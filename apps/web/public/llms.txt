@@ -1,0 +1,18 @@
+# Invoice Next
+
+> Invoice Next is an online invoicing and small business billing platform that helps freelancers, agencies, and small businesses create and send professional invoices in 60 seconds, track expenses, manage documents, partners, and items, and get paid faster.
+
+Invoice Next runs on the web, iOS, and Android. Every plan includes unlimited invoices, unlimited expenses, unlimited quotes, unlimited stock documents, unlimited clients and products, and 256-bit encrypted cloud storage.
+
+## Pages
+- [Invoice Next — Simple Invoicing for Small Businesses](https://invonxt.com/): Invoice Next helps freelancers and small businesses create professional invoices, accept online payments, and manage billing faster with simple tools.
+
+## Key Sections & Resources
+- [Homepage](https://invonxt.com/): Overview of Invoice Next online invoicing software, live dashboard preview, and key platform metrics.
+- [About & How It Works](https://invonxt.com/#about): Three-step workflow to create, send, and organize invoices online.
+- [Features](https://invonxt.com/#features): Dashboard, Invoices, Expenses, Documents, Partners, Items, and Settings.
+- [Security & Reliability](https://invonxt.com/#security): 256-bit encryption, cross-platform web/mobile support, and 99.9% uptime.
+- [Customer Reviews](https://invonxt.com/#reviews): Feedback from freelancers, agency founders, and small business owners.
+- [Pricing Plans](https://invonxt.com/#pricing): Flexible monthly ($5/mo), annual ($4/mo billed $48/12 months), and 24-month ($3/mo billed $72/24 months) plans with a 30-day money-back guarantee.
+- [Frequently Asked Questions](https://invonxt.com/#faq): Answers about the free trial, included features, cancellation policy, browser/mobile access, and data security.
+- [Web Application & Contact Portal](https://app.invonxt.com/): Log in, start free, or contact support via the Invoice Next application.

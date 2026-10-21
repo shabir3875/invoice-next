@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://invonxt.com/sitemap.xml
