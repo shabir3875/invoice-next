@@ -51,6 +51,19 @@ async function prerender() {
 			const updatedSm = sm.replace(/<lastmod>.*?<\/lastmod>/, `<lastmod>${today}</lastmod>`);
 			fs.writeFileSync(sitemapPath, updatedSm, 'utf8');
 		}
+
+		// Mirror dist/apps/web/* to root dist/* so both `dist` and `dist/apps/web` output directories work seamlessly on Hostinger
+		const distAppDir = path.resolve(webRoot, '../../dist/apps/web');
+		const rootDistDir = path.resolve(webRoot, '../../dist');
+		if (fs.existsSync(distAppDir)) {
+			for (const entry of fs.readdirSync(distAppDir)) {
+				if (entry === 'apps') continue;
+				const srcEntry = path.join(distAppDir, entry);
+				const destEntry = path.join(rootDistDir, entry);
+				fs.cpSync(srcEntry, destEntry, { recursive: true, force: true });
+			}
+			console.log('✅ Mirrored build artifacts to root dist/ directory');
+		}
 	} finally {
 		await vite.close();
 	}
