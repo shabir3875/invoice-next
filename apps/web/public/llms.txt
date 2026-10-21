@@ -5,7 +5,7 @@
 Invoice Next runs on the web, iOS, and Android. Every plan includes unlimited invoices, unlimited expenses, unlimited quotes, unlimited stock documents, unlimited clients and products, and 256-bit encrypted cloud storage.
 
 ## Pages
-- [Invoice Next — Simple Invoicing for Small Businesses](https://invonxt.com/): Invoice Next helps freelancers and small businesses create professional invoices, accept online payments, and manage billing faster with simple tools.
+- [Invoice Next — Simple Invoicing for Small Businesses](https://invonxt.com/terms): Invoice Next helps freelancers and small businesses create professional invoices, accept online payments, and manage billing faster with simple tools.
 
 ## Key Sections & Resources
 - [Homepage](https://invonxt.com/): Overview of Invoice Next online invoicing software, live dashboard preview, and key platform metrics.

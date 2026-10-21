@@ -21,6 +21,13 @@ const Seo = ({
         <Helmet>
             <link rel="canonical" href={canonical} />
             <meta name="robots" content={robots} />
+            <meta name="author" content={siteName || 'Invoice Next'} />
+            <meta
+                name="keywords"
+                content="online invoicing software, invoice generator for small businesses, invoicing app for freelancers, create and send invoices online, small business billing software, online invoice management, Invoice Next"
+            />
+            <meta property="article:published_time" content="2026-10-01T00:00:00Z" />
+            <meta property="article:modified_time" content="2026-10-22T00:00:00Z" />
             <meta property="og:url" content={canonical} />
             <meta property="og:type" content={type} />
             <meta property="og:locale" content={locale} />
@@ -32,6 +39,8 @@ const Seo = ({
             {image && <meta property="og:image:height" content="630" />}
             {imageAlt && <meta property="og:image:alt" content={imageAlt} />}
             <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+            <meta name="twitter:site" content="@invoicenext" />
+            <meta name="twitter:creator" content="@invoicenext" />
             {title && <meta name="twitter:title" content={title} />}
             {description && <meta property="twitter:description" content={description} />}
             {description && <meta name="twitter:description" content={description} />}

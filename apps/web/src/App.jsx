@@ -9,6 +9,10 @@ function App() {
             <ScrollToTop />
             <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<HomePage />} />
+                <Route path="/contact" element={<HomePage />} />
+                <Route path="/privacy" element={<HomePage />} />
+                <Route path="/terms" element={<HomePage />} />
             </Routes>
         </Router>
     );

@@ -41,9 +41,14 @@ function Header() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-3">
         <div className="flex items-center justify-between h-14 sm:h-16 px-4 sm:px-5 rounded-2xl bg-white/85 backdrop-blur-xl border border-border/80 shadow-card">
           <a href="/" className="flex items-center gap-2 font-display text-lg sm:text-xl font-extrabold text-foreground tracking-tight">
-            <span className="grid place-items-center w-8 h-8 rounded-lg bg-gradient-primary text-white shadow-glow">
-              <Receipt className="w-4 h-4" aria-hidden />
-            </span>
+            <img
+              src="/favicon.svg"
+              alt="Invoice Next — Online Invoicing Software Logo"
+              title="Invoice Next — Simple Invoicing for Small Businesses"
+              width="32"
+              height="32"
+              className="w-8 h-8 rounded-lg shadow-glow"
+            />
             Invoice Next
           </a>
           <nav className="hidden md:flex items-center gap-8" aria-label="Primary">
@@ -520,7 +525,7 @@ function Testimonials() {
                     <Star key={s} className="w-4 h-4 text-primary fill-current" aria-hidden />
                   ))}
                 </div>
-                <blockquote className="text-foreground/90 text-[0.95rem] leading-relaxed flex-1">
+                <blockquote cite="https://invonxt.com/#reviews" className="text-foreground/90 text-[0.95rem] leading-relaxed flex-1">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
                 <figcaption className="flex items-center gap-3 mt-6 pt-6 border-t border-border">
@@ -528,7 +533,7 @@ function Testimonials() {
                     {t.initials}
                   </div>
                   <div>
-                    <div className="font-display text-sm font-bold text-foreground">{t.name}</div>
+                    <cite className="not-italic font-display text-sm font-bold text-foreground block">{t.name}</cite>
                     <div className="text-muted-foreground text-xs">{t.role}</div>
                   </div>
                 </figcaption>
@@ -682,7 +687,7 @@ function TrustBar() {
 
 function Cta() {
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section id="contact" className="py-16 md:py-24 bg-background scroll-mt-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <div className="relative overflow-hidden rounded-3xl bg-gradient-primary px-6 py-14 sm:px-12 sm:py-16 text-center shadow-glow">
@@ -719,7 +724,23 @@ function Faq() {
     { q: 'Can I cancel anytime?', a: 'Yes. The monthly plan has no commitment — cancel whenever you want. Every plan also comes with a 30-day money-back guarantee.' },
     { q: 'Do I need to install anything?', a: 'No. Invoice Next works in your browser. You can also download the mobile app to send invoices on the go.' },
     { q: 'How does online invoice management and payment tracking work?', a: 'Invoice Next lets you create and send invoices online via email or a direct payment link. You can monitor paid, pending, and overdue balances in real time from your dashboard alongside expenses, quotes, partners, and items.' },
-    { q: 'How is my business and client billing data protected?', a: 'All account and billing data is protected with bank-grade 256-bit encryption, stored in secure cloud storage, and backed by 99.9% platform uptime across web, iOS, and Android.' },
+    {
+      q: 'How is my business and client billing data protected?',
+      a: (
+        <>
+          All account and billing data is protected with bank-grade{' '}
+          <a
+            href="https://csrc.nist.gov/publications/detail/fips/197/final"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline underline-offset-2"
+          >
+            NIST FIPS 197 256-bit AES encryption
+          </a>
+          , stored in secure cloud storage, and backed by 99.9% platform uptime across web, iOS, and Android.
+        </>
+      ),
+    },
   ];
   return (
     <section id="faq" className="py-20 md:py-28 bg-muted/40 scroll-mt-28">
@@ -761,16 +782,16 @@ function Footer() {
     {
       title: 'Company',
       links: [
-        { label: 'About', href: '#about' },
-        { label: 'Contact', href: APP_URL },
+        { label: 'About', href: '/about' },
+        { label: 'Contact', href: '/contact' },
         { label: 'Support', href: '#faq' },
       ],
     },
     {
       title: 'Legal',
       links: [
-        { label: 'Privacy Policy', href: '#security' },
-        { label: 'Terms of Service', href: '#pricing' },
+        { label: 'Privacy Policy', href: '/privacy' },
+        { label: 'Terms of Service', href: '/terms' },
       ],
     },
   ];
@@ -780,9 +801,14 @@ function Footer() {
         <div className="grid md:grid-cols-5 gap-10 mb-12">
           <div className="md:col-span-2">
             <a href="/" className="flex items-center gap-2 font-display text-xl font-extrabold text-white">
-              <span className="grid place-items-center w-8 h-8 rounded-lg bg-gradient-primary text-white">
-                <Receipt className="w-4 h-4" aria-hidden />
-              </span>
+              <img
+                src="/favicon.svg"
+                alt="Invoice Next — Simple Invoicing for Small Businesses"
+                title="Invoice Next — Online Invoicing Software"
+                width="32"
+                height="32"
+                className="w-8 h-8 rounded-lg"
+              />
               Invoice Next
             </a>
             <p className="mt-3 text-sm max-w-xs leading-relaxed">
@@ -806,8 +832,12 @@ function Footer() {
           ))}
         </div>
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
-          <span>© {new Date().getFullYear()} Invoice Next. All rights reserved.</span>
-          <span>30-day money-back guarantee.</span>
+          <span>
+            © {new Date().getFullYear()} <a href="/" rel="author" className="hover:text-white">Invoice Next</a>. All rights reserved.
+          </span>
+          <span>
+            30-day money-back guarantee · <time dateTime="2026-10-22">Updated Oct 2026</time>
+          </span>
         </div>
       </div>
     </footer>

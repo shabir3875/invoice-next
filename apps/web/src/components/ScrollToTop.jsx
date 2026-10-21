@@ -5,8 +5,16 @@ const ScrollToTop = () => {
     const { pathname, hash } = useLocation();
 
     useLayoutEffect(() => {
-        if (hash) {
-            const target = document.getElementById(hash.slice(1));
+        const routeSectionMap = {
+            '/about': 'about',
+            '/contact': 'contact',
+            '/privacy': 'security',
+            '/terms': 'pricing',
+        };
+        const targetId = hash ? hash.slice(1) : routeSectionMap[pathname];
+
+        if (targetId) {
+            const target = document.getElementById(targetId);
 
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
