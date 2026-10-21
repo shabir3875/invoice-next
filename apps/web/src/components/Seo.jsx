@@ -22,10 +22,6 @@ const Seo = ({
             <link rel="canonical" href={canonical} />
             <meta name="robots" content={robots} />
             <meta name="author" content={siteName || 'Invoice Next'} />
-            <meta
-                name="keywords"
-                content="online invoicing software, invoice generator for small businesses, invoicing app for freelancers, create and send invoices online, small business billing software, online invoice management, Invoice Next"
-            />
             <meta property="article:published_time" content="2026-10-01T00:00:00Z" />
             <meta property="article:modified_time" content="2026-10-22T00:00:00Z" />
             <meta property="og:url" content={canonical} />
