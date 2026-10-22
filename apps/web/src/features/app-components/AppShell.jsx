@@ -7,7 +7,7 @@ import { PremiumPage } from './PremiumPage';
  * Full application layout shell uniting the collapsible Sidebar and content area,
  * supporting client-side routing, plan selection, and state persistence.
  */
-export function AppShell({ initialPage = 'premium' }) {
+export function AppShell({ initialPage = 'premium', onChoosePlan, onBack }) {
   const [currentPage, setCurrentPage] = useState(initialPage);
 
   const handleChoosePlan = (planId) => {
@@ -16,18 +16,26 @@ export function AppShell({ initialPage = 'premium' }) {
     } catch (e) {
       console.error('Failed to save selected plan', e);
     }
-    // Direct user to real subscription checkout on live application
-    if (typeof window !== 'undefined') {
-      window.location.href = 'https://app.invonxt.com/#/settings';
+
+    if (onChoosePlan) {
+      onChoosePlan(planId);
+    } else if (typeof window !== 'undefined') {
+      if (window.location.hostname === 'invonxt.com' || window.location.hostname === 'www.invonxt.com') {
+        window.location.href = 'https://app.invonxt.com/#/settings';
+      } else {
+        window.location.hash = '#/settings';
+      }
     }
   };
 
   const handleBack = () => {
-    if (typeof window !== 'undefined') {
-      if (window.history.length > 1) {
-        window.history.back();
-      } else {
+    if (onBack) {
+      onBack();
+    } else if (typeof window !== 'undefined') {
+      if (window.location.hostname === 'invonxt.com' || window.location.hostname === 'www.invonxt.com') {
         window.location.href = 'https://app.invonxt.com/#/dashboard';
+      } else {
+        window.location.hash = '#/dashboard';
       }
     }
   };
@@ -36,7 +44,11 @@ export function AppShell({ initialPage = 'premium' }) {
     if (page === 'premium') {
       setCurrentPage('premium');
     } else if (typeof window !== 'undefined') {
-      window.location.href = `https://app.invonxt.com/#/${page}`;
+      if (window.location.hostname === 'invonxt.com' || window.location.hostname === 'www.invonxt.com') {
+        window.location.href = `https://app.invonxt.com/#/${page}`;
+      } else {
+        window.location.hash = `#/${page}`;
+      }
     }
   };
 

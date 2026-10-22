@@ -13,8 +13,10 @@ function HashRouteHandler({ children }) {
             setHash(h);
 
             // If navigating to core app hash routes on the marketing domain, safely redirect to the live app
-            if (h && (h.startsWith('#/dashboard') || h.startsWith('#/invoices') || h.startsWith('#/customers') || h.startsWith('#/expenses') || h.startsWith('#/documents') || h.startsWith('#/settings'))) {
-                window.location.href = `https://app.invonxt.com/${h}`;
+            if (typeof window !== 'undefined' && (window.location.hostname === 'invonxt.com' || window.location.hostname === 'www.invonxt.com')) {
+                if (h && (h.startsWith('#/dashboard') || h.startsWith('#/invoices') || h.startsWith('#/customers') || h.startsWith('#/expenses') || h.startsWith('#/documents') || h.startsWith('#/settings'))) {
+                    window.location.href = `https://app.invonxt.com/${h}`;
+                }
             }
         };
 
