@@ -42,8 +42,10 @@ const CountUp = ({ value, duration = 1600, decimals = 0, prefix = '', suffix = '
         };
     }, [value, duration]);
 
+    const formattedTarget = initialTarget.toLocaleString(locale, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+
     return (
-        <span ref={ref} className={className}>
+        <span ref={ref} className={className} aria-label={`${prefix}${formattedTarget}${suffix}`}>
             {prefix}
             {display.toLocaleString(locale, { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}
             {suffix}

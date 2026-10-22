@@ -39,6 +39,19 @@ async function prerender() {
 			console.log(`✅ Prerendered static HTML injected into ${path.relative(webRoot, filePath)}`);
 		}
 
+		// Generate static route entrypoints (/about, /contact, /privacy, /terms) so static hosts return HTTP 200 OK instead of 404
+		const distAppDir = path.resolve(webRoot, '../../dist/apps/web');
+		const distIndexHtmlPath = path.join(distAppDir, 'index.html');
+		if (fs.existsSync(distIndexHtmlPath)) {
+			const distIndexHtml = fs.readFileSync(distIndexHtmlPath, 'utf8');
+			for (const routeName of ['about', 'contact', 'privacy', 'terms']) {
+				const routeDir = path.join(distAppDir, routeName);
+				fs.mkdirSync(routeDir, { recursive: true });
+				fs.writeFileSync(path.join(routeDir, 'index.html'), distIndexHtml, 'utf8');
+			}
+			console.log('✅ Generated static route HTML files for /about, /contact, /privacy, /terms');
+		}
+
 		// Update sitemap.xml lastmod date automatically
 		const today = new Date().toISOString().slice(0, 10);
 		const sitemapTargets = [
@@ -53,7 +66,6 @@ async function prerender() {
 		}
 
 		// Mirror dist/apps/web/* to root dist/* AND repo root (../../*) so Hostinger works seamlessly whether Output Directory is `none`, `dist`, or `dist/apps/web`
-		const distAppDir = path.resolve(webRoot, '../../dist/apps/web');
 		const rootDistDir = path.resolve(webRoot, '../../dist');
 		const repoRootDir = path.resolve(webRoot, '../..');
 		if (fs.existsSync(distAppDir)) {
