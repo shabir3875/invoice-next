@@ -143,6 +143,7 @@ const parse = (input, options = {}) => {
      */
 
     if (value === CHAR_LEFT_PARENTHESES) {
+      if (stack.length > 32) { throw new SyntaxError('Max nesting depth (32) exceeded'); }
       block = push({ type: 'paren', nodes: [] });
       stack.push(block);
       push({ type: 'text', value });
@@ -196,7 +197,7 @@ const parse = (input, options = {}) => {
 
     if (value === CHAR_LEFT_CURLY_BRACE) {
       depth++;
-      if (depth > 32) { throw new SyntaxError('Max brace nesting depth (32) exceeded'); }
+      if (depth > 32 || stack.length > 32) { throw new SyntaxError('Max brace nesting depth (32) exceeded'); }
 
       const dollar = prev.value && prev.value.slice(-1) === '$' || block.dollar === true;
       const brace = {

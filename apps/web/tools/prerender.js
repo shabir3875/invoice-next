@@ -43,7 +43,7 @@ async function prerender() {
 		const routeMetaMap = {
 			about: {
 				title: 'About Invoice Next — Online Invoicing for Small Businesses',
-				description: 'Learn how Invoice Next helps 200,000+ freelancers and small businesses create, send, and organize invoices, expenses, and documents in three simple steps.',
+				description: 'Learn how Invoice Next helps freelancers and small businesses create, send, and organize invoices, expenses, and documents in three simple steps.',
 				url: 'https://invonxt.com/about',
 			},
 			contact: {

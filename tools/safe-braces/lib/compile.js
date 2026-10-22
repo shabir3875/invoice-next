@@ -4,7 +4,8 @@ const fill = require('fill-range');
 const utils = require('./utils');
 
 const compile = (ast, options = {}) => {
-  const walk = (node, parent = {}) => {
+  const walk = (node, parent = {}, depth = 0) => {
+    if (depth > 64) { throw new RangeError('Max AST compile recursion depth (64) exceeded'); }
     const invalidBlock = utils.isInvalidBrace(parent);
     const invalidNode = node.invalid === true && options.escapeInvalid === true;
     const invalid = invalidBlock === true || invalidNode === true;
@@ -16,7 +17,6 @@ const compile = (ast, options = {}) => {
     }
 
     if (node.isClose === true) {
-      console.log('node.isClose', prefix, node.value);
       return prefix + node.value;
     }
 
@@ -47,7 +47,7 @@ const compile = (ast, options = {}) => {
 
     if (node.nodes) {
       for (const child of node.nodes) {
-        output += walk(child, node);
+        output += walk(child, node, depth + 1);
       }
     }
 

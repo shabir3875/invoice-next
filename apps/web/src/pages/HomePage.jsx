@@ -312,7 +312,7 @@ function Hero() {
           <Reveal>
             <p className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-primary mb-6">
               <Sparkles className="w-3.5 h-3.5" aria-hidden />
-              Trusted by 200,000+ businesses
+              Simple, professional invoicing software
             </p>
           </Reveal>
           <Reveal delay={0.06}>
@@ -360,11 +360,11 @@ function LogoStrip() {
     <section className="py-10 md:py-12 border-y border-border bg-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground/70 mb-6">
-          Trusted by teams at
+          Designed for modern businesses & professionals
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-60">
-          {['Northwind', 'Acme Co', 'Lumina', 'Vertex', 'Quanta', 'Helios'].map((b) => (
-            <span key={b} className="font-display text-lg font-bold text-foreground/70">{b}</span>
+        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-70">
+          {['Designers', 'Contractors', 'Consultants', 'Agencies', 'Freelancers', 'Small Businesses'].map((b) => (
+            <span key={b} className="font-display text-sm sm:text-base font-semibold text-foreground/70">{b}</span>
           ))}
         </div>
       </div>
@@ -374,10 +374,10 @@ function LogoStrip() {
 
 function Stats() {
   const stats = [
-    { value: 200, suffix: 'K+', label: 'Businesses' },
-    { value: 3, suffix: 'M+', label: 'Invoices sent' },
-    { value: 99.9, suffix: '%', label: 'Uptime', decimals: 1 },
-    { value: 60, suffix: 's', label: 'To send an invoice' },
+    { value: 60, suffix: 's', label: 'Average setup time' },
+    { value: 7, suffix: '+', label: 'Core business modules' },
+    { value: 100, suffix: '%', label: 'Cloud-based access' },
+    { value: 30, suffix: '-day', label: 'Money-back guarantee' },
   ];
   return (
     <section className="py-14 md:py-20 bg-background" aria-label="Key metrics">
@@ -486,22 +486,22 @@ const PLAN_FEATURES = [
 function Testimonials() {
   const items = [
     {
-      quote: 'Invoice Next cut my billing time from hours to minutes. I sent my first invoice in under a minute and got paid the same day.',
-      name: 'Sarah Mitchell',
-      role: 'Freelance Designer',
-      initials: 'SM',
+      quote: 'Create and send clean, professional invoices in 60 seconds with instant payment links and automated status tracking.',
+      name: 'Solo Freelancers & Contractors',
+      role: 'Fast, Frictionless Billing',
+      initials: 'FC',
     },
     {
-      quote: 'Invoices, expenses, and documents finally live in one place. I open the dashboard and I know where everything is.',
-      name: 'David Okafor',
-      role: 'Agency Founder',
-      initials: 'DO',
+      quote: 'Keep quotes, stock documents, customer contacts, and item catalogs unified in a single, accessible menu.',
+      name: 'Studios & Agencies',
+      role: 'Organized Document Workflow',
+      initials: 'SA',
     },
     {
-      quote: 'Clean, fast, and exactly what I needed. No clutter, no learning curve. My whole team picked it up on day one.',
-      name: 'Elena Rossi',
-      role: 'Small Business Owner',
-      initials: 'ER',
+      quote: 'Monitor receivables, record overhead expenses, and manage client billing with straightforward flat-rate pricing.',
+      name: 'Growing Small Businesses',
+      role: 'Real-Time Financial Clarity',
+      initials: 'SB',
     },
   ];
   return (
@@ -510,10 +510,10 @@ function Testimonials() {
         <Reveal className="max-w-2xl mx-auto text-center mb-12 md:mb-16">
           <p className="text-primary font-semibold text-sm mb-3">Testimonials</p>
           <h2 className="font-display text-3xl sm:text-4xl md:text-[2.75rem] font-extrabold tracking-tight text-foreground leading-tight mb-4">
-            Loved by 200,000+ businesses
+            Built for independent professionals
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-            Freelancers, agencies, and small teams trust Invoice Next to get paid on time.
+            Discover how Invoice Next streamlines daily billing, expense management, and client payments.
           </p>
         </Reveal>
         <div className="grid md:grid-cols-3 gap-5 md:gap-6">
@@ -660,9 +660,9 @@ function Pricing() {
 
 function TrustBar() {
   const items = [
-    { icon: ShieldCheck, label: 'Bank-grade security', text: '256-bit encryption' },
-    { icon: Globe, label: 'Works everywhere', text: 'Web, iOS & Android' },
-    { icon: Clock, label: '99.9% uptime', text: 'Always available' },
+    { icon: ShieldCheck, label: 'Data security', text: '256-bit TLS encryption' },
+    { icon: Globe, label: 'Modern browser support', text: 'Desktop & mobile web' },
+    { icon: Clock, label: 'Always accessible', text: 'Reliable cloud platform' },
   ];
   return (
     <section id="security" className="py-12 md:py-16 bg-muted/40 border-y border-border scroll-mt-28" aria-label="Security and reliability">
@@ -700,7 +700,7 @@ function Cta() {
                 Ready to get paid?
               </h2>
               <p className="text-white/85 text-base sm:text-lg mb-8 leading-relaxed">
-                Join 200,000+ businesses using Invoice Next. Start free today — no credit card required.
+                Create professional invoices and manage billing in minutes. Start free today — no credit card required.
               </p>
               <a
                 href={APP_URL}
@@ -722,7 +722,7 @@ function Faq() {
     { q: 'Is there a free trial?', a: 'Yes. You can start free with no credit card required and try every feature. When you are ready, pick a plan that fits you.' },
     { q: 'What is included in every plan?', a: 'Every plan includes the same features: unlimited invoices, expenses, quotes, stock documents, clients and products, secure cloud storage, and more premium features.' },
     { q: 'Can I cancel anytime?', a: 'Yes. The monthly plan has no commitment — cancel whenever you want. Every plan also comes with a 30-day money-back guarantee.' },
-    { q: 'Do I need to install anything?', a: 'No. Invoice Next works in your browser. You can also download the mobile app to send invoices on the go.' },
+    { q: 'Do I need to install anything?', a: 'No. Invoice Next runs directly in modern desktop and mobile browsers. No app store installation required.' },
     { q: 'How does online invoice management and payment tracking work?', a: 'Invoice Next lets you create and send invoices online via email or a direct payment link. You can monitor paid, pending, and overdue balances in real time from your dashboard alongside expenses, quotes, partners, and items.' },
     {
       q: 'How is my business and client billing data protected?',
@@ -737,7 +737,7 @@ function Faq() {
           >
             NIST FIPS 197 256-bit AES encryption
           </a>
-          , stored in secure cloud storage, and backed by 99.9% platform uptime across web, iOS, and Android.
+          , stored in secure cloud storage, and accessible across modern desktop and mobile web browsers.
         </>
       ),
     },
@@ -847,7 +847,7 @@ function Footer() {
 const ROUTE_META = {
   '/about': {
     title: 'About Invoice Next — Online Invoicing for Small Businesses',
-    description: 'Learn how Invoice Next helps 200,000+ freelancers and small businesses create, send, and organize invoices, expenses, and documents in three simple steps.',
+    description: 'Learn how Invoice Next helps freelancers and small businesses create, send, and organize invoices, expenses, and documents in three simple steps.',
     url: 'https://invonxt.com/about',
   },
   '/contact': {
