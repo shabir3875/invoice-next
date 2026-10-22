@@ -45,3 +45,4 @@ export const PREMIUM_FEATURES = [
 export function getPlanById(planId) {
   return PREMIUM_PLANS.find((plan) => plan.id === planId) ?? PREMIUM_PLANS[0];
 }
+
