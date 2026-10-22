@@ -4,7 +4,10 @@ const fill = require('fill-range');
 const stringify = require('./stringify');
 const utils = require('./utils');
 
-const append = (queue = '', stash = '', enclose = false) => {
+const append = (queue = '', stash = '', enclose = false, maxCombinations = 10000) => {
+  if (Array.isArray(queue) && Array.isArray(stash) && (queue.length * stash.length > maxCombinations)) {
+    throw new RangeError('expanded array length exceeds range limit. Use options.rangeLimit to increase or disable the limit.');
+  }
   const result = [];
 
   queue = [].concat(queue);
@@ -18,12 +21,18 @@ const append = (queue = '', stash = '', enclose = false) => {
   for (const item of queue) {
     if (Array.isArray(item)) {
       for (const value of item) {
-        result.push(append(value, stash, enclose));
+        result.push(append(value, stash, enclose, maxCombinations));
+        if (result.length > maxCombinations) {
+          throw new RangeError('expanded array length exceeds range limit. Use options.rangeLimit to increase or disable the limit.');
+        }
       }
     } else {
       for (let ele of stash) {
         if (enclose === true && typeof ele === 'string') ele = `{${ele}}`;
-        result.push(Array.isArray(ele) ? append(item, ele, enclose) : item + ele);
+        result.push(Array.isArray(ele) ? append(item, ele, enclose, maxCombinations) : item + ele);
+        if (result.length > maxCombinations) {
+          throw new RangeError('expanded array length exceeds range limit. Use options.rangeLimit to increase or disable the limit.');
+        }
       }
     }
   }
@@ -33,7 +42,10 @@ const append = (queue = '', stash = '', enclose = false) => {
 const expand = (ast, options = {}) => {
   const rangeLimit = options.rangeLimit === undefined ? 1000 : options.rangeLimit;
 
-  const walk = (node, parent = {}) => {
+  const walk = (node, parent = {}, depth = 0) => {
+    if (depth > 64) {
+      throw new RangeError('Max AST expand recursion depth (64) exceeded');
+    }
     node.queue = [];
 
     let p = parent;
@@ -45,7 +57,7 @@ const expand = (ast, options = {}) => {
     }
 
     if (node.invalid || node.dollar) {
-      q.push(append(q.pop(), stringify(node, options)));
+      q.push(append(q.pop(), stringify(node, options), false, rangeLimit));
       return;
     }
 
@@ -66,7 +78,7 @@ const expand = (ast, options = {}) => {
         range = stringify(node, options);
       }
 
-      q.push(append(q.pop(), range));
+      q.push(append(q.pop(), range, false, rangeLimit));
       node.nodes = [];
       return;
     }
@@ -90,17 +102,17 @@ const expand = (ast, options = {}) => {
       }
 
       if (child.type === 'close') {
-        q.push(append(q.pop(), queue, enclose));
+        q.push(append(q.pop(), queue, enclose, rangeLimit));
         continue;
       }
 
       if (child.value && child.type !== 'open') {
-        queue.push(append(queue.pop(), child.value));
+        queue.push(append(queue.pop(), child.value, false, rangeLimit));
         continue;
       }
 
       if (child.nodes) {
-        walk(child, node);
+        walk(child, node, depth + 1);
       }
     }
 

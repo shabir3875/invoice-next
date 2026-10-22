@@ -3,7 +3,8 @@
 const utils = require('./utils');
 
 module.exports = (ast, options = {}) => {
-  const stringify = (node, parent = {}) => {
+  const stringify = (node, parent = {}, depth = 0) => {
+    if (depth > 64) { throw new RangeError('Max AST stringify recursion depth (64) exceeded'); }
     const invalidBlock = options.escapeInvalid && utils.isInvalidBrace(parent);
     const invalidNode = node.invalid === true && options.escapeInvalid === true;
     let output = '';
@@ -21,7 +22,7 @@ module.exports = (ast, options = {}) => {
 
     if (node.nodes) {
       for (const child of node.nodes) {
-        output += stringify(child);
+        output += stringify(child, node, depth + 1);
       }
     }
     return output;

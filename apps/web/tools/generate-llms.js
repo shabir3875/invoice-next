@@ -143,9 +143,9 @@ function generateLlmsTxt(pages) {
 	return [
 		'# Invoice Next',
 		'',
-		'> Invoice Next is an online invoicing and small business billing platform that helps freelancers, agencies, and small businesses create and send professional invoices in 60 seconds, track expenses, manage documents, partners, and items, and get paid faster.',
+		'> Invoice Next is an online invoicing and small business billing platform that helps freelancers, agencies, and small businesses create and send professional invoices online, track expenses, manage documents, partners, and items, and get paid faster.',
 		'',
-		'Invoice Next runs on the web, iOS, and Android. Every plan includes unlimited invoices, unlimited expenses, unlimited quotes, unlimited stock documents, unlimited clients and products, and 256-bit encrypted cloud storage.',
+		'Invoice Next runs directly in modern desktop and mobile web browsers. Every plan includes unlimited invoices, unlimited expenses, unlimited quotes, unlimited stock documents, unlimited clients and products, and 256-bit encrypted cloud storage.',
 		'',
 		'## Pages',
 		pageEntries,
@@ -154,9 +154,9 @@ function generateLlmsTxt(pages) {
 		`- [Homepage](${SITE_ORIGIN}/): Overview of Invoice Next online invoicing software, live dashboard preview, and key platform metrics.`,
 		`- [About & How It Works](${SITE_ORIGIN}/#about): Three-step workflow to create, send, and organize invoices online.`,
 		`- [Features](${SITE_ORIGIN}/#features): Dashboard, Invoices, Expenses, Documents, Partners, Items, and Settings.`,
-		`- [Security & Reliability](${SITE_ORIGIN}/#security): 256-bit encryption, cross-platform web/mobile support, and 99.9% uptime.`,
+		`- [Security & Reliability](${SITE_ORIGIN}/#security): 256-bit TLS encryption, modern desktop/mobile web support, and reliable cloud storage.`,
 		`- [Customer Reviews](${SITE_ORIGIN}/#reviews): Feedback from freelancers, agency founders, and small business owners.`,
-		`- [Pricing Plans](${SITE_ORIGIN}/#pricing): Flexible monthly ($5/mo), annual ($4/mo billed $48/12 months), and 24-month ($3/mo billed $72/24 months) plans with a 30-day money-back guarantee.`,
+		`- [Pricing Plans](${SITE_ORIGIN}/#pricing): Flexible monthly ($5/mo), annual ($4/mo billed $48/12 months), and 24-month ($3/mo billed $72/24 months) plans with flexible billing and cancel-anytime monthly options.`,
 		`- [Frequently Asked Questions](${SITE_ORIGIN}/#faq): Answers about the free trial, included features, cancellation policy, browser/mobile access, and data security.`,
 		`- [Web Application & Contact Portal](${APP_URL}): Log in, start free, or contact support via the Invoice Next application.`,
 		''

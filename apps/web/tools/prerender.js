@@ -43,22 +43,22 @@ async function prerender() {
 		const routeMetaMap = {
 			about: {
 				title: 'About Invoice Next — Online Invoicing for Small Businesses',
-				description: 'Learn how Invoice Next helps 200,000+ freelancers and small businesses create, send, and organize invoices, expenses, and documents in three simple steps.',
+				description: 'Learn how Invoice Next helps freelancers and small businesses create, send, and organize invoices, expenses, and documents in three simple steps.',
 				url: 'https://invonxt.com/about',
 			},
 			contact: {
 				title: 'Contact & Get Started — Invoice Next Invoicing Platform',
-				description: 'Get started with Invoice Next or reach out to our team. Create and send professional invoices in 60 seconds with no credit card required.',
+				description: 'Get started with Invoice Next or reach out to our team. Create and send professional invoices online with no credit card required.',
 				url: 'https://invonxt.com/contact',
 			},
 			privacy: {
 				title: 'Privacy & Data Security — Invoice Next',
-				description: 'Discover how Invoice Next protects your business and client billing data with bank-grade 256-bit AES encryption, secure cloud storage, and 99.9% uptime.',
+				description: 'Discover how Invoice Next protects your business and client billing data with bank-grade 256-bit AES encryption, secure cloud storage, and reliable cloud access.',
 				url: 'https://invonxt.com/privacy',
 			},
 			terms: {
 				title: 'Terms & Pricing Plans — Invoice Next',
-				description: 'Review Invoice Next subscription terms, flexible monthly and annual pricing plans, unlimited invoicing features, and our 30-day money-back guarantee.',
+				description: 'Review Invoice Next subscription terms, flexible monthly and annual pricing plans, unlimited invoicing features, and clear cancellation policy.',
 				url: 'https://invonxt.com/terms',
 			},
 		};
