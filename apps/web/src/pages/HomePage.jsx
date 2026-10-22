@@ -317,8 +317,8 @@ function Hero() {
           </Reveal>
           <Reveal delay={0.06}>
             <h1 className="font-display text-[2.4rem] leading-[1.08] sm:text-5xl md:text-6xl lg:text-[4.25rem] font-extrabold tracking-tight text-foreground mb-5">
-              Send invoices in{' '}
-              <span className="text-gradient">60 seconds</span>
+              Send invoices{' '}
+              <span className="text-gradient">in simple steps</span>
             </h1>
           </Reveal>
           <Reveal delay={0.12}>
@@ -341,7 +341,7 @@ function Hero() {
             <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
               <span className="inline-flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-primary" aria-hidden /> Free to start</span>
               <span className="inline-flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-primary" aria-hidden /> No credit card required</span>
-              <span className="inline-flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-primary" aria-hidden /> 30-day money-back</span>
+              <span className="inline-flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-primary" aria-hidden /> Cancel anytime</span>
             </div>
           </Reveal>
         </div>
@@ -374,10 +374,10 @@ function LogoStrip() {
 
 function Stats() {
   const stats = [
-    { value: 60, suffix: 's', label: 'Average setup time' },
+    { value: 3, suffix: ' steps', label: 'To create & send invoices' },
     { value: 7, suffix: '+', label: 'Core business modules' },
     { value: 100, suffix: '%', label: 'Cloud-based access' },
-    { value: 30, suffix: '-day', label: 'Money-back guarantee' },
+    { value: 0, prefix: '$', label: 'Cost to start free' },
   ];
   return (
     <section className="py-14 md:py-20 bg-background" aria-label="Key metrics">
@@ -486,7 +486,7 @@ const PLAN_FEATURES = [
 function Testimonials() {
   const items = [
     {
-      quote: 'Create and send clean, professional invoices in 60 seconds with instant payment links and automated status tracking.',
+      quote: 'Create and send clean, professional invoices in simple steps with direct payment links and automated status tracking.',
       name: 'Solo Freelancers & Contractors',
       role: 'Fast, Frictionless Billing',
       initials: 'FC',
@@ -651,7 +651,7 @@ function Pricing() {
           ))}
         </div>
         <p className="text-center text-muted-foreground text-sm mt-10">
-          30-day money-back guarantee. No questions asked.
+          Flexible billing options. Upgrade, downgrade, or cancel anytime.
         </p>
       </div>
     </section>
@@ -721,7 +721,7 @@ function Faq() {
   const faqs = [
     { q: 'Is there a free trial?', a: 'Yes. You can start free with no credit card required and try every feature. When you are ready, pick a plan that fits you.' },
     { q: 'What is included in every plan?', a: 'Every plan includes the same features: unlimited invoices, expenses, quotes, stock documents, clients and products, secure cloud storage, and more premium features.' },
-    { q: 'Can I cancel anytime?', a: 'Yes. The monthly plan has no commitment — cancel whenever you want. Every plan also comes with a 30-day money-back guarantee.' },
+    { q: 'Can I cancel anytime?', a: 'Yes. The monthly plan has no long-term commitment — cancel whenever you want directly from your account settings.' },
     { q: 'Do I need to install anything?', a: 'No. Invoice Next runs directly in modern desktop and mobile browsers. No app store installation required.' },
     { q: 'How does online invoice management and payment tracking work?', a: 'Invoice Next lets you create and send invoices online via email or a direct payment link. You can monitor paid, pending, and overdue balances in real time from your dashboard alongside expenses, quotes, partners, and items.' },
     {
@@ -836,7 +836,7 @@ function Footer() {
             © {new Date().getFullYear()} <a href="/" rel="author" className="hover:text-white">Invoice Next</a>. All rights reserved.
           </span>
           <span>
-            30-day money-back guarantee · <time dateTime="2026-10-22">Updated Oct 2026</time>
+            Cancel anytime · <time dateTime="2026-10-22">Updated Oct 2026</time>
           </span>
         </div>
       </div>
@@ -852,17 +852,17 @@ const ROUTE_META = {
   },
   '/contact': {
     title: 'Contact & Get Started — Invoice Next Invoicing Platform',
-    description: 'Get started with Invoice Next or reach out to our team. Create and send professional invoices in 60 seconds with no credit card required.',
+    description: 'Get started with Invoice Next or reach out to our team. Create and send professional invoices online with no credit card required.',
     url: 'https://invonxt.com/contact',
   },
   '/privacy': {
     title: 'Privacy & Data Security — Invoice Next',
-    description: 'Discover how Invoice Next protects your business and client billing data with bank-grade 256-bit AES encryption, secure cloud storage, and 99.9% uptime.',
+    description: 'Discover how Invoice Next protects your business and client billing data with bank-grade 256-bit AES encryption, secure cloud storage, and reliable cloud access.',
     url: 'https://invonxt.com/privacy',
   },
   '/terms': {
     title: 'Terms & Pricing Plans — Invoice Next',
-    description: 'Review Invoice Next subscription terms, flexible monthly and annual pricing plans, unlimited invoicing features, and our 30-day money-back guarantee.',
+    description: 'Review Invoice Next subscription terms, flexible monthly and annual pricing plans, unlimited invoicing features, and clear cancellation policy.',
     url: 'https://invonxt.com/terms',
   },
 };
