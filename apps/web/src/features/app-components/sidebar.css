@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Invonxt Collapsible Sidebar & Layout Transitions
+   ========================================================================== */
+
+/* Main layout grid transitions */
+.app-shell {
+  display: grid;
+  grid-template-columns: 264px minmax(0, 1fr);
+  min-height: 100vh;
+  transition: grid-template-columns 240ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-shell.sidebar-collapsed {
+  grid-template-columns: 72px minmax(0, 1fr);
+}
+
+/* Sidebar container transition */
+.app-sidebar {
+  transition: width 240ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Floating toggle arrow button */
+.sidebar-toggle-btn {
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+  will-change: transform;
+}
+
+.sidebar-toggle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(16, 168, 135, 0.2);
+}
+
+/* Sleek custom scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
+
+/* Responsive adjustments for mobile/tablet */
+@media (max-width: 1024px) {
+  .app-shell {
+    grid-template-columns: 100%;
+  }
+
+  .app-shell.sidebar-collapsed {
+    grid-template-columns: 100%;
+  }
+
+  .sidebar-toggle-btn {
+    display: none;
+  }
+}
