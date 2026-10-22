@@ -8,11 +8,11 @@ function App() {
         <Router>
             <ScrollToTop />
             <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<HomePage />} />
-                <Route path="/contact" element={<HomePage />} />
-                <Route path="/privacy" element={<HomePage />} />
-                <Route path="/terms" element={<HomePage />} />
+                <Route path="/" element={<HomePage routePath="/" />} />
+                <Route path="/about" element={<HomePage routePath="/about" />} />
+                <Route path="/contact" element={<HomePage routePath="/contact" />} />
+                <Route path="/privacy" element={<HomePage routePath="/privacy" />} />
+                <Route path="/terms" element={<HomePage routePath="/terms" />} />
             </Routes>
         </Router>
     );

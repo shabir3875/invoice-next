@@ -11,7 +11,8 @@ const ScrollToTop = () => {
             '/privacy': 'security',
             '/terms': 'pricing',
         };
-        const targetId = hash ? hash.slice(1) : routeSectionMap[pathname];
+        const normalizedPath = pathname.replace(/\/+$/, '') || '/';
+        const targetId = hash ? hash.slice(1) : routeSectionMap[normalizedPath];
 
         if (targetId) {
             const target = document.getElementById(targetId);

@@ -39,15 +39,51 @@ async function prerender() {
 			console.log(`✅ Prerendered static HTML injected into ${path.relative(webRoot, filePath)}`);
 		}
 
-		// Generate static route entrypoints (/about, /contact, /privacy, /terms) so static hosts return HTTP 200 OK instead of 404
+		// Generate static route entrypoints (/about, /contact, /privacy, /terms) with route-specific metadata & canonical URLs
+		const routeMetaMap = {
+			about: {
+				title: 'About Invoice Next — Online Invoicing for Small Businesses',
+				description: 'Learn how Invoice Next helps 200,000+ freelancers and small businesses create, send, and organize invoices, expenses, and documents in three simple steps.',
+				url: 'https://invonxt.com/about',
+			},
+			contact: {
+				title: 'Contact & Get Started — Invoice Next Invoicing Platform',
+				description: 'Get started with Invoice Next or reach out to our team. Create and send professional invoices in 60 seconds with no credit card required.',
+				url: 'https://invonxt.com/contact',
+			},
+			privacy: {
+				title: 'Privacy & Data Security — Invoice Next',
+				description: 'Discover how Invoice Next protects your business and client billing data with bank-grade 256-bit AES encryption, secure cloud storage, and 99.9% uptime.',
+				url: 'https://invonxt.com/privacy',
+			},
+			terms: {
+				title: 'Terms & Pricing Plans — Invoice Next',
+				description: 'Review Invoice Next subscription terms, flexible monthly and annual pricing plans, unlimited invoicing features, and our 30-day money-back guarantee.',
+				url: 'https://invonxt.com/terms',
+			},
+		};
 		const distAppDir = path.resolve(webRoot, '../../dist/apps/web');
 		const distIndexHtmlPath = path.join(distAppDir, 'index.html');
 		if (fs.existsSync(distIndexHtmlPath)) {
 			const distIndexHtml = fs.readFileSync(distIndexHtmlPath, 'utf8');
-			for (const routeName of ['about', 'contact', 'privacy', 'terms']) {
+			for (const [routeName, meta] of Object.entries(routeMetaMap)) {
 				const routeDir = path.join(distAppDir, routeName);
 				fs.mkdirSync(routeDir, { recursive: true });
-				fs.writeFileSync(path.join(routeDir, 'index.html'), distIndexHtml, 'utf8');
+				const routeHtml = distIndexHtml
+					.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`)
+					.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="description" content="${meta.description}" data-react-helmet="true" />`)
+					.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<link rel="canonical" href="${meta.url}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:title" content="${meta.title}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:description" content="${meta.description}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${meta.url}" data-react-helmet="true" />`)
+					.replace(/<meta name="twitter:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="twitter:title" content="${meta.title}" data-react-helmet="true" />`)
+					.replace(/<meta name="twitter:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="twitter:description" content="${meta.description}" data-react-helmet="true" />`)
+					.replace(
+						/"@type":\s*"WebPage",\s*"@id":\s*"https:\/\/invonxt\.com\/#webpage",\s*"url":\s*"https:\/\/invonxt\.com\/",\s*"name":\s*".*?",\s*"description":\s*".*?"/,
+						`"@type": "WebPage",\n\t\t\t\t\t\t"@id": "${meta.url}#webpage",\n\t\t\t\t\t\t"url": "${meta.url}",\n\t\t\t\t\t\t"name": "${meta.title}",\n\t\t\t\t\t\t"description": "${meta.description}"`
+					);
+				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
+				fs.writeFileSync(path.join(distAppDir, `${routeName}.html`), routeHtml, 'utf8');
 			}
 			console.log('✅ Generated static route HTML files for /about, /contact, /privacy, /terms');
 		}

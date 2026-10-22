@@ -844,23 +844,47 @@ function Footer() {
   );
 }
 
-export default function HomePage() {
-  const pageTitle = 'Invoice Next — Simple Invoicing for Small Businesses';
-  const pageDescription = 'Invoice Next helps freelancers and small businesses create professional invoices, accept online payments, and manage billing faster with simple tools.';
+const ROUTE_META = {
+  '/about': {
+    title: 'About Invoice Next — Online Invoicing for Small Businesses',
+    description: 'Learn how Invoice Next helps 200,000+ freelancers and small businesses create, send, and organize invoices, expenses, and documents in three simple steps.',
+    url: 'https://invonxt.com/about',
+  },
+  '/contact': {
+    title: 'Contact & Get Started — Invoice Next Invoicing Platform',
+    description: 'Get started with Invoice Next or reach out to our team. Create and send professional invoices in 60 seconds with no credit card required.',
+    url: 'https://invonxt.com/contact',
+  },
+  '/privacy': {
+    title: 'Privacy & Data Security — Invoice Next',
+    description: 'Discover how Invoice Next protects your business and client billing data with bank-grade 256-bit AES encryption, secure cloud storage, and 99.9% uptime.',
+    url: 'https://invonxt.com/privacy',
+  },
+  '/terms': {
+    title: 'Terms & Pricing Plans — Invoice Next',
+    description: 'Review Invoice Next subscription terms, flexible monthly and annual pricing plans, unlimited invoicing features, and our 30-day money-back guarantee.',
+    url: 'https://invonxt.com/terms',
+  },
+};
+
+export default function HomePage({ routePath }) {
+  const currentPath = routePath || (typeof window !== 'undefined' ? (window.location.pathname.replace(/\/+$/, '') || '/') : '/');
+  const activeMeta = ROUTE_META[currentPath] || {
+    title: 'Invoice Next — Simple Invoicing for Small Businesses',
+    description: 'Invoice Next helps freelancers and small businesses create professional invoices, accept online payments, and manage billing faster with simple tools.',
+    url: 'https://invonxt.com/',
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
       <Helmet>
-        <title>Invoice Next — Simple Invoicing for Small Businesses</title>
-        <meta
-          name="description"
-          content="Invoice Next helps freelancers and small businesses create professional invoices, accept online payments, and manage billing faster with simple tools."
-        />
+        <title>{activeMeta.title}</title>
+        <meta name="description" content={activeMeta.description} />
       </Helmet>
       <Seo
-        title={pageTitle}
-        description={pageDescription}
-        url="https://invonxt.com/"
+        title={activeMeta.title}
+        description={activeMeta.description}
+        url={activeMeta.url}
         image="https://invonxt.com/og-image.png"
         siteName="Invoice Next"
       />

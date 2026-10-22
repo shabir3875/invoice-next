@@ -8,7 +8,7 @@ const Seo = ({
     title,
     description,
     image = 'https://invonxt.com/og-image.png',
-    imageAlt = 'Invoice Next — Simple Invoicing for Small Businesses',
+    imageAlt = 'Invoice Next — Simple online invoicing software dashboard for freelancers and small businesses',
     url = 'https://invonxt.com/',
     siteName = 'Invoice Next',
     locale = 'en_US',
@@ -38,7 +38,6 @@ const Seo = ({
             <meta name="twitter:site" content="@invoicenext" />
             <meta name="twitter:creator" content="@invoicenext" />
             {title && <meta name="twitter:title" content={title} />}
-            {description && <meta property="twitter:description" content={description} />}
             {description && <meta name="twitter:description" content={description} />}
             {image && <meta name="twitter:image" content={image} />}
             {imageAlt && <meta name="twitter:image:alt" content={imageAlt} />}
