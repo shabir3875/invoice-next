@@ -8,17 +8,23 @@ function HashRouteHandler({ children }) {
     const [hash, setHash] = React.useState(() => (typeof window !== 'undefined' ? window.location.hash : ''));
 
     React.useEffect(() => {
-        const handleHashChange = () => setHash(window.location.hash);
+        const handleHashChange = () => {
+            const h = window.location.hash;
+            setHash(h);
+
+            // If navigating to core app hash routes on the marketing domain, safely redirect to the live app
+            if (h && (h.startsWith('#/dashboard') || h.startsWith('#/invoices') || h.startsWith('#/customers') || h.startsWith('#/expenses') || h.startsWith('#/documents') || h.startsWith('#/settings'))) {
+                window.location.href = `https://app.invonxt.com/${h}`;
+            }
+        };
+
         window.addEventListener('hashchange', handleHashChange);
         return () => window.removeEventListener('hashchange', handleHashChange);
     }, []);
 
+    // Render the responsive Premium Plans shell if requested via hash
     if (hash === '#/premium' || hash.startsWith('#/premium')) {
         return <AppShell initialPage="premium" />;
-    }
-
-    if (hash === '#/dashboard' || hash.startsWith('#/app')) {
-        return <AppShell initialPage="dashboard" />;
     }
 
     return children;
@@ -36,8 +42,6 @@ function App() {
                     <Route path="/privacy" element={<HomePage routePath="/privacy" />} />
                     <Route path="/terms" element={<HomePage routePath="/terms" />} />
                     <Route path="/premium" element={<AppShell initialPage="premium" />} />
-                    <Route path="/app" element={<AppShell initialPage="dashboard" />} />
-                    <Route path="/app/premium" element={<AppShell initialPage="premium" />} />
                 </Routes>
             </HashRouteHandler>
         </Router>
