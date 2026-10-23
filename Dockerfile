@@ -1,23 +1,5 @@
-FROM node:22-alpine AS build
-
-WORKDIR /app
-
-# Copy root and workspace package files
-COPY package*.json ./
-COPY apps/web/package*.json ./apps/web/
-COPY tools/safe-braces/package*.json ./tools/safe-braces/
-
-# Install dependencies for build
-RUN npm install
-
-# Copy application source code
-COPY . .
-
-# Run production build
-RUN npm run build
-
 # Ultra-lightweight production web server (Nginx Alpine ~25MB total image size)
-FROM nginx:alpine AS runner
+FROM nginx:alpine
 
 # Remove default nginx static assets
 RUN rm -rf /usr/share/nginx/html/*
@@ -25,8 +7,8 @@ RUN rm -rf /usr/share/nginx/html/*
 # Dummy no-op php script so Coolify placeholder lifecycle commands exit 0 cleanly
 RUN printf '#!/bin/sh\nexit 0\n' > /usr/local/bin/php && chmod +x /usr/local/bin/php
 
-# Copy built production frontend assets
-COPY --from=build /app/dist/apps/web /usr/share/nginx/html
+# Copy pre-built production frontend assets
+COPY dist/apps/web /usr/share/nginx/html
 
 # Configure Nginx to serve on port 3000 with SPA routing fallback
 RUN printf 'server {\n\
