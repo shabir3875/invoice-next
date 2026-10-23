@@ -1,0 +1,9 @@
+node_modules
+.git
+.github
+.gemini
+dist
+scratch
+npm-debug.log
+*.md
+!README.md
