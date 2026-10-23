@@ -22,6 +22,9 @@ FROM nginx:alpine AS runner
 # Remove default nginx static assets
 RUN rm -rf /usr/share/nginx/html/*
 
+# Dummy no-op php script so Coolify placeholder lifecycle commands exit 0 cleanly
+RUN printf '#!/bin/sh\nexit 0\n' > /usr/local/bin/php && chmod +x /usr/local/bin/php
+
 # Copy built production frontend assets
 COPY --from=build /app/dist/apps/web /usr/share/nginx/html
 
