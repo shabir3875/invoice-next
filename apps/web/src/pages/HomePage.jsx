@@ -568,7 +568,7 @@ function TemplatesShowcase() {
         <Reveal className="max-w-2xl mx-auto text-center mb-10 md:mb-14">
           <p className="inline-flex items-center gap-1.5 text-primary font-semibold text-sm mb-3">
             <Palette className="w-4 h-4" aria-hidden />
-            The InvoNxt Designer Suite
+            The Invoice Next Designer Suite
           </p>
           <h2 className="font-display text-3xl sm:text-4xl md:text-[2.75rem] font-extrabold tracking-tight text-foreground leading-tight mb-4">
             Invoice templates crafted to impress
@@ -780,12 +780,12 @@ function ComparisonSection() {
     <section id="comparison" className="py-20 md:py-28 bg-background scroll-mt-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal className="max-w-2xl mx-auto text-center mb-12 md:mb-16">
-          <p className="text-primary font-semibold text-sm mb-3">Why InvoNxt</p>
+          <p className="text-primary font-semibold text-sm mb-3">Why Invoice Next</p>
           <h2 className="font-display text-3xl sm:text-4xl md:text-[2.75rem] font-extrabold tracking-tight text-foreground leading-tight mb-4">
             Built for modern businesses, not 2012
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-            See how InvoNxt beats traditional invoicing tools like BizXpert on speed, design flexibility, and day-to-day productivity.
+            See how Invoice Next beats traditional invoicing tools on speed, design flexibility, and day-to-day productivity.
           </p>
         </Reveal>
 
@@ -795,9 +795,9 @@ function ComparisonSection() {
               <div className="col-span-4 sm:col-span-3 text-muted-foreground uppercase tracking-wider text-[11px]">Feature</div>
               <div className="col-span-4 sm:col-span-5 text-emerald-700 flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>Invoice Next (InvoNxt)</span>
+                <span>Invoice Next</span>
               </div>
-              <div className="col-span-4 sm:col-span-4 text-muted-foreground">Traditional Software (BizXpert)</div>
+              <div className="col-span-4 sm:col-span-4 text-muted-foreground">Traditional Software</div>
             </div>
 
             <div className="divide-y divide-border/70 text-xs sm:text-sm">
