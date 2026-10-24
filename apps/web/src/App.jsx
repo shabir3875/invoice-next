@@ -12,15 +12,10 @@ function HashRouteHandler({ children }) {
             const h = window.location.hash;
             setHash(h);
 
-            // If navigating to core app hash routes, safely redirect to local or production SaaS app
-            if (typeof window !== 'undefined') {
-                const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-                const isLive = window.location.hostname === 'invonxt.com' || window.location.hostname === 'www.invonxt.com';
-                if (isLive || isLocal) {
-                    const base = isLocal ? (import.meta.env.VITE_APP_URL || 'http://localhost:5173') : 'https://app.invonxt.com';
-                    if (h && (h.startsWith('#/dashboard') || h.startsWith('#/invoices') || h.startsWith('#/customers') || h.startsWith('#/expenses') || h.startsWith('#/documents') || h.startsWith('#/settings'))) {
-                        window.location.href = `${base}/${h}`;
-                    }
+            // If navigating to core app hash routes on the marketing domain, safely redirect to the live app
+            if (typeof window !== 'undefined' && (window.location.hostname === 'invonxt.com' || window.location.hostname === 'www.invonxt.com')) {
+                if (h && (h.startsWith('#/dashboard') || h.startsWith('#/invoices') || h.startsWith('#/customers') || h.startsWith('#/expenses') || h.startsWith('#/documents') || h.startsWith('#/settings'))) {
+                    window.location.href = `https://app.invonxt.com/${h}`;
                 }
             }
         };

@@ -4,7 +4,6 @@ import {
   ArrowRight, Users, Clock, Check, Star, Menu, X,
   LayoutDashboard, Receipt, Settings, Search, Bell, Plus, TrendingUp,
   ShieldCheck, Globe, Sparkles, Wallet, FolderOpen, Package,
-  RefreshCw, Palette, Share2, Zap, CheckCircle2, FileText, Layers, ExternalLink,
 } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import CountUp from '@/components/CountUp';
@@ -15,31 +14,17 @@ import {
 
 const NAV_LINKS = [
   { label: 'Features', href: '#features' },
-  { label: 'Templates', href: '#templates' },
-  { label: 'Comparison', href: '#comparison' },
   { label: 'Reviews', href: '#reviews' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'FAQ', href: '#faq' },
 ];
 
-export const APP_URL = getAppUrl();
+const APP_URL = 'https://app.invonxt.com/';
 
-export function getAppUrl(path = '') {
-  if (typeof window !== 'undefined') {
-    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    const base = isLocal
-      ? (import.meta.env.VITE_APP_URL || 'http://localhost:5173')
-      : 'https://app.invonxt.com';
-    return path ? `${base}/${path.replace(/^\//, '')}` : base;
-  }
-  return import.meta.env.VITE_APP_URL || 'https://app.invonxt.com';
-}
-
-function PrimaryButton({ href, children, className = '', onClick }) {
-  const targetHref = href || getAppUrl();
+function PrimaryButton({ href = APP_URL, children, className = '', onClick }) {
   return (
     <a
-      href={targetHref}
+      href={href}
       onClick={onClick}
       className={`group inline-flex items-center justify-center gap-2 min-h-12 px-6 rounded-xl bg-gradient-primary text-white font-semibold text-sm shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${className}`}
     >
@@ -74,7 +59,7 @@ function Header() {
             ))}
           </nav>
           <div className="hidden md:flex items-center gap-2">
-            <a href={getAppUrl()} className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors px-3 py-2">
+            <a href={APP_URL} className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors px-3 py-2">
               Log in
             </a>
             <PrimaryButton className="!min-h-10 !px-5 !text-sm">Start free</PrimaryButton>
@@ -115,7 +100,6 @@ function Header() {
 const MENU_ITEMS = [
   { icon: LayoutDashboard, label: 'Dashboard', active: true },
   { icon: Receipt, label: 'Invoices' },
-  { icon: RefreshCw, label: 'Recurring' },
   { icon: Wallet, label: 'Expenses' },
   { icon: FolderOpen, label: 'Documents' },
   { icon: Users, label: 'Partners' },
@@ -240,8 +224,8 @@ function DashboardMockup() {
                   <span className="grid place-items-center w-7 h-7 rounded-lg text-muted-foreground hover:bg-muted">
                     <Bell className="w-3.5 h-3.5" aria-hidden />
                   </span>
-                  <span className="inline-flex items-center gap-1 rounded-lg bg-emerald-600 text-white text-[11px] font-semibold px-2.5 py-1.5 shadow-sm">
-                    <Plus className="w-3 h-3" aria-hidden /> Create ▾
+                  <span className="inline-flex items-center gap-1 rounded-lg bg-gradient-primary text-white text-[11px] font-semibold px-2.5 py-1.5">
+                    <Plus className="w-3 h-3" aria-hidden /> New invoice
                   </span>
                 </div>
               </div>
@@ -346,7 +330,7 @@ function Hero() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
               <PrimaryButton className="min-h-14 px-8 text-base">Start free</PrimaryButton>
               <a
-                href={getAppUrl()}
+                href={APP_URL}
                 className="inline-flex items-center justify-center min-h-14 px-8 rounded-xl border border-border bg-white text-foreground font-semibold text-base hover:border-primary/40 hover:bg-secondary transition-all"
               >
                 Log in
@@ -451,29 +435,24 @@ function HowItWorks() {
 
 function Features() {
   const features = [
-    { icon: LayoutDashboard, title: 'Smart Dashboard', text: 'Real-time overview of revenue, receivables, overdue invoices, and recent activity in one central hub.' },
-    { icon: Receipt, title: 'Invoicing Engine', text: 'Create, search, track, and send pixel-perfect invoices in seconds with automated balance calculations.' },
-    { icon: RefreshCw, title: 'Recurring Billing', text: 'Automate subscription schedules and retainers with weekly, monthly, and quarterly intervals and live MRR insights.' },
-    { icon: Palette, title: '5 Designer Templates', text: 'Choose from Stripe-minimal, corporate emerald, enterprise blue, creative violet, or compact retail slips.' },
-    { icon: Share2, title: 'Instant Public Links', text: 'Generate client-facing 1-click shareable payment links for lightning delivery via WhatsApp, email, or Slack.' },
-    { icon: Zap, title: 'Universal Fast Action', text: 'Jump directly to new invoices, expenses, quotes, items, or customers from anywhere in the platform.' },
-    { icon: Wallet, title: 'Expense Tracking', text: 'Record business overheads, attach receipts, and track operational expenses alongside your income.' },
-    { icon: FolderOpen, title: 'Quotes & Documents', text: 'Convert estimates to paid invoices in 1 click and keep your commercial documentation unified.' },
-    { icon: Users, title: 'Client & Partner CRM', text: 'Maintain client directories, payment terms, contact details, and transaction histories with ease.' },
-    { icon: Package, title: 'Product Catalog', text: 'Catalog inventory items, standard rates, descriptions, and tax rules for instant invoice line additions.' },
-    { icon: Settings, title: 'Custom Organization', text: 'Tailor currency symbols, numbering prefixes, tax groups, payment instructions, and team settings.' },
-    { icon: ShieldCheck, title: 'Security & Auto-Backups', text: 'Bank-grade 256-bit data encryption with automated daily cloud backups so your finances are always safe.' },
+    { icon: LayoutDashboard, title: 'Dashboard', text: 'Open on a clear overview of your studio, with paid totals and recent activity in one place.' },
+    { icon: Receipt, title: 'Invoices', text: 'Create, search, and keep track of the invoices you send.' },
+    { icon: Wallet, title: 'Expenses', text: 'Record business expenses alongside the work you bill.' },
+    { icon: FolderOpen, title: 'Documents', text: 'Keep business documents together so they are easy to find.' },
+    { icon: Users, title: 'Partners', text: 'Manage the people and companies you work with.' },
+    { icon: Package, title: 'Items', text: 'Keep a list of the products and services you add to invoices.' },
+    { icon: Settings, title: 'Settings', text: 'Update your account from the admin menu when you need to.' },
   ];
   return (
     <section id="features" className="py-20 md:py-28 bg-background scroll-mt-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal className="max-w-2xl mx-auto text-center mb-12 md:mb-16">
-          <p className="text-primary font-semibold text-sm mb-3">Modern Invoicing Tools</p>
+          <p className="text-primary font-semibold text-sm mb-3">Features</p>
           <h2 className="font-display text-3xl sm:text-4xl md:text-[2.75rem] font-extrabold tracking-tight text-foreground leading-tight mb-4">
-            Everything your business needs to get paid
+            Everything you need, nothing you don&apos;t
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-            From automated recurring billing and designer invoice templates to instant shareable links and expense tracking — all unified in one lightning-fast platform.
+            Complete small business billing software and online invoice management — dashboard, invoices, expenses, documents, partners, items, and settings in one simple tool.
           </p>
         </Reveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
@@ -494,349 +473,14 @@ function Features() {
   );
 }
 
-function TemplatesShowcase() {
-  const [activeTab, setActiveTab] = useState('fintech-minimal');
-
-  const templates = [
-    {
-      id: 'fintech-minimal',
-      name: 'Fintech Minimal',
-      badge: 'Stripe Style',
-      accentColor: '#10b981',
-      description: 'Ultra-clean typography, generous whitespace, crisp 1px borders, and subtle metadata pills. Engineered for digital agencies, modern SaaS, and independent consultants who value understated elegance.',
-      bestFor: 'Tech Startups, Consultants & Agencies',
-      headerStyle: 'bg-white border-b border-slate-200 text-slate-900',
-      tableHeaderStyle: 'bg-slate-50 text-slate-600 border-y border-slate-200',
-      totalBoxStyle: 'bg-slate-50 border border-slate-200 text-slate-900',
-      highlights: ['Minimalist border-bottom rows', 'Zero margin clutter', 'Sleek sans-serif typography', 'Subtle status pills'],
-    },
-    {
-      id: 'executive-emerald',
-      name: 'Executive Emerald',
-      badge: 'Corporate Prestige',
-      accentColor: '#047857',
-      description: 'A stately dark emerald hero banner with high-contrast executive metadata. Designed to project financial authority, trust, and premium corporate caliber.',
-      bestFor: 'Corporate B2B, Legal, Advisory & Accounting',
-      headerStyle: 'bg-emerald-950 text-white shadow-sm',
-      tableHeaderStyle: 'bg-emerald-900/10 text-emerald-900 border-y border-emerald-200',
-      totalBoxStyle: 'bg-emerald-950 text-white',
-      highlights: ['Deep emerald corporate header band', 'High-contrast white & gold accents', 'Formal remittance advice block', 'Auditor-friendly formatting'],
-    },
-    {
-      id: 'enterprise-blue',
-      name: 'Enterprise Blue',
-      badge: 'DevExpress Style',
-      accentColor: '#1d4ed8',
-      description: 'Cobalt corporate styling with solid structure, distinct boxed "Bill To" cards, and formal tabular item lists. Built for enterprise trade, wholesale, and logistics.',
-      bestFor: 'Wholesale, Logistics, Manufacturing & Construction',
-      headerStyle: 'bg-blue-900 text-white',
-      tableHeaderStyle: 'bg-blue-900 text-white font-semibold',
-      totalBoxStyle: 'bg-blue-50 border border-blue-200 text-blue-950',
-      highlights: ['Solid cobalt table header', 'Structured boxed address cards', 'Formal banking details footer', 'High-volume item row clarity'],
-    },
-    {
-      id: 'creative-violet',
-      name: 'Creative Violet',
-      badge: 'Modern Studio',
-      accentColor: '#7c3aed',
-      description: 'Energetic violet accents with sleek rounded badges and high visual personality. Perfect for design studios, video creators, and creative agencies.',
-      bestFor: 'Design Studios, Videographers & Creative Freelancers',
-      headerStyle: 'bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-800 text-white',
-      tableHeaderStyle: 'bg-purple-50 text-purple-800 border-b-2 border-purple-200',
-      totalBoxStyle: 'bg-purple-50 border border-purple-200 text-purple-900',
-      highlights: ['Vibrant violet gradient styling', 'Service notes indented cleanly', 'Modern rounded UI pill elements', 'High client visual impression'],
-    },
-    {
-      id: 'compact-slip',
-      name: 'Compact Slip',
-      badge: 'High Density',
-      accentColor: '#d97706',
-      description: 'Space-optimized single-sheet layout engineered to fit 15 to 30 items without page overflow. Essential for parts distributors, repair shops, and rapid commerce.',
-      bestFor: 'Trade Contractors, Retail & Fast Commerce',
-      headerStyle: 'bg-zinc-900 text-white',
-      tableHeaderStyle: 'bg-zinc-100 text-zinc-700 border-y border-zinc-300 font-mono text-[11px]',
-      totalBoxStyle: 'bg-zinc-100 border border-zinc-300 text-zinc-900 font-mono',
-      highlights: ['Condensed single-page density', 'Micro font tabular precision', 'Instant print & slip receipt mode', 'Space for up to 30 line items'],
-    },
-  ];
-
-  const current = templates.find((t) => t.id === activeTab) || templates[0];
-
-  return (
-    <section id="templates" className="py-20 md:py-28 bg-muted/30 border-y border-border scroll-mt-28">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <Reveal className="max-w-2xl mx-auto text-center mb-10 md:mb-14">
-          <p className="inline-flex items-center gap-1.5 text-primary font-semibold text-sm mb-3">
-            <Palette className="w-4 h-4" aria-hidden />
-            The Invoice Next Designer Suite
-          </p>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-[2.75rem] font-extrabold tracking-tight text-foreground leading-tight mb-4">
-            Invoice templates crafted to impress
-          </h2>
-          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-            No more ugly spreadsheets. Switch between 5 distinct, high-converting invoice layouts tailored to your exact industry.
-          </p>
-        </Reveal>
-
-        {/* Tab Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
-          {templates.map((tpl) => (
-            <button
-              key={tpl.id}
-              type="button"
-              onClick={() => setActiveTab(tpl.id)}
-              className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
-                activeTab === tpl.id
-                  ? 'bg-foreground text-background shadow-md scale-[1.02]'
-                  : 'bg-white border border-border text-muted-foreground hover:text-foreground hover:bg-muted/50'
-              }`}
-            >
-              <span>{tpl.name}</span>
-              <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${
-                activeTab === tpl.id ? 'bg-white/20 text-white' : 'bg-muted text-muted-foreground'
-              }`}>
-                {tpl.badge}
-              </span>
-            </button>
-          ))}
-        </div>
-
-        {/* Interactive Template Preview Grid */}
-        <div className="grid lg:grid-cols-12 gap-8 items-center">
-          {/* Left: Template Details & Highlights */}
-          <div className="lg:col-span-5 space-y-6">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-3 border" style={{ backgroundColor: `${current.accentColor}15`, color: current.accentColor, borderColor: `${current.accentColor}30` }}>
-                <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>{current.name}</span>
-              </div>
-              <h3 className="font-display text-2xl font-bold text-foreground mb-3">
-                Tailored for {current.bestFor}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                {current.description}
-              </p>
-            </div>
-
-            <div className="space-y-2.5">
-              <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Template Highlights</div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {current.highlights.map((h) => (
-                  <div key={h} className="flex items-center gap-2 text-xs text-foreground/90 font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: current.accentColor }} />
-                    {h}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="pt-4 flex flex-wrap items-center gap-3">
-              <PrimaryButton href={getAppUrl('#/invoices/new')} className="!min-h-11 !px-5 !text-sm">
-                Use this template free
-              </PrimaryButton>
-              <a
-                href={getAppUrl('#/invoices/new')}
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-foreground px-3 py-2"
-              >
-                <span>Live PDF preview</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Right: Rendered Mock Invoice Card */}
-          <div className="lg:col-span-7">
-            <div className="rounded-2xl border border-border bg-white shadow-float overflow-hidden transition-all duration-300">
-              {/* Dynamic Header */}
-              <div className={`p-6 sm:p-7 ${current.headerStyle}`}>
-                <div className="flex flex-wrap items-start justify-between gap-4">
-                  <div>
-                    <div className="font-display text-xl font-extrabold tracking-tight">Nexus Studio Inc.</div>
-                    <div className="text-xs opacity-80 mt-1">contact@nexusstudio.io · +1 (555) 019-2834</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="font-mono text-sm font-bold uppercase tracking-wider">INVOICE #INV-2026-0042</div>
-                    <div className="text-xs opacity-80 mt-1">Date: Oct 24, 2026 · Due in 15 days</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bill To & Metadata */}
-              <div className="p-6 sm:p-7 border-b border-border/70 bg-white">
-                <div className="grid grid-cols-2 gap-4 text-xs">
-                  <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground block mb-1">Billed To</span>
-                    <strong className="text-foreground text-sm font-display block">Apex Ventures Ltd.</strong>
-                    <span className="text-muted-foreground block">742 Evergreen Terrace, Suite 100</span>
-                    <span className="text-muted-foreground block">finance@apexventures.io</span>
-                  </div>
-                  <div className="text-right">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground block mb-1">Invoice Status</span>
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                      Ready to Send
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Line Items Table */}
-              <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs">
-                  <thead className={current.tableHeaderStyle}>
-                    <tr>
-                      <th className="py-2.5 px-6 font-semibold">Description</th>
-                      <th className="py-2.5 px-4 font-semibold text-center">Qty</th>
-                      <th className="py-2.5 px-4 font-semibold text-right">Rate</th>
-                      <th className="py-2.5 px-6 font-semibold text-right">Amount</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-border/60">
-                    <tr className="hover:bg-muted/30">
-                      <td className="py-3 px-6">
-                        <div className="font-semibold text-foreground">Cloud SaaS Platform Retainer</div>
-                        <div className="text-[11px] text-muted-foreground">Monthly dedicated recurring retainer tier</div>
-                      </td>
-                      <td className="py-3 px-4 text-center text-muted-foreground">1</td>
-                      <td className="py-3 px-4 text-right text-muted-foreground">$2,500.00</td>
-                      <td className="py-3 px-6 text-right font-medium text-foreground">$2,500.00</td>
-                    </tr>
-                    <tr className="hover:bg-muted/30">
-                      <td className="py-3 px-6">
-                        <div className="font-semibold text-foreground">API Architecture & Integration</div>
-                        <div className="text-[11px] text-muted-foreground">Custom webhook connectors and billing sync</div>
-                      </td>
-                      <td className="py-3 px-4 text-center text-muted-foreground">1</td>
-                      <td className="py-3 px-4 text-right text-muted-foreground">$1,250.00</td>
-                      <td className="py-3 px-6 text-right font-medium text-foreground">$1,250.00</td>
-                    </tr>
-                    <tr className="hover:bg-muted/30">
-                      <td className="py-3 px-6">
-                        <div className="font-semibold text-foreground">Priority SLA Support</div>
-                        <div className="text-[11px] text-muted-foreground">24/7 incident response coverage</div>
-                      </td>
-                      <td className="py-3 px-4 text-center text-muted-foreground">1</td>
-                      <td className="py-3 px-4 text-right text-muted-foreground">$500.00</td>
-                      <td className="py-3 px-6 text-right font-medium text-foreground">$500.00</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              {/* Total & Action Bar */}
-              <div className="p-6 bg-slate-50/70 border-t border-border flex flex-wrap items-center justify-between gap-4">
-                <div className="text-xs text-muted-foreground space-y-0.5">
-                  <div>Payment terms: <strong>Net 15 Days</strong></div>
-                  <div>Direct Deposit / Wire & Card accepted</div>
-                </div>
-                <div className={`px-5 py-3 rounded-xl text-right ${current.totalBoxStyle}`}>
-                  <div className="text-[10px] uppercase tracking-wider font-semibold opacity-75">Total Balance Due</div>
-                  <div className="font-display text-xl sm:text-2xl font-extrabold">$4,250.00</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ComparisonSection() {
-  const comparisons = [
-    {
-      feature: 'Invoice Templates',
-      invoNxt: '5 Designer-crafted print & PDF themes with brand color accents',
-      others: '1 Static, generic layout with outdated styling',
-    },
-    {
-      feature: 'Recurring Billing Engine',
-      invoNxt: 'Built-in auto-invoicing, weekly/monthly intervals & live MRR metrics',
-      others: 'Manual invoice re-entry or expensive third-party plugins',
-    },
-    {
-      feature: 'Quick Action Speed',
-      invoNxt: 'Universal "+ Create" topbar header & 4-step onboarding checklist',
-      others: 'Confusing nested sidebar sub-menus and multi-step setups',
-    },
-    {
-      feature: 'Client Payment Sharing',
-      invoNxt: '1-Click instant shareable link for WhatsApp, email, or Slack',
-      others: 'Requires downloading PDF to disk and manually emailing',
-    },
-    {
-      feature: 'Platform Performance',
-      invoNxt: 'Modern Go + React architecture with sub-second page loads',
-      others: 'Slow legacy monoliths prone to freezes and spin wheels',
-    },
-    {
-      feature: 'Pricing & Transparency',
-      invoNxt: 'Simple flat $3 - $5/month with unlimited everything & 0% hidden cuts',
-      others: 'Hidden payment transaction fees and restrictive document limits',
-    },
-  ];
-
-  return (
-    <section id="comparison" className="py-20 md:py-28 bg-background scroll-mt-28">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <Reveal className="max-w-2xl mx-auto text-center mb-12 md:mb-16">
-          <p className="text-primary font-semibold text-sm mb-3">Why Invoice Next</p>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-[2.75rem] font-extrabold tracking-tight text-foreground leading-tight mb-4">
-            Built for modern businesses, not 2012
-          </h2>
-          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-            See how Invoice Next beats traditional invoicing tools on speed, design flexibility, and day-to-day productivity.
-          </p>
-        </Reveal>
-
-        <Reveal>
-          <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-card">
-            <div className="grid grid-cols-12 bg-muted/60 p-4 sm:p-5 border-b border-border text-xs sm:text-sm font-bold text-foreground">
-              <div className="col-span-4 sm:col-span-3 text-muted-foreground uppercase tracking-wider text-[11px]">Feature</div>
-              <div className="col-span-4 sm:col-span-5 text-emerald-700 flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>Invoice Next</span>
-              </div>
-              <div className="col-span-4 sm:col-span-4 text-muted-foreground">Traditional Software</div>
-            </div>
-
-            <div className="divide-y divide-border/70 text-xs sm:text-sm">
-              {comparisons.map((c) => (
-                <div key={c.feature} className="grid grid-cols-12 p-4 sm:p-5 items-center hover:bg-muted/20 transition-colors">
-                  <div className="col-span-4 sm:col-span-3 font-semibold text-foreground">
-                    {c.feature}
-                  </div>
-                  <div className="col-span-4 sm:col-span-5 text-foreground font-medium flex items-start gap-2 pr-2">
-                    <span className="grid place-items-center w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 shrink-0 mt-0.5">
-                      <Check className="w-3.5 h-3.5" />
-                    </span>
-                    <span>{c.invoNxt}</span>
-                  </div>
-                  <div className="col-span-4 sm:col-span-4 text-muted-foreground flex items-start gap-2">
-                    <span className="grid place-items-center w-5 h-5 rounded-full bg-rose-50 text-rose-500 shrink-0 mt-0.5 font-bold text-[10px]">
-                      ✕
-                    </span>
-                    <span>{c.others}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Reveal>
-      </div>
-    </section>
-  );
-}
-
 const PLAN_FEATURES = [
-  'Unlimited Invoices & Recurring Billing',
-  '5 Designer PDF Invoice Templates',
-  'Instant 1-Click Shareable Payment Links',
-  'Universal Fast Action Topbar (+ Create)',
-  'Unlimited Expenses & Receipts',
-  'Unlimited Quotes & Estimates',
-  'Unlimited Clients & Catalog Items',
-  'Secure Data Storage & Auto Cloud Backups',
+  'Unlimited Invoices',
+  'Unlimited Expenses',
+  'Unlimited Quotes',
+  'Unlimited Stock Documents',
+  'Unlimited Clients & Products',
+  'Secure Data Storage Cloud',
+  'More Premium Features',
 ];
 
 function Testimonials() {
@@ -993,7 +637,7 @@ function Pricing() {
                   ))}
                 </ul>
                 <a
-                  href={getAppUrl('#/premium')}
+                  href={APP_URL}
                   className={`inline-flex w-full items-center justify-center min-h-12 rounded-xl font-semibold text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                     p.popular
                       ? 'bg-gradient-primary text-white shadow-glow hover:scale-[1.01] active:scale-[0.99]'
@@ -1059,7 +703,7 @@ function Cta() {
                 Create professional invoices and manage billing in minutes. Start free today — no credit card required.
               </p>
               <a
-                href={getAppUrl()}
+                href={APP_URL}
                 className="inline-flex items-center justify-center gap-2 min-h-14 px-8 rounded-xl bg-white text-primary font-bold text-base shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all"
               >
                 Start free
@@ -1251,8 +895,6 @@ export default function HomePage({ routePath }) {
         <Stats />
         <HowItWorks />
         <Features />
-        <TemplatesShowcase />
-        <ComparisonSection />
         <TrustBar />
         <Testimonials />
         <Pricing />
