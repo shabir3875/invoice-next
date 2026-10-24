@@ -22,12 +22,24 @@ const NAV_LINKS = [
   { label: 'FAQ', href: '#faq' },
 ];
 
-const APP_URL = 'https://app.invonxt.com/';
+export const APP_URL = getAppUrl();
 
-function PrimaryButton({ href = APP_URL, children, className = '', onClick }) {
+export function getAppUrl(path = '') {
+  if (typeof window !== 'undefined') {
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const base = isLocal
+      ? (import.meta.env.VITE_APP_URL || 'http://localhost:5173')
+      : 'https://app.invonxt.com';
+    return path ? `${base}/${path.replace(/^\//, '')}` : base;
+  }
+  return import.meta.env.VITE_APP_URL || 'https://app.invonxt.com';
+}
+
+function PrimaryButton({ href, children, className = '', onClick }) {
+  const targetHref = href || getAppUrl();
   return (
     <a
-      href={href}
+      href={targetHref}
       onClick={onClick}
       className={`group inline-flex items-center justify-center gap-2 min-h-12 px-6 rounded-xl bg-gradient-primary text-white font-semibold text-sm shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${className}`}
     >
@@ -62,7 +74,7 @@ function Header() {
             ))}
           </nav>
           <div className="hidden md:flex items-center gap-2">
-            <a href={APP_URL} className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors px-3 py-2">
+            <a href={getAppUrl()} className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors px-3 py-2">
               Log in
             </a>
             <PrimaryButton className="!min-h-10 !px-5 !text-sm">Start free</PrimaryButton>
@@ -334,7 +346,7 @@ function Hero() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
               <PrimaryButton className="min-h-14 px-8 text-base">Start free</PrimaryButton>
               <a
-                href={APP_URL}
+                href={getAppUrl()}
                 className="inline-flex items-center justify-center min-h-14 px-8 rounded-xl border border-border bg-white text-foreground font-semibold text-base hover:border-primary/40 hover:bg-secondary transition-all"
               >
                 Log in
@@ -619,11 +631,11 @@ function TemplatesShowcase() {
             </div>
 
             <div className="pt-4 flex flex-wrap items-center gap-3">
-              <PrimaryButton href={APP_URL} className="!min-h-11 !px-5 !text-sm">
+              <PrimaryButton href={getAppUrl('#/invoices/new')} className="!min-h-11 !px-5 !text-sm">
                 Use this template free
               </PrimaryButton>
               <a
-                href={APP_URL}
+                href={getAppUrl('#/invoices/new')}
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-foreground px-3 py-2"
               >
                 <span>Live PDF preview</span>
@@ -981,7 +993,7 @@ function Pricing() {
                   ))}
                 </ul>
                 <a
-                  href={APP_URL}
+                  href={getAppUrl('#/premium')}
                   className={`inline-flex w-full items-center justify-center min-h-12 rounded-xl font-semibold text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                     p.popular
                       ? 'bg-gradient-primary text-white shadow-glow hover:scale-[1.01] active:scale-[0.99]'
@@ -1047,7 +1059,7 @@ function Cta() {
                 Create professional invoices and manage billing in minutes. Start free today — no credit card required.
               </p>
               <a
-                href={APP_URL}
+                href={getAppUrl()}
                 className="inline-flex items-center justify-center gap-2 min-h-14 px-8 rounded-xl bg-white text-primary font-bold text-base shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all"
               >
                 Start free

@@ -17,11 +17,18 @@ export function AppShell({ initialPage = 'premium', onChoosePlan, onBack }) {
       console.error('Failed to save selected plan', e);
     }
 
+    const getTargetBase = () => {
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      return isLocal ? (import.meta.env.VITE_APP_URL || 'http://localhost:5173') : 'https://app.invonxt.com';
+    };
+
     if (onChoosePlan) {
       onChoosePlan(planId);
     } else if (typeof window !== 'undefined') {
-      if (window.location.hostname === 'invonxt.com' || window.location.hostname === 'www.invonxt.com') {
-        window.location.href = 'https://app.invonxt.com/#/settings';
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      const isLive = window.location.hostname === 'invonxt.com' || window.location.hostname === 'www.invonxt.com';
+      if (isLive || isLocal) {
+        window.location.href = `${getTargetBase()}/#/settings`;
       } else {
         window.location.hash = '#/settings';
       }
@@ -32,8 +39,10 @@ export function AppShell({ initialPage = 'premium', onChoosePlan, onBack }) {
     if (onBack) {
       onBack();
     } else if (typeof window !== 'undefined') {
-      if (window.location.hostname === 'invonxt.com' || window.location.hostname === 'www.invonxt.com') {
-        window.location.href = 'https://app.invonxt.com/#/dashboard';
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      const isLive = window.location.hostname === 'invonxt.com' || window.location.hostname === 'www.invonxt.com';
+      if (isLive || isLocal) {
+        window.location.href = `${isLocal ? (import.meta.env.VITE_APP_URL || 'http://localhost:5173') : 'https://app.invonxt.com'}/#/dashboard`;
       } else {
         window.location.hash = '#/dashboard';
       }
@@ -44,8 +53,10 @@ export function AppShell({ initialPage = 'premium', onChoosePlan, onBack }) {
     if (page === 'premium') {
       setCurrentPage('premium');
     } else if (typeof window !== 'undefined') {
-      if (window.location.hostname === 'invonxt.com' || window.location.hostname === 'www.invonxt.com') {
-        window.location.href = `https://app.invonxt.com/#/${page}`;
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      const isLive = window.location.hostname === 'invonxt.com' || window.location.hostname === 'www.invonxt.com';
+      if (isLive || isLocal) {
+        window.location.href = `${isLocal ? (import.meta.env.VITE_APP_URL || 'http://localhost:5173') : 'https://app.invonxt.com'}/#/${page}`;
       } else {
         window.location.hash = `#/${page}`;
       }
@@ -59,7 +70,8 @@ export function AppShell({ initialPage = 'premium', onChoosePlan, onBack }) {
         onNavigate={handleSidebarNavigate}
         onLogout={() => {
           if (typeof window !== 'undefined') {
-            window.location.href = 'https://app.invonxt.com/';
+            const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+            window.location.href = isLocal ? (import.meta.env.VITE_APP_URL || 'http://localhost:5173') : 'https://app.invonxt.com/';
           }
         }}
       />
