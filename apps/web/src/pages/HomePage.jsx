@@ -549,6 +549,7 @@ function Testimonials() {
 function Pricing() {
   const plans = [
     {
+      id: 'monthly',
       eyebrow: 'Flexible',
       name: '1 Month',
       desc: 'The freedom to upgrade your business one month at a time.',
@@ -557,8 +558,10 @@ function Pricing() {
       billing: '$5 billed every month. Cancel anytime.',
       save: null,
       popular: false,
+      url: `${APP_URL}#/premium?plan=monthly`,
     },
     {
+      id: 'two-year',
       eyebrow: 'Best value',
       name: '24 Months',
       desc: 'Maximum savings for businesses ready to grow for the long term.',
@@ -567,8 +570,10 @@ function Pricing() {
       billing: '$72 billed every 24 months.',
       save: 'SAVE $48',
       popular: true,
+      url: `${APP_URL}#/premium?plan=two-year`,
     },
     {
+      id: 'annual',
       eyebrow: 'Annual',
       name: '12 Months',
       desc: 'A simple annual plan with meaningful savings built in.',
@@ -577,6 +582,7 @@ function Pricing() {
       billing: '$48 billed every 12 months.',
       save: 'SAVE $48',
       popular: false,
+      url: `${APP_URL}#/premium?plan=annual`,
     },
   ];
   return (
@@ -637,7 +643,7 @@ function Pricing() {
                   ))}
                 </ul>
                 <a
-                  href={APP_URL}
+                  href={p.url || APP_URL}
                   className={`inline-flex w-full items-center justify-center min-h-12 rounded-xl font-semibold text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                     p.popular
                       ? 'bg-gradient-primary text-white shadow-glow hover:scale-[1.01] active:scale-[0.99]'

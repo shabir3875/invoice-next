@@ -14,7 +14,7 @@ function HashRouteHandler({ children }) {
 
             // If navigating to core app hash routes on the marketing domain, safely redirect to the live app
             if (typeof window !== 'undefined' && (window.location.hostname === 'invonxt.com' || window.location.hostname === 'www.invonxt.com')) {
-                if (h && (h.startsWith('#/dashboard') || h.startsWith('#/invoices') || h.startsWith('#/customers') || h.startsWith('#/expenses') || h.startsWith('#/documents') || h.startsWith('#/settings'))) {
+                if (h && (h.startsWith('#/dashboard') || h.startsWith('#/invoices') || h.startsWith('#/customers') || h.startsWith('#/expenses') || h.startsWith('#/documents') || h.startsWith('#/settings') || h.startsWith('#/premium'))) {
                     window.location.href = `https://app.invonxt.com/${h}`;
                 }
             }
