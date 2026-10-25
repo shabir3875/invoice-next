@@ -626,7 +626,7 @@ function Pricing() {
                   </div>
                   <h3 className="font-display text-2xl font-extrabold text-foreground">{p.name}</h3>
                   <p className="text-muted-foreground text-sm min-h-[2.5rem] leading-relaxed mt-2">{p.desc}</p>
-                  <div className="mt-4 text-[11px] font-bold uppercase tracking-[0.16em] text-rose-600">3 month offer</div>
+                  <div className="mt-4 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{p.id === "two-year" ? "2 Years Upfront · Best Value" : p.id === "annual" ? "Annual Billing · Save $48" : "Monthly Plan · Cancel Anytime"}</div>
                   <div className="flex items-baseline gap-2 mt-2">
                     <span className="text-lg text-muted-foreground line-through decoration-2">${p.oldPrice}</span>
                     <span className="font-display text-5xl font-extrabold tracking-tight text-foreground">${p.price}</span>
