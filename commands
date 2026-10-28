@@ -1,0 +1,25 @@
+Terminal 1: Go API Backend (Already Running)
+powershell
+cd D:\YUMNA\invoxa\api
+go run ./cmd/server
+
+Status: Port 8080 par active hai.
+
+Terminal 2: SaaS Frontend Dashboard (Start Karein)
+powershell
+cd D:\YUMNA\invoxa\web
+npm run dev
+
+Status: Start hone ke baad SaaS Dashboard port 5173 par live ho jayega.
+
+Terminal 3: Marketing Website (Already Running)
+powershell
+cd "D:\YUMNA\Invoice Software"
+npm run dev
+
+Login Details
+Login URL: <http://localhost:5173>
+Email: <demo@invonxt.com>
+Password: demo123
+
+Note: Terminal 1 aur Terminal 3 ko running rehne dein. SaaS Dashboard use karne ke liye Terminal 2 mein command run karein.
