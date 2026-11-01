@@ -9,6 +9,59 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+footer .text-slate-950 {
+  color: white;
+}
+
+@media (max-width: 1023px) {
+  header > div,
+  main > section:first-child > div.relative.mx-auto.grid {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  main > section:first-child > div.relative.mx-auto.grid {
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  main > section:first-child > div.relative.mx-auto.grid > * {
+    min-width: 0;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .preview-overlay,
+  .preview-overlay * {
+    visibility: visible !important;
+  }
+
+  .preview-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    overflow: visible !important;
+    background: white !important;
+    padding: 0 !important;
+  }
+
+  .preview-controls {
+    display: none !important;
+  }
+
+  .invoice-print {
+    max-width: none !important;
+    box-shadow: none !important;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
