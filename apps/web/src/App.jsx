@@ -43,6 +43,11 @@ function App() {
                     <Route path="/contact" element={<HomePage routePath="/contact" />} />
                     <Route path="/privacy" element={<HomePage routePath="/privacy" />} />
                     <Route path="/terms" element={<HomePage routePath="/terms" />} />
+                    <Route path="/templates/consulting" element={<HomePage routePath="/templates/consulting" />} />
+                    <Route path="/templates/freelance" element={<HomePage routePath="/templates/freelance" />} />
+                    <Route path="/template/freeluncer" element={<HomePage routePath="/template/freeluncer" />} />
+                    <Route path="/templates/law-firm" element={<HomePage routePath="/templates/law-firm" />} />
+                    <Route path="/templates/small-businesses" element={<HomePage routePath="/templates/small-businesses" />} />
                     <Route path="/premium" element={<AppShell initialPage="premium" />} />
                 </Routes>
             </HashRouteHandler>

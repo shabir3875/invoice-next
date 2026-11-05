@@ -9,6 +9,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* The freelancer page goes directly from its editorial content into the FAQ. */
+main[class*="max-w-[1170px]"] > section:nth-of-type(5) > h2,
+main[class*="max-w-[1170px]"] > section:nth-of-type(5) > h2 + p,
+main[class*="max-w-[1170px]"] > section:nth-of-type(5) > h2 + p + div {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
