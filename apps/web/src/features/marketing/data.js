@@ -51,12 +51,12 @@ export const templates = [
 ];
 
 export const solutions = [
-  { icon: Calculator, title: 'Accountants', text: 'Standardize client billing records and keep invoice, expense and document workflows organized.' },
-  { icon: GraduationCap, title: 'Education Consultants', text: 'Create professional service invoices and maintain a clear record for every student or institution.' },
-  { icon: BriefcaseBusiness, title: 'Business Consultants', text: 'Move from estimate to invoice while keeping client histories and service items ready to reuse.' },
-  { icon: FileClock, title: 'Freelancers', text: 'Invoice projects quickly, record partial payments and see outstanding balances without spreadsheets.' },
-  { icon: Hammer, title: 'Contractors', text: 'Turn estimates into invoices, document expenses and keep customer records accessible on the go.' },
-  { icon: FileCheck2, title: 'Small Businesses', text: 'Bring documents, customers, products and expenses into one straightforward business workspace.' },
+  { icon: Calculator, title: 'Accountants', route: '/solutions/accountants', text: 'Standardize client billing records and keep invoice, expense and document workflows organized.' },
+  { icon: GraduationCap, title: 'Education Consultants', route: '/solutions/consultants', text: 'Create professional service invoices and maintain a clear record for every student or institution.' },
+  { icon: BriefcaseBusiness, title: 'Business Consultants', route: '/solutions/consultants', text: 'Move from estimate to invoice while keeping client histories and service items ready to reuse.' },
+  { icon: FileClock, title: 'Freelancers', route: '/solutions/freelancers', text: 'Invoice projects quickly, record partial payments and see outstanding balances without spreadsheets.' },
+  { icon: Hammer, title: 'Contractors', route: '/solutions/contractors', text: 'Turn estimates into invoices, document expenses and keep customer records accessible on the go.' },
+  { icon: FileCheck2, title: 'Small Businesses', route: '/solutions/small-businesses', text: 'Bring documents, customers, products and expenses into one straightforward business workspace.' },
 ];
 
 export const demoTestimonials = [

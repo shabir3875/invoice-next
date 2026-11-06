@@ -7,12 +7,12 @@ import { APP_ROUTES } from './data';
 import './animated-features.css';
 
 const FEATURES = [
-  { title: 'Professional Invoices', text: 'Create branded invoices with customizable templates, your logo, items, taxes and payment terms.', icon: FileText, tone: 'orange', route: APP_ROUTES.invoices, scene: 'invoice' },
-  { title: 'Expenses & Insights', text: 'Track expenses, manage categories, and view revenue, profit, and financial trends in a clear dashboard.', icon: BarChart3, tone: 'blue', route: APP_ROUTES.expenses, scene: 'insights' },
-  { title: 'Clients, Services & More', text: 'Manage clients, suppliers, products, and services, reuse details, and keep all business records in one place.', icon: Users, tone: 'purple', route: APP_ROUTES.customers, scene: 'clients' },
-  { title: 'Estimates to Invoices, Instantly', text: 'Convert estimates, sales orders or proformas into invoices with one click. All details carry over automatically.', icon: FileCheck2, tone: 'green', route: APP_ROUTES.documents, scene: 'convert' },
-  { title: 'Recurring Invoices', text: 'Automate repeat billing for monthly services, retainers, and ongoing projects. Save time and get paid on schedule.', icon: RefreshCw, tone: 'orange', route: APP_ROUTES.invoices, scene: 'recurring' },
-  { title: 'Customer Statements', text: 'Generate professional account statements showing invoices, payments, credits, and outstanding balances.', icon: WalletCards, tone: 'blue', route: APP_ROUTES.customers, scene: 'statement' },
+  { title: 'Professional Invoices', text: 'Create branded invoices with customizable templates, your logo, items, taxes and payment terms.', icon: FileText, tone: 'orange', route: '/features/professional-invoices', scene: 'invoice' },
+  { title: 'Expenses & Insights', text: 'Track expenses, manage categories, and view revenue, profit, and financial trends in a clear dashboard.', icon: BarChart3, tone: 'blue', route: '/features/expense-management', scene: 'insights' },
+  { title: 'Clients, Services & More', text: 'Manage clients, suppliers, products, and services, reuse details, and keep all business records in one place.', icon: Users, tone: 'purple', route: '/features/client-management', scene: 'clients' },
+  { title: 'Estimates to Invoices, Instantly', text: 'Convert estimates, sales orders or proformas into invoices with one click. All details carry over automatically.', icon: FileCheck2, tone: 'green', route: '/features/estimates-to-invoices', scene: 'convert' },
+  { title: 'Recurring Invoices', text: 'Automate repeat billing for monthly services, retainers, and ongoing projects. Save time and get paid on schedule.', icon: RefreshCw, tone: 'orange', route: '/features/recurring-invoices', scene: 'recurring' },
+  { title: 'Customer Statements', text: 'Generate professional account statements showing invoices, payments, credits, and outstanding balances.', icon: WalletCards, tone: 'blue', route: '/features/customer-statements', scene: 'statement' },
 ];
 
 function MiniScene({ type }) {

@@ -3,6 +3,8 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
 import { AppShell } from './features/app-components';
+import FeatureDetailPage from './features/marketing/FeatureDetailPage';
+import PublicPage from './features/marketing/PublicPage';
 
 function HashRouteHandler({ children }) {
     const [hash, setHash] = React.useState(() => (typeof window !== 'undefined' ? window.location.hash : ''));
@@ -39,16 +41,25 @@ function App() {
             <HashRouteHandler>
                 <Routes>
                     <Route path="/" element={<HomePage routePath="/" />} />
-                    <Route path="/about" element={<HomePage routePath="/about" />} />
-                    <Route path="/contact" element={<HomePage routePath="/contact" />} />
-                    <Route path="/privacy" element={<HomePage routePath="/privacy" />} />
-                    <Route path="/terms" element={<HomePage routePath="/terms" />} />
+                    <Route path="/features" element={<PublicPage kind="features" />} />
+                    <Route path="/solutions/:slug" element={<PublicPage kind="solution" />} />
+                    <Route path="/pricing" element={<PublicPage kind="pricing" />} />
+                    <Route path="/about" element={<PublicPage kind="about" />} />
+                    <Route path="/contact" element={<PublicPage kind="contact" />} />
+                    <Route path="/support" element={<PublicPage kind="support" />} />
+                    <Route path="/faq" element={<PublicPage kind="faq" />} />
+                    <Route path="/privacy" element={<PublicPage kind="privacy" />} />
+                    <Route path="/terms" element={<PublicPage kind="terms" />} />
+                    <Route path="/cookie-policy" element={<PublicPage kind="cookie-policy" />} />
+                    <Route path="/refund-policy" element={<PublicPage kind="refund-policy" />} />
                     <Route path="/templates/consulting" element={<HomePage routePath="/templates/consulting" />} />
                     <Route path="/templates/freelance" element={<HomePage routePath="/templates/freelance" />} />
                     <Route path="/template/freeluncer" element={<HomePage routePath="/template/freeluncer" />} />
                     <Route path="/templates/law-firm" element={<HomePage routePath="/templates/law-firm" />} />
                     <Route path="/templates/small-businesses" element={<HomePage routePath="/templates/small-businesses" />} />
+                    <Route path="/features/:slug" element={<FeatureDetailPage />} />
                     <Route path="/premium" element={<AppShell initialPage="premium" />} />
+                    <Route path="*" element={<PublicPage kind="not-found" />} />
                 </Routes>
             </HashRouteHandler>
         </Router>

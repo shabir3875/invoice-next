@@ -17,6 +17,9 @@ async function prerender() {
 
 	try {
 		const { default: HomePage } = await vite.ssrLoadModule('/src/pages/HomePage.jsx');
+		const { default: FeatureDetailPage, FEATURE_SLUGS, getFeature } = await vite.ssrLoadModule('/src/features/marketing/FeatureDetailPage.jsx');
+		const { default: PublicPage, PUBLIC_ROUTES, getPublicRoute } = await vite.ssrLoadModule('/src/features/marketing/PublicPage.jsx');
+		const { default: TemplatePage, templatePages } = await vite.ssrLoadModule('/src/features/marketing/TemplatePage.jsx');
 		const appHtml = renderToString(React.createElement(HomePage));
 
 		if (!appHtml || !appHtml.includes('<h1')) {
@@ -85,7 +88,67 @@ async function prerender() {
 				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
 				fs.writeFileSync(path.join(distAppDir, `${routeName}.html`), routeHtml, 'utf8');
 			}
+			for (const slug of FEATURE_SLUGS) {
+				const feature = getFeature(slug);
+				const featureHtml = renderToString(React.createElement(FeatureDetailPage, { slug }));
+				const title = `${feature.short} | InvoNxt`;
+				const url = `https://invonxt.com/features/${slug}`;
+				const routeDir = path.join(distAppDir, 'features', slug);
+				fs.mkdirSync(routeDir, { recursive: true });
+				const routeHtml = distIndexHtml
+					.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${featureHtml}</div>\n\t\t`)
+					.replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
+					.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="description" content="${feature.description}" data-react-helmet="true" />`)
+					.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<link rel="canonical" href="${url}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:title" content="${title}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:description" content="${feature.description}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${url}" data-react-helmet="true" />`)
+					.replace(/<meta name="twitter:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="twitter:title" content="${title}" data-react-helmet="true" />`)
+					.replace(/<meta name="twitter:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="twitter:description" content="${feature.description}" data-react-helmet="true" />`);
+				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
+			}
+			for (const routePath of PUBLIC_ROUTES) {
+				const meta = getPublicRoute(routePath);
+				if (!meta) continue;
+				const publicHtml = renderToString(React.createElement(PublicPage, { kind: meta.kind, slug: meta.slug }));
+				const title = `${meta.title} | Invonxt`;
+				const url = `https://invonxt.com${routePath}`;
+				const routeDir = path.join(distAppDir, ...routePath.split('/').filter(Boolean));
+				fs.mkdirSync(routeDir, { recursive: true });
+				const routeHtml = distIndexHtml
+					.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${publicHtml}</div>\n\t\t`)
+					.replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
+					.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="description" content="${meta.description}" data-react-helmet="true" />`)
+					.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<link rel="canonical" href="${url}" data-react-helmet="true" />`)
+					.replace(/<meta name="robots" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="robots" content="${meta.noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:title" content="${title}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:description" content="${meta.description}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${url}" data-react-helmet="true" />`);
+				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
+				if (routePath.split('/').filter(Boolean).length === 1) {
+					fs.writeFileSync(path.join(distAppDir, `${routePath.slice(1)}.html`), routeHtml, 'utf8');
+				}
+			}
+			const notFoundHtml = renderToString(React.createElement(PublicPage, { kind: 'not-found' }));
+			for (const [routePath, template] of Object.entries(templatePages)) {
+				const pageHtml = renderToString(React.createElement(TemplatePage, { routePath }));
+				const title = `${template.name} Invoice Templates | Invonxt`;
+				const url = `https://invonxt.com${routePath}`;
+				const routeDir = path.join(distAppDir, ...routePath.split('/').filter(Boolean));
+				fs.mkdirSync(routeDir, { recursive: true });
+				const routeHtml = distIndexHtml
+					.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${pageHtml}</div>\n\t\t`)
+					.replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
+					.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="description" content="${template.description}" data-react-helmet="true" />`)
+					.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<link rel="canonical" href="${url}" data-react-helmet="true" />`);
+				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
+			}
+			fs.writeFileSync(path.join(distAppDir, '404.html'), distIndexHtml
+				.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${notFoundHtml}</div>\n\t\t`)
+				.replace(/<title>.*?<\/title>/, '<title>Page Not Found | Invonxt</title>')
+				.replace(/<meta name="robots" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, '<meta name="robots" content="noindex, follow" data-react-helmet="true" />'), 'utf8');
 			console.log('✅ Generated static route HTML files for /about, /contact, /privacy, /terms');
+			console.log(`✅ Generated ${FEATURE_SLUGS.length} static feature detail pages`);
 		}
 
 		// Update sitemap.xml lastmod date automatically

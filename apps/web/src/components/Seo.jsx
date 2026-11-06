@@ -8,7 +8,7 @@ const Seo = ({
     title,
     description,
     image = 'https://invonxt.com/og-image.png',
-    imageAlt = 'Invoice Next — Simple online invoicing software dashboard for freelancers and small businesses',
+    imageAlt = 'Invonxt invoicing dashboard for freelancers and small businesses',
     url = 'https://invonxt.com/',
     siteName = 'Invoice Next',
     locale = 'en_US',
@@ -22,8 +22,6 @@ const Seo = ({
             <link rel="canonical" href={canonical} />
             <meta name="robots" content={robots} />
             <meta name="author" content={siteName || 'Invoice Next'} />
-            <meta property="article:published_time" content="2026-10-01T00:00:00Z" />
-            <meta property="article:modified_time" content="2026-10-22T00:00:00Z" />
             <meta property="og:url" content={canonical} />
             <meta property="og:type" content={type} />
             <meta property="og:locale" content={locale} />
@@ -35,8 +33,6 @@ const Seo = ({
             {image && <meta property="og:image:height" content="630" />}
             {imageAlt && <meta property="og:image:alt" content={imageAlt} />}
             <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
-            <meta name="twitter:site" content="@invoicenext" />
-            <meta name="twitter:creator" content="@invoicenext" />
             {title && <meta name="twitter:title" content={title} />}
             {description && <meta name="twitter:description" content={description} />}
             {image && <meta name="twitter:image" content={image} />}
