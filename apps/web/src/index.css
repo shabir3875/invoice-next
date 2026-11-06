@@ -522,8 +522,66 @@ main[class*="max-w-[1170px]"] > section:nth-of-type(2) > p::after {
   object-position: right center;
 }
 
+.freelancer-second-workspace-image {
+  object-position: right center;
+}
+
+.freelance-payment-workflow-image {
+  object-position: right center;
+}
+
+.freelance-payment-guide h2 {
+  margin-bottom: 20px;
+  color: #0f172a;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+}
+
+.freelance-payment-guide h3 {
+  margin-top: 28px;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.freelance-payment-guide p,
+.freelance-payment-guide li {
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.freelance-payment-guide p {
+  margin-top: 12px;
+}
+
+.freelance-payment-guide ul {
+  margin: 12px 0 4px;
+  padding-left: 22px;
+  list-style: disc;
+}
+
+.freelance-payment-guide a {
+  color: #ea580c;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.freelance-payment-guide strong {
+  color: #1e293b;
+  font-weight: 800;
+}
+
 @media (max-width: 767px) {
   .freelancer-modern-workspace-image {
+    object-position: right center;
+  }
+
+  .freelancer-second-workspace-image {
     object-position: right center;
   }
 }
