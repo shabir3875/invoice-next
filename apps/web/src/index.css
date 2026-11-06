@@ -171,24 +171,25 @@ main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article {
 main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child {
   position: relative;
   isolation: isolate;
-  height: 380px;
-  border-radius: 6px;
-  padding: 24px 18px 0;
+  height: 320px;
+  border: 1px solid #dbeafe;
+  border-radius: 0;
+  padding: 0;
   overflow: hidden;
-  background: #ef3708;
-  box-shadow: 0 12px 30px -18px rgb(131 38 7 / 0.55);
+  background: #eff6ff url('/custom-invoice-creation-banner.png') center / 100% 100% no-repeat;
+  box-shadow: 0 14px 34px -20px rgb(37 99 235 / 0.45);
+}
+
+@media (min-width: 1051px) {
+  main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child {
+    width: calc(100% + 16px);
+    margin-left: -8px;
+  }
 }
 
 main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child::before,
 main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  right: -70px;
-  width: 210px;
-  height: 250px;
-  transform: rotate(45deg);
-  background: #ff5128;
+  content: none;
 }
 
 main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child::before {
@@ -244,6 +245,20 @@ main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-chi
 
 main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child > div > * {
   display: none;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child > * {
+  visibility: hidden;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child > a {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  visibility: visible;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
 }
 
 main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:not(:first-child) > div:first-child {
