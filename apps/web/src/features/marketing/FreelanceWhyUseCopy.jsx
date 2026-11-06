@@ -38,8 +38,8 @@ export default function FreelanceWhyUseCopy() {
     targetHeading.textContent = heading;
 
     if (sectionImage) {
-      sectionImage.src = '/freelancer-modern-workspace.png';
-      sectionImage.alt = 'Freelancer creating and customizing an invoice in a modern workspace';
+      sectionImage.src = '/modern-invoicing-bright-desk.png';
+      sectionImage.alt = 'Freelancer creating a professional invoice at a bright modern desk';
       sectionImage.classList.add('freelancer-modern-workspace-image');
     }
 
@@ -71,8 +71,8 @@ export default function FreelanceWhyUseCopy() {
       targetSecondHeading.textContent = secondHeading;
 
       if (secondSectionImage) {
-        secondSectionImage.src = '/modern-invoicing-workspace.png';
-        secondSectionImage.alt = 'Freelancer using a modern workspace with a customizable invoice design';
+        secondSectionImage.src = '/invonxt-invoice-creation-workspace.png';
+        secondSectionImage.alt = 'InvoNxt invoice creation workspace with customizable freelancer template options';
         secondSectionImage.classList.add('freelancer-second-workspace-image');
       }
 
@@ -105,8 +105,8 @@ export default function FreelanceWhyUseCopy() {
 
     if (paymentContainer) {
       if (paymentSectionImage) {
-        paymentSectionImage.src = '/invonxt-freelance-payment-workflow.png';
-        paymentSectionImage.alt = 'InvoNxt freelance invoice payment workflow with payment methods and invoice statuses';
+        paymentSectionImage.src = '/invonxt-invoice-workflow-infographic.png';
+        paymentSectionImage.alt = 'InvoNxt invoice workflow infographic showing invoice creation, payment methods, and payment tracking';
         paymentSectionImage.classList.add('freelance-payment-workflow-image');
       }
       paymentContainer.classList.add('freelance-payment-guide');
