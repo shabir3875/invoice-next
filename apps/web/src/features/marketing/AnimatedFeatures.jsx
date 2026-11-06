@@ -7,19 +7,19 @@ import { APP_ROUTES } from './data';
 import './animated-features.css';
 
 const FEATURES = [
-  { title: 'Professional Invoices', text: 'Create polished invoices with your logo, taxes, line items and clear payment terms.', icon: FileText, tone: 'orange', route: APP_ROUTES.invoices, scene: 'invoice' },
-  { title: 'Expenses & Business Insights', text: 'Record expenses and understand revenue, costs and balance trends in one clear view.', icon: BarChart3, tone: 'blue', route: APP_ROUTES.expenses, scene: 'insights' },
-  { title: 'Clients, Services & More', text: 'Keep customers, suppliers, products and services organized and ready to reuse.', icon: Users, tone: 'purple', route: APP_ROUTES.customers, scene: 'clients' },
-  { title: 'Quotes to Invoices, Instantly', text: 'Turn quotes and other sales documents into invoice drafts without re-entering the details.', icon: FileCheck2, tone: 'green', route: APP_ROUTES.documents, scene: 'convert' },
-  { title: 'Recurring Invoices', text: 'Prepare repeat billing schedules for retainers, monthly services and ongoing projects.', icon: RefreshCw, tone: 'orange', route: APP_ROUTES.invoices, scene: 'recurring' },
-  { title: 'Customer Statements', text: 'Summarize invoices, recorded payments, credits and outstanding balances professionally.', icon: WalletCards, tone: 'blue', route: APP_ROUTES.customers, scene: 'statement' },
+  { title: 'Professional Invoices', text: 'Create branded invoices with customizable templates, your logo, items, taxes and payment terms.', icon: FileText, tone: 'orange', route: APP_ROUTES.invoices, scene: 'invoice' },
+  { title: 'Expenses & Insights', text: 'Track expenses, manage categories, and view revenue, profit, and financial trends in a clear dashboard.', icon: BarChart3, tone: 'blue', route: APP_ROUTES.expenses, scene: 'insights' },
+  { title: 'Clients, Services & More', text: 'Manage clients, suppliers, products, and services, reuse details, and keep all business records in one place.', icon: Users, tone: 'purple', route: APP_ROUTES.customers, scene: 'clients' },
+  { title: 'Estimates to Invoices, Instantly', text: 'Convert estimates, sales orders or proformas into invoices with one click. All details carry over automatically.', icon: FileCheck2, tone: 'green', route: APP_ROUTES.documents, scene: 'convert' },
+  { title: 'Recurring Invoices', text: 'Automate repeat billing for monthly services, retainers, and ongoing projects. Save time and get paid on schedule.', icon: RefreshCw, tone: 'orange', route: APP_ROUTES.invoices, scene: 'recurring' },
+  { title: 'Customer Statements', text: 'Generate professional account statements showing invoices, payments, credits, and outstanding balances.', icon: WalletCards, tone: 'blue', route: APP_ROUTES.customers, scene: 'statement' },
 ];
 
 function MiniScene({ type }) {
   if (type === 'invoice') return <div className="af-mini af-invoice-mini"><span className="af-logo">IN</span><i/><i/><i/><b>$2,450</b><em><Check size={10}/></em></div>;
   if (type === 'insights') return <div className="af-mini af-insights-mini"><ReceiptText/><div className="af-bars"><i/><i/><i/><i/></div><b>+18.4%</b></div>;
   if (type === 'clients') return <div className="af-mini af-clients-mini"><span>AM</span><span>SK</span><span>+</span><i><ArrowRight size={13}/></i><FileText/></div>;
-  if (type === 'convert') return <div className="af-mini af-convert-mini"><span>QUOTE</span><ArrowRight/><span>INVOICE</span><b><Check size={10}/></b></div>;
+  if (type === 'convert') return <div className="af-mini af-convert-mini"><span>ESTIMATE</span><ArrowRight/><span>INVOICE</span><b><Check size={10}/></b></div>;
   if (type === 'recurring') return <div className="af-mini af-calendar-mini"><CalendarDays/><div><span>APR</span><b>15</b></div><RefreshCw/></div>;
   return <div className="af-mini af-statement-mini"><span>STATEMENT</span><i/><i/><i/><div><b>Paid</b><strong>$1,250</strong></div><FileText/></div>;
 }
@@ -29,13 +29,13 @@ function FeatureCard({ feature, index, active, onActivate }) {
   return <article className={`af-card af-${feature.tone} ${active ? 'is-active' : ''}`} onMouseEnter={() => onActivate(index)} onFocus={() => onActivate(index)}>
     <div className="af-card-top"><span className="af-icon"><Icon size={19}/></span><MiniScene type={feature.scene}/></div>
     <h3>{feature.title}</h3><p>{feature.text}</p>
-    <a href={feature.route}>Learn more <ArrowRight size={14}/></a>
+    <a href={feature.route}>Learn More <ArrowRight size={14}/></a>
   </article>;
 }
 
 function DocumentOrbit() {
   return <div className="af-orbit" aria-hidden="true">
-    <div className="af-doc af-doc-quote"><span>QUOTE</span><b>Northstar Legal</b><i/><i/><i/><strong>$2,450</strong></div>
+    <div className="af-doc af-doc-quote"><span>ESTIMATE</span><b>Northstar Legal</b><i/><i/><i/><strong>$2,450</strong></div>
     <div className="af-doc-arrow"><ArrowRight size={20}/></div>
     <div className="af-doc af-doc-invoice"><span>INVOICE</span><b>Northstar Legal</b><i/><i/><i/><strong>$2,450</strong><em><Check size={11}/> Created</em></div>
     <div className="af-doc-tags"><span>Estimate</span><span>Sales order</span><span>Proforma</span></div>
@@ -72,7 +72,7 @@ export default function AnimatedFeatures() {
   return <section ref={rootRef} id="features" className={`af-section ${visible ? 'is-visible' : ''}`} aria-labelledby="af-title">
     <div className="af-glow af-glow-one"/><div className="af-glow af-glow-two"/>
     <div className="af-container">
-      <div className="af-heading"><span>ONE SIMPLE BUSINESS WORKSPACE</span><h2 id="af-title">Everything You Need to Invoice, Get Paid, and Grow</h2><p>Create professional invoices, convert quotes, manage payments, track expenses, and stay organized — all in one simple platform.</p></div>
+      <div className="af-heading"><span>ONE SIMPLE BUSINESS WORKSPACE</span><h2 id="af-title">Everything You Need to Invoice, Get Paid, and Grow</h2><p>Create professional invoices, convert estimates, manage payments, track expenses, and stay organized — all in one simple platform.</p></div>
       <div className="af-layout" data-active={active}>
         <div className="af-column af-left">{FEATURES.slice(0,3).map((f,i) => <FeatureCard key={f.title} feature={f} index={i} active={active===i} onActivate={activate}/>)}</div>
         <div className="af-center"><DocumentOrbit/><LaptopDashboard/><div className="af-live"><i/><span>Live dashboard preview</span><b>Sample data</b></div></div>
