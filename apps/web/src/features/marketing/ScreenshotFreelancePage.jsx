@@ -5,12 +5,12 @@ import Seo from '@/components/Seo';
 import { APP_ROUTES } from './data';
 
 const templates = [
-  ['Modern Template', '#f04422'],
-  ['Letterhead Style Template', '#f15a3a'],
-  ['Classic', '#3478d4'],
-  ['Printer Friendly', '#404040'],
-  ['Wide Margin Template', '#507dd7'],
-  ['Modern II', '#1762dc'],
+  ['Modern Template', '#cf2027', 'modern'],
+  ['Letterhead Style Template', '#ef6837', 'letterhead'],
+  ['Classic', '#2874d0', 'classic'],
+  ['Printer Friendly', '#404040', 'printer'],
+  ['Wide Margin Template', '#507dd7', 'wide-margin'],
+  ['Modern II', '#1762dc', 'modern-two'],
 ];
 
 function InvoiceThumb({ title, color }) {

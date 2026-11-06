@@ -1,19 +1,6 @@
-import React, { useState } from 'react';
-import { ArrowRight, Eye, Palette, X } from 'lucide-react';
-import { APP_ROUTES, templates } from './data';
-import { InvoicePreview } from './ProductVisuals';
+import React from 'react';
 
+// The homepage template gallery is intentionally disabled.
 export default function TemplateGallery() {
-  const [active, setActive] = useState(null);
-  const [showAll, setShowAll] = useState(false);
-  const visible = showAll ? templates : templates.slice(0, 6);
-
-  return <section id="templates" className="scroll-mt-24 bg-[#f5f8fc] py-20 sm:py-28">
-    <div className="mx-auto max-w-7xl px-5 sm:px-8">
-      <div className="mx-auto max-w-3xl text-center"><span className="text-xs font-extrabold uppercase tracking-[.18em] text-blue-600">Invoice template gallery</span><h2 className="mt-4 text-3xl font-black tracking-[-.04em] text-slate-950 sm:text-5xl">A professional look for every kind of business</h2><p className="mt-5 text-base leading-8 text-slate-600">Preview focused layouts for different industries, then continue into the existing InvoNxt invoice workflow to apply your business details.</p></div>
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{visible.map(template=><article key={template.id} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"><div className="relative overflow-hidden bg-slate-100 p-5"><div className="origin-top transition duration-300 group-hover:scale-[1.02]"><InvoicePreview compact accent={template.accent} business="INVONXT BUSINESS" customer="Your Customer" total="$2,840.00"/></div><button type="button" onClick={()=>setActive(template)} className="absolute inset-0 flex items-center justify-center bg-slate-950/0 opacity-0 transition group-hover:bg-slate-950/35 group-hover:opacity-100" aria-label={`Preview ${template.name} template`}><span className="flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-bold text-slate-950"><Eye size={16}/>Preview</span></button></div><div className="flex items-center justify-between p-5"><div><h3 className="font-extrabold text-slate-950">{template.name}</h3><p className="mt-1 text-xs text-slate-500">Responsive invoice layout</p></div><a href={`${APP_ROUTES.invoices}?template=${template.id}`} className="rounded-lg bg-blue-600 px-3 py-2 text-xs font-bold text-white hover:bg-blue-700">Use template</a></div></article>)}</div>
-      <div className="mt-10 text-center"><button type="button" onClick={()=>setShowAll(v=>!v)} className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-bold text-slate-700 shadow-sm hover:border-blue-300 hover:text-blue-700">{showAll?'Show fewer templates':'View all template categories'}<ArrowRight size={16}/></button></div>
-    </div>
-    {active&&<div className="fixed inset-0 z-[100] grid place-items-center overflow-y-auto bg-slate-950/70 p-4" role="dialog" aria-modal="true" aria-label={`${active.name} template preview`}><div className="relative w-full max-w-3xl rounded-2xl bg-white p-5 shadow-2xl sm:p-8"><button type="button" onClick={()=>setActive(null)} className="absolute right-4 top-4 z-10 grid h-10 w-10 place-items-center rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200" aria-label="Close template preview"><X size={19}/></button><div className="mb-6 flex items-center gap-3"><span className="grid h-11 w-11 place-items-center rounded-xl bg-blue-50 text-blue-600"><Palette size={20}/></span><div><h3 className="text-xl font-black text-slate-950">{active.name} template</h3><p className="text-sm text-slate-500">Preview with sample invoice information</p></div></div><div className="rounded-2xl bg-slate-100 p-4 sm:p-8"><InvoicePreview accent={active.accent}/></div><div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-end"><button type="button" onClick={()=>setActive(null)} className="rounded-lg border border-slate-300 px-5 py-3 text-sm font-bold text-slate-700">Close preview</button><a href={`${APP_ROUTES.invoices}?template=${active.id}`} className="rounded-lg bg-blue-600 px-5 py-3 text-center text-sm font-bold text-white">Use this template</a></div></div></div>}
-  </section>;
+  return null;
 }

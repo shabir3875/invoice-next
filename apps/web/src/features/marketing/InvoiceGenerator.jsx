@@ -50,6 +50,10 @@ function Preview({ form, totals, logo }) {
 function Field({ label, children, className = '' }) { return <label className={`block text-xs font-bold text-slate-700 ${className}`}>{label}{children}</label>; }
 
 export default function InvoiceGenerator() {
+  return null;
+
+  /* The embedded marketing-page builder is disabled. Invoice creation now
+     continues in the existing InvoNxt application via APP_ROUTES.invoices. */
   const today = new Date().toISOString().slice(0, 10);
   const due = new Date(Date.now() + 14 * 86400000).toISOString().slice(0, 10);
   const [form, setForm] = useState({ businessName: '', businessDetails: '', customerName: '', customerDetails: '', invoiceNumber: 'INV-1001', invoiceDate: today, dueDate: due, paymentDetails: 'Payment terms: Due within 14 days', notes: 'We appreciate your business. Please include the invoice number with your payment.', items: [{ ...blankItem(), description: 'Professional services', quantity: 1, price: 500, tax: 0, discount: 0 }] });

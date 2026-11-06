@@ -16,6 +16,463 @@ main[class*="max-w-[1170px]"] > section:nth-of-type(5) > h2 + p + div {
   display: none;
 }
 
+/* Branded hero treatment for the dedicated freelancer template page. */
+main[class*="max-w-[1170px]"] > section:first-child {
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 12% 18%, rgb(56 189 248 / 0.28), transparent 24%),
+    radial-gradient(circle at 88% 82%, rgb(37 99 235 / 0.36), transparent 28%),
+    linear-gradient(125deg, #071b36 0%, #0b3471 52%, #1469d8 100%);
+  box-shadow: 0 24px 70px -35px rgb(15 70 150 / 0.65);
+}
+
+main[class*="max-w-[1170px]"] > section:first-child::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.22;
+  background-image: radial-gradient(circle, #fff 1.2px, transparent 1.2px);
+  background-size: 20px 20px;
+  mask-image: linear-gradient(90deg, #000, transparent 48%, #000);
+}
+
+main[class*="max-w-[1170px]"] > section:first-child::after {
+  content: "INVOICE\A\A Client services\A Strategy session\A Project delivery\A\A TOTAL     $2,450";
+  white-space: pre;
+  position: absolute;
+  right: 7%;
+  top: 50%;
+  width: 285px;
+  height: 330px;
+  padding: 34px 28px;
+  transform: translateY(-50%) rotate(3deg);
+  border: 7px solid rgb(255 255 255 / 0.22);
+  border-radius: 20px;
+  background:
+    linear-gradient(#2563eb, #2563eb) 28px 82px / calc(100% - 56px) 5px no-repeat,
+    repeating-linear-gradient(to bottom, transparent 0 43px, #e2e8f0 43px 44px),
+    #fff;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 3.35;
+  box-shadow: 0 32px 65px rgb(2 14 35 / 0.4);
+}
+
+main[class*="max-w-[1170px]"] > section:first-child > div:last-child {
+  width: 58%;
+  max-width: 650px;
+  margin: 0;
+  text-align: left;
+}
+
+main[class*="max-w-[1170px]"] > section:first-child h1 {
+  color: #fff;
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+main[class*="max-w-[1170px]"] > section:first-child h1::before {
+  content: "BUILT FOR INDEPENDENT WORK";
+  display: block;
+  width: max-content;
+  margin-bottom: 20px;
+  border: 1px solid rgb(147 197 253 / 0.55);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.1);
+  padding: 8px 12px;
+  color: #bae6fd;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+main[class*="max-w-[1170px]"] > section:first-child p {
+  max-width: 590px;
+  margin-left: 0;
+  color: #dbeafe;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+main[class*="max-w-[1170px]"] > section:first-child a {
+  border-radius: 12px;
+  background: #fff;
+  color: #174ea6;
+  box-shadow: 0 14px 35px rgb(2 14 35 / 0.3);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+main[class*="max-w-[1170px]"] > section:first-child a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 42px rgb(2 14 35 / 0.4);
+}
+
+main[class*="max-w-[1170px]"] > section:first-child a:focus-visible {
+  outline: 3px solid #7dd3fc;
+  outline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+  main[class*="max-w-[1170px]"] > section:first-child {
+    min-height: auto;
+    padding-block: 72px;
+  }
+  main[class*="max-w-[1170px]"] > section:first-child::after {
+    display: none;
+  }
+  main[class*="max-w-[1170px]"] > section:first-child > div:last-child {
+    width: 100%;
+    max-width: 720px;
+    margin-inline: auto;
+    text-align: center;
+  }
+  main[class*="max-w-[1170px]"] > section:first-child h1::before {
+    margin-inline: auto;
+  }
+  main[class*="max-w-[1170px]"] > section:first-child p {
+    margin-inline: auto;
+  }
+}
+
+/* Match the reference layout while keeping all downloadable templates visible. */
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) {
+  padding-top: 68px;
+  padding-bottom: 72px;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > h2 {
+  max-width: 850px;
+  margin-inline: auto;
+  font-size: clamp(2rem, 3.7vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  max-width: none;
+  align-items: start;
+  gap: 38px;
+  margin-top: 56px;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article {
+  width: 100%;
+  min-width: 0;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child {
+  position: relative;
+  isolation: isolate;
+  height: 380px;
+  border-radius: 6px;
+  padding: 24px 18px 0;
+  overflow: hidden;
+  background: #ef3708;
+  box-shadow: 0 12px 30px -18px rgb(131 38 7 / 0.55);
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child::before,
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -70px;
+  width: 210px;
+  height: 250px;
+  transform: rotate(45deg);
+  background: #ff5128;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child::before {
+  top: 38px;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child::after {
+  right: auto;
+  left: -130px;
+  top: 250px;
+  width: 250px;
+  height: 230px;
+  background: #ff5b31;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child h3 {
+  position: relative;
+  z-index: 2;
+  max-width: 190px;
+  margin-inline: auto;
+  font-size: 21px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child > a {
+  position: relative;
+  z-index: 2;
+  margin-top: 18px;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 12px;
+  box-shadow: 0 8px 20px rgb(111 28 4 / 0.18);
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child > div {
+  position: relative;
+  z-index: 2;
+  width: calc(100% + 14px);
+  height: 245px;
+  margin-top: 18px;
+  margin-left: -7px;
+  transform: none;
+  border: 1px solid rgb(15 23 42 / 0.12);
+  background: #fff url('/template-cards-image.webp') center top / 100% 100% no-repeat;
+  padding: 0;
+  box-shadow: 0 8px 20px rgb(15 23 42 / 0.18);
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child > div::before {
+  content: none;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:first-child > div > * {
+  display: none;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:not(:first-child) > div:first-child {
+  height: 320px;
+  padding: 18px;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:nth-child(2) > div:first-child {
+  border: 1px solid #cbd5e1;
+  background: #fff url('/auto-repair-modern-template-preview.png') center top / contain no-repeat;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:nth-child(2) > div:first-child > * {
+  visibility: hidden;
+}
+
+.professional-template-preview {
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+  box-shadow: 0 12px 32px -20px rgb(15 23 42 / 0.45);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.professional-template-preview::after {
+  content: "Preview template";
+  position: absolute;
+  inset: auto 14px 14px;
+  border-radius: 9px;
+  background: rgb(15 23 42 / 0.9);
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.professional-template-preview:hover,
+.professional-template-preview:focus-visible {
+  transform: translateY(-3px);
+  border-color: #60a5fa !important;
+  box-shadow: 0 22px 44px -22px rgb(37 99 235 / 0.5);
+  outline: none;
+}
+
+.professional-template-preview:hover::after,
+.professional-template-preview:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.template-preview-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  overflow-y: auto;
+  background: rgb(2 6 23 / 0.78);
+  padding: 24px;
+  backdrop-filter: blur(8px);
+}
+
+.template-preview-dialog {
+  width: min(100%, 760px);
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.15);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 35px 90px rgb(2 6 23 / 0.45);
+}
+
+.template-preview-header,
+.template-preview-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 24px;
+}
+
+.template-preview-header {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.template-preview-header span {
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.template-preview-header h2 {
+  margin-top: 3px;
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.template-preview-header button {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: none;
+  place-items: center;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.template-preview-canvas {
+  display: grid;
+  max-height: 70vh;
+  place-items: center;
+  overflow: auto;
+  background: #eef2f7;
+  padding: 30px;
+}
+
+.template-preview-canvas img {
+  width: min(100%, 430px);
+  height: auto;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  box-shadow: 0 22px 55px -28px rgb(15 23 42 / 0.45);
+}
+
+.template-preview-actions {
+  justify-content: flex-end;
+  border-top: 1px solid #e2e8f0;
+}
+
+.template-preview-actions button,
+.template-preview-actions a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  padding: 0 18px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.template-preview-actions button {
+  border: 1px solid #cbd5e1;
+  color: #334155;
+}
+
+.template-preview-actions a {
+  background: #2563eb;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .template-preview-backdrop { padding: 10px; }
+  .template-preview-header,
+  .template-preview-actions { padding: 16px; }
+  .template-preview-actions { align-items: stretch; flex-direction: column-reverse; }
+  .template-preview-canvas { padding: 16px; }
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article h3 {
+  margin-top: 18px;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 58px;
+  max-width: 1080px;
+  padding-inline: 24px;
+  font-size: 0;
+  line-height: 0;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(2) > p::after {
+  content: "Each template includes everything you need to bill for auto repair work. Add your services, hours, rates, and tax—the total is calculated for you. You can then print or send the finished invoice. Need a different design? Browse more templates or create a custom invoice with our";
+  display: block;
+  font-size: clamp(16px, 1.45vw, 20px);
+  line-height: 1.75;
+  color: #475569;
+  text-align: center;
+}
+
+.freelance-generator-link {
+  order: 2;
+  margin-top: 8px;
+  color: #ea580c;
+  font-size: clamp(16px, 1.45vw, 20px) !important;
+  font-weight: 800;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.freelance-generator-link:hover {
+  color: #c2410c;
+}
+
+.freelance-generator-link:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid #93c5fd;
+  outline-offset: 4px;
+}
+
+@media (max-width: 1050px) {
+  main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 680px;
+    gap: 42px 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

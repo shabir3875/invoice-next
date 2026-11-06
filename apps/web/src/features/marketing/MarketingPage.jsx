@@ -16,7 +16,7 @@ import TemplatePage, { templatePages } from './TemplatePage';
 const navGroups = [
   { label:'Features', href:'#features', children:[['Invoices','#features'],['Estimates','#features'],['Expenses','#features'],['Reports','#features']] },
   { label:'Businesses', href:'#templates', children:[['Consulting','/templates/consulting'],['Freelance','/template/freeluncer'],['Law Firm','/templates/law-firm'],['Small Businesses','/templates/small-businesses']] },
-  { label:'Invoice Generator', href:'#generator' },
+  { label:'Invoice Generator', href:APP_ROUTES.invoices },
   { label:'Pricing', href:'#pricing' },
   { label:'Resources', href:'#resources', children:[['How it works','#how-it-works'],['Customer stories','#testimonials'],['Support','/contact']] },
 ];
