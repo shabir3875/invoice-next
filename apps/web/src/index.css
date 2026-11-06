@@ -417,6 +417,18 @@ main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article h3 {
   line-height: 1.45;
 }
 
+@media (min-width: 1051px) {
+  main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:nth-child(6) {
+    grid-column: 2;
+    transform: translateX(50%);
+  }
+
+  main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div > article:nth-child(7) {
+    grid-column: 3;
+    transform: translateX(50%);
+  }
+}
+
 main[class*="max-w-[1170px]"] > section:nth-of-type(2) > p {
   display: flex;
   flex-direction: column;

@@ -56,7 +56,7 @@ export default function TemplatePreviewModal() {
         </div>
         <footer className="template-preview-actions">
           <button type="button" onClick={() => setOpen(false)}>Close preview</button>
-          <a href="/downloads/auto-repair-invoice-template.docx" download="Auto-Repair-Invoice-Template.docx"><Download size={16}/>Download Word Template</a>
+          <a href="/downloads/freelance-invoice-template-1.docx" download="Freelance-Invoice-Template-1.docx"><Download size={16}/>Download Word Template</a>
         </footer>
       </section>
     </div>,

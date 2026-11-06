@@ -1,14 +1,11 @@
 import { useEffect } from 'react';
 
-const downloads = {
-  excel: {
-    href: '/downloads/auto-repair-invoice-template.xlsx',
-    filename: 'Auto-Repair-Invoice-Template.xlsx',
-  },
-  word: {
-    href: '/downloads/auto-repair-invoice-template.docx',
-    filename: 'Auto-Repair-Invoice-Template.docx',
-  },
+const downloadFor = (templateNumber, format) => {
+  const extension = format === 'excel' ? 'xlsx' : 'docx';
+  return {
+    href: `/downloads/freelance-invoice-template-${templateNumber}.${extension}`,
+    filename: `Freelance-Invoice-Template-${templateNumber}.${extension}`,
+  };
 };
 
 export default function TemplateDownloadLinks() {
@@ -16,19 +13,26 @@ export default function TemplateDownloadLinks() {
     const section = document.querySelector('main[class*="max-w-[1170px]"] > section:nth-of-type(2)');
     if (!section) return;
 
-    section.querySelectorAll('a').forEach((link) => {
-      const label = link.textContent?.trim().toLowerCase() || '';
-      const file = label.startsWith('excel')
-        ? downloads.excel
-        : label.startsWith('word')
-          ? downloads.word
-          : null;
+    const templateCards = Array.from(section.querySelectorAll('article')).slice(1, 7);
 
-      if (file) {
+    templateCards.forEach((card, index) => {
+      const templateNumber = index + 1;
+
+      card.querySelectorAll('a').forEach((link) => {
+        const label = link.textContent?.trim().toLowerCase() || '';
+        const format = label.startsWith('excel')
+          ? 'excel'
+          : label.startsWith('word')
+            ? 'word'
+            : null;
+
+        if (!format) return;
+
+        const file = downloadFor(templateNumber, format);
         link.href = file.href;
         link.download = file.filename;
-        link.setAttribute('aria-label', `Download ${file.filename}`);
-      }
+        link.setAttribute('aria-label', `Download template ${templateNumber} for ${format}`);
+      });
     });
   }, []);
 
