@@ -3,10 +3,6 @@ import { Helmet } from 'react-helmet';
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react';
 import Seo from '@/components/Seo';
 import { APP_ROUTES } from './data';
-import ScreenshotFreelancePage from './ScreenshotFreelancePage';
-import InvoiceGeneratorInlineLink from './InvoiceGeneratorInlineLink';
-import TemplateDownloadLinks from './TemplateDownloadLinks';
-import FreelanceWhyUseCopy from './FreelanceWhyUseCopy';
 
 export const templatePages = {
   '/templates/consulting': {
@@ -42,8 +38,6 @@ export const templatePages = {
     accent: 'from-emerald-600 to-cyan-500',
   },
 };
-
-templatePages['/template/freeluncer'] = templatePages['/templates/freelance'];
 
 function Brand() {
   return <a href="/" className="flex items-center gap-2.5 text-xl font-black tracking-[-.04em] text-slate-950"><span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-600/20">IN</span>Invo<span className="text-blue-500">Nxt</span></a>;
@@ -82,7 +76,7 @@ function FreelanceReferencePage({ routePath }) {
 }
 
 export default function TemplatePage({ routePath }) {
-  if (routePath === '/template/freeluncer' || routePath === '/templates/freelance') return <><ScreenshotFreelancePage routePath={routePath}/><InvoiceGeneratorInlineLink/><TemplateDownloadLinks/><FreelanceWhyUseCopy/></>;
+  if (routePath === '/templates/freelance') return <FreelanceReferencePage routePath={routePath}/>;
   const page = templatePages[routePath];
   const title = `${page.name} Invoice Template | InvoNxt`;
   return <div className="min-h-screen bg-white text-slate-900"><Helmet><title>{title}</title><meta name="description" content={page.description}/></Helmet><Seo title={title} description={page.description} url={`https://invonxt.com${routePath}`} image="https://invonxt.com/og-image.png" siteName="InvoNxt"/><header className="sticky top-0 z-[80] border-b border-slate-200/80 bg-white/90 backdrop-blur-xl"><div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-8"><Brand/><div className="flex items-center gap-3"><a href="/#templates" className="hidden text-sm font-bold text-slate-600 sm:block">Templates</a><a href={APP_ROUTES.signup} className="inline-flex min-h-11 items-center rounded-xl bg-blue-600 px-5 text-sm font-extrabold text-white">Get Started Free</a></div></div></header><main><section className="overflow-hidden bg-[radial-gradient(circle_at_80%_10%,#dbeafe_0,transparent_35%),linear-gradient(180deg,#f8fbff,#fff)] py-20 sm:py-28"><div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2"><div><a href="/#templates" className="inline-flex items-center gap-2 text-sm font-bold text-blue-700"><ArrowLeft size={16}/>All templates</a><div className="mt-8 text-xs font-extrabold uppercase tracking-[.18em] text-blue-600">{page.eyebrow}</div><h1 className="mt-4 text-4xl font-black leading-tight tracking-[-.045em] text-slate-950 sm:text-6xl">{page.headline}</h1><p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">{page.description}</p><ul className="mt-7 space-y-3">{page.features.map(feature=><li key={feature} className="flex items-center gap-3 text-sm font-bold text-slate-700"><span className="grid h-7 w-7 place-items-center rounded-full bg-blue-50 text-blue-600"><Check size={15}/></span>{feature}</li>)}</ul><a href={APP_ROUTES.signup} className="mt-9 inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 text-base font-extrabold text-white shadow-lg shadow-blue-600/20">Use this template<ArrowRight size={18}/></a></div><InvoicePreview accent={page.accent}/></div></section><section className="bg-[#f7f9fc] py-20"><div className="mx-auto max-w-4xl px-5 text-center sm:px-8"><h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">Ready to create your {page.name.toLowerCase()} invoice?</h2><p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-600">Start with this layout, add your business details, and create a polished invoice in minutes.</p><a href={APP_ROUTES.signup} className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-xl bg-blue-600 px-6 text-sm font-extrabold text-white">Get Started Free<ArrowRight size={17}/></a></div></section></main><footer className="bg-[#07172c] px-5 py-8 text-center text-sm text-slate-400">© {new Date().getFullYear()} InvoNxt. All rights reserved.</footer></div>;

@@ -116,6 +116,18 @@ const FEATURES = [
 
 export const FEATURE_SLUGS = FEATURES.map(feature => feature.slug);
 export const getFeature = slug => FEATURES.find(feature => feature.slug === slug);
+const FEATURE_SEO_TITLES = {
+  'professional-invoices': 'Professional Invoice Software for Freelancers & Small Businesses',
+  'invoice-templates': 'Customizable Invoice Templates for Every Business',
+  'estimates-to-invoices': 'Convert Estimates to Invoices in One Click',
+  'payment-tracking': 'Track Invoice Payments and Outstanding Balances',
+  'expense-management': 'Business Expense Tracking Made Simple',
+  'customer-statements': 'Create Professional Customer Account Statements',
+  'business-reports': 'Business Financial Reports for Revenue and Expenses',
+  'client-management': 'Organize Customers, Products, and Services',
+  'recurring-invoices': 'Recurring Invoice Records for Repeat Billing',
+};
+export const getFeatureSeoTitle = feature => `${FEATURE_SEO_TITLES[feature.slug] || feature.short} | Invonxt`;
 
 function Brand(){return <a href="/" className="fd-brand"><span>IN</span>Invo<b>Nxt</b></a>}
 
@@ -138,7 +150,8 @@ export default function FeatureDetailPage({slug:slugProp}){
   const params=useParams();const feature=getFeature(slugProp||params.slug);if(!feature)return <div className="fd-not-found"><h1>Feature not found</h1><a href="/#features">Explore all features</a></div>;
   const index=FEATURES.findIndex(item=>item.slug===feature.slug);const prev=FEATURES[(index-1+FEATURES.length)%FEATURES.length];const next=FEATURES[(index+1)%FEATURES.length];const Icon=feature.icon;
   const canonical=`https://invonxt.com/features/${feature.slug}`;
-  return <div className="fd-page"><Helmet><title>{feature.short} | InvoNxt</title><meta name="description" content={feature.description}/></Helmet><Seo title={`${feature.short} | InvoNxt`} description={feature.description} url={canonical} image="https://invonxt.com/og-image.png" siteName="InvoNxt"/><FeatureHeader/><main>
+  const seoTitle=getFeatureSeoTitle(feature);
+  return <div className="fd-page"><Helmet><title>{seoTitle}</title><meta name="description" content={feature.description}/></Helmet><Seo title={seoTitle} description={feature.description} url={canonical} image="https://invonxt.com/og-image.png" siteName="Invonxt"/><FeatureHeader/><main>
     <section className="fd-hero"><div className="fd-shell fd-hero-grid"><Reveal className="fd-hero-copy"><a className="fd-back" href="/#features"><ArrowLeft/>All features</a><div className="fd-label"><Icon/>{feature.category}</div><h1>{feature.title}</h1><p>{feature.description}</p>{feature.notice&&<div className="fd-notice"><ShieldCheck/>{feature.notice}</div>}<div className="fd-actions"><a href={APP_ROUTES.signup}>Get Started Free<ArrowRight/></a><a href="/#features">Explore All Features</a></div><div className="fd-trust"><span><Check/>No credit card required</span><span><Check/>Works on every device</span></div></Reveal><Reveal delay={.12} className="fd-hero-visual"><FeatureVisual type={feature.visual}/></Reveal></div></section>
     <section className="fd-section fd-work"><div className="fd-shell"><Reveal className="fd-heading"><span>HOW IT WORKS</span><h2>A clear workflow from start to finish</h2><p>{feature.intro}</p></Reveal><div className="fd-steps">{feature.steps.map(([title,text],i)=><Reveal as="article" delay={i*.08} key={title}><b>{String(i+1).padStart(2,'0')}</b><h3>{title}</h3><p>{text}</p></Reveal>)}</div></div></section>
     <section className="fd-section"><div className="fd-shell"><Reveal className="fd-heading"><span>KEY CAPABILITIES</span><h2>Everything you need for this workflow</h2></Reveal><div className="fd-capabilities">{feature.capabilities.map(([title,text,CardIcon],i)=><Reveal as="article" delay={(i%3)*.06} key={title}><span><CardIcon/></span><h3>{title}</h3><p>{text}</p></Reveal>)}</div></div></section>

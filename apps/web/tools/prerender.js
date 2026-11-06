@@ -6,6 +6,19 @@ import { createServer } from 'vite';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 
+function pageSchema({ title, description, url, breadcrumbs = [] }) {
+	const graph = [
+		{ '@type': 'WebPage', '@id': `${url}#webpage`, url, name: title, description, isPartOf: { '@id': 'https://invonxt.com/#website' }, inLanguage: 'en' },
+	];
+	if (breadcrumbs.length) {
+		graph.push({
+			'@type': 'BreadcrumbList',
+			itemListElement: breadcrumbs.map(([name, item], index) => ({ '@type': 'ListItem', position: index + 1, name, item })),
+		});
+	}
+	return `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })}</script>`;
+}
+
 async function prerender() {
 	const webRoot = process.cwd();
 	const vite = await createServer({
@@ -17,7 +30,7 @@ async function prerender() {
 
 	try {
 		const { default: HomePage } = await vite.ssrLoadModule('/src/pages/HomePage.jsx');
-		const { default: FeatureDetailPage, FEATURE_SLUGS, getFeature } = await vite.ssrLoadModule('/src/features/marketing/FeatureDetailPage.jsx');
+		const { default: FeatureDetailPage, FEATURE_SLUGS, getFeature, getFeatureSeoTitle } = await vite.ssrLoadModule('/src/features/marketing/FeatureDetailPage.jsx');
 		const { default: PublicPage, PUBLIC_ROUTES, getPublicRoute } = await vite.ssrLoadModule('/src/features/marketing/PublicPage.jsx');
 		const { default: TemplatePage, templatePages } = await vite.ssrLoadModule('/src/features/marketing/TemplatePage.jsx');
 		const appHtml = renderToString(React.createElement(HomePage));
@@ -91,7 +104,7 @@ async function prerender() {
 			for (const slug of FEATURE_SLUGS) {
 				const feature = getFeature(slug);
 				const featureHtml = renderToString(React.createElement(FeatureDetailPage, { slug }));
-				const title = `${feature.short} | InvoNxt`;
+				const title = getFeatureSeoTitle(feature);
 				const url = `https://invonxt.com/features/${slug}`;
 				const routeDir = path.join(distAppDir, 'features', slug);
 				fs.mkdirSync(routeDir, { recursive: true });
@@ -105,7 +118,8 @@ async function prerender() {
 					.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${url}" data-react-helmet="true" />`)
 					.replace(/<meta name="twitter:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="twitter:title" content="${title}" data-react-helmet="true" />`)
 					.replace(/<meta name="twitter:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="twitter:description" content="${feature.description}" data-react-helmet="true" />`);
-				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
+				const featureRouteHtml = routeHtml.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, pageSchema({ title, description: feature.description, url, breadcrumbs: [['Home','https://invonxt.com/'],['Features','https://invonxt.com/features'],[feature.short,url]] }));
+				fs.writeFileSync(path.join(routeDir, 'index.html'), featureRouteHtml, 'utf8');
 			}
 			for (const routePath of PUBLIC_ROUTES) {
 				const meta = getPublicRoute(routePath);
@@ -124,9 +138,10 @@ async function prerender() {
 					.replace(/<meta property="og:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:title" content="${title}" data-react-helmet="true" />`)
 					.replace(/<meta property="og:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:description" content="${meta.description}" data-react-helmet="true" />`)
 					.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${url}" data-react-helmet="true" />`);
-				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
+				const publicRouteHtml = routeHtml.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, pageSchema({ title, description: meta.description, url, breadcrumbs: [['Home','https://invonxt.com/'],[meta.title,url]] }));
+				fs.writeFileSync(path.join(routeDir, 'index.html'), publicRouteHtml, 'utf8');
 				if (routePath.split('/').filter(Boolean).length === 1) {
-					fs.writeFileSync(path.join(distAppDir, `${routePath.slice(1)}.html`), routeHtml, 'utf8');
+					fs.writeFileSync(path.join(distAppDir, `${routePath.slice(1)}.html`), publicRouteHtml, 'utf8');
 				}
 			}
 			const notFoundHtml = renderToString(React.createElement(PublicPage, { kind: 'not-found' }));
@@ -141,7 +156,8 @@ async function prerender() {
 					.replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
 					.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="description" content="${template.description}" data-react-helmet="true" />`)
 					.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<link rel="canonical" href="${url}" data-react-helmet="true" />`);
-				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
+				const templateRouteHtml = routeHtml.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, pageSchema({ title, description: template.description, url, breadcrumbs: [['Home','https://invonxt.com/'],['Invoice Templates','https://invonxt.com/features/invoice-templates'],[template.name,url]] }));
+				fs.writeFileSync(path.join(routeDir, 'index.html'), templateRouteHtml, 'utf8');
 			}
 			fs.writeFileSync(path.join(distAppDir, '404.html'), distIndexHtml
 				.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${notFoundHtml}</div>\n\t\t`)
@@ -151,17 +167,32 @@ async function prerender() {
 			console.log(`✅ Generated ${FEATURE_SLUGS.length} static feature detail pages`);
 		}
 
-		// Update sitemap.xml lastmod date automatically
-		const today = new Date().toISOString().slice(0, 10);
+		// Build the sitemap from the same route inventories used to generate pages.
+		// Source-file modification dates prevent every URL from receiving a fabricated
+		// new date merely because a deployment was rebuilt.
+		const sourceDate = (relativePath) => fs.statSync(path.join(webRoot, relativePath)).mtime.toISOString().slice(0, 10);
+		const sitemapEntries = [
+			{ route: '/', lastmod: sourceDate('src/features/marketing/MarketingPage.jsx') },
+			...FEATURE_SLUGS.map((slug) => ({ route: `/features/${slug}`, lastmod: sourceDate('src/features/marketing/FeatureDetailPage.jsx') })),
+			...PUBLIC_ROUTES
+				.map((route) => ({ route, meta: getPublicRoute(route) }))
+				.filter(({ meta }) => meta && !meta.noindex)
+				.map(({ route }) => ({ route, lastmod: sourceDate('src/features/marketing/PublicPage.jsx') })),
+			...Object.keys(templatePages)
+				.filter((route) => route.startsWith('/templates/'))
+				.map((route) => ({ route, lastmod: sourceDate('src/features/marketing/TemplatePage.jsx') })),
+		];
+		const seenRoutes = new Set();
+		const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries
+			.filter(({ route }) => !seenRoutes.has(route) && seenRoutes.add(route))
+			.map(({ route, lastmod }) => `  <url><loc>https://invonxt.com${route === '/' ? '/' : route}</loc><lastmod>${lastmod}</lastmod></url>`)
+			.join('\n')}\n</urlset>\n`;
 		const sitemapTargets = [
 			path.join(webRoot, 'public', 'sitemap.xml'),
 			path.resolve(webRoot, '../../dist/apps/web/sitemap.xml'),
 		];
 		for (const sitemapPath of sitemapTargets) {
-			if (!fs.existsSync(sitemapPath)) continue;
-			const sm = fs.readFileSync(sitemapPath, 'utf8');
-			const updatedSm = sm.replace(/<lastmod>.*?<\/lastmod>/, `<lastmod>${today}</lastmod>`);
-			fs.writeFileSync(sitemapPath, updatedSm, 'utf8');
+			fs.writeFileSync(sitemapPath, sitemapXml, 'utf8');
 		}
 
 		// Mirror dist/apps/web/* to root dist/* AND repo root (../../*) so Hostinger works seamlessly whether Output Directory is `none`, `dist`, or `dist/apps/web`

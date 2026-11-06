@@ -1,10 +1,12 @@
 import React from 'react';
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import { Navigate, Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
-import { AppShell } from './features/app-components';
-import FeatureDetailPage from './features/marketing/FeatureDetailPage';
-import PublicPage from './features/marketing/PublicPage';
+
+const AppShell = React.lazy(() => import('./features/app-components').then(module => ({ default: module.AppShell })));
+const FeatureDetailPage = React.lazy(() => import('./features/marketing/FeatureDetailPage'));
+const PublicPage = React.lazy(() => import('./features/marketing/PublicPage'));
+const TemplatePage = React.lazy(() => import('./features/marketing/TemplatePage'));
 
 function HashRouteHandler({ children }) {
     const [hash, setHash] = React.useState(() => (typeof window !== 'undefined' ? window.location.hash : ''));
@@ -38,6 +40,7 @@ function App() {
     return (
         <Router>
             <ScrollToTop />
+            <React.Suspense fallback={<div className="min-h-screen bg-white" aria-busy="true" />}>
             <HashRouteHandler>
                 <Routes>
                     <Route path="/" element={<HomePage routePath="/" />} />
@@ -52,16 +55,17 @@ function App() {
                     <Route path="/terms" element={<PublicPage kind="terms" />} />
                     <Route path="/cookie-policy" element={<PublicPage kind="cookie-policy" />} />
                     <Route path="/refund-policy" element={<PublicPage kind="refund-policy" />} />
-                    <Route path="/templates/consulting" element={<HomePage routePath="/templates/consulting" />} />
-                    <Route path="/templates/freelance" element={<HomePage routePath="/templates/freelance" />} />
-                    <Route path="/template/freeluncer" element={<HomePage routePath="/template/freeluncer" />} />
-                    <Route path="/templates/law-firm" element={<HomePage routePath="/templates/law-firm" />} />
-                    <Route path="/templates/small-businesses" element={<HomePage routePath="/templates/small-businesses" />} />
+                    <Route path="/templates/consulting" element={<TemplatePage routePath="/templates/consulting" />} />
+                    <Route path="/templates/freelance" element={<TemplatePage routePath="/templates/freelance" />} />
+                    <Route path="/template/freeluncer" element={<Navigate to="/templates/freelance" replace />} />
+                    <Route path="/templates/law-firm" element={<TemplatePage routePath="/templates/law-firm" />} />
+                    <Route path="/templates/small-businesses" element={<TemplatePage routePath="/templates/small-businesses" />} />
                     <Route path="/features/:slug" element={<FeatureDetailPage />} />
                     <Route path="/premium" element={<AppShell initialPage="premium" />} />
                     <Route path="*" element={<PublicPage kind="not-found" />} />
                 </Routes>
             </HashRouteHandler>
+            </React.Suspense>
         </Router>
     );
 }
