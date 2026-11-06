@@ -661,6 +661,14 @@ html {
   scroll-behavior: smooth;
 }
 
+#solutions {
+  display: none;
+}
+
+#testimonials {
+  display: none;
+}
+
 footer .text-slate-950 {
   color: white;
 }
