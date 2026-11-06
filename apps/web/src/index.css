@@ -518,6 +518,72 @@ main[class*="max-w-[1170px]"] > section:nth-of-type(2) > p::after {
   outline-offset: 4px;
 }
 
+.freelancer-modern-workspace-image {
+  object-position: right center;
+}
+
+@media (max-width: 767px) {
+  .freelancer-modern-workspace-image {
+    object-position: right center;
+  }
+}
+
+/* Friendly, polished benefits panel matching the supplied reference. */
+main[class*="max-w-[1170px]"] > section:nth-of-type(4) > div:first-child {
+  border: 1px solid #eef0f4;
+  border-radius: 24px;
+  background: #f5f6f8;
+  padding: 58px 48px 64px;
+  box-shadow: 0 18px 45px -42px rgb(15 23 42 / 0.3);
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(4) > div:first-child > h2 {
+  color: #1f2937;
+  font-size: clamp(27px, 3vw, 38px);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(4) > div:first-child > h2 + p {
+  margin-top: 14px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(4) > div:first-child > div {
+  margin-top: 48px;
+  gap: 34px;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(4) > div:first-child > div > div {
+  align-items: flex-start;
+  gap: 12px;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+main[class*="max-w-[1170px]"] > section:nth-of-type(4) > div:first-child svg {
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  stroke-width: 3;
+  color: #07894f;
+}
+
+@media (max-width: 760px) {
+  main[class*="max-w-[1170px]"] > section:nth-of-type(4) > div:first-child {
+    padding: 40px 24px 44px;
+  }
+
+  main[class*="max-w-[1170px]"] > section:nth-of-type(4) > div:first-child > div {
+    margin-top: 34px;
+    gap: 22px;
+  }
+}
+
 @media (max-width: 1050px) {
   main[class*="max-w-[1170px]"] > section:nth-of-type(2) > div {
     grid-template-columns: repeat(2, minmax(0, 1fr));
