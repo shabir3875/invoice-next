@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T21:02:58.012Z",
+  "generatedAt": "2026-11-07T10:46:05.762Z",
   "pages": [
     {
       "url": "https://invonxt.com/",
@@ -11,7 +11,7 @@
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "wordCount": 938,
       "issues": [],
-      "internalLinkCount": 54
+      "internalLinkCount": 52
     },
     {
       "url": "https://invonxt.com/features/professional-invoices",
@@ -203,7 +203,7 @@
       "robots": "index, follow, max-image-preview:large",
       "wordCount": 190,
       "issues": [],
-      "internalLinkCount": 49
+      "internalLinkCount": 50
     },
     {
       "url": "https://invonxt.com/terms",
@@ -215,7 +215,7 @@
       "robots": "index, follow, max-image-preview:large",
       "wordCount": 163,
       "issues": [],
-      "internalLinkCount": 49
+      "internalLinkCount": 50
     },
     {
       "url": "https://invonxt.com/solutions/freelancers",
@@ -302,16 +302,16 @@
       "internalLinkCount": 2
     },
     {
-      "url": "https://invonxt.com/templates/freelance",
+      "url": "https://invonxt.com/templates/freelance/",
       "status": 200,
-      "title": "Freelance Invoice Templates | Invonxt",
-      "description": "Turn completed projects into clear, professional invoices that make your scope, pricing and payment expectations easy to understand.",
+      "title": "Freelance Invoice Templates | Free Invoice Maker | Invonxt",
+      "description": "Create a professional freelance invoice with six polished templates and an easy invoice maker for freelancers and self-employed professionals.",
       "h1": "Freelance Invoice Templates",
-      "canonical": "https://invonxt.com/templates/freelance",
+      "canonical": "https://invonxt.com/templates/freelance/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 504,
+      "wordCount": 773,
       "issues": [],
-      "internalLinkCount": 2
+      "internalLinkCount": 1
     },
     {
       "url": "https://invonxt.com/templates/law-firm",

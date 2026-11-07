@@ -6,7 +6,7 @@ import { createServer } from 'vite';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 
-function pageSchema({ title, description, url, breadcrumbs = [] }) {
+function pageSchema({ title, description, url, breadcrumbs = [], faq = [] }) {
 	const graph = [
 		{ '@type': 'WebPage', '@id': `${url}#webpage`, url, name: title, description, isPartOf: { '@id': 'https://invonxt.com/#website' }, inLanguage: 'en' },
 	];
@@ -14,6 +14,12 @@ function pageSchema({ title, description, url, breadcrumbs = [] }) {
 		graph.push({
 			'@type': 'BreadcrumbList',
 			itemListElement: breadcrumbs.map(([name, item], index) => ({ '@type': 'ListItem', position: index + 1, name, item })),
+		});
+	}
+	if (faq.length) {
+		graph.push({
+			'@type': 'FAQPage',
+			mainEntity: faq.map(([name, text]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } })),
 		});
 	}
 	return `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })}</script>`;
@@ -147,16 +153,22 @@ async function prerender() {
 			const notFoundHtml = renderToString(React.createElement(PublicPage, { kind: 'not-found' }));
 			for (const [routePath, template] of Object.entries(templatePages)) {
 				const pageHtml = renderToString(React.createElement(TemplatePage, { routePath }));
-				const title = `${template.name} Invoice Templates | Invonxt`;
-				const url = `https://invonxt.com${routePath}`;
+				const title = template.seoTitle || `${template.name} Invoice Templates | Invonxt`;
+				const description = template.seoDescription || template.description;
+				const url = `https://invonxt.com${routePath}${template.trailingSlash ? '/' : ''}`;
 				const routeDir = path.join(distAppDir, ...routePath.split('/').filter(Boolean));
 				fs.mkdirSync(routeDir, { recursive: true });
 				const routeHtml = distIndexHtml
 					.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${pageHtml}</div>\n\t\t`)
 					.replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
-					.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="description" content="${template.description}" data-react-helmet="true" />`)
-					.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<link rel="canonical" href="${url}" data-react-helmet="true" />`);
-				const templateRouteHtml = routeHtml.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, pageSchema({ title, description: template.description, url, breadcrumbs: [['Home','https://invonxt.com/'],['Invoice Templates','https://invonxt.com/features/invoice-templates'],[template.name,url]] }));
+					.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="description" content="${description}" data-react-helmet="true" />`)
+					.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<link rel="canonical" href="${url}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:url" content=".*?"\s*\/?>/, `<meta property="og:url" content="${url}" />`)
+					.replace(/<meta property="og:title" content=".*?"\s*\/?>/, `<meta property="og:title" content="${title}" />`)
+					.replace(/<meta property="og:description" content=".*?"\s*\/?>/, `<meta property="og:description" content="${description}" />`)
+					.replace(/<meta name="twitter:title" content=".*?"\s*\/?>/, `<meta name="twitter:title" content="${title}" />`)
+					.replace(/<meta name="twitter:description" content=".*?"\s*\/?>/, `<meta name="twitter:description" content="${description}" />`);
+				const templateRouteHtml = routeHtml.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, pageSchema({ title, description, url, faq: template.faq || [], breadcrumbs: [['Home','https://invonxt.com/'],['Invoice Templates','https://invonxt.com/features/invoice-templates'],[template.name,url]] }));
 				fs.writeFileSync(path.join(routeDir, 'index.html'), templateRouteHtml, 'utf8');
 			}
 			fs.writeFileSync(path.join(distAppDir, '404.html'), distIndexHtml
@@ -180,7 +192,7 @@ async function prerender() {
 				.map(({ route }) => ({ route, lastmod: sourceDate('src/features/marketing/PublicPage.jsx') })),
 			...Object.keys(templatePages)
 				.filter((route) => route.startsWith('/templates/'))
-				.map((route) => ({ route, lastmod: sourceDate('src/features/marketing/TemplatePage.jsx') })),
+				.map((route) => ({ route: `${route}${templatePages[route].trailingSlash ? '/' : ''}`, lastmod: sourceDate('src/features/marketing/TemplatePage.jsx') })),
 		];
 		const seenRoutes = new Set();
 		const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries
