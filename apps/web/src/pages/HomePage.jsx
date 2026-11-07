@@ -12,7 +12,7 @@ export default function HomePage({ routePath = '/' }) {
           content="Create professional invoices with customizable templates, manage estimates, track payments, organize expenses, and simplify business billing with Invonxt."
         />
       </Helmet>
-      <MarketingPage routePath={routePath} />
+      <div className="home-page"><MarketingPage routePath={routePath} /></div>
     </>
   );
 }

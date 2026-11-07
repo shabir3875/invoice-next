@@ -25,19 +25,7 @@
   min-width: 0;
 }
 
-.freelance-page header {
-  border-color: var(--invonxt-border);
-  box-shadow: 0 1px 2px rgb(15 23 42 / 0.03);
-}
-
-.freelance-page header nav a {
-  color: #334155;
-}
-
-.freelance-page header nav a:hover,
-.freelance-page footer a:hover {
-  color: var(--invonxt-brand);
-}
+.freelance-page footer a:hover { color: var(--invonxt-brand); }
 
 .freelance-page main > section:first-child {
   border-color: #d8eee7;
@@ -169,6 +157,26 @@
 
 .info-image-wrap:hover .info-image {
   transform: scale(1.015);
+}
+
+.freelance-inline-link {
+  color: #0f8f6f;
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: rgb(15 143 111 / 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.freelance-inline-link:hover {
+  color: #0b7a5e;
+  text-decoration-color: currentColor;
+}
+
+.freelance-inline-link:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid rgb(15 143 111 / 0.25);
+  outline-offset: 2px;
 }
 
 .freelance-cta {

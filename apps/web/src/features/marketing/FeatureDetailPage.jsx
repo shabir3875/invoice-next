@@ -10,6 +10,7 @@ import Reveal from '@/components/Reveal';
 import Seo from '@/components/Seo';
 import { APP_ROUTES } from './data';
 import SiteFooter from './SiteFooter';
+import MarketingHeader from './MarketingHeader';
 import './feature-detail.css';
 
 const FEATURES = [
@@ -129,10 +130,6 @@ const FEATURE_SEO_TITLES = {
 };
 export const getFeatureSeoTitle = feature => `${FEATURE_SEO_TITLES[feature.slug] || feature.short} | Invonxt`;
 
-function Brand(){return <a href="/" className="fd-brand"><span>IN</span>Invo<b>Nxt</b></a>}
-
-function FeatureHeader(){const[open,setOpen]=React.useState(false);return <header className="fd-header"><div className="fd-nav"><Brand/><nav aria-label="Feature page navigation"><a href="/features">All Features</a><a href="/features/invoice-templates">Templates</a><a href="/pricing">Pricing</a></nav><div className="fd-nav-actions"><a href={APP_ROUTES.login}>Login</a><a href={APP_ROUTES.signup}>Get Started Free</a></div><button type="button" onClick={()=>setOpen(v=>!v)} aria-expanded={open} aria-label="Toggle navigation"><Menu/></button></div>{open&&<div className="fd-mobile-nav"><a href="/features">All Features</a><a href="/features/invoice-templates">Templates</a><a href={APP_ROUTES.login}>Login</a><a href={APP_ROUTES.signup}>Get Started Free</a></div>}</header>}
-
 function FeatureVisual({type}){
   if(type==='conversion')return <div className="fd-visual fd-conversion"><Document label="ESTIMATE"/><span className="fd-convert-arrow"><ArrowRight/></span><Document label="INVOICE" paid/><div className="fd-visual-note"><Check/> Invoice draft created</div></div>;
   if(type==='expenses')return <div className="fd-visual fd-expenses"><div className="fd-expense-receipt"><ReceiptText/><b>Office supplies</b><span>$184.50</span></div><div className="fd-insight-panel"><header><span>Business overview</span><b>+$8,420</b></header><div className="fd-kpis"><span>Revenue<b>$24.8k</b></span><span>Expenses<b>$7.4k</b></span><span>Profit<b>$17.4k</b></span></div><div className="fd-bars">{[35,52,43,66,59,82,73,94].map((v,i)=><i key={i} style={{height:`${v}%`,'--i':i}}/>)}</div></div></div>;
@@ -151,7 +148,7 @@ export default function FeatureDetailPage({slug:slugProp}){
   const index=FEATURES.findIndex(item=>item.slug===feature.slug);const prev=FEATURES[(index-1+FEATURES.length)%FEATURES.length];const next=FEATURES[(index+1)%FEATURES.length];const Icon=feature.icon;
   const canonical=`https://invonxt.com/features/${feature.slug}`;
   const seoTitle=getFeatureSeoTitle(feature);
-  return <div className="fd-page"><Helmet><title>{seoTitle}</title><meta name="description" content={feature.description}/></Helmet><Seo title={seoTitle} description={feature.description} url={canonical} image="https://invonxt.com/og-image.png" siteName="Invonxt"/><FeatureHeader/><main>
+  return <div className="fd-page"><Helmet><title>{seoTitle}</title><meta name="description" content={feature.description}/></Helmet><Seo title={seoTitle} description={feature.description} url={canonical} image="https://invonxt.com/og-image.png" siteName="Invonxt"/><MarketingHeader/><main>
     <section className="fd-hero"><div className="fd-shell fd-hero-grid"><Reveal className="fd-hero-copy"><a className="fd-back" href="/#features"><ArrowLeft/>All features</a><div className="fd-label"><Icon/>{feature.category}</div><h1>{feature.title}</h1><p>{feature.description}</p>{feature.notice&&<div className="fd-notice"><ShieldCheck/>{feature.notice}</div>}<div className="fd-actions"><a href={APP_ROUTES.signup}>Get Started Free<ArrowRight/></a><a href="/#features">Explore All Features</a></div><div className="fd-trust"><span><Check/>No credit card required</span><span><Check/>Works on every device</span></div></Reveal><Reveal delay={.12} className="fd-hero-visual"><FeatureVisual type={feature.visual}/></Reveal></div></section>
     <section className="fd-section fd-work"><div className="fd-shell"><Reveal className="fd-heading"><span>HOW IT WORKS</span><h2>A clear workflow from start to finish</h2><p>{feature.intro}</p></Reveal><div className="fd-steps">{feature.steps.map(([title,text],i)=><Reveal as="article" delay={i*.08} key={title}><b>{String(i+1).padStart(2,'0')}</b><h3>{title}</h3><p>{text}</p></Reveal>)}</div></div></section>
     <section className="fd-section"><div className="fd-shell"><Reveal className="fd-heading"><span>KEY CAPABILITIES</span><h2>Everything you need for this workflow</h2></Reveal><div className="fd-capabilities">{feature.capabilities.map(([title,text,CardIcon],i)=><Reveal as="article" delay={(i%3)*.06} key={title}><span><CardIcon/></span><h3>{title}</h3><p>{text}</p></Reveal>)}</div></div></section>

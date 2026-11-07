@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T11:12:13.944Z",
+  "generatedAt": "2026-11-07T13:56:52.664Z",
   "pages": [
     {
       "url": "https://invonxt.com/",
@@ -9,9 +9,9 @@
       "h1": "Professional Invoicing Made Simple.",
       "canonical": "https://invonxt.com/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 938,
+      "wordCount": 945,
       "issues": [],
-      "internalLinkCount": 52
+      "internalLinkCount": 53
     },
     {
       "url": "https://invonxt.com/features/professional-invoices",
@@ -21,9 +21,9 @@
       "h1": "Create Professional Invoices That Reflect Your Business",
       "canonical": "https://invonxt.com/features/professional-invoices",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 602,
+      "wordCount": 622,
       "issues": [],
-      "internalLinkCount": 32
+      "internalLinkCount": 59
     },
     {
       "url": "https://invonxt.com/features/estimates-to-invoices",
@@ -33,7 +33,7 @@
       "h1": "Turn Estimates Into Professional Invoices Instantly",
       "canonical": "https://invonxt.com/features/estimates-to-invoices",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 640,
+      "wordCount": 660,
       "issues": [],
       "internalLinkCount": 31
     },
@@ -45,9 +45,9 @@
       "h1": "Customizable Invoice Templates for Every Business",
       "canonical": "https://invonxt.com/features/invoice-templates",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 567,
+      "wordCount": 587,
       "issues": [],
-      "internalLinkCount": 39
+      "internalLinkCount": 57
     },
     {
       "url": "https://invonxt.com/features/payment-tracking",
@@ -57,9 +57,9 @@
       "h1": "Track Invoice Payments and Outstanding Balances",
       "canonical": "https://invonxt.com/features/payment-tracking",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 509,
+      "wordCount": 529,
       "issues": [],
-      "internalLinkCount": 32
+      "internalLinkCount": 59
     },
     {
       "url": "https://invonxt.com/features/expense-management",
@@ -69,9 +69,9 @@
       "h1": "Understand Your Expenses. Stay in Control of Your Business.",
       "canonical": "https://invonxt.com/features/expense-management",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 512,
+      "wordCount": 532,
       "issues": [],
-      "internalLinkCount": 32
+      "internalLinkCount": 59
     },
     {
       "url": "https://invonxt.com/features/recurring-invoices",
@@ -81,7 +81,7 @@
       "h1": "Make Repeat Billing Simple and Predictable",
       "canonical": "https://invonxt.com/features/recurring-invoices",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 585,
+      "wordCount": 605,
       "issues": [],
       "internalLinkCount": 5
     },
@@ -93,7 +93,7 @@
       "h1": "Keep Your Clients, Products, and Services Organized",
       "canonical": "https://invonxt.com/features/client-management",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 550,
+      "wordCount": 570,
       "issues": [],
       "internalLinkCount": 32
     },
@@ -105,7 +105,7 @@
       "h1": "Professional Customer Statements, Without the Extra Work",
       "canonical": "https://invonxt.com/features/customer-statements",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 543,
+      "wordCount": 563,
       "issues": [],
       "internalLinkCount": 32
     },
@@ -117,9 +117,9 @@
       "h1": "Understand Your Business with Financial Reports",
       "canonical": "https://invonxt.com/features/business-reports",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 499,
+      "wordCount": 519,
       "issues": [],
-      "internalLinkCount": 31
+      "internalLinkCount": 58
     },
     {
       "url": "https://invonxt.com/features",
@@ -129,9 +129,9 @@
       "h1": "Invoicing and Business Tools in One Clear Workspace",
       "canonical": "https://invonxt.com/features",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 276,
+      "wordCount": 296,
       "issues": [],
-      "internalLinkCount": 74
+      "internalLinkCount": 105
     },
     {
       "url": "https://invonxt.com/pricing",
@@ -141,9 +141,9 @@
       "h1": "Choose the Billing Period That Fits Your Business",
       "canonical": "https://invonxt.com/pricing",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 360,
+      "wordCount": 380,
       "issues": [],
-      "internalLinkCount": 49
+      "internalLinkCount": 53
     },
     {
       "url": "https://invonxt.com/about",
@@ -153,9 +153,9 @@
       "h1": "About Invonxt",
       "canonical": "https://invonxt.com/about",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 230,
+      "wordCount": 250,
       "issues": [],
-      "internalLinkCount": 39
+      "internalLinkCount": 25
     },
     {
       "url": "https://invonxt.com/contact",
@@ -165,7 +165,7 @@
       "h1": "Contact Invonxt",
       "canonical": "https://invonxt.com/contact",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 222,
+      "wordCount": 242,
       "issues": [],
       "internalLinkCount": 25
     },
@@ -177,9 +177,9 @@
       "h1": "Invonxt Help & Support",
       "canonical": "https://invonxt.com/support",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 216,
+      "wordCount": 236,
       "issues": [],
-      "internalLinkCount": 27
+      "internalLinkCount": 25
     },
     {
       "url": "https://invonxt.com/faq",
@@ -189,9 +189,9 @@
       "h1": "Invonxt Frequently Asked Questions",
       "canonical": "https://invonxt.com/faq",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 297,
+      "wordCount": 317,
       "issues": [],
-      "internalLinkCount": 26
+      "internalLinkCount": 25
     },
     {
       "url": "https://invonxt.com/privacy",
@@ -201,7 +201,7 @@
       "h1": "Privacy Policy",
       "canonical": "https://invonxt.com/privacy",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 190,
+      "wordCount": 210,
       "issues": [],
       "internalLinkCount": 50
     },
@@ -213,7 +213,7 @@
       "h1": "Terms & Conditions",
       "canonical": "https://invonxt.com/terms",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 163,
+      "wordCount": 183,
       "issues": [],
       "internalLinkCount": 50
     },
@@ -225,9 +225,9 @@
       "h1": "Invoicing Software Built for Freelancers",
       "canonical": "https://invonxt.com/solutions/freelancers",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 479,
+      "wordCount": 499,
       "issues": [],
-      "internalLinkCount": 40
+      "internalLinkCount": 26
     },
     {
       "url": "https://invonxt.com/solutions/small-businesses",
@@ -237,7 +237,7 @@
       "h1": "Simple Invoicing and Business Management for Small Businesses",
       "canonical": "https://invonxt.com/solutions/small-businesses",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 475,
+      "wordCount": 495,
       "issues": [],
       "internalLinkCount": 26
     },
@@ -249,7 +249,7 @@
       "h1": "Professional Invoicing Software for Consultants",
       "canonical": "https://invonxt.com/solutions/consultants",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 468,
+      "wordCount": 488,
       "issues": [],
       "internalLinkCount": 27
     },
@@ -261,7 +261,7 @@
       "h1": "Professional Invoicing and Client Billing for Legal Firms",
       "canonical": "https://invonxt.com/solutions/legal-firms",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 481,
+      "wordCount": 501,
       "issues": [],
       "internalLinkCount": 25
     },
@@ -273,7 +273,7 @@
       "h1": "Professional Invoicing and Expense Tools for Accountants",
       "canonical": "https://invonxt.com/solutions/accountants",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 476,
+      "wordCount": 496,
       "issues": [],
       "internalLinkCount": 26
     },
@@ -285,7 +285,7 @@
       "h1": "Estimate and Invoice Software for Contractors",
       "canonical": "https://invonxt.com/solutions/contractors",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 472,
+      "wordCount": 492,
       "issues": [],
       "internalLinkCount": 26
     },
@@ -297,9 +297,9 @@
       "h1": "Professional invoices for every client engagement",
       "canonical": "https://invonxt.com/templates/consulting",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 122,
+      "wordCount": 146,
       "issues": [],
-      "internalLinkCount": 2
+      "internalLinkCount": 29
     },
     {
       "url": "https://invonxt.com/templates/freelance/",
@@ -309,7 +309,7 @@
       "h1": "Freelance Invoice Templates",
       "canonical": "https://invonxt.com/templates/freelance/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 785,
+      "wordCount": 804,
       "issues": [],
       "internalLinkCount": 1
     },
@@ -321,9 +321,9 @@
       "h1": "Clear billing for legal services and matters",
       "canonical": "https://invonxt.com/templates/law-firm",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 121,
+      "wordCount": 145,
       "issues": [],
-      "internalLinkCount": 2
+      "internalLinkCount": 29
     },
     {
       "url": "https://invonxt.com/templates/small-businesses",
@@ -333,9 +333,9 @@
       "h1": "Reliable invoices for everyday business",
       "canonical": "https://invonxt.com/templates/small-businesses",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 115,
+      "wordCount": 139,
       "issues": [],
-      "internalLinkCount": 2
+      "internalLinkCount": 29
     }
   ]
 }

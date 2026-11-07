@@ -1,12 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { ArrowRight, Check, ChevronDown, Menu } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown } from 'lucide-react';
 import Seo from '@/components/Seo';
 import Reveal from '@/components/Reveal';
 import { APP_ROUTES } from './data';
+import MarketingHeader from './MarketingHeader';
 import './freelance-page.css';
 
 const LOGIN_URL = APP_ROUTES.login;
+const Header = MarketingHeader;
 const PAGE_URL = 'https://invonxt.com/templates/freelance/';
 
 const templates = [
@@ -28,14 +30,6 @@ const faq = [
   ['Are there additional invoice templates for freelancers?', 'Yes. Freelancers can also start from consulting, contractor, Word-style, spreadsheet-style, or other professional layouts. Choose the structure that best matches how you price and describe your work.'],
 ];
 
-function Brand() {
-  return <a href={LOGIN_URL} className="freelance-focus inline-flex items-center gap-2 text-xl font-black tracking-tight text-slate-950" aria-label="Invonxt login"><span className="grid h-9 w-9 place-items-center rounded-xl bg-orange-600 text-xs text-white">IN</span>Invo<span className="text-orange-600">Nxt</span></a>;
-}
-
-function Header() {
-  return <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-xl"><div className="mx-auto flex min-h-[72px] max-w-[1180px] items-center justify-between gap-2 px-4 sm:gap-4 sm:px-8"><Brand/><nav aria-label="Primary navigation" className="hidden items-center gap-7 lg:flex">{['Features', 'Invoice Templates', 'Invoice Generator', 'Pricing'].map(label => <a key={label} href={LOGIN_URL} className="freelance-focus text-sm font-semibold text-slate-600 transition hover:text-orange-600">{label}</a>)}</nav><div className="flex shrink-0 items-center gap-2"><a href={LOGIN_URL} className="freelance-focus hidden min-h-11 items-center px-3 text-sm font-bold text-slate-700 sm:inline-flex">Login</a><a href={LOGIN_URL} className="freelance-focus inline-flex min-h-11 items-center rounded-xl bg-orange-600 px-3 text-sm font-extrabold text-white shadow-sm transition hover:bg-orange-700 sm:px-4">Try It Free</a><a href={LOGIN_URL} className="freelance-focus hidden h-11 w-11 place-items-center rounded-xl border border-slate-200 sm:grid lg:hidden" aria-label="Open Invonxt navigation"><Menu size={19}/></a></div></div></header>;
-}
-
 function Cta({ final = false }) {
   return <Reveal as="section" className={`freelance-cta relative overflow-hidden rounded-3xl px-6 py-12 text-white sm:px-10 ${final ? 'bg-slate-950 text-center' : 'bg-gradient-to-r from-orange-600 to-orange-500'}`}><div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle,#fff_1px,transparent_1px)] [background-size:14px_14px]"/><div className={`relative ${final ? 'mx-auto max-w-2xl' : 'flex flex-col items-start justify-between gap-6 md:flex-row md:items-center'}`}><div><h2 className="text-2xl font-black leading-tight sm:text-3xl">{final ? 'Get Started for Free' : 'Create your first invoice with our online invoice generator.'}</h2><p className="mt-3 max-w-2xl text-sm leading-6 text-white/80">{final ? 'Create a clear, professional freelancer invoice with Invonxt.' : 'Build a professional freelance invoice using your own business and client details.'}</p></div><a href={LOGIN_URL} className="freelance-focus mt-6 inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-6 text-sm font-extrabold text-slate-950 shadow-lg transition hover:-translate-y-0.5 md:mt-0">{final ? 'Get Started for Free' : 'Try It Free'}<ArrowRight size={17}/></a></div></Reveal>;
 }
@@ -46,8 +40,26 @@ function TemplateCard({ item, index }) {
   return <Reveal as="article" delay={index * 70} className="template-card group rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"><div className="overflow-hidden rounded-xl bg-slate-100"><div className="aspect-[4/5] overflow-hidden"><img src={src} alt={alt} width="600" height="750" loading="lazy" decoding="async" className="h-full w-full object-contain transition duration-700 ease-out group-hover:scale-[1.035]"/></div></div><h3 className="px-1 pb-1 pt-5 text-base font-extrabold text-slate-950">{name}</h3><div className="mt-3 grid grid-cols-2 gap-2 px-1 sm:grid-cols-3"><a href={`/downloads/freelance-invoice-template-${templateNumber}.docx`} download={`Freelance-Invoice-Template-${templateNumber}.docx`} className="freelance-focus inline-flex min-h-11 items-center justify-center rounded-lg border border-slate-200 px-2 text-center text-xs font-extrabold text-slate-700 transition hover:border-blue-300 hover:bg-blue-50" aria-label={`Download the ${name} template as a Word document`}>Word download</a><a href={`/downloads/freelance-invoice-template-${templateNumber}.xlsx`} download={`Freelance-Invoice-Template-${templateNumber}.xlsx`} className="freelance-focus inline-flex min-h-11 items-center justify-center rounded-lg border border-slate-200 px-2 text-center text-xs font-extrabold text-slate-700 transition hover:border-emerald-300 hover:bg-emerald-50" aria-label={`Download the ${name} template as an Excel spreadsheet`}>Excel download</a><a href={LOGIN_URL} className="freelance-focus col-span-2 inline-flex min-h-11 items-center justify-center gap-1.5 rounded-lg bg-orange-600 px-2 text-center text-xs font-extrabold text-white transition hover:bg-orange-700 sm:col-span-1" aria-label={`Customize the ${name} template in Invonxt`}>Customize<ArrowRight size={14}/></a></div></Reveal>;
 }
 
+const sectionLinks = {
+  'Why Should I Use a Self-Employed Invoice Template?': ['well-structured invoice', 'reusable template'],
+  'How Are Templates Specifically Designed for Freelancers Better?': ['freelancer-focused layout', 'create an invoice'],
+  'How Can I Get Paid?': ['payment method', 'invoicing workflow'],
+};
+
+function LinkedParagraph({ children, phrases }) {
+  if (typeof children !== 'string') return children;
+  const pattern = new RegExp(`(${phrases.join('|')})`, 'gi');
+  return children.split(pattern).map((part, index) => phrases.some(phrase => phrase.toLowerCase() === part.toLowerCase())
+    ? <a key={`${part}-${index}`} href={LOGIN_URL} className="freelance-inline-link">{part}</a>
+    : part);
+}
+
 function InfoSection({ image, alt, title, children, reverse = false, delay = 0 }) {
-  return <section className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16"><Reveal delay={delay} className={`info-image-wrap ${reverse ? 'lg:order-2' : ''}`}><img src={image} alt={alt} width="960" height="720" loading="lazy" decoding="async" className="info-image aspect-[4/3] w-full object-cover"/></Reveal><Reveal delay={delay + 90} className={reverse ? 'lg:order-1' : ''}><h2 className="text-3xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">{title}</h2><div className="mt-5 space-y-4 text-base leading-8 text-slate-600">{children}</div></Reveal></section>;
+  const greenImage = image.replace('.png', '-green.webp');
+  const linkedChildren = React.Children.map(children, child => React.isValidElement(child)
+    ? React.cloneElement(child, {}, <LinkedParagraph phrases={sectionLinks[title]}>{child.props.children}</LinkedParagraph>)
+    : child);
+  return <section className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16"><Reveal delay={delay} className={`info-image-wrap ${reverse ? 'lg:order-2' : ''}`}><img src={greenImage} alt={alt} width="1254" height="941" loading="lazy" decoding="async" className="info-image aspect-[4/3] w-full object-cover"/></Reveal><Reveal delay={delay + 90} className={reverse ? 'lg:order-1' : ''}><h2 className="text-3xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl">{title}</h2><div className="mt-5 space-y-4 text-base leading-8 text-slate-600">{linkedChildren}</div></Reveal></section>;
 }
 
 function Footer() {

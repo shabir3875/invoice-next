@@ -1,11 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
-import { ArrowRight, BarChart3, Check, ChevronDown, FileText, Menu, ReceiptText, Users, X } from 'lucide-react';
+import { ArrowRight, BarChart3, Check, ChevronDown, FileText, ReceiptText, Users } from 'lucide-react';
 import Seo from '../../components/Seo';
 import { APP_ROUTES } from './data';
 import { PREMIUM_FEATURES, PREMIUM_PLANS } from '../app-components/plans';
-import SiteFooter, { SiteBrand } from './SiteFooter';
+import SiteFooter from './SiteFooter';
+import MarketingHeader from './MarketingHeader';
 import './public-pages.css';
 
 const FEATURE_LINKS = [
@@ -62,7 +63,6 @@ export function getPublicRoute(path){
   return null;
 }
 
-function Header(){const[open,setOpen]=React.useState(false);return <header className="pp-header"><div className="pp-nav"><SiteBrand/><nav aria-label="Primary navigation"><a href="/features">Features</a><a href="/solutions/freelancers">Solutions</a><a href="/pricing">Pricing</a><a href="/about">Company</a></nav><div className="pp-actions"><a href={APP_ROUTES.login}>Login</a><a href={APP_ROUTES.signup}>Get Started Free</a></div><button type="button" onClick={()=>setOpen(!open)} aria-expanded={open} aria-label="Toggle navigation">{open?<X/>:<Menu/>}</button></div>{open&&<div className="pp-mobile"><a href="/features">Features</a><a href="/solutions/freelancers">Solutions</a><a href="/pricing">Pricing</a><a href="/support">Support</a><a href={APP_ROUTES.signup}>Get Started Free</a></div>}</header>}
 function Schema({title,description,url,type='WebPage'}){const data={'@context':'https://schema.org','@type':type,name:title,description,url,isPartOf:{'@type':'WebSite',name:'Invonxt',url:'https://invonxt.com/'}};return <Helmet><script type="application/ld+json">{JSON.stringify(data)}</script></Helmet>}
 function Meta({title,description,path,noindex=false}){const full=`${title} | Invonxt`;const url=`https://invonxt.com${path}`;return <><Helmet><title>{full}</title><meta name="description" content={description}/></Helmet><Seo title={full} description={description} url={url} siteName="Invonxt" robots={noindex?'noindex, follow':'index, follow, max-image-preview:large'}/><Schema title={title} description={description} url={url}/></>}
 function Hero({eyebrow,title,description,note}){return <section className="pp-hero"><div className="pp-shell pp-hero-grid"><div><span>{eyebrow}</span><h1>{title}</h1><p>{description}</p>{note&&<small>{note}</small>}<div className="pp-hero-actions"><a href={APP_ROUTES.signup}>Get Started Free <ArrowRight/></a><a href="/features">Explore All Features</a></div></div><WorkflowVisual/></div></section>}
@@ -79,4 +79,4 @@ function FAQPage(){return <><Meta title="Invonxt Frequently Asked Questions" des
 function LegalPage({kind}){const d=LEGAL[kind];const path=kind==='privacy'?'/privacy':kind==='terms'?'/terms':`/${kind}`;const draft=kind==='cookie-policy'||kind==='refund-policy';return <><Meta title={d.title} description={d.description} path={path} noindex={draft}/><main className="pp-legal pp-shell"><span>LEGAL NOTICE {draft?'· REVIEW REQUIRED':''}</span><h1>{d.title}</h1><p className="pp-lead">{d.description}</p>{d.body.map((x,i)=><section key={x}><h2>{i===0?'Important status':i===1?'How this applies':'Questions and requests'}</h2><p>{x}</p></section>)}</main></>}
 function NotFound(){return <><Meta title="Page Not Found" description="The requested Invonxt page could not be found." path="/404" noindex/><main className="pp-not-found"><h1>Page not found</h1><p>The page may have moved or the address may be incorrect.</p><a href="/">Return to Invonxt</a></main></>}
 
-export default function PublicPage({kind,slug:slugProp}){const params=useParams();const slug=slugProp||params.slug;let content;if(kind==='features')content=<FeaturesDirectory/>;else if(kind==='solution')content=<SolutionPage slug={slug}/>;else if(kind==='pricing')content=<PricingPage/>;else if(kind==='faq')content=<FAQPage/>;else if(COMPANY[kind])content=<CompanyPage kind={kind}/>;else if(LEGAL[kind])content=<LegalPage kind={kind}/>;else content=<NotFound/>;return <div className="pp-page"><Header/>{content}<SiteFooter/></div>}
+export default function PublicPage({kind,slug:slugProp}){const params=useParams();const slug=slugProp||params.slug;let content;if(kind==='features')content=<FeaturesDirectory/>;else if(kind==='solution')content=<SolutionPage slug={slug}/>;else if(kind==='pricing')content=<PricingPage/>;else if(kind==='faq')content=<FAQPage/>;else if(COMPANY[kind])content=<CompanyPage kind={kind}/>;else if(LEGAL[kind])content=<LegalPage kind={kind}/>;else content=<NotFound/>;return <div className="pp-page"><MarketingHeader/>{content}<SiteFooter/></div>}

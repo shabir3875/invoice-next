@@ -25,7 +25,7 @@ export const FOOTER_GROUPS = [
 ];
 
 export function SiteBrand({ light = false }) {
-  return <a href="/" className={`inline-flex items-center gap-2 text-xl font-black tracking-tight ${light ? 'text-white' : 'text-slate-950'}`} aria-label="Invonxt home"><span className="grid h-9 w-9 place-items-center rounded-xl bg-blue-600 text-xs text-white">IN</span>Invo<span className="text-blue-500">Nxt</span></a>;
+  return <a href="/" className={`marketing-brand inline-flex items-center gap-2 text-xl font-black tracking-tight ${light ? 'text-white' : 'text-slate-950'}`} aria-label="Invonxt home"><span className="grid h-9 w-9 place-items-center rounded-xl text-xs text-white">IN</span>Invo<span>Nxt</span></a>;
 }
 
 export default function SiteFooter() {
