@@ -32,7 +32,7 @@ function FeatureCard({ feature, index, active, onActivate }) {
   const Icon = feature.icon;
   return <article className={`af-card af-${feature.tone} ${active ? 'is-active' : ''}`} onMouseEnter={() => onActivate(index)} onFocus={() => onActivate(index)}>
     <div className="af-card-top"><span className="af-icon"><Icon size={19}/></span><MiniScene type={feature.scene}/></div>
-    <div className="mt-5 flex items-center gap-2"><h3 className="!mt-0">{feature.title}</h3><span className={`rounded-full px-2 py-1 text-[9px] font-black uppercase tracking-wide ${feature.availability==='Available'?'bg-emerald-50 text-emerald-700':feature.availability==='Partial'?'bg-amber-50 text-amber-700':'bg-slate-100 text-slate-600'}`}>{feature.availability}</span></div><p>{feature.text}</p>
+    <h3>{feature.title}</h3><p>{feature.text}</p>
     <a href={feature.route}>Learn More <ArrowRight size={14}/></a>
   </article>;
 }

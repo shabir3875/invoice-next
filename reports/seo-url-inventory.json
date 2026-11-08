@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T18:32:43.723Z",
+  "generatedAt": "2026-11-08T18:41:49.046Z",
   "summary": {
     "totalPublicPages": 47,
     "indexablePages": 47,
@@ -21,7 +21,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1088,
+      "wordCount": 1058,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -160,7 +160,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 167
+      "internalLinkCount": 166
     },
     {
       "url": "https://invonxt.com/pricing",
