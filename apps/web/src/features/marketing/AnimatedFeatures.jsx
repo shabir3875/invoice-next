@@ -9,14 +9,14 @@ import './animated-features.css';
 import './animated-features-green.css';
 
 const FEATURES = [
-  { title: 'Lightning Fast', text: 'Create, edit, email, share, print, and download professional invoices from one streamlined workflow.', icon: Zap, tone: 'orange', route: '/invoice-generator', scene: 'invoice', availability: 'Available' },
-  { title: 'Automate Repeat Invoices', text: 'Schedule invoices monthly, every three months, or yearly for retainers, quarterly services, and annual renewals.', icon: RefreshCw, tone: 'blue', route: '/features', scene: 'recurring', availability: 'Planned' },
-  { title: 'Inventory Tracking', text: 'Track opening and current stock, set reorder levels, check projected availability, and receive low-stock warnings.', icon: Boxes, tone: 'purple', route: '/features/client-management', scene: 'clients', availability: 'Available' },
+  { title: 'Lightning Fast', text: 'Create, edit, email, share, print, and download professional invoices from one streamlined workflow.', icon: Zap, tone: 'orange', route: '/features/lightning-fast-invoicing', scene: 'invoice', availability: 'Available' },
+  { title: 'Automate Repeat Invoices', text: 'Schedule invoices monthly, every three months, or yearly for retainers, quarterly services, and annual renewals.', icon: RefreshCw, tone: 'blue', route: '/features/recurring-invoices', scene: 'recurring', availability: 'Planned' },
+  { title: 'Inventory Tracking', text: 'Track opening and current stock, set reorder levels, check projected availability, and receive low-stock warnings.', icon: Boxes, tone: 'purple', route: '/features/inventory-tracking', scene: 'clients', availability: 'Available' },
   { title: 'Get Paid Faster', text: 'Record full or partial payments and use clear invoice statuses to see paid, unpaid, overdue, and outstanding balances. Direct PayPal collection is planned.', icon: WalletCards, tone: 'green', route: '/features/payment-tracking', scene: 'statement', availability: 'Partial' },
-  { title: 'Follow Up in Batches', text: 'Select overdue customers, tailor a reminder, and send follow-ups together instead of one by one.', icon: Send, tone: 'orange', route: '/features/customer-statements', scene: 'statement', availability: 'Planned' },
-  { title: 'See Sales and Stock Clearly', text: 'Review sales by product, compare net and gross values, check inventory value, and identify top items and customers.', icon: BarChart3, tone: 'blue', route: '/invoice-reports', scene: 'insights', availability: 'Available' },
-  { title: 'Import and Export Business Records', text: 'Export supported reports and records to Excel or PDF. CSV and Excel imports with validation warnings are planned.', icon: FileSpreadsheet, tone: 'purple', route: '/features/business-reports', scene: 'convert', availability: 'Partial' },
-  { title: 'Customize Documents as You Work', text: 'Apply fixed or percentage discounts, manage line items, and convert or duplicate supported business documents with less retyping.', icon: SlidersHorizontal, tone: 'green', route: '/invoice-customization', scene: 'invoice', availability: 'Available' },
+  { title: 'Follow Up in Batches', text: 'Select overdue customers, tailor a reminder, and send follow-ups together instead of one by one.', icon: Send, tone: 'orange', route: '/features/batch-payment-reminders', scene: 'statement', availability: 'Planned' },
+  { title: 'See Sales and Stock Clearly', text: 'Review sales by product, compare net and gross values, check inventory value, and identify top items and customers.', icon: BarChart3, tone: 'blue', route: '/features/sales-stock-reports', scene: 'insights', availability: 'Available' },
+  { title: 'Import and Export Business Records', text: 'Export supported reports and records to Excel or PDF. CSV and Excel imports with validation warnings are planned.', icon: FileSpreadsheet, tone: 'purple', route: '/features/import-export-records', scene: 'convert', availability: 'Partial' },
+  { title: 'Customize Documents as You Work', text: 'Apply fixed or percentage discounts, manage line items, and convert or duplicate supported business documents with less retyping.', icon: SlidersHorizontal, tone: 'green', route: '/features/document-customization', scene: 'invoice', availability: 'Available' },
 ];
 
 function MiniScene({ type }) {

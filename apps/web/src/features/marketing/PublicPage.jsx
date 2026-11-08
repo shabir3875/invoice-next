@@ -11,10 +11,17 @@ import './public-pages.css';
 import './verified-features.css';
 
 const FEATURE_LINKS = [
+  ['Fast Invoicing','/features/lightning-fast-invoicing','Create and deliver professional invoices through one focused workflow.'],
+  ['Repeat Invoices','/features/recurring-invoices','Understand repeat billing and the planned scheduling workflow.'],
   ['Professional Invoices','/features/professional-invoices','Create branded, itemized invoices and track their status.'],
   ['Invoice Templates','/features/invoice-templates','Present consistent business details with reusable layouts.'],
   ['Estimates to Invoices','/features/estimates-to-invoices','Reuse supported estimate details in an editable invoice draft.'],
   ['Payment Tracking','/features/payment-tracking','Record full or partial payments and review outstanding balances.'],
+  ['Batch Payment Reminders','/features/batch-payment-reminders','Understand the planned batch follow-up workflow and available statement tools.'],
+  ['Inventory Tracking','/features/inventory-tracking','Monitor stock, projected availability, and reorder levels.'],
+  ['Sales and Stock Reports','/features/sales-stock-reports','Review product sales, inventory value, and leading records.'],
+  ['Import and Export','/features/import-export-records','Move supported business data and understand planned imports.'],
+  ['Document Customization','/features/document-customization','Adjust line items, discounts, taxes, fees, and supported documents.'],
   ['Expense Management','/features/expense-management','Organize supplier expenses, categories, and business costs.'],
   ['Customer Statements','/features/customer-statements','Summarize invoices, recorded payments, and balances.'],
   ['Business Reports','/features/business-reports','Review revenue, expenses, taxes, and receivables.'],
