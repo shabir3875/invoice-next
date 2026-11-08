@@ -10,16 +10,22 @@ RUN printf '#!/bin/sh\nexit 0\n' > /usr/local/bin/php && chmod +x /usr/local/bin
 # Copy pre-built production frontend assets
 COPY dist/apps/web /usr/share/nginx/html
 
-# Configure Nginx to serve on port 3000 with SPA routing fallback
+# Configure Nginx to serve generated routes, redirects, and a real 404.
 RUN printf 'server {\n\
     listen 3000;\n\
     server_name _;\n\
     root /usr/share/nginx/html;\n\
     index index.html;\n\
 \n\
+    location = /template/freeluncer { return 301 /templates/freelance; }\n\
+    location = /template/freeluncer/ { return 301 /templates/freelance; }\n\
+\n\
     location / {\n\
-        try_files $uri $uri/ /index.html;\n\
+        try_files $uri $uri/ =404;\n\
     }\n\
+\n\
+    error_page 404 /404.html;\n\
+    location = /404.html { internal; }\n\
 \n\
     location /assets/ {\n\
         expires 1y;\n\

@@ -6,7 +6,7 @@ import { createServer } from 'vite';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 
-function pageSchema({ title, description, url, breadcrumbs = [], faq = [] }) {
+function pageSchema({ title, description, url, breadcrumbs = [] }) {
 	const graph = [
 		{ '@type': 'WebPage', '@id': `${url}#webpage`, url, name: title, description, isPartOf: { '@id': 'https://invonxt.com/#website' }, inLanguage: 'en' },
 	];
@@ -14,12 +14,6 @@ function pageSchema({ title, description, url, breadcrumbs = [], faq = [] }) {
 		graph.push({
 			'@type': 'BreadcrumbList',
 			itemListElement: breadcrumbs.map(([name, item], index) => ({ '@type': 'ListItem', position: index + 1, name, item })),
-		});
-	}
-	if (faq.length) {
-		graph.push({
-			'@type': 'FAQPage',
-			mainEntity: faq.map(([name, text]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } })),
 		});
 	}
 	return `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })}</script>`;
@@ -39,6 +33,10 @@ async function prerender() {
 		const { default: FeatureDetailPage, FEATURE_SLUGS, getFeature, getFeatureSeoTitle } = await vite.ssrLoadModule('/src/features/marketing/FeatureDetailPage.jsx');
 		const { default: PublicPage, PUBLIC_ROUTES, getPublicRoute } = await vite.ssrLoadModule('/src/features/marketing/PublicPage.jsx');
 		const { default: TemplatePage, templatePages } = await vite.ssrLoadModule('/src/features/marketing/TemplatePage.jsx');
+		const { default: SeoLandingPage } = await vite.ssrLoadModule('/src/features/marketing/SeoLandingPage.jsx');
+		const { SEO_PAGES, SEO_ROUTES } = await vite.ssrLoadModule('/src/features/marketing/seo-pages.js');
+		const { default: BlogPage } = await vite.ssrLoadModule('/src/features/marketing/BlogPage.jsx');
+		const { ARTICLES, ARTICLE_ROUTES } = await vite.ssrLoadModule('/src/features/marketing/blog-data.js');
 		const appHtml = renderToString(React.createElement(HomePage));
 
 		if (!appHtml || !appHtml.includes('<h1')) {
@@ -168,8 +166,45 @@ async function prerender() {
 					.replace(/<meta property="og:description" content=".*?"\s*\/?>/, `<meta property="og:description" content="${description}" />`)
 					.replace(/<meta name="twitter:title" content=".*?"\s*\/?>/, `<meta name="twitter:title" content="${title}" />`)
 					.replace(/<meta name="twitter:description" content=".*?"\s*\/?>/, `<meta name="twitter:description" content="${description}" />`);
-				const templateRouteHtml = routeHtml.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, pageSchema({ title, description, url, faq: template.faq || [], breadcrumbs: [['Home','https://invonxt.com/'],['Invoice Templates','https://invonxt.com/features/invoice-templates'],[template.name,url]] }));
+				const templateRouteHtml = routeHtml.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, pageSchema({ title, description, url, breadcrumbs: [['Home','https://invonxt.com/'],['Invoice Templates','https://invonxt.com/invoice-templates'],[template.name,url]] }));
 				fs.writeFileSync(path.join(routeDir, 'index.html'), templateRouteHtml, 'utf8');
+			}
+			for (const routePath of SEO_ROUTES) {
+				const page = SEO_PAGES[routePath];
+				const pageHtml = renderToString(React.createElement(SeoLandingPage, { routePath }));
+				const url = `https://invonxt.com${routePath}`;
+				const routeDir = path.join(distAppDir, ...routePath.split('/').filter(Boolean));
+				fs.mkdirSync(routeDir, { recursive: true });
+				const routeHtml = distIndexHtml
+					.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${pageHtml}</div>\n\t\t`)
+					.replace(/<title>.*?<\/title>/, `<title>${page.title}</title>`)
+					.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="description" content="${page.description}" data-react-helmet="true" />`)
+					.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<link rel="canonical" href="${url}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:title" content="${page.title}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:description" content="${page.description}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${url}" data-react-helmet="true" />`)
+					.replace(/<meta name="twitter:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="twitter:title" content="${page.title}" data-react-helmet="true" />`)
+					.replace(/<meta name="twitter:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="twitter:description" content="${page.description}" data-react-helmet="true" />`);
+				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
+			}
+			for (const routePath of ['/blog', ...ARTICLE_ROUTES]) {
+				const slug = routePath === '/blog' ? undefined : routePath.split('/').at(-1);
+				const article = slug ? ARTICLES[slug] : null;
+				const title = article ? `${article.title} | Invonxt` : 'Invoicing Guides & Business Resources | Invonxt';
+				const description = article ? article.description : 'Practical guides for creating invoices, choosing payment terms, billing international clients, freelancing, accounting, and business finance.';
+				const url = `https://invonxt.com${routePath}`;
+				const pageHtml = renderToString(React.createElement(BlogPage, { slug }));
+				const routeDir = path.join(distAppDir, ...routePath.split('/').filter(Boolean));
+				fs.mkdirSync(routeDir, { recursive: true });
+				const routeHtml = distIndexHtml
+					.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${pageHtml}</div>\n\t\t`)
+					.replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
+					.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="description" content="${description}" data-react-helmet="true" />`)
+					.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<link rel="canonical" href="${url}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:title" content="${title}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:description" content="${description}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${url}" data-react-helmet="true" />`);
+				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
 			}
 			fs.writeFileSync(path.join(distAppDir, '404.html'), distIndexHtml
 				.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${notFoundHtml}</div>\n\t\t`)
@@ -193,6 +228,9 @@ async function prerender() {
 			...Object.keys(templatePages)
 				.filter((route) => route.startsWith('/templates/'))
 				.map((route) => ({ route: `${route}${templatePages[route].trailingSlash ? '/' : ''}`, lastmod: sourceDate('src/features/marketing/TemplatePage.jsx') })),
+			...SEO_ROUTES.map((route) => ({ route, lastmod: sourceDate('src/features/marketing/seo-pages.js') })),
+			{ route: '/blog', lastmod: sourceDate('src/features/marketing/blog-data.js') },
+			...ARTICLE_ROUTES.map((route) => ({ route, lastmod: sourceDate('src/features/marketing/blog-data.js') })),
 		];
 		const seenRoutes = new Set();
 		const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries

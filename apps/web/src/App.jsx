@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import { Navigate, Route, Routes, BrowserRouter as Router, useParams } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
 
@@ -7,6 +7,9 @@ const AppShell = React.lazy(() => import('./features/app-components').then(modul
 const FeatureDetailPage = React.lazy(() => import('./features/marketing/FeatureDetailPage'));
 const PublicPage = React.lazy(() => import('./features/marketing/PublicPage'));
 const TemplatePage = React.lazy(() => import('./features/marketing/TemplatePage'));
+const SeoLandingPage = React.lazy(() => import('./features/marketing/SeoLandingPage'));
+const BlogPage = React.lazy(() => import('./features/marketing/BlogPage'));
+import { SEO_ROUTES } from './features/marketing/seo-pages';
 
 function HashRouteHandler({ children }) {
     const [hash, setHash] = React.useState(() => (typeof window !== 'undefined' ? window.location.hash : ''));
@@ -61,6 +64,9 @@ function App() {
                     <Route path="/templates/law-firm" element={<TemplatePage routePath="/templates/law-firm" />} />
                     <Route path="/templates/small-businesses" element={<TemplatePage routePath="/templates/small-businesses" />} />
                     <Route path="/features/:slug" element={<FeatureDetailPage />} />
+                    {SEO_ROUTES.map(path => <Route key={path} path={path} element={<SeoLandingPage routePath={path} />} />)}
+                    <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/blog/:slug" element={<BlogRoute />} />
                     <Route path="/premium" element={<AppShell initialPage="premium" />} />
                     <Route path="*" element={<PublicPage kind="not-found" />} />
                 </Routes>
@@ -68,6 +74,11 @@ function App() {
             </React.Suspense>
         </Router>
     );
+}
+
+function BlogRoute() {
+    const { slug } = useParams();
+    return <BlogPage slug={slug} />;
 }
 
 export default App;

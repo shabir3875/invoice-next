@@ -440,6 +440,7 @@ export default defineConfig({
 		},
 	},
 	build: {
+		emptyOutDir: true,
 		[bundlerOptionsKey]: bundlerOptions,
 	}
 });

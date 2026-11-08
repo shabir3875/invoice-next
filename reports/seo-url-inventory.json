@@ -1,5 +1,16 @@
 {
-  "generatedAt": "2026-11-07T13:56:52.664Z",
+  "generatedAt": "2026-11-08T09:57:01.481Z",
+  "summary": {
+    "totalPublicPages": 49,
+    "indexablePages": 49,
+    "missingMetadata": 0,
+    "duplicateTitles": 0,
+    "missingDescriptions": 0,
+    "brokenInternalLinks": 0,
+    "sitemapStatus": "All generated sitemap files present",
+    "canonicalIssues": 0,
+    "structuredDataIssues": 0
+  },
   "pages": [
     {
       "url": "https://invonxt.com/",
@@ -7,11 +18,14 @@
       "title": "Invonxt | Professional Invoicing Software for Freelancers & Businesses",
       "description": "Create professional invoices with customizable templates, manage estimates, track payments, organize expenses, and simplify business billing with Invonxt.",
       "h1": "Professional Invoicing Made Simple.",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 945,
+      "wordCount": 951,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 53
+      "brokenInternalLinks": [],
+      "internalLinkCount": 115
     },
     {
       "url": "https://invonxt.com/features/professional-invoices",
@@ -19,11 +33,14 @@
       "title": "Professional Invoice Software for Freelancers & Small Businesses | Invonxt",
       "description": "Create branded invoices with customizable templates, your logo, items, taxes, and payment terms. Give every client a polished, professional billing experience.",
       "h1": "Create Professional Invoices That Reflect Your Business",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/features/professional-invoices",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 622,
+      "wordCount": 628,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 59
+      "brokenInternalLinks": [],
+      "internalLinkCount": 102
     },
     {
       "url": "https://invonxt.com/features/estimates-to-invoices",
@@ -31,11 +48,14 @@
       "title": "Convert Estimates to Invoices in One Click | Invonxt",
       "description": "Convert estimates, sales orders, and proforma documents into invoice drafts without entering the same information twice. Supported customer details, line items, prices, and terms carry into the draft.",
       "h1": "Turn Estimates Into Professional Invoices Instantly",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/features/estimates-to-invoices",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 660,
+      "wordCount": 666,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 31
+      "brokenInternalLinks": [],
+      "internalLinkCount": 52
     },
     {
       "url": "https://invonxt.com/features/invoice-templates",
@@ -43,11 +63,14 @@
       "title": "Customizable Invoice Templates for Every Business | Invonxt",
       "description": "Choose a professional invoice layout and present your business logo, details, line items, taxes, notes, and payment terms clearly.",
       "h1": "Customizable Invoice Templates for Every Business",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/features/invoice-templates",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 587,
+      "wordCount": 593,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 57
+      "brokenInternalLinks": [],
+      "internalLinkCount": 99
     },
     {
       "url": "https://invonxt.com/features/payment-tracking",
@@ -55,11 +78,14 @@
       "title": "Track Invoice Payments and Outstanding Balances | Invonxt",
       "description": "Record full or partial payments, review payment history, and keep paid, unpaid, partial, and overdue invoice balances visible.",
       "h1": "Track Invoice Payments and Outstanding Balances",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/features/payment-tracking",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 529,
+      "wordCount": 535,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 59
+      "brokenInternalLinks": [],
+      "internalLinkCount": 103
     },
     {
       "url": "https://invonxt.com/features/expense-management",
@@ -67,11 +93,14 @@
       "title": "Business Expense Tracking Made Simple | Invonxt",
       "description": "Track expenses, manage categories, and view revenue, profit, and financial trends in one clear dashboard.",
       "h1": "Understand Your Expenses. Stay in Control of Your Business.",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/features/expense-management",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 532,
+      "wordCount": 538,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 59
+      "brokenInternalLinks": [],
+      "internalLinkCount": 101
     },
     {
       "url": "https://invonxt.com/features/recurring-invoices",
@@ -79,10 +108,13 @@
       "title": "Recurring Invoice Records for Repeat Billing | Invonxt",
       "description": "Prepare repeat billing details for ongoing services, monthly retainers, and repeat clients. Spend less time rebuilding the same invoice information.",
       "h1": "Make Repeat Billing Simple and Predictable",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/features/recurring-invoices",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 605,
+      "wordCount": 611,
+      "missingAltCount": 0,
       "issues": [],
+      "brokenInternalLinks": [],
       "internalLinkCount": 5
     },
     {
@@ -91,11 +123,14 @@
       "title": "Organize Customers, Products, and Services | Invonxt",
       "description": "Manage clients, suppliers, products, and services, reuse details, and keep all your business records in one place.",
       "h1": "Keep Your Clients, Products, and Services Organized",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/features/client-management",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 570,
+      "wordCount": 576,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 32
+      "brokenInternalLinks": [],
+      "internalLinkCount": 8
     },
     {
       "url": "https://invonxt.com/features/customer-statements",
@@ -103,11 +138,14 @@
       "title": "Create Professional Customer Account Statements | Invonxt",
       "description": "Generate professional account statements showing invoices, recorded payments, credits, and outstanding balances. Give clients a clear view of their account activity.",
       "h1": "Professional Customer Statements, Without the Extra Work",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/features/customer-statements",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 563,
+      "wordCount": 569,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 32
+      "brokenInternalLinks": [],
+      "internalLinkCount": 54
     },
     {
       "url": "https://invonxt.com/features/business-reports",
@@ -115,11 +153,14 @@
       "title": "Business Financial Reports for Revenue and Expenses | Invonxt",
       "description": "Review revenue, expenses, invoice status, tax summaries, receivables, and financial trends using clear business reporting views.",
       "h1": "Understand Your Business with Financial Reports",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/features/business-reports",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 519,
+      "wordCount": 525,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 58
+      "brokenInternalLinks": [],
+      "internalLinkCount": 101
     },
     {
       "url": "https://invonxt.com/features",
@@ -127,11 +168,14 @@
       "title": "Invonxt Features | Invonxt",
       "description": "Explore Invonxt features for professional invoices, estimates, payments, expenses, customer statements, reports, clients, products, and services.",
       "h1": "Invoicing and Business Tools in One Clear Workspace",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/features",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 296,
+      "wordCount": 302,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 105
+      "brokenInternalLinks": [],
+      "internalLinkCount": 168
     },
     {
       "url": "https://invonxt.com/pricing",
@@ -139,11 +183,14 @@
       "title": "Invonxt Pricing | Invonxt",
       "description": "Compare verified Invonxt monthly, annual, and 24-month subscription options and included premium features.",
       "h1": "Choose the Billing Period That Fits Your Business",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/pricing",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 380,
+      "wordCount": 386,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 53
+      "brokenInternalLinks": [],
+      "internalLinkCount": 95
     },
     {
       "url": "https://invonxt.com/about",
@@ -151,11 +198,14 @@
       "title": "About Invonxt | Invonxt",
       "description": "Invonxt is a professional invoicing and business-record workspace built for freelancers, small businesses, consultants, contractors, and professional service providers.",
       "h1": "About Invonxt",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/about",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 250,
+      "wordCount": 256,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 25
+      "brokenInternalLinks": [],
+      "internalLinkCount": 46
     },
     {
       "url": "https://invonxt.com/contact",
@@ -163,11 +213,14 @@
       "title": "Contact Invonxt | Invonxt",
       "description": "Get product and account assistance through the verified support entry point in the Invonxt application.",
       "h1": "Contact Invonxt",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/contact",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 242,
+      "wordCount": 248,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 25
+      "brokenInternalLinks": [],
+      "internalLinkCount": 46
     },
     {
       "url": "https://invonxt.com/support",
@@ -175,11 +228,14 @@
       "title": "Invonxt Help & Support | Invonxt",
       "description": "Find clear starting points for the most common Invonxt workflows.",
       "h1": "Invonxt Help & Support",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/support",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 236,
+      "wordCount": 242,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 25
+      "brokenInternalLinks": [],
+      "internalLinkCount": 46
     },
     {
       "url": "https://invonxt.com/faq",
@@ -187,11 +243,14 @@
       "title": "Invonxt Frequently Asked Questions | Invonxt",
       "description": "Get clear answers about Invonxt invoices, estimates, payments, expenses, statements, reports, and recurring records.",
       "h1": "Invonxt Frequently Asked Questions",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/faq",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 317,
+      "wordCount": 323,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 25
+      "brokenInternalLinks": [],
+      "internalLinkCount": 46
     },
     {
       "url": "https://invonxt.com/privacy",
@@ -199,11 +258,14 @@
       "title": "Privacy Policy | Invonxt",
       "description": "Review the current Invonxt privacy notice and how privacy questions should be handled.",
       "h1": "Privacy Policy",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/privacy",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 210,
+      "wordCount": 216,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 50
+      "brokenInternalLinks": [],
+      "internalLinkCount": 92
     },
     {
       "url": "https://invonxt.com/terms",
@@ -211,11 +273,14 @@
       "title": "Terms & Conditions | Invonxt",
       "description": "Review the current Invonxt service-terms notice.",
       "h1": "Terms & Conditions",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/terms",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 183,
+      "wordCount": 189,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 50
+      "brokenInternalLinks": [],
+      "internalLinkCount": 92
     },
     {
       "url": "https://invonxt.com/solutions/freelancers",
@@ -223,11 +288,14 @@
       "title": "Invoicing Software Built for Freelancers | Invonxt",
       "description": "Create professional client invoices, prepare project estimates, record payments, and organize business expenses without relying on disconnected spreadsheets.",
       "h1": "Invoicing Software Built for Freelancers",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/solutions/freelancers",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 499,
+      "wordCount": 505,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 26
+      "brokenInternalLinks": [],
+      "internalLinkCount": 47
     },
     {
       "url": "https://invonxt.com/solutions/small-businesses",
@@ -235,11 +303,14 @@
       "title": "Simple Invoicing and Business Management for Small Businesses | Invonxt",
       "description": "Bring customers, suppliers, products, invoices, expenses, and financial summaries into one practical business workspace.",
       "h1": "Simple Invoicing and Business Management for Small Businesses",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/solutions/small-businesses",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 495,
+      "wordCount": 501,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 26
+      "brokenInternalLinks": [],
+      "internalLinkCount": 47
     },
     {
       "url": "https://invonxt.com/solutions/consultants",
@@ -247,11 +318,14 @@
       "title": "Professional Invoicing Software for Consultants | Invonxt",
       "description": "Prepare service estimates, create polished consulting invoices, reuse service details, and keep client balances visible.",
       "h1": "Professional Invoicing Software for Consultants",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/solutions/consultants",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 488,
+      "wordCount": 494,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 27
+      "brokenInternalLinks": [],
+      "internalLinkCount": 48
     },
     {
       "url": "https://invonxt.com/solutions/legal-firms",
@@ -259,11 +333,14 @@
       "title": "Professional Invoicing and Client Billing for Legal Firms | Invonxt",
       "description": "Create itemized legal-service invoices, maintain client billing records, record payments, and produce clear account statements.",
       "h1": "Professional Invoicing and Client Billing for Legal Firms",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/solutions/legal-firms",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 501,
+      "wordCount": 507,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 25
+      "brokenInternalLinks": [],
+      "internalLinkCount": 46
     },
     {
       "url": "https://invonxt.com/solutions/accountants",
@@ -271,11 +348,14 @@
       "title": "Professional Invoicing and Expense Tools for Accountants | Invonxt",
       "description": "Organize client invoices, expense records, statements, tax summaries, and spreadsheet-ready reports in one workspace.",
       "h1": "Professional Invoicing and Expense Tools for Accountants",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/solutions/accountants",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 496,
+      "wordCount": 502,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 26
+      "brokenInternalLinks": [],
+      "internalLinkCount": 47
     },
     {
       "url": "https://invonxt.com/solutions/contractors",
@@ -283,11 +363,14 @@
       "title": "Estimate and Invoice Software for Contractors | Invonxt",
       "description": "Create project estimates, convert approved details into invoice drafts, reuse products and services, and monitor payment status.",
       "h1": "Estimate and Invoice Software for Contractors",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/solutions/contractors",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 492,
+      "wordCount": 498,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 26
+      "brokenInternalLinks": [],
+      "internalLinkCount": 48
     },
     {
       "url": "https://invonxt.com/templates/consulting",
@@ -295,11 +378,14 @@
       "title": "Consulting Invoice Templates | Invonxt",
       "description": "Present strategy, advisory and project work clearly with a polished consulting invoice built for retainers, milestones and hourly services.",
       "h1": "Professional invoices for every client engagement",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/templates/consulting",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "wordCount": 146,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 29
+      "brokenInternalLinks": [],
+      "internalLinkCount": 51
     },
     {
       "url": "https://invonxt.com/templates/freelance/",
@@ -307,10 +393,13 @@
       "title": "Freelance Invoice Templates | Free Invoice Maker | Invonxt",
       "description": "Create a professional freelance invoice with six polished templates and an easy invoice maker for freelancers and self-employed professionals.",
       "h1": "Freelance Invoice Templates",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/templates/freelance/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "wordCount": 804,
+      "missingAltCount": 0,
       "issues": [],
+      "brokenInternalLinks": [],
       "internalLinkCount": 1
     },
     {
@@ -319,11 +408,14 @@
       "title": "Law Firm Invoice Templates | Invonxt",
       "description": "Organize professional fees and reimbursable costs in a structured invoice designed for legal practices and client matters.",
       "h1": "Clear billing for legal services and matters",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/templates/law-firm",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "wordCount": 145,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 29
+      "brokenInternalLinks": [],
+      "internalLinkCount": 50
     },
     {
       "url": "https://invonxt.com/templates/small-businesses",
@@ -331,11 +423,329 @@
       "title": "Small Businesses Invoice Templates | Invonxt",
       "description": "Create branded, easy-to-read invoices for products and services without spending valuable time formatting documents from scratch.",
       "h1": "Reliable invoices for everyday business",
+      "h1Count": 1,
       "canonical": "https://invonxt.com/templates/small-businesses",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "wordCount": 139,
+      "missingAltCount": 0,
       "issues": [],
-      "internalLinkCount": 29
+      "brokenInternalLinks": [],
+      "internalLinkCount": 51
+    },
+    {
+      "url": "https://invonxt.com/invoice-templates",
+      "status": 200,
+      "title": "Free Invoice Templates for Businesses | Invonxt",
+      "description": "Explore professional invoice templates for freelancers, consultants, contractors, accountants, legal practices, and small businesses.",
+      "h1": "Free Invoice Templates for Professional Billing",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/invoice-templates",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 413,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 53
+    },
+    {
+      "url": "https://invonxt.com/invoice-generator",
+      "status": 200,
+      "title": "Online Invoice Maker & PDF Invoice Generator | Invonxt",
+      "description": "Create an invoice online with client details, itemized services, taxes, terms, and a professional PDF-ready layout.",
+      "h1": "Online Invoice Maker for Clear, Professional Invoices",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/invoice-generator",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 420,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 105
+    },
+    {
+      "url": "https://invonxt.com/free-invoice-generator",
+      "status": 200,
+      "title": "Free Invoice Generator — Create an Invoice Online | Invonxt",
+      "description": "Use the Invonxt free invoice generator to create a professional itemized invoice online with your business and client details.",
+      "h1": "Free Invoice Generator for Your First Professional Invoice",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/free-invoice-generator",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 424,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 2
+    },
+    {
+      "url": "https://invonxt.com/freelancer-invoice-template",
+      "status": 200,
+      "title": "Freelancer Invoice Template for Professional Billing | Invonxt",
+      "description": "Create a freelancer invoice with project details, rates, deliverables, payment terms, and a polished professional layout.",
+      "h1": "Freelancer Invoice Template for Projects and Retainers",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/freelancer-invoice-template",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 413,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 4
+    },
+    {
+      "url": "https://invonxt.com/self-employed-invoice-template",
+      "status": 200,
+      "title": "Self-Employed Invoice Template | Invonxt",
+      "description": "Use a self-employed invoice template for clear client details, services, rates, due dates, and payment instructions.",
+      "h1": "Self-Employed Invoice Template That Keeps Billing Simple",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/self-employed-invoice-template",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 410,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 2
+    },
+    {
+      "url": "https://invonxt.com/consultant-invoice-template",
+      "status": 200,
+      "title": "Consultant Invoice Template for Services & Retainers | Invonxt",
+      "description": "Create consulting invoices for hourly advice, retainers, milestones, projects, and reimbursable expenses.",
+      "h1": "Consultant Invoice Template for Clear Professional Fees",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/consultant-invoice-template",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 402,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 2
+    },
+    {
+      "url": "https://invonxt.com/accountant-invoice-template",
+      "status": 200,
+      "title": "Accountant Invoice Template for Professional Services | Invonxt",
+      "description": "Create itemized accounting invoices for bookkeeping, tax preparation, advisory work, and recurring services.",
+      "h1": "Accountant Invoice Template for Accurate Service Billing",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/accountant-invoice-template",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 407,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 2
+    },
+    {
+      "url": "https://invonxt.com/business-invoice-template",
+      "status": 200,
+      "title": "Business Invoice Template for Products & Services | Invonxt",
+      "description": "Create a professional business invoice with customer details, itemized products or services, taxes, totals, and payment terms.",
+      "h1": "Business Invoice Template for Products and Services",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/business-invoice-template",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 397,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 3
+    },
+    {
+      "url": "https://invonxt.com/contractor-invoice-template",
+      "status": 200,
+      "title": "Contractor Invoice Template for Labor & Materials | Invonxt",
+      "description": "Create contractor invoices that separate labor, materials, project details, taxes, deposits, and outstanding balances.",
+      "h1": "Contractor Invoice Template for Labor and Materials",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/contractor-invoice-template",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 401,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 2
+    },
+    {
+      "url": "https://invonxt.com/recurring-invoices",
+      "status": 200,
+      "title": "Recurring Invoices for Repeat Billing | Invonxt",
+      "description": "Organize recurring invoices for retainers, subscriptions, maintenance, and repeat services with configurable billing frequencies.",
+      "h1": "Recurring Invoices for Predictable Repeat Billing",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/recurring-invoices",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 406,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 48
+    },
+    {
+      "url": "https://invonxt.com/client-management",
+      "status": 200,
+      "title": "Client Management for Faster Invoicing | Invonxt",
+      "description": "Organize customer details, billing history, reusable products, and services to create accurate invoices more efficiently.",
+      "h1": "Client Management That Keeps Billing Details Ready",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/client-management",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 402,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 50
+    },
+    {
+      "url": "https://invonxt.com/invoice-customization",
+      "status": 200,
+      "title": "Invoice Customization with Branded Templates | Invonxt",
+      "description": "Customize invoice layouts with your business details, logo, colors, line items, notes, taxes, and payment terms.",
+      "h1": "Invoice Customization for a Consistent Business Brand",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/invoice-customization",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 407,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 2
+    },
+    {
+      "url": "https://invonxt.com/multi-currency-invoicing",
+      "status": 200,
+      "title": "Multi-Currency Invoicing for International Clients | Invonxt",
+      "description": "Create invoices in the agreed currency and clearly present prices, totals, payment terms, and international client details.",
+      "h1": "Multi-Currency Invoicing for International Client Work",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/multi-currency-invoicing",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 411,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 1
+    },
+    {
+      "url": "https://invonxt.com/invoice-management",
+      "status": 200,
+      "title": "Invoice Management Software for Small Businesses | Invonxt",
+      "description": "Create, revise, export, and organize invoices while tracking paid, pending, partial, and overdue balances.",
+      "h1": "Invoice Management from Draft to Recorded Payment",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/invoice-management",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 407,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 10
+    },
+    {
+      "url": "https://invonxt.com/invoice-reports",
+      "status": 200,
+      "title": "Invoice Reports for Revenue & Outstanding Balances | Invonxt",
+      "description": "Review invoice status, revenue, expenses, tax summaries, receivables, and outstanding balances with practical business reports.",
+      "h1": "Invoice Reports That Turn Billing Records into Answers",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/invoice-reports",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 403,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 3
+    },
+    {
+      "url": "https://invonxt.com/blog",
+      "status": 200,
+      "title": "Invoicing Guides & Business Resources | Invonxt",
+      "description": "Practical guides for creating invoices, choosing payment terms, billing international clients, freelancing, accounting, and business finance.",
+      "h1": "Practical Invoicing Guides",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/blog",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 581,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 6
+    },
+    {
+      "url": "https://invonxt.com/blog/how-to-create-an-invoice",
+      "status": 200,
+      "title": "How to Create an Invoice: A Practical Step-by-Step Guide | Invonxt",
+      "description": "Learn how to create a professional invoice with the right business details, line items, dates, totals, payment terms, and final checks.",
+      "h1": "How to Create an Invoice: A Practical Step-by-Step Guide",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/blog/how-to-create-an-invoice",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 429,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 3
+    },
+    {
+      "url": "https://invonxt.com/blog/how-to-write-an-invoice",
+      "status": 200,
+      "title": "How to Write an Invoice Clients Can Review Quickly | Invonxt",
+      "description": "Write a clear invoice using concise service descriptions, itemized rates, exact dates, totals, and practical payment instructions.",
+      "h1": "How to Write an Invoice Clients Can Review Quickly",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/blog/how-to-write-an-invoice",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 375,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 3
+    },
+    {
+      "url": "https://invonxt.com/blog/invoice-vs-receipt",
+      "status": 200,
+      "title": "Invoice vs Receipt: What Each Document Does | Invonxt",
+      "description": "Understand the difference between an invoice and a receipt, when each is issued, and why businesses should keep both records.",
+      "h1": "Invoice vs Receipt: What Each Document Does",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/blog/invoice-vs-receipt",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 384,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 2
+    },
+    {
+      "url": "https://invonxt.com/blog/invoice-payment-terms",
+      "status": 200,
+      "title": "Invoice Payment Terms: Clear Examples and Practical Choices | Invonxt",
+      "description": "Choose clear invoice payment terms with an exact due date, agreed payment method, currency, deposits, and late-payment wording.",
+      "h1": "Invoice Payment Terms: Clear Examples and Practical Choices",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/blog/invoice-payment-terms",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 365,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 5
+    },
+    {
+      "url": "https://invonxt.com/blog/how-to-invoice-international-clients",
+      "status": 200,
+      "title": "How to Invoice International Clients Clearly | Invonxt",
+      "description": "Create international invoices with an agreed currency, correct client details, clear tax treatment, payment instructions, and fee expectations.",
+      "h1": "How to Invoice International Clients Clearly",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/blog/how-to-invoice-international-clients",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 415,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 4
     }
   ]
 }

@@ -26,7 +26,7 @@ export const MARKETING_NAVIGATION = [
       ['Small Businesses', '/templates/small-businesses'],
     ],
   },
-  { label: 'Invoice Generator', href: APP_ROUTES.invoices },
+  { label: 'Invoice Generator', href: '/invoice-generator' },
   { label: 'Pricing', href: '/pricing' },
 ];
 

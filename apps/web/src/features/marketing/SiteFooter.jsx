@@ -7,7 +7,8 @@ export const FOOTER_GROUPS = [
     ['Invoice Templates', '/features/invoice-templates'], ['Estimates to Invoices', '/features/estimates-to-invoices'],
     ['Payment Tracking', '/features/payment-tracking'], ['Expense Management', '/features/expense-management'],
     ['Customer Statements', '/features/customer-statements'], ['Business Reports', '/features/business-reports'],
-    ['Clients & Services', '/features/client-management'],
+    ['Clients & Services', '/client-management'], ['Invoice Generator', '/invoice-generator'],
+    ['Free Templates', '/invoice-templates'], ['Recurring Invoices', '/recurring-invoices'],
   ]],
   ['Solutions', [
     ['Freelancers', '/solutions/freelancers'], ['Small Businesses', '/solutions/small-businesses'],
