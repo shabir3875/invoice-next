@@ -1,0 +1,142 @@
+[2m10:56:41 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mWarning: Encountered two children with the same key, `/features/client-management`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at section
+    at main
+    at FeaturesDirectory
+    at div
+    at PublicPage (http://127.0.0.1:3000/src/features/marketing/PublicPage.jsx?t=1794160231025:1543:38)
+    at RenderedRoute (http://127.0.0.1:3000/node_modules/.vite/deps/react-router-dom.js?v=2f8a9528:4155:26)
+    at Routes (http://127.0.0.1:3000/node_modules/.vite/deps/react-router-dom.js?v=2f8a9528:4835:19)
+    at HashRouteHandler (http://127.0.0.1:3000/src/App.jsx?t=1794160332719:21:29)
+    at Suspense
+    at Router (http://127.0.0.1:3000/node_modules/.vite/deps/react-router-dom.js?v=2f8a9528:4787:29)
+    at BrowserRouter (http://127.0.0.1:3000/node_modules/.vite/deps/react-router-dom.js?v=2f8a9528:7233:26)
+    at App
+[2m10:57:01 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mWarning: Encountered two children with the same key, `/features/client-management`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at section
+    at main
+    at FeaturesDirectory
+    at div
+    at PublicPage (http://127.0.0.1:3000/src/features/marketing/PublicPage.jsx?t=1794160231025:1543:38)
+    at RenderedRoute (http://127.0.0.1:3000/node_modules/.vite/deps/react-router-dom.js?v=2f8a9528:4155:26)
+    at Routes (http://127.0.0.1:3000/node_modules/.vite/deps/react-router-dom.js?v=2f8a9528:4835:19)
+    at HashRouteHandler (http://127.0.0.1:3000/src/App.jsx?t=1794160332719:21:29)
+    at Suspense
+    at Router (http://127.0.0.1:3000/node_modules/.vite/deps/react-router-dom.js?v=2f8a9528:4787:29)
+    at BrowserRouter (http://127.0.0.1:3000/node_modules/.vite/deps/react-router-dom.js?v=2f8a9528:7233:26)
+    at App
+[2m11:11:47 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "./daily-business-tools.css" from "src/features/marketing/MarketingPage.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx[39m:20:7
+[33m  13 |  import MarketingHeader, { MarketingBrand } from "./MarketingHeader";
+  14 |  import "./homepage-intro.css";
+  15 |  import "./daily-business-tools.css";
+     |          ^
+  16 |  var _jsxFileName = "C:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx";
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";[39m
+      at TransformPluginContext._formatLog (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:8803:39)
+      at TransformPluginContext.error (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:8800:14)
+      at resolveId (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:26594:18)
+      at async file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:26693:23
+      at async Promise.all (index 14)
+      at async TransformPluginContext.transform (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:26666:4)
+      at async EnvironmentPluginContainer.transform (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:8582:14)
+      at async loadAndTransform (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:20155:26)
+[2m11:11:47 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "./daily-business-tools.css" from "src/features/marketing/MarketingPage.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx[39m:20:7
+[33m  13 |  import MarketingHeader, { MarketingBrand } from "./MarketingHeader";
+  14 |  import "./homepage-intro.css";
+  15 |  import "./daily-business-tools.css";
+     |          ^
+  16 |  var _jsxFileName = "C:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx";
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";[39m
+[2m11:11:47 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "./daily-business-tools.css" from "src/features/marketing/MarketingPage.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx[39m:20:7
+[33m  13 |  import MarketingHeader, { MarketingBrand } from "./MarketingHeader";
+  14 |  import "./homepage-intro.css";
+  15 |  import "./daily-business-tools.css";
+     |          ^
+  16 |  var _jsxFileName = "C:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx";
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";[39m
+      at TransformPluginContext._formatLog (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:8803:39)
+      at TransformPluginContext.error (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:8800:14)
+      at resolveId (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:26594:18)
+      at async file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:26693:23
+      at async Promise.all (index 14)
+      at async TransformPluginContext.transform (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:26666:4)
+      at async EnvironmentPluginContainer.transform (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:8582:14)
+      at async loadAndTransform (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:20155:26)
+[2m11:11:47 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/features/marketing/MarketingPage.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2m11:11:47 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/features/marketing/MarketingPage.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2m11:11:47 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "./daily-business-tools.css" from "src/features/marketing/MarketingPage.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx[39m:20:7
+[33m  13 |  import MarketingHeader, { MarketingBrand } from "./MarketingHeader";
+  14 |  import "./homepage-intro.css";
+  15 |  import "./daily-business-tools.css";
+     |          ^
+  16 |  var _jsxFileName = "C:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx";
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";[39m
+[2m11:11:47 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "./daily-business-tools.css" from "src/features/marketing/MarketingPage.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx[39m:20:7
+[33m  13 |  import MarketingHeader, { MarketingBrand } from "./MarketingHeader";
+  14 |  import "./homepage-intro.css";
+  15 |  import "./daily-business-tools.css";
+     |          ^
+  16 |  var _jsxFileName = "C:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx";
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";[39m
+      at TransformPluginContext._formatLog (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:8803:39)
+      at TransformPluginContext.error (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:8800:14)
+      at resolveId (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:26594:18)
+      at async file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:26693:23
+      at async Promise.all (index 14)
+      at async TransformPluginContext.transform (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:26666:4)
+      at async EnvironmentPluginContainer.transform (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:8582:14)
+      at async loadAndTransform (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:20155:26)
+[2m11:11:47 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "./daily-business-tools.css" from "src/features/marketing/MarketingPage.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx[39m:20:7
+[33m  13 |  import MarketingHeader, { MarketingBrand } from "./MarketingHeader";
+  14 |  import "./homepage-intro.css";
+  15 |  import "./daily-business-tools.css";
+     |          ^
+  16 |  var _jsxFileName = "C:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx";
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";[39m
+      at TransformPluginContext._formatLog (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:8803:39)
+      at TransformPluginContext.error (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:8800:14)
+      at resolveId (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:26594:18)
+      at async file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:26693:23
+      at async Promise.all (index 14)
+      at async TransformPluginContext.transform (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:26666:4)
+      at async EnvironmentPluginContainer.transform (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:8582:14)
+      at async loadAndTransform (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:20155:26)
+      at async viteTransformMiddleware (file:///C:/Users/ABC/Desktop/InvoiceNext/invoice-next/node_modules/vite/dist/node/chunks/node.js:20375:20)
+[2m11:11:47 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "./daily-business-tools.css" from "src/features/marketing/MarketingPage.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx[39m:20:7
+[33m  13 |  import MarketingHeader, { MarketingBrand } from "./MarketingHeader";
+  14 |  import "./homepage-intro.css";
+  15 |  import "./daily-business-tools.css";
+     |          ^
+  16 |  var _jsxFileName = "C:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx";
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";[39m
+[2m11:11:47 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "./daily-business-tools.css" from "src/features/marketing/MarketingPage.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx[39m:20:7
+[33m  13 |  import MarketingHeader, { MarketingBrand } from "./MarketingHeader";
+  14 |  import "./homepage-intro.css";
+  15 |  import "./daily-business-tools.css";
+     |          ^
+  16 |  var _jsxFileName = "C:/Users/ABC/Desktop/InvoiceNext/invoice-next/apps/web/src/features/marketing/MarketingPage.jsx";
+  17 |  import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";[39m
+[2m11:11:47 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/features/marketing/MarketingPage.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2m11:19:36 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/features/marketing/daily-business-tools.css. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2m11:19:36 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/features/marketing/daily-business-tools.css. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2m11:19:36 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/features/marketing/daily-business-tools.css. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2m11:25:02 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/features/marketing/daily-business-tools.css. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2m11:25:02 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/features/marketing/daily-business-tools.css. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2m11:25:02 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/features/marketing/daily-business-tools.css. This could be due to syntax errors or importing non-existent modules. (see errors above)

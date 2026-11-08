@@ -1,18 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
-  ArrowRight, BarChart3, CalendarDays, Check, CircleDollarSign, FileCheck2,
-  FileText, RefreshCw, ReceiptText, Users, WalletCards,
+  ArrowRight, BarChart3, Boxes, CalendarDays, Check, CircleDollarSign,
+  FileSpreadsheet, FileText, RefreshCw, ReceiptText, Send, SlidersHorizontal,
+  WalletCards, Zap,
 } from 'lucide-react';
 import { APP_ROUTES } from './data';
 import './animated-features.css';
+import './animated-features-green.css';
 
 const FEATURES = [
-  { title: 'Professional Invoices', text: 'Create branded invoices with customizable templates, your logo, items, taxes and payment terms.', icon: FileText, tone: 'orange', route: '/features/professional-invoices', scene: 'invoice' },
-  { title: 'Expenses & Insights', text: 'Track expenses, manage categories, and view revenue, profit, and financial trends in a clear dashboard.', icon: BarChart3, tone: 'blue', route: '/features/expense-management', scene: 'insights' },
-  { title: 'Clients, Services & More', text: 'Manage clients, suppliers, products, and services, reuse details, and keep all business records in one place.', icon: Users, tone: 'purple', route: '/features/client-management', scene: 'clients' },
-  { title: 'Estimates to Invoices, Instantly', text: 'Convert estimates, sales orders or proformas into invoices with one click. All details carry over automatically.', icon: FileCheck2, tone: 'green', route: '/features/estimates-to-invoices', scene: 'convert' },
-  { title: 'Recurring Invoices', text: 'Automate repeat billing for monthly services, retainers, and ongoing projects. Save time and get paid on schedule.', icon: RefreshCw, tone: 'orange', route: '/features/recurring-invoices', scene: 'recurring' },
-  { title: 'Customer Statements', text: 'Generate professional account statements showing invoices, payments, credits, and outstanding balances.', icon: WalletCards, tone: 'blue', route: '/features/customer-statements', scene: 'statement' },
+  { title: 'Lightning Fast', text: 'Create, edit, email, share, print, and download professional invoices from one streamlined workflow.', icon: Zap, tone: 'orange', route: '/invoice-generator', scene: 'invoice', availability: 'Available' },
+  { title: 'Automate Repeat Invoices', text: 'Schedule invoices monthly, every three months, or yearly for retainers, quarterly services, and annual renewals.', icon: RefreshCw, tone: 'blue', route: '/features', scene: 'recurring', availability: 'Planned' },
+  { title: 'Inventory Tracking', text: 'Track opening and current stock, set reorder levels, check projected availability, and receive low-stock warnings.', icon: Boxes, tone: 'purple', route: '/features/client-management', scene: 'clients', availability: 'Available' },
+  { title: 'Get Paid Faster', text: 'Record full or partial payments and use clear invoice statuses to see paid, unpaid, overdue, and outstanding balances. Direct PayPal collection is planned.', icon: WalletCards, tone: 'green', route: '/features/payment-tracking', scene: 'statement', availability: 'Partial' },
+  { title: 'Follow Up in Batches', text: 'Select overdue customers, tailor a reminder, and send follow-ups together instead of one by one.', icon: Send, tone: 'orange', route: '/features/customer-statements', scene: 'statement', availability: 'Planned' },
+  { title: 'See Sales and Stock Clearly', text: 'Review sales by product, compare net and gross values, check inventory value, and identify top items and customers.', icon: BarChart3, tone: 'blue', route: '/invoice-reports', scene: 'insights', availability: 'Available' },
+  { title: 'Import and Export Business Records', text: 'Export supported reports and records to Excel or PDF. CSV and Excel imports with validation warnings are planned.', icon: FileSpreadsheet, tone: 'purple', route: '/features/business-reports', scene: 'convert', availability: 'Partial' },
+  { title: 'Customize Documents as You Work', text: 'Apply fixed or percentage discounts, manage line items, and convert or duplicate supported business documents with less retyping.', icon: SlidersHorizontal, tone: 'green', route: '/invoice-customization', scene: 'invoice', availability: 'Available' },
 ];
 
 function MiniScene({ type }) {
@@ -28,7 +32,7 @@ function FeatureCard({ feature, index, active, onActivate }) {
   const Icon = feature.icon;
   return <article className={`af-card af-${feature.tone} ${active ? 'is-active' : ''}`} onMouseEnter={() => onActivate(index)} onFocus={() => onActivate(index)}>
     <div className="af-card-top"><span className="af-icon"><Icon size={19}/></span><MiniScene type={feature.scene}/></div>
-    <h3>{feature.title}</h3><p>{feature.text}</p>
+    <div className="mt-5 flex items-center gap-2"><h3 className="!mt-0">{feature.title}</h3><span className={`rounded-full px-2 py-1 text-[9px] font-black uppercase tracking-wide ${feature.availability==='Available'?'bg-emerald-50 text-emerald-700':feature.availability==='Partial'?'bg-amber-50 text-amber-700':'bg-slate-100 text-slate-600'}`}>{feature.availability}</span></div><p>{feature.text}</p>
     <a href={feature.route}>Learn More <ArrowRight size={14}/></a>
   </article>;
 }
@@ -72,13 +76,13 @@ export default function AnimatedFeatures() {
   return <section ref={rootRef} id="features" className={`af-section ${visible ? 'is-visible' : ''}`} aria-labelledby="af-title">
     <div className="af-glow af-glow-one"/><div className="af-glow af-glow-two"/>
     <div className="af-container">
-      <div className="af-heading"><span>ONE SIMPLE BUSINESS WORKSPACE</span><h2 id="af-title">Everything You Need to Invoice, Get Paid, and Grow</h2><p>Create professional invoices, convert estimates, manage payments, track expenses, and stay organized — all in one simple platform.</p></div>
+      <div className="af-heading"><span className="!border-emerald-200 !bg-emerald-50 !text-emerald-700">ONE SIMPLE BUSINESS WORKSPACE</span><h2 id="af-title">Everything You Need to Invoice, Get Paid, and Grow</h2><p>Create professional invoices, convert estimates, manage payments, track expenses, and stay organized — all in one simple platform.</p></div>
       <div className="af-layout" data-active={active}>
-        <div className="af-column af-left">{FEATURES.slice(0,3).map((f,i) => <FeatureCard key={f.title} feature={f} index={i} active={active===i} onActivate={activate}/>)}</div>
+        <div className="af-column af-left">{FEATURES.slice(0,4).map((f,i) => <FeatureCard key={f.title} feature={f} index={i} active={active===i} onActivate={activate}/>)}</div>
         <div className="af-center"><DocumentOrbit/><LaptopDashboard/><div className="af-live"><i/><span>Live dashboard preview</span><b>Sample data</b></div></div>
-        <div className="af-column af-right">{FEATURES.slice(3).map((f,i) => <FeatureCard key={f.title} feature={f} index={i+3} active={active===i+3} onActivate={activate}/>)}</div>
+        <div className="af-column af-right">{FEATURES.slice(4).map((f,i) => <FeatureCard key={f.title} feature={f} index={i+4} active={active===i+4} onActivate={activate}/>)}</div>
       </div>
-      <div className="af-actions"><a className="af-primary" href={APP_ROUTES.signup}>Start Invoicing Free <ArrowRight size={17}/></a><a className="af-secondary" href="#how-it-works">Explore All Features</a></div>
+      <div className="af-actions"><a className="af-primary" href={APP_ROUTES.signup}>Start Invoicing Free <ArrowRight size={17}/></a><a className="af-secondary" href="/features">Explore All Features</a></div>
     </div>
   </section>;
 }

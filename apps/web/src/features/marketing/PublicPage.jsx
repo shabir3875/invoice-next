@@ -8,6 +8,7 @@ import { PREMIUM_FEATURES, PREMIUM_PLANS } from '../app-components/plans';
 import SiteFooter from './SiteFooter';
 import MarketingHeader from './MarketingHeader';
 import './public-pages.css';
+import './verified-features.css';
 
 const FEATURE_LINKS = [
   ['Professional Invoices','/features/professional-invoices','Create branded, itemized invoices and track their status.'],
@@ -18,7 +19,114 @@ const FEATURE_LINKS = [
   ['Customer Statements','/features/customer-statements','Summarize invoices, recorded payments, and balances.'],
   ['Business Reports','/features/business-reports','Review revenue, expenses, taxes, and receivables.'],
   ['Clients & Services','/features/client-management','Reuse customer, supplier, product, and service details.'],
-  ['Recurring Invoices','/features/recurring-invoices','Maintain repeat-billing records and configurable frequencies.'],
+  ['Products & Inventory','/features/client-management','Manage reusable items, stock levels, reorder points, and availability.'],
+];
+
+const VERIFIED_FEATURE_GROUPS = [
+  ['Dashboard & reporting', 'Understand performance, cash flow, tax, and customer activity.', [
+    'Business performance overview with preset and custom reporting periods',
+    'Income, expense, and profit-margin analysis',
+    'Cash-basis and accrual-basis profit-and-loss reports',
+    'Tax statistics, itemized tax totals, destination tax, and sales-exposure reports',
+    'Outstanding receivables and partner balances',
+    'Top products, items, customers, partners, and quotes',
+    'PDF tax and profit-and-loss exports plus XLSX invoiced-versus-received export',
+    'Customer statements that can be emailed with attachments',
+  ]],
+  ['Invoices', 'Create the document, share it securely, and follow its complete payment history.', [
+    'Create, edit, list, filter, sort, and delete invoices',
+    'Custom invoice numbers, prefixes, numbering rules, and yearly restart behavior',
+    'Saved customers and products, multiple line items, quantities, prices, taxes, fees, and discounts',
+    'Item-level or subtotal discounts, payment terms, due dates, notes, and conditions',
+    'Create, update, and remove partial or complete payment entries',
+    'Draft, unpaid, partially paid, paid, overdue, and void status handling',
+    'Email delivery with attachments and visible email status information',
+    'Secure public links, customer-facing shared views, PDF downloads, and printing',
+    'Invoice audit history and payment-linked activity records',
+    'Inventory availability checks, low-stock warnings, and stock adjustment from invoiced quantities',
+    'Selectable invoice templates with saved active-template configuration',
+  ]],
+  ['Expenses', 'Keep supplier costs, payment activity, and exports connected.', [
+    'Create, view, update, filter, and delete expenses with supplier and line-item details',
+    'Taxes, totals, payment status, due dates, discounts, and receipt references',
+    'Create, edit, and remove expense payments or mark an expense paid',
+    'Duplicate or void an expense',
+    'Print expenses and export an individual expense as PDF',
+    'Export filtered expense records to XLSX',
+    'Convert an expense into an invoice',
+  ]],
+  ['Business documents', 'Manage commercial documents before and alongside invoicing.', [
+    'Create and manage quotes, orders, delivery documents, purchase documents, and custom categories',
+    'Add line items, quantities, taxes, discounts, fees, dates, and notes',
+    'Update document status, including fulfilled workflows',
+    'Convert supported documents into invoices',
+    'Create secure sharing links and download or print shared PDFs',
+    'Create and remove custom document categories',
+  ]],
+  ['Customers & suppliers', 'Keep partner details, balances, documents, and account history together.', [
+    'Manage customers and suppliers with detailed contacts, addresses, tax IDs, payment methods, and notes',
+    'Assign custom partner categories',
+    'Search, filter, sort, and paginate partner records',
+    'Review partner details, transactions, overdue amounts, and outstanding balances',
+    'Generate statements filtered by status and date',
+    'Export partner data and account statements',
+    'Archive and restore partner records',
+    'Create a partner without leaving invoice preparation',
+  ]],
+  ['Products, services & inventory', 'Reuse item details while keeping stock implications visible.', [
+    'Manage products and services with sale and purchase prices',
+    'Units, categories, images, tax rates, weights, descriptions, and notes',
+    'Optional inventory management per item',
+    'Opening stock, current stock, reorder levels, and projected availability',
+    'Low-stock and negative projected-inventory detection',
+    'Search, sort, filter, and paginate item records',
+    'XLSX item export plus archive and restore workflows',
+    'Custom units and multi-level item categories',
+  ]],
+  ['Taxes & payment methods', 'Configure how tax and payment choices appear across business records.', [
+    'Create custom tax rates and combined tax groups',
+    'Configure net or gross tax display and tax-registration details',
+    'Enable or disable expense taxes',
+    'Create and edit payment methods',
+    'Configure automatic-payment behavior and default due periods',
+  ]],
+  ['Company, localization & setup', 'Adapt documents and defaults to the company operating the workspace.', [
+    'Company profile, identity, contact, and registration details',
+    'Country, language, currency, and zero-to-four decimal places',
+    'Invoice numbering, yearly restart, and voucher-number behavior',
+    'Invoice templates, branding, item, partner, and document settings',
+    'Guided setup for company details, partners, items, templates, and the first invoice',
+    'Optional starter customers, suppliers, services, and images for a new account',
+  ]],
+  ['Team & access control', 'Invite coworkers and limit access by business area.', [
+    'Invite users by email and accept invitations through secure tokens',
+    'Resend pending invitations and remove workspace users',
+    'Control access to invoices, expenses, settings, reports, and other areas',
+    'Account profile and password management',
+  ]],
+  ['Authentication & security', 'Protect account onboarding and authenticated application access.', [
+    'Registration and password login',
+    'Email verification with one-time codes',
+    'Email-based password reset',
+    'Google and Microsoft OAuth sign-in',
+    'JWT-authenticated API sessions, logout, and profile controls',
+    'Subscription and permission middleware around protected business routes',
+  ]],
+  ['Subscriptions & administration', 'Track access periods and review manual subscription payments.', [
+    'Monthly, annual, and two-year plans with free-trial status',
+    'Manual subscription-payment submission and payment history',
+    'Cancellation and subscription-status handling',
+    'Administrative review queue',
+    'Verify, activate, reject, expire, or cancel subscriptions',
+    'Super-administrator review workspace',
+  ]],
+  ['Data management & usability', 'Work efficiently across large record sets and different devices.', [
+    'XLSX exports, PDF generation, printing, and browser downloads',
+    'Search, filters, sorting, date ranges, and pagination across major records',
+    'Responsive collapsible navigation with keyboard shortcut and saved preference',
+    'Notifications, account controls, and persistent workspace navigation',
+    'Import/export settings areas and guided starter data',
+  ]],
 ];
 
 const SOLUTIONS = {
@@ -42,7 +150,7 @@ const FAQS = [
   ['Can I record a partial payment?','The application advertises full and partial payment records and shows the remaining invoice balance.'],
   ['Does Invonxt process card payments?','This website does not claim built-in online card processing. Payment tracking refers to recording and monitoring payments.'],
   ['Can I download invoice documents?','The invoicing workflow supports professional PDF-ready documents and available sharing options.'],
-  ['Is recurring billing fully automatic?','The verified repository supports recurring records and configurable frequencies. Automatic charging and automatic sending are not advertised.'],
+  ['Does Invonxt create recurring invoices automatically?','No recurring-invoice scheduler was verified in the audited application repository. Saved customers, products, services, terms, and templates still reduce repeat data entry.'],
 ];
 
 const LEGAL = {
@@ -56,7 +164,7 @@ export const PUBLIC_ROUTES = ['/features','/pricing','/about','/contact','/suppo
 export function getPublicRoute(path){
   if(path==='/features')return {kind:'features',title:'Invonxt Features',description:'Explore Invonxt features for professional invoices, estimates, payments, expenses, customer statements, reports, clients, products, and services.'};
   if(path==='/pricing')return {kind:'pricing',title:'Invonxt Pricing',description:'Compare verified Invonxt monthly, annual, and 24-month subscription options and included premium features.'};
-  if(path==='/faq')return {kind:'faq',title:'Invonxt Frequently Asked Questions',description:'Get clear answers about Invonxt invoices, estimates, payments, expenses, statements, reports, and recurring records.'};
+  if(path==='/faq')return {kind:'faq',title:'Invonxt Frequently Asked Questions',description:'Get clear answers about Invonxt invoices, estimates, payments, expenses, statements, reports, inventory, and account access.'};
   if(path.startsWith('/solutions/')){const slug=path.split('/').pop();const d=SOLUTIONS[slug];return d?{kind:'solution',slug,title:d.title,description:d.description}:null}
   const key=path.slice(1);if(COMPANY[key])return {kind:key,title:COMPANY[key].title,description:COMPANY[key].description};
   if(LEGAL[key])return {kind:key,title:LEGAL[key].title,description:LEGAL[key].description,noindex:key==='cookie-policy'||key==='refund-policy'};
@@ -70,12 +178,12 @@ function WorkflowVisual(){return <div className="pp-workflow" aria-label="Illust
 function Cards({items}){return <div className="pp-cards">{items.map((item,i)=><article key={item[0]} style={{'--delay':`${i*.05}s`}}><span>{i+1}</span><h3>{item[0]}</h3><p>{item[1]}</p>{item[2]&&<a href={item[1]}>Learn more <ArrowRight/></a>}</article>)}</div>}
 function CTA(){return <section className="pp-cta"><h2>Ready to simplify your business records?</h2><p>Create professional documents, organize customers, and keep invoice activity clear with Invonxt.</p><div><a href={APP_ROUTES.signup}>Get Started Free</a><a href="/features">Explore Features</a></div></section>}
 
-function FeaturesDirectory(){return <><Meta title="Invonxt Features" description="Explore Invonxt features for professional invoices, estimates, payments, expenses, customer statements, reports, clients, products, and services." path="/features"/><Hero eyebrow="PRODUCT DIRECTORY" title="Invoicing and Business Tools in One Clear Workspace" description="Explore the practical features Invonxt provides for creating documents, organizing records, monitoring balances, and understanding business activity."/><main className="pp-main"><section><div className="pp-heading"><span>ALL FEATURES</span><h2>Choose the workflow you want to improve</h2></div><div className="pp-link-grid">{FEATURE_LINKS.map(([name,href,text])=><a href={href} key={href}><FileText/><div><h3>{name}</h3><p>{text}</p><b>Explore feature <ArrowRight/></b></div></a>)}</div></section></main><CTA/></>}
+function FeaturesDirectory(){return <><Meta title="Invonxt Features" description="Explore verified Invonxt capabilities for invoices, expenses, documents, inventory, partners, reporting, settings, teams, authentication, and subscriptions." path="/features"/><Hero eyebrow="VERIFIED PRODUCT DIRECTORY" title="From First Invoice to Complete Business Control" description="Explore capabilities verified against the Invonxt application UI, API routes, data models, and automated tests."/><main className="pp-main"><section><div className="pp-heading"><span>FEATURE GUIDES</span><h2>Start with a core workflow</h2></div><div className="pp-link-grid">{FEATURE_LINKS.map(([name,href,text])=><a href={href} key={href}><FileText/><div><h3>{name}</h3><p>{text}</p><b>Explore feature <ArrowRight/></b></div></a>)}</div></section><section className="pp-verified"><div className="pp-heading"><span>COMPLETE CAPABILITY REFERENCE</span><h2>What Invonxt supports</h2><p>Each item below is backed by application source, an API route, a persisted model, or a tested workflow. Availability can still depend on plan, role, and workspace settings.</p></div><div className="pp-verified-grid">{VERIFIED_FEATURE_GROUPS.map(([title,intro,items])=><article key={title}><h3>{title}</h3><p>{intro}</p><ul>{items.map(item=><li key={item}><Check/>{item}</li>)}</ul></article>)}</div></section></main><CTA/></>}
 function SolutionPage({slug}){const d=SOLUTIONS[slug];if(!d)return <NotFound/>;return <><Meta title={d.title} description={d.description} path={`/solutions/${slug}`}/><Hero eyebrow="SOLUTIONS" title={d.title} description={d.description} note={d.note}/><main className="pp-main"><section className="pp-two"><div className="pp-heading"><span>BUSINESS CHALLENGES</span><h2>Keep everyday billing work under control</h2></div><Cards items={d.challenges.map(x=>[x,'Use a clear, reusable workflow to reduce repeated entry and keep the related record accessible.'])}/></section><section className="pp-tint"><div className="pp-heading"><span>HOW INVONXT HELPS</span><h2>Relevant tools for this workflow</h2></div><Cards items={d.benefits.map(x=>[x,'Use the supported Invonxt record and document tools from the same business workspace.'])}/></section><section className="pp-example"><div><span>WORKFLOW EXAMPLE</span><h2>A realistic path from details to a clear record</h2><p>{d.example}</p></div><WorkflowVisual/></section><section><div className="pp-heading"><span>RELATED FEATURES</span><h2>Continue exploring</h2></div><div className="pp-related">{d.related.map(path=>{const f=FEATURE_LINKS.find(x=>x[1]===path);return <a href={path} key={path}>{f?.[0]||'Invonxt feature'}<ArrowRight/></a>})}</div></section></main><FAQBlock items={FAQS.slice(0,4)}/><CTA/></>}
 function PricingPage(){return <><Meta title="Invonxt Pricing" description="Compare verified Invonxt monthly, annual, and 24-month subscription options and included premium features." path="/pricing"/><Hero eyebrow="VERIFIED PRICING" title="Choose the Billing Period That Fits Your Business" description="The prices below come directly from the project’s existing subscription configuration."/><main className="pp-main"><div className="pp-pricing">{PREMIUM_PLANS.map(p=><article key={p.id} className={p.popular?'popular':''}><span>{p.label}</span><h2>{p.name}</h2><p>{p.description}</p><div><b>${p.price}</b><small>/month</small></div><em>{p.billingNote}</em><ul>{PREMIUM_FEATURES.map(x=><li key={x}><Check/>{x}</li>)}</ul><a href={`/premium?plan=${p.id}`}>Choose {p.name}</a></article>)}</div></main><FAQBlock items={[['Are these the current plans?','These values are read from the subscription configuration in this project. Confirm production checkout totals before purchase.'],['Is there a separate annual total?','The annual plan is listed as $48 billed every 12 months.'],['Can I cancel the monthly plan?','The verified monthly-plan configuration states “Cancel anytime.” Refund terms remain subject to the reviewed production policy.']]}/><CTA/></>}
 function CompanyPage({kind}){const d=COMPANY[kind];return <><Meta title={d.title} description={d.description} path={`/${kind}`}/><Hero eyebrow="INVONXT" title={d.title} description={d.description}/><main className="pp-main"><section><Cards items={d.sections}/>{kind==='contact'&&<div className="pp-contact"><h2>Open verified support</h2><p>No public email address, phone number, or office address is published because none was verified in the repository.</p><a href={APP_ROUTES.login}>Open Invonxt support <ArrowRight/></a></div>}</section></main><CTA/></>}
 function FAQBlock({items=FAQS}){return <section className="pp-faq"><div className="pp-shell"><div className="pp-heading"><span>FREQUENTLY ASKED QUESTIONS</span><h2>Clear answers before you get started</h2></div><div>{items.map(([q,a])=><details key={q}><summary>{q}<ChevronDown/></summary><p>{a}</p></details>)}</div></div></section>}
-function FAQPage(){return <><Meta title="Invonxt Frequently Asked Questions" description="Get clear answers about Invonxt invoices, estimates, payments, expenses, statements, reports, and recurring records." path="/faq"/><Hero eyebrow="HELP CENTER" title="Invonxt Frequently Asked Questions" description="Search the most common product questions and follow links to the relevant workflow."/><FAQBlock/><CTA/></>}
+function FAQPage(){return <><Meta title="Invonxt Frequently Asked Questions" description="Get clear answers about Invonxt invoices, estimates, payments, expenses, statements, reports, inventory, and account access." path="/faq"/><Hero eyebrow="HELP CENTER" title="Invonxt Frequently Asked Questions" description="Search the most common product questions and follow links to the relevant workflow."/><FAQBlock/><CTA/></>}
 function LegalPage({kind}){const d=LEGAL[kind];const path=kind==='privacy'?'/privacy':kind==='terms'?'/terms':`/${kind}`;const draft=kind==='cookie-policy'||kind==='refund-policy';return <><Meta title={d.title} description={d.description} path={path} noindex={draft}/><main className="pp-legal pp-shell"><span>LEGAL NOTICE {draft?'· REVIEW REQUIRED':''}</span><h1>{d.title}</h1><p className="pp-lead">{d.description}</p>{d.body.map((x,i)=><section key={x}><h2>{i===0?'Important status':i===1?'How this applies':'Questions and requests'}</h2><p>{x}</p></section>)}</main></>}
 function NotFound(){return <><Meta title="Page Not Found" description="The requested Invonxt page could not be found." path="/404" noindex/><main className="pp-not-found"><h1>Page not found</h1><p>The page may have moved or the address may be incorrect.</p><a href="/">Return to Invonxt</a></main></>}
 

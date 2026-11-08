@@ -1,0 +1,35 @@
+.af-section {
+  --orange: #10a887;
+}
+
+.af-glow-one { background: #ecfdf5; }
+.af-heading > span {
+  border-color: #a7f3d0;
+  background: #ecfdf5;
+  color: #047857;
+}
+.af-card:hover,
+.af-card.is-active { border-color: #86d9c7; }
+.af-icon { background: #eaf9f2; color: #0f9f78; }
+.af-card > a { color: #078568; }
+.af-invoice-mini .af-logo { background: #10a887; }
+.af-bars i:nth-child(4) { background: #10a887; }
+.af-clients-mini > svg,
+.af-convert-mini svg { color: #10a887; }
+.af-calendar-mini { color: #10a887; }
+.af-calendar-mini span { background: #10a887; }
+.af-doc span { color: #078568; }
+.af-doc-arrow {
+  background: #eaf9f2;
+  color: #078568;
+  box-shadow: 0 7px 20px #10a8872e;
+}
+.af-screen aside b,
+.af-dash header > span { background: #10a887; }
+.af-screen aside i:nth-child(2) { background: #5eead4; }
+.af-stats svg { color: #10a887; }
+.af-line { stroke: #10a887; }
+.af-primary {
+  background: #10a887;
+  box-shadow: 0 12px 27px #10a8873d;
+}
