@@ -1,0 +1,14 @@
+[2m4:11:56 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mWarning: Encountered two children with the same key, `/features/client-management`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+    at div
+    at section
+    at main
+    at FeaturesDirectory
+    at div
+    at PublicPage (http://localhost:3000/src/features/marketing/PublicPage.jsx:1578:38)
+    at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=2f8a9528:4155:26)
+    at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=2f8a9528:4835:19)
+    at HashRouteHandler (http://localhost:3000/src/App.jsx?t=1794222456958:21:29)
+    at Suspense
+    at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=2f8a9528:4787:29)
+    at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=2f8a9528:7233:26)
+    at App
