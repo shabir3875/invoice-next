@@ -129,7 +129,7 @@ async function prerender() {
 				const meta = getPublicRoute(routePath);
 				if (!meta) continue;
 				const publicHtml = renderToString(React.createElement(PublicPage, { kind: meta.kind, slug: meta.slug }));
-				const title = `${meta.title} | Invonxt`;
+				const title = `${meta.title} | Invoice Next`;
 				const url = `https://invonxt.com${routePath}`;
 				const routeDir = path.join(distAppDir, ...routePath.split('/').filter(Boolean));
 				fs.mkdirSync(routeDir, { recursive: true });
@@ -151,7 +151,7 @@ async function prerender() {
 			const notFoundHtml = renderToString(React.createElement(PublicPage, { kind: 'not-found' }));
 			for (const [routePath, template] of Object.entries(templatePages)) {
 				const pageHtml = renderToString(React.createElement(TemplatePage, { routePath }));
-				const title = template.seoTitle || `${template.name} Invoice Templates | Invonxt`;
+				const title = template.seoTitle || `${template.name} Invoice Templates | Invoice Next`;
 				const description = template.seoDescription || template.description;
 				const url = `https://invonxt.com${routePath}${template.trailingSlash ? '/' : ''}`;
 				const routeDir = path.join(distAppDir, ...routePath.split('/').filter(Boolean));
@@ -190,7 +190,7 @@ async function prerender() {
 			for (const routePath of ['/blog', ...ARTICLE_ROUTES]) {
 				const slug = routePath === '/blog' ? undefined : routePath.split('/').at(-1);
 				const article = slug ? ARTICLES[slug] : null;
-				const title = article ? `${article.title} | Invonxt` : 'Invoicing Guides & Business Resources | Invonxt';
+				const title = article ? `${article.title} | Invoice Next` : 'Invoicing Guides & Business Resources | Invoice Next';
 				const description = article ? article.description : 'Practical guides for creating invoices, choosing payment terms, billing international clients, freelancing, accounting, and business finance.';
 				const url = `https://invonxt.com${routePath}`;
 				const pageHtml = renderToString(React.createElement(BlogPage, { slug }));
@@ -208,7 +208,7 @@ async function prerender() {
 			}
 			fs.writeFileSync(path.join(distAppDir, '404.html'), distIndexHtml
 				.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${notFoundHtml}</div>\n\t\t`)
-				.replace(/<title>.*?<\/title>/, '<title>Page Not Found | Invonxt</title>')
+				.replace(/<title>.*?<\/title>/, '<title>Page Not Found | Invoice Next</title>')
 				.replace(/<meta name="robots" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, '<meta name="robots" content="noindex, follow" data-react-helmet="true" />'), 'utf8');
 			console.log('✅ Generated static route HTML files for /about, /contact, /privacy, /terms');
 			console.log(`✅ Generated ${FEATURE_SLUGS.length} static feature detail pages`);

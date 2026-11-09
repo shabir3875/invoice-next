@@ -7,7 +7,7 @@
 @media(max-width:560px){.home-hero h1{font-size:43px}.home-hero-copy>p{font-size:16px;line-height:1.7}.home-hero-actions{flex-direction:column}.home-hero-actions>a{width:100%}.home-trust{display:grid;grid-template-columns:1fr}.home-benefits{padding-bottom:28px}.home-benefit{min-height:0}.home-how{padding:64px 0 82px}.home-section-heading h2{font-size:34px}.home-step{padding:17px}.hi-share-paper{left:18%}.hi-mail{right:20px}}
 @media(prefers-reduced-motion:reduce){.hero-dashboard,.hero-kpi,.hero-chart-bar,.hero-recent,.hero-status-paid:before,.hero-success,.hi-paper>i,.hi-paper>div,.hi-paper>strong,.hi-share-paper,.hi-mail em,.hi-payment-row,.hi-paid,.hi-balance b{animation:none!important;opacity:1!important;transform:none!important}.hero-status-paid:before{display:none}.hero-success{position:absolute}.hi-payment-row,.hi-paid{display:flex}}
 
-/* Unified Invonxt marketing theme — sourced from the freelance page tokens. */
+/* Unified Invoice Next marketing theme — sourced from the freelance page tokens. */
 .home-page{--brand:#00856f;--primary:#047857;--accent:#10b981;--primary-hover:#065f46;--navy:#0f172a;--text:#334155;--muted:#64748b;--mint:#edfcf6;--page:#f5f7fb;--subtle:#f8fafc;--border:#e2e8f0;--ring:rgb(16 185 129 / .36);color:var(--text);background:#fff}
 .home-page :is(a,button,summary):focus-visible{outline:3px solid var(--ring)!important;outline-offset:3px}
 .home-page .home-hero{padding:clamp(4.5rem,8vw,7.5rem) 0 7rem;border-bottom:1px solid #d8eee7;background:radial-gradient(circle at 78% 15%,rgb(16 185 129 / .12),transparent 31%),linear-gradient(180deg,var(--mint),#fff)}

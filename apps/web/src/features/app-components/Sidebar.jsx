@@ -128,7 +128,7 @@ export function Sidebar({
               IN
             </div>
             <span className="text-lg font-black tracking-tight text-slate-900">
-              Invo<span className="text-[#10a887]">Nxt</span>
+              Invoice <span className="text-[#10a887]">Next</span>
             </span>
           </div>
         )}

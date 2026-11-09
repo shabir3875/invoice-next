@@ -41,7 +41,7 @@ function Preview({ form, totals, logo }) {
           <div>{form.notes && <><div className="text-[9px] font-extrabold uppercase tracking-[.2em] text-slate-400">Notes</div><p className="mt-2 whitespace-pre-line text-[11px] leading-5 text-slate-500">{form.notes}</p></>}</div>
           <div className="text-[11px]"><div className="flex justify-between py-2 text-slate-500"><span>Subtotal</span><span className="font-semibold text-slate-700">{money(totals.subtotal)}</span></div><div className="flex justify-between py-2 text-slate-500"><span>Tax</span><span className="font-semibold text-slate-700">{money(totals.tax)}</span></div><div className="flex justify-between py-2 text-slate-500"><span>Discount</span><span className="font-semibold text-slate-700">−{money(totals.discount)}</span></div><div className="mt-2 flex justify-between rounded-lg bg-blue-50 px-4 py-3.5 text-base font-extrabold text-blue-950"><span>Total due</span><span>{money(totals.grand)}</span></div></div>
         </div>
-        <footer className="mt-10 flex items-center justify-between border-t border-slate-100 pt-5 text-[9px] text-slate-400"><span>Thank you for your business.</span><span className="font-bold uppercase tracking-wider">Generated with InvoNxt</span></footer>
+        <footer className="mt-10 flex items-center justify-between border-t border-slate-100 pt-5 text-[9px] text-slate-400"><span>Thank you for your business.</span><span className="font-bold uppercase tracking-wider">Generated with Invoice Next</span></footer>
       </div>
     </article>
   );
@@ -53,7 +53,7 @@ export default function InvoiceGenerator() {
   return null;
 
   /* The embedded marketing-page builder is disabled. Invoice creation now
-     continues in the existing InvoNxt application via APP_ROUTES.invoices. */
+     continues in the existing Invoice Next application via APP_ROUTES.invoices. */
   const today = new Date().toISOString().slice(0, 10);
   const due = new Date(Date.now() + 14 * 86400000).toISOString().slice(0, 10);
   const [form, setForm] = useState({ businessName: '', businessDetails: '', customerName: '', customerDetails: '', invoiceNumber: 'INV-1001', invoiceDate: today, dueDate: due, paymentDetails: 'Payment terms: Due within 14 days', notes: 'We appreciate your business. Please include the invoice number with your payment.', items: [{ ...blankItem(), description: 'Professional services', quantity: 1, price: 500, tax: 0, discount: 0 }] });

@@ -65,13 +65,13 @@ export function PremiumPage({ onBack, onChoosePlan }) {
         <header className="mx-auto mt-8 max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[#00856f]">
             <Sparkles size={14} />
-            <span>Invonxt Premium</span>
+            <span>Invoice Next Premium</span>
           </div>
           <h1 className="mt-3 text-3xl font-black text-slate-900 sm:text-4xl">
             Simple, Transparent Pricing
           </h1>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-500 sm:text-base">
-            Choose the plan that works for you. Every option includes the complete Invonxt toolkit,
+            Choose the plan that works for you. Every option includes the complete Invoice Next toolkit,
             secure cloud storage, and unlimited documents.
           </p>
         </header>

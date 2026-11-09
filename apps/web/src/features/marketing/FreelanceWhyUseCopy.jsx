@@ -6,16 +6,16 @@ const paragraphs = [
   'When you work for yourself, sending a professional invoice is an important part of your business. It helps you make a good impression, build trust with clients, and keep your payments organized.',
   "Whether you're a freelancer, consultant, small business owner, or someone earning extra income from a side job, a professional invoice shows your clients that you take your work seriously.",
   "Using an invoice template saves time and makes billing easier. You can quickly add your client's details, services, prices, and payment information without creating an invoice from scratch.",
-  'With InvoNxt, you can create fully customized, professional invoices that match your business. Add your logo, choose your colors, and send clear, well-designed invoices to your clients in minutes.',
+  'With Invoice Next, you can create fully customized, professional invoices that match your business. Add your logo, choose your colors, and send clear, well-designed invoices to your clients in minutes.',
 ];
 
 const secondHeading = 'Why Are Invoice Templates Designed for Freelancers Better?';
 
 const secondParagraphs = [
   'Every freelancer has different invoicing needs. A good invoice template should be simple, professional, and include all the important details, such as client information, services, prices, and payment terms.',
-  'At <strong>InvoNxt</strong>, we make invoicing easier for <a href="/#solutions">freelancers</a>. Our easy-to-use <a href="/#generator">invoice generator</a> helps you create professional invoices in minutes.',
+  'At <strong>Invoice Next</strong>, we make invoicing easier for <a href="/#solutions">freelancers</a>. Our easy-to-use <a href="/#generator">invoice generator</a> helps you create professional invoices in minutes.',
   'We also offer <strong>fully customizable freelance invoice templates</strong> designed to fit your work. You can add your logo, change colors, update details, and create invoices that match your business.',
-  'Whether you\'re a designer, developer, consultant, or other independent professional, InvoNxt helps you save time and keep your invoicing organized.',
+  'Whether you\'re a designer, developer, consultant, or other independent professional, Invoice Next helps you save time and keep your invoicing organized.',
   'Explore our <a href="/#templates">professional invoice templates</a> to find the right design for your business.',
 ];
 
@@ -72,7 +72,7 @@ export default function FreelanceWhyUseCopy() {
 
       if (secondSectionImage) {
         secondSectionImage.src = '/invonxt-invoice-creation-workspace.png';
-        secondSectionImage.alt = 'InvoNxt invoice creation workspace with customizable freelancer template options';
+        secondSectionImage.alt = 'Invoice Next invoice creation workspace with customizable freelancer template options';
         secondSectionImage.classList.add('freelancer-second-workspace-image');
       }
 
@@ -106,20 +106,20 @@ export default function FreelanceWhyUseCopy() {
     if (paymentContainer) {
       if (paymentSectionImage) {
         paymentSectionImage.src = '/invonxt-invoice-workflow-infographic.png';
-        paymentSectionImage.alt = 'InvoNxt invoice workflow infographic showing invoice creation, payment methods, and payment tracking';
+        paymentSectionImage.alt = 'Invoice Next invoice workflow infographic showing invoice creation, payment methods, and payment tracking';
         paymentSectionImage.classList.add('freelance-payment-workflow-image');
       }
       paymentContainer.classList.add('freelance-payment-guide');
       paymentContainer.innerHTML = `
         <h2>How Can I Get Paid?</h2>
-        <p>Once you've created your freelance invoice, the next step is getting paid. With <strong>InvoNxt</strong>, you can send professional invoices, record payments, and keep track of your outstanding balances. Your clients pay you outside InvoNxt using your preferred payment method.</p>
+        <p>Once you've created your freelance invoice, the next step is getting paid. With <strong>Invoice Next</strong>, you can send professional invoices, record payments, and keep track of your outstanding balances. Your clients pay you outside Invoice Next using your preferred payment method.</p>
         <h3>Step 1: Choose Your Payment Method</h3>
         <p>Choose a payment method that works best for you and your clients. You can accept payments through bank transfers, PayPal, Payoneer, cash, or other payment services. Make sure your client knows how and where to send the payment.</p>
         <h3>Step 2: Create and Send Your Invoice</h3>
-        <p>Use the <a href="https://app.invonxt.com/"><strong>InvoNxt Invoice Generator</strong></a> to create a professional invoice with your client's details, services, prices, and payment instructions. Once it's ready, send it to your client by email or your preferred communication method.</p>
+        <p>Use the <a href="https://app.invonxt.com/"><strong>Invoice Next Invoice Generator</strong></a> to create a professional invoice with your client's details, services, prices, and payment instructions. Once it's ready, send it to your client by email or your preferred communication method.</p>
         <h3>Step 3: Record and Track Your Payments</h3>
-        <p>After receiving a payment, simply record it in <a href="https://app.invonxt.com/#/invoices"><strong>InvoNxt Invoice Management</strong></a>. You can track unpaid, partially paid, and fully paid invoices, monitor outstanding balances, and keep your payment records organized.</p>
-        <p><strong>Note:</strong> InvoNxt does not process payments directly. All payments are received through external methods and recorded manually in InvoNxt.</p>
+        <p>After receiving a payment, simply record it in <a href="https://app.invonxt.com/#/invoices"><strong>Invoice Next Invoice Management</strong></a>. You can track unpaid, partially paid, and fully paid invoices, monitor outstanding balances, and keep your payment records organized.</p>
+        <p><strong>Note:</strong> Invoice Next does not process payments directly. All payments are received through external methods and recorded manually in Invoice Next.</p>
       `;
     }
 

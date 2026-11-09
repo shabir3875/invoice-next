@@ -17,7 +17,7 @@ export const MARKETING_NAVIGATION = [
 ];
 
 export function MarketingBrand({ dark = false }) {
-  return <a href="/" aria-label="Invonxt home" className={`marketing-brand flex items-center gap-2.5 text-xl font-black tracking-[-.04em] ${dark ? 'text-white' : 'text-slate-950'}`}><span className="grid h-10 w-10 place-items-center rounded-xl text-white">IN</span>Invo<span>Nxt</span></a>;
+  return <a href="/" aria-label="Invoice Next home" className={`marketing-brand flex items-center gap-2.5 text-xl font-black tracking-[-.04em] ${dark ? 'text-white' : 'text-slate-950'}`}><span className="grid h-10 w-10 place-items-center rounded-xl text-white">IN</span>Invoice <span>Next</span></a>;
 }
 
 export default function MarketingHeader() {

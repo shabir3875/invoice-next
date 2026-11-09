@@ -6,10 +6,10 @@ export default function HomePage({ routePath = '/' }) {
   return (
     <>
       <Helmet>
-        <title>Invonxt | Professional Invoicing Software for Freelancers &amp; Businesses</title>
+        <title>Invoice Next | Professional Invoicing Software for Freelancers &amp; Businesses</title>
         <meta
           name="description"
-          content="Create professional invoices with customizable templates, manage estimates, track payments, organize expenses, and simplify business billing with Invonxt."
+          content="Create professional invoices with customizable templates, manage estimates, track payments, organize expenses, and simplify business billing with Invoice Next."
         />
       </Helmet>
       <div className="home-page"><MarketingPage routePath={routePath} /></div>

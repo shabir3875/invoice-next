@@ -47,7 +47,7 @@ function DocumentOrbit() {
 }
 
 function LaptopDashboard() {
-  return <div className="af-laptop-wrap" aria-label="Illustration of the InvoNxt dashboard showing sample financial data">
+  return <div className="af-laptop-wrap" aria-label="Illustration of the Invoice Next dashboard showing sample financial data">
     <div className="af-laptop">
       <div className="af-camera"/><div className="af-screen">
         <aside><b>IN</b>{[0,1,2,3,4].map(x => <i key={x}/>)}</aside>

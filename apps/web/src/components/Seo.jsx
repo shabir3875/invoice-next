@@ -8,7 +8,7 @@ const Seo = ({
     title,
     description,
     image = 'https://invonxt.com/og-image.png',
-    imageAlt = 'Invonxt invoicing dashboard for freelancers and small businesses',
+    imageAlt = 'Invoice Next invoicing dashboard for freelancers and small businesses',
     url = 'https://invonxt.com/',
     siteName = 'Invoice Next',
     locale = 'en_US',
