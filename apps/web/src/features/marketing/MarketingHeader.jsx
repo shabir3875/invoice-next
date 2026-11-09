@@ -9,10 +9,7 @@ export const MARKETING_NAVIGATION = [
     label: 'Invoice Templates',
     href: '/templates/freelance',
     children: [
-      ['Consulting', '/templates/consulting'],
       ['Freelance', '/templates/freelance'],
-      ['Law Firm', '/templates/law-firm'],
-      ['Small Businesses', '/templates/small-businesses'],
     ],
   },
   { label: 'Invoice Generator', href: '/invoice-generator' },

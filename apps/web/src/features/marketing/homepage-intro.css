@@ -15,6 +15,7 @@
 .home-page .home-eyebrow{border-color:#a7d9c9;color:var(--primary)}.home-page .home-eyebrow span{background:var(--accent)}
 .home-page .home-hero h1{font-size:clamp(2.75rem,5vw,4.6rem);color:var(--navy)}.home-page .home-hero h1 span{color:var(--brand)}
 .home-page .home-hero-copy>p{color:var(--text);font-size:clamp(1rem,1.5vw,1.125rem)}
+.home-hero-intro{max-width:640px;margin-top:25px}.home-hero-intro p{margin:0;color:var(--text);font-size:clamp(.95rem,1.25vw,1.06rem);line-height:1.72}.home-hero-intro p+p{margin-top:12px}.home-hero-intro p:first-child{color:var(--navy);font-size:clamp(1.05rem,1.5vw,1.18rem);font-weight:750}.home-hero-intro p:last-child{color:var(--primary);font-weight:850}
 .home-primary-link{background:var(--primary);box-shadow:0 12px 28px rgb(4 120 87 / .2)}.home-primary-link:hover{background:var(--primary-hover);transform:translateY(-2px)}
 .home-page .home-hero-actions>a:last-child:hover{border-color:#6ee7b7;color:var(--primary);box-shadow:0 8px 20px rgb(4 120 87 / .1)}
 .home-page .home-trust svg{color:var(--primary)}
