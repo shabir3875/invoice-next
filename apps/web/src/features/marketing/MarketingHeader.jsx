@@ -12,7 +12,7 @@ export const MARKETING_NAVIGATION = [
       ['Freelance', '/templates/freelance'],
     ],
   },
-  { label: 'Invoice Generator', href: '/invoice-generator' },
+  { label: 'Invoice Generator', href: APP_ROUTES.login },
   { label: 'Pricing', href: '/pricing' },
 ];
 
