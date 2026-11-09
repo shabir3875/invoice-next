@@ -3,10 +3,10 @@ import { openCookiePreferences } from '../../lib/cookieConsent';
 
 export const FOOTER_GROUPS = [
   ['Product', [
-    ['All Features', '/features'], ['Professional Invoices', '/features/professional-invoices'],
-    ['Invoice Templates', '/features/invoice-templates'], ['Estimates to Invoices', '/features/estimates-to-invoices'],
-    ['Payment Tracking', '/features/payment-tracking'], ['Expense Management', '/features/expense-management'],
-    ['Customer Statements', '/features/customer-statements'], ['Business Reports', '/features/business-reports'],
+    ['Fast Invoicing', '/features/lightning-fast-invoicing'], ['Recurring Invoices', '/features/recurring-invoices'],
+    ['Inventory Tracking', '/features/inventory-tracking'], ['Payment Follow-Ups', '/features/batch-payment-reminders'],
+    ['Sales & Stock Reports', '/features/sales-stock-reports'], ['Import & Export', '/features/import-export-records'],
+    ['Document Customization', '/features/document-customization'],
     ['Clients & Services', '/client-management'], ['Invoice Generator', '/invoice-generator'],
     ['Free Templates', '/invoice-templates'], ['Products & Inventory', '/features/client-management'],
   ]],

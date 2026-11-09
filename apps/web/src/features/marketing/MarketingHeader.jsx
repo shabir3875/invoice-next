@@ -4,18 +4,7 @@ import { APP_ROUTES } from './data';
 import './marketing-header.css';
 
 export const MARKETING_NAVIGATION = [
-  {
-    label: 'Features',
-    href: '/features',
-    children: [
-      ['All Features', '/features'],
-      ['Professional Invoices', '/features/professional-invoices'],
-      ['Invoice Templates', '/features/invoice-templates'],
-      ['Payment Tracking', '/features/payment-tracking'],
-      ['Expense Management', '/features/expense-management'],
-      ['Business Reports', '/features/business-reports'],
-    ],
-  },
+  { label: 'Features', href: '/#features' },
   {
     label: 'Invoice Templates',
     href: '/templates/freelance',

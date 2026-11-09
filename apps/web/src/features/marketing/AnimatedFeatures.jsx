@@ -82,7 +82,7 @@ export default function AnimatedFeatures() {
         <div className="af-center"><DocumentOrbit/><LaptopDashboard/><div className="af-live"><i/><span>Live dashboard preview</span><b>Sample data</b></div></div>
         <div className="af-column af-right">{FEATURES.slice(4).map((f,i) => <FeatureCard key={f.title} feature={f} index={i+4} active={active===i+4} onActivate={activate}/>)}</div>
       </div>
-      <div className="af-actions"><a className="af-primary" href={APP_ROUTES.signup}>Start Invoicing Free <ArrowRight size={17}/></a><a className="af-secondary" href="/features">Explore All Features</a></div>
+      <div className="af-actions"><a className="af-primary" href={APP_ROUTES.signup}>Start Invoicing Free <ArrowRight size={17}/></a></div>
     </div>
   </section>;
 }

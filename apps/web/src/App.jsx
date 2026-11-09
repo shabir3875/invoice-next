@@ -47,7 +47,7 @@ function App() {
             <HashRouteHandler>
                 <Routes>
                     <Route path="/" element={<HomePage routePath="/" />} />
-                    <Route path="/features" element={<PublicPage kind="features" />} />
+                    <Route path="/features" element={<Navigate to="/#features" replace />} />
                     <Route path="/solutions/:slug" element={<PublicPage kind="solution" />} />
                     <Route path="/pricing" element={<PublicPage kind="pricing" />} />
                     <Route path="/about" element={<PublicPage kind="about" />} />

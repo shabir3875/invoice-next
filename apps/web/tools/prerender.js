@@ -249,6 +249,23 @@ async function prerender() {
 		const rootDistDir = path.resolve(webRoot, '../../dist');
 		const repoRootDir = path.resolve(webRoot, '../..');
 		if (fs.existsSync(distAppDir)) {
+			// Remove retired prerendered routes before mirroring so old deploy artifacts
+			// cannot survive a build simply because recursive copying merges folders.
+			const retiredDeployEntries = [
+				'features.html',
+				path.join('features', 'index.html'),
+				path.join('features', 'professional-invoices'),
+				path.join('features', 'invoice-templates'),
+				path.join('features', 'expense-management'),
+				path.join('features', 'business-reports'),
+				path.join('features', 'create-estimates-invoices'),
+				'recurring-invoices',
+			];
+			for (const destinationRoot of [rootDistDir, repoRootDir]) {
+				for (const retiredEntry of retiredDeployEntries) {
+					fs.rmSync(path.join(destinationRoot, retiredEntry), { recursive: true, force: true });
+				}
+			}
 			for (const entry of fs.readdirSync(distAppDir)) {
 				if (entry === 'apps') continue;
 				const srcEntry = path.join(distAppDir, entry);
