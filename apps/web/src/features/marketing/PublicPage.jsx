@@ -7,6 +7,8 @@ import { APP_ROUTES } from './data';
 import { PREMIUM_FEATURES, PREMIUM_PLANS } from '../app-components/plans';
 import SiteFooter from './SiteFooter';
 import MarketingHeader from './MarketingHeader';
+import PrivacyPolicy from './PrivacyPolicy';
+import DisclaimerPage from './DisclaimerPage';
 import './public-pages.css';
 import './verified-features.css';
 
@@ -164,10 +166,11 @@ const LEGAL = {
   'refund-policy':{title:'Cancellation & Refund Policy',description:'Review the current Invonxt cancellation and refund policy notice.',body:['This page is intentionally marked for owner and legal review. The repository verifies monthly, 12-month, and 24-month subscription periods, but it does not provide enough authoritative information to publish a binding refund policy.','The final policy must be aligned with the payment provider, checkout disclosures, applicable consumer law, renewal behavior, and the actual cancellation process.']},
 };
 
-export const PUBLIC_ROUTES = ['/pricing','/about','/contact','/support','/faq','/privacy','/terms','/cookie-policy','/refund-policy',...Object.keys(SOLUTIONS).map(x=>`/solutions/${x}`)];
+export const PUBLIC_ROUTES = ['/pricing','/about','/contact','/support','/faq','/privacy','/terms','/cookie-policy','/refund-policy','/disclaimer',...Object.keys(SOLUTIONS).map(x=>`/solutions/${x}`)];
 export function getPublicRoute(path){
   if(path==='/pricing')return {kind:'pricing',title:'Invonxt Pricing',description:'Compare verified Invonxt monthly, annual, and 24-month subscription options and included premium features.'};
   if(path==='/faq')return {kind:'faq',title:'Invonxt Frequently Asked Questions',description:'Get clear answers about Invonxt invoices, estimates, payments, expenses, statements, reports, inventory, and account access.'};
+  if(path==='/disclaimer')return {kind:'disclaimer',title:'Disclaimer',description:'Read the Invonxt website disclaimer covering informational content, external links, professional advice, and use at your own risk.'};
   if(path.startsWith('/solutions/')){const slug=path.split('/').pop();const d=SOLUTIONS[slug];return d?{kind:'solution',slug,title:d.title,description:d.description}:null}
   const key=path.slice(1);if(COMPANY[key])return {kind:key,title:COMPANY[key].title,description:COMPANY[key].description};
   if(LEGAL[key])return {kind:key,title:LEGAL[key].title,description:LEGAL[key].description,noindex:key==='cookie-policy'||key==='refund-policy'};
@@ -189,4 +192,4 @@ function FAQPage(){return <><Meta title="Invonxt Frequently Asked Questions" des
 function LegalPage({kind}){const d=LEGAL[kind];const path=kind==='privacy'?'/privacy':kind==='terms'?'/terms':`/${kind}`;const draft=kind==='cookie-policy'||kind==='refund-policy';return <><Meta title={d.title} description={d.description} path={path} noindex={draft}/><main className="pp-legal pp-shell"><span>LEGAL NOTICE {draft?'· REVIEW REQUIRED':''}</span><h1>{d.title}</h1><p className="pp-lead">{d.description}</p>{d.body.map((x,i)=><section key={x}><h2>{i===0?'Important status':i===1?'How this applies':'Questions and requests'}</h2><p>{x}</p></section>)}</main></>}
 function NotFound(){return <><Meta title="Page Not Found" description="The requested Invonxt page could not be found." path="/404" noindex/><main className="pp-not-found"><h1>Page not found</h1><p>The page may have moved or the address may be incorrect.</p><a href="/">Return to Invonxt</a></main></>}
 
-export default function PublicPage({kind,slug:slugProp}){const params=useParams();const slug=slugProp||params.slug;let content;if(kind==='solution')content=<SolutionPage slug={slug}/>;else if(kind==='pricing')content=<PricingPage/>;else if(kind==='faq')content=<FAQPage/>;else if(COMPANY[kind])content=<CompanyPage kind={kind}/>;else if(LEGAL[kind])content=<LegalPage kind={kind}/>;else content=<NotFound/>;return <div className="pp-page"><MarketingHeader/>{content}<SiteFooter/></div>}
+export default function PublicPage({kind,slug:slugProp}){const params=useParams();const slug=slugProp||params.slug;let content;if(kind==='privacy')content=<PrivacyPolicy/>;else if(kind==='disclaimer')content=<DisclaimerPage/>;else if(kind==='solution')content=<SolutionPage slug={slug}/>;else if(kind==='pricing')content=<PricingPage/>;else if(kind==='faq')content=<FAQPage/>;else if(COMPANY[kind])content=<CompanyPage kind={kind}/>;else if(LEGAL[kind])content=<LegalPage kind={kind}/>;else content=<NotFound/>;return <div className="pp-page"><MarketingHeader/>{content}<SiteFooter/></div>}

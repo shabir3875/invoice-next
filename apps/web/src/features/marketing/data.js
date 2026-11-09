@@ -19,7 +19,7 @@ export const APP_ROUTES = {
 
 export const benefits = [
   { icon: Zap, title: 'Easy Invoice Creation', text: 'Build accurate invoices in minutes.' },
-  { icon: Layers3, title: 'Professional Templates', text: 'Present a consistent business brand.' },
+  { icon: Layers3, title: 'Professional Templates', text: 'Create customizable templates your way.' },
   { icon: CreditCard, title: 'Faster Payments', text: 'Keep payment details clear and accessible.' },
   { icon: BriefcaseBusiness, title: 'Business Management', text: 'Organize clients, items and documents.' },
   { icon: ShieldCheck, title: 'Secure Data', text: 'Access business records from the cloud.' },

@@ -58,6 +58,7 @@ function App() {
                     <Route path="/terms" element={<PublicPage kind="terms" />} />
                     <Route path="/cookie-policy" element={<PublicPage kind="cookie-policy" />} />
                     <Route path="/refund-policy" element={<PublicPage kind="refund-policy" />} />
+                    <Route path="/disclaimer" element={<PublicPage kind="disclaimer" />} />
                     <Route path="/templates/consulting" element={<TemplatePage routePath="/templates/consulting" />} />
                     <Route path="/templates/freelance" element={<TemplatePage routePath="/templates/freelance" />} />
                     <Route path="/template/freeluncer" element={<Navigate to="/templates/freelance" replace />} />

@@ -21,7 +21,7 @@ export const FOOTER_GROUPS = [
   ]],
   ['Legal', [
     ['Privacy Policy', '/privacy'], ['Terms & Conditions', '/terms'],
-    ['Cookie Policy', '/cookie-policy'], ['Cancellation & Refund Policy', '/refund-policy'],
+    ['Cookie Policy', '/cookie-policy'], ['Cancellation & Refund Policy', '/refund-policy'], ['Disclaimer', '/disclaimer'],
   ]],
 ];
 
