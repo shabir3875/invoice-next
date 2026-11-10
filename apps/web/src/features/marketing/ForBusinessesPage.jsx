@@ -110,6 +110,11 @@ export function SmartBusinessImage({
  * Reusable Hero Section for the Businesses Page.
  */
 export function BusinessHero() {
+  const totalBusinesses = BUSINESS_CATEGORIES.reduce(
+    (sum, cat) => sum + cat.subcategories.length,
+    0
+  );
+
   return (
     <section className="fb-hero" aria-labelledby="fb-hero-heading">
       <div className="fb-hero-inner">
@@ -161,7 +166,7 @@ export function BusinessHero() {
                 <ShieldCheck size={20} />
               </span>
               <div className="fb-hero-caption-text">
-                <strong>Built for 37+ Industries &amp; Professions</strong>
+                <strong>Built for {totalBusinesses}+ Industries &amp; Professions</strong>
                 <span>Invoices, estimates, expenses, client records &amp; statements</span>
               </div>
             </div>
@@ -383,8 +388,8 @@ export function CategoryAccordion({
 
 export default function ForBusinessesPage() {
   const [searchQuery, setSearchQuery] = useState('');
-  // Expand the Trades category by default to introduce the layout
-  const [expandedIds, setExpandedIds] = useState(() => new Set(['trades']));
+  // Expand the Trades and Business categories by default to introduce the layout
+  const [expandedIds, setExpandedIds] = useState(() => new Set(['trades', 'business']));
 
   const query = searchQuery.trim().toLowerCase();
 

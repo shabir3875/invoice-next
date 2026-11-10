@@ -361,80 +361,896 @@ export const BUSINESS_CATEGORIES = [
     ],
     subcategories: [
       {
-        id: 'freelancer',
-        name: 'Freelancer',
-        slug: 'freelancer',
-        icon: Laptop,
+        id: 'rental-invoice-template',
+        name: 'Rental Invoice Template',
+        slug: 'rental-invoice-template',
+        icon: KeyRound,
         description:
-          'Send polished project invoices, prepare estimates, track client payments, and organize deductible business expenses.',
+          'Generate clear rental invoices for equipment, property, vehicles, and recurring lease periods with security deposit tracking.',
         image:
-          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Freelance professional working on a laptop in a bright modern studio',
-        url: '/businesses/business/freelancer',
-        existingSolutionSlug: 'freelancers',
+          'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Property and rental manager handing over keys with a formal rental invoice',
+        url: '/businesses/business/rental-invoice-template',
       },
       {
-        id: 'small-business',
-        name: 'Small Business',
-        slug: 'small-business',
-        icon: Store,
-        description:
-          'Unify customer billing, supplier expenses, product catalogs, payments, and profit-and-loss reporting in one workspace.',
-        image:
-          'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Small business owner managing customer orders and operations at a counter',
-        url: '/businesses/business/small-business',
-        existingSolutionSlug: 'small-businesses',
-      },
-      {
-        id: 'consultant',
-        name: 'Consultant',
-        slug: 'consultant',
+        id: 'consulting',
+        name: 'Consulting',
+        slug: 'consulting',
         icon: UserCheck,
         description:
-          'Deliver executive-ready proposals, convert approved scopes into invoices, and track retainers and project milestones.',
+          'Deliver executive-ready consulting proposals, convert approved scopes into invoices, and track retainers and advisory milestones.',
         image:
           'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=640&q=80',
         imageAlt: 'Business consultant presenting strategic analysis to clients in a meeting room',
-        url: '/businesses/business/consultant',
+        url: '/businesses/business/consulting',
         existingSolutionSlug: 'consultants',
       },
       {
-        id: 'accountant',
-        name: 'Accountant',
-        slug: 'accountant',
+        id: 'freelance',
+        name: 'Freelance',
+        slug: 'freelance',
+        icon: Laptop,
+        description:
+          'Send polished project invoices, prepare client estimates, track partial and full payments, and organize deductible freelance expenses.',
+        image:
+          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Freelance professional working on a laptop in a bright modern studio',
+        url: '/businesses/business/freelance',
+        existingSolutionSlug: 'freelancers',
+      },
+      {
+        id: 'b2b',
+        name: 'B2B',
+        slug: 'b2b',
+        icon: Handshake,
+        description:
+          'Manage B2B wholesale billing, purchase order references, net payment terms, volume discounts, and corporate account statements.',
+        image:
+          'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'B2B commercial partners shaking hands across a conference table',
+        url: '/businesses/business/b2b',
+      },
+      {
+        id: 'computer-shop',
+        name: 'Computer Shop',
+        slug: 'computer-shop',
+        icon: Laptop,
+        description:
+          'Track PC hardware inventory, itemize custom builds and diagnostic repair labor, and issue warranty-ready customer invoices.',
+        image:
+          'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Technician testing computer hardware and laptops at a clean workbench',
+        url: '/businesses/business/computer-shop',
+      },
+      {
+        id: 'journalist',
+        name: 'Journalist',
+        slug: 'journalist',
+        icon: FileEdit,
+        description:
+          'Invoice media publications for commissioned articles, investigative reporting, syndication rights, and travel reimbursements.',
+        image:
+          'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Journalist drafting an investigative story and notes at an editorial desk',
+        url: '/businesses/business/journalist',
+      },
+      {
+        id: 'saas-quote-templates',
+        name: 'SaaS Quote Templates',
+        slug: 'saas-quote-templates',
+        icon: Globe,
+        description:
+          'Prepare structured software subscription quotes with seat tiers, onboarding fees, annual discounts, and enterprise SLA terms.',
+        image:
+          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'SaaS metrics and subscription pricing proposal on a modern laptop screen',
+        url: '/businesses/business/saas-quote-templates',
+      },
+      {
+        id: 'bakery',
+        name: 'Bakery',
+        slug: 'bakery',
+        icon: Store,
+        description:
+          'Bill wholesale pastry accounts, custom cake orders, event catering deposits, and daily ingredient supplier expenses.',
+        image:
+          'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Small bakery owner serving customers and managing orders at the counter',
+        url: '/businesses/business/bakery',
+      },
+      {
+        id: 'lodging',
+        name: 'Lodging',
+        slug: 'lodging',
+        icon: Home,
+        description:
+          'Create itemized guest folios, corporate stay invoices, room block quotes, and occupancy tax summaries for lodging properties.',
+        image:
+          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Welcoming boutique lodging interior prepared for arriving guests',
+        url: '/businesses/business/lodging',
+      },
+      {
+        id: 'sales-quote-templates',
+        name: 'Sales Quote Templates',
+        slug: 'sales-quote-templates',
+        icon: FileText,
+        description:
+          'Send fast, persuasive sales quotes with clear product pricing, volume discounts, validity dates, and one-click invoice conversion.',
+        image:
+          'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Sales team reviewing commercial price quotes and order proposals',
+        url: '/businesses/business/sales-quote-templates',
+      },
+      {
+        id: 'bank',
+        name: 'Bank',
+        slug: 'bank',
+        icon: Building2,
+        description:
+          'Document financial advisory fees, commercial account servicing, transaction schedules, and institutional billing statements.',
+        image:
+          'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Financial banking specialist reviewing institutional account documents',
+        url: '/businesses/business/bank',
+      },
+      {
+        id: 'copywriter',
+        name: 'Copywriter',
+        slug: 'copywriter',
+        icon: PenTool,
+        description:
+          'Quote conversion copywriting packages, landing page scripts, email sequences, and monthly editorial retainers cleanly.',
+        image:
+          'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Copywriter crafting brand messaging and campaign copy at a workspace',
+        url: '/businesses/business/copywriter',
+      },
+      {
+        id: 'logistics',
+        name: 'Logistics',
+        slug: 'logistics',
+        icon: PackageCheck,
+        description:
+          'Invoice supply chain coordination, last-mile distribution, customs handling fees, fuel surcharges, and warehousing services.',
+        image:
+          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Logistics coordinator managing distribution pallets inside a fulfillment center',
+        url: '/businesses/business/logistics',
+      },
+      {
+        id: 'seo',
+        name: 'Seo',
+        slug: 'seo',
+        icon: Globe,
+        description:
+          'Bill technical SEO audits, keyword research sprints, content optimization retainers, and link-building campaign milestones.',
+        image:
+          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'SEO specialist analyzing organic search performance and analytics charts',
+        url: '/businesses/business/seo',
+      },
+      {
+        id: 'bed-and-breakfast',
+        name: 'Bed And Breakfast',
+        slug: 'bed-and-breakfast',
+        icon: Home,
+        description:
+          'Manage guest booking deposits, nightly room rates, dining add-ons, and housekeeping supply expenses for your B&B.',
+        image:
+          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Bright, inviting guest room in a boutique bed and breakfast property',
+        url: '/businesses/business/bed-and-breakfast',
+      },
+      {
+        id: 'corporate',
+        name: 'Corporate',
+        slug: 'corporate',
+        icon: Building2,
+        description:
+          'Standardize multi-department invoicing, vendor expense tracking, consolidated client statements, and executive financial reporting.',
+        image:
+          'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Modern corporate headquarters boardroom and executive workspace',
+        url: '/businesses/business/corporate',
+      },
+      {
+        id: 'manufacturing',
+        name: 'Manufacturing',
+        slug: 'manufacturing',
+        icon: Layers,
+        description:
+          'Track raw material stock, bill production runs and tooling setup fees, and reconcile factory supplier expenses.',
+        image:
+          'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Manufacturing engineer inspecting precision production equipment',
+        url: '/businesses/business/manufacturing',
+      },
+      {
+        id: 'social-media',
+        name: 'Social Media',
+        slug: 'social-media',
+        icon: Megaphone,
+        description:
+          'Invoice monthly social media management retainers, paid ad spend reimbursements, short-form video packages, and creator campaigns.',
+        image:
+          'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Social media strategists planning content calendars in a creative office',
+        url: '/businesses/business/social-media',
+      },
+      {
+        id: 'bookkeeping-invoices',
+        name: 'Bookkeeping Invoices',
+        slug: 'bookkeeping-invoices',
         icon: Calculator,
         description:
-          'Organize client billing, expense records, tax summaries, customer statements, and XLSX-ready financial exports.',
+          'Bill monthly reconciliation services, payroll administration, tax preparation, and financial cleanup projects with precision.',
         image:
           'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Accountant reviewing financial reports and calculator at an office desk',
-        url: '/businesses/business/accountant',
+        imageAlt: 'Bookkeeper reviewing general ledger statements and invoices at a desk',
+        url: '/businesses/business/bookkeeping-invoices',
         existingSolutionSlug: 'accountants',
       },
       {
-        id: 'retail-store',
-        name: 'Retail Store',
-        slug: 'retail-store',
+        id: 'dance-teacher',
+        name: 'Dance Teacher',
+        slug: 'dance-teacher',
+        icon: Users,
+        description:
+          'Invoice private dance lessons, group class packages, choreography fees, studio rentals, and recital costume expenses.',
+        image:
+          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Instructor organizing class schedules and student billing records',
+        url: '/businesses/business/dance-teacher',
+      },
+      {
+        id: 'marketing',
+        name: 'Marketing',
+        slug: 'marketing',
+        icon: Megaphone,
+        description:
+          'Create proposals and invoices for brand strategy, lead generation campaigns, media buying retainers, and performance analytics.',
+        image:
+          'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Marketing team collaborating on campaign performance in a modern office',
+        url: '/businesses/business/marketing',
+      },
+      {
+        id: 'software',
+        name: 'Software',
+        slug: 'software',
+        icon: Code2,
+        description:
+          'Bill custom software development, SaaS licensing, implementation milestones, and ongoing maintenance and support contracts.',
+        image:
+          'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Software engineer building enterprise applications on a workstation',
+        url: '/businesses/business/software',
+      },
+      {
+        id: 'broker',
+        name: 'Broker',
+        slug: 'broker',
+        icon: Handshake,
+        description:
+          'Document brokerage commissions, deal advisory retainers, transaction success fees, and client settlement statements.',
+        image:
+          'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Commercial broker reviewing transaction agreements in an executive office',
+        url: '/businesses/business/broker',
+      },
+      {
+        id: 'developer',
+        name: 'Developer',
+        slug: 'developer',
+        icon: Code2,
+        description:
+          'Invoice full-stack engineering sprints, API integrations, technical architecture reviews, and DevOps support retainers.',
+        image:
+          'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Application developer writing and testing code on a laptop',
+        url: '/businesses/business/developer',
+      },
+      {
+        id: 'party-rental',
+        name: 'Party Rental',
+        slug: 'party-rental',
+        icon: CalendarCheck,
+        description:
+          'Track tent, seating, lighting, and AV inventory while billing event booking deposits, delivery fees, and damage waivers.',
+        image:
+          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Event space staged with professional party rental seating and lighting',
+        url: '/businesses/business/party-rental',
+      },
+      {
+        id: 'sole-proprietor',
+        name: 'Sole Proprietor',
+        slug: 'sole-proprietor',
+        icon: User,
+        description:
+          'Run your independent business with simple invoicing, expense tracking, client payment records, and tax-ready financial summaries.',
+        image:
+          'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Sole proprietor managing business operations and client billing',
+        url: '/businesses/business/sole-proprietor',
+      },
+      {
+        id: 'brokerage',
+        name: 'Brokerage',
+        slug: 'brokerage',
+        icon: Briefcase,
+        description:
+          'Manage multi-agent commission splits, commercial closing invoices, client trust statements, and brokerage operating expenses.',
+        image:
+          'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Brokerage partners finalizing a commercial agreement with clients',
+        url: '/businesses/business/brokerage',
+      },
+      {
+        id: 'dry-cleaning',
+        name: 'Dry Cleaning',
+        slug: 'dry-cleaning',
+        icon: Sparkles,
+        description:
+          'Bill commercial hotel and restaurant laundry accounts, garment care packages, alterations, and pickup-and-delivery routes.',
+        image:
+          'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional garment and commercial cleaning service operation',
+        url: '/businesses/business/dry-cleaning',
+      },
+      {
+        id: 'pro-forma',
+        name: 'Pro Forma',
+        slug: 'pro-forma',
+        icon: FileSpreadsheet,
+        description:
+          'Generate accurate pro forma invoices for customs declarations, advance payment requests, and international trade shipments.',
+        image:
+          'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Export specialist preparing a pro forma invoice and commercial trade documents',
+        url: '/businesses/business/pro-forma',
+      },
+      {
+        id: 'sole-trader',
+        name: 'Sole Trader',
+        slug: 'sole-trader',
+        icon: User,
+        description:
+          'Create professional quotes and invoices on the go, log business receipts, and keep sole trader income and expenses organized.',
+        image:
+          'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Independent sole trader reviewing client invoices and financial records',
+        url: '/businesses/business/sole-trader',
+      },
+      {
+        id: 'business',
+        name: 'Business',
+        slug: 'business',
+        icon: Briefcase,
+        description:
+          'Unify customer invoicing, estimates, supplier expenses, inventory catalogs, and profit-and-loss reporting in one platform.',
+        image:
+          'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Business team reviewing operational performance and client billing',
+        url: '/businesses/business/business',
+        existingSolutionSlug: 'small-businesses',
+      },
+      {
+        id: 'ecommerce',
+        name: 'Ecommerce',
+        slug: 'ecommerce',
         icon: ShoppingBag,
         description:
-          'Track product inventory, manage wholesale and customer invoices, monitor reorder levels, and review daily sales.',
+          'Track SKU inventory across channels, issue B2B and wholesale order invoices, and monitor shipping and supplier unit costs.',
+        image:
+          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Ecommerce fulfillment team preparing customer orders and inventory boxes',
+        url: '/businesses/business/ecommerce',
+      },
+      {
+        id: 'professional-quote-templates',
+        name: 'Professional Quote Templates',
+        slug: 'professional-quote-templates',
+        icon: FileText,
+        description:
+          'Present polished service proposals with itemized deliverables, tax breakdowns, and instant conversion to final invoices.',
+        image:
+          'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional reviewing a formal service quote and contract proposal',
+        url: '/businesses/business/professional-quote-templates',
+      },
+      {
+        id: 'solicitor',
+        name: 'Solicitor',
+        slug: 'solicitor',
+        icon: Scale,
+        description:
+          'Itemize legal advice, conveyancing fees, court disbursements, and client retainer statements with clear audit trails.',
+        image:
+          'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Solicitor desk with legal reference volumes and client matter files',
+        url: '/businesses/business/solicitor',
+      },
+      {
+        id: 'business-quote-templates',
+        name: 'Business Quote Templates',
+        slug: 'business-quote-templates',
+        icon: ClipboardCheck,
+        description:
+          'Standardize commercial price quotes across your sales team with saved catalog items, custom terms, and branded PDF output.',
+        image:
+          'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Business managers reviewing commercial quote templates and pricing tables',
+        url: '/businesses/business/business-quote-templates',
+      },
+      {
+        id: 'engineering',
+        name: 'Engineering',
+        slug: 'engineering',
+        icon: Ruler,
+        description:
+          'Bill civil, structural, mechanical, and electrical engineering design phases, CAD deliverables, and site inspection hours.',
+        image:
+          'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Engineer reviewing technical blueprints and structural drawings',
+        url: '/businesses/business/engineering',
+      },
+      {
+        id: 'project-management',
+        name: 'Project Management',
+        slug: 'project-management',
+        icon: ClipboardCheck,
+        description:
+          'Align billing with project milestones, track subcontractor and material costs, and keep stakeholders updated with clear statements.',
+        image:
+          'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Project manager leading a milestone review meeting with team members',
+        url: '/businesses/business/project-management',
+      },
+      {
+        id: 'sound-engineer',
+        name: 'Sound Engineer',
+        slug: 'sound-engineer',
+        icon: Activity,
+        description:
+          'Invoice studio recording sessions, mixing and mastering packages, live event audio engineering, and gear rental fees.',
+        image:
+          'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Audio and media production equipment inside a professional studio',
+        url: '/businesses/business/sound-engineer',
+      },
+      {
+        id: 'car-dealer',
+        name: 'Car Dealer',
+        slug: 'car-dealer',
+        icon: Wrench,
+        description:
+          'Prepare vehicle sales invoices, trade-in adjustments, dealer documentation fees, warranty packages, and deposit receipts.',
+        image:
+          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Automotive specialist preparing a vehicle for customer handover',
+        url: '/businesses/business/car-dealer',
+      },
+      {
+        id: 'event-planner',
+        name: 'Event Planner',
+        slug: 'event-planner',
+        icon: CalendarCheck,
+        description:
+          'Manage event budgets, client booking deposits, vendor pass-through expenses, and staged production milestone billing.',
+        image:
+          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Event planner inspecting a professionally arranged conference hall',
+        url: '/businesses/business/event-planner',
+      },
+      {
+        id: 'project-quote-templates',
+        name: 'Project Quote Templates',
+        slug: 'project-quote-templates',
+        icon: FileSpreadsheet,
+        description:
+          'Break complex multi-phase projects into clear cost estimates covering discovery, execution, materials, and contingency.',
+        image:
+          'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Project planner preparing an itemized project cost estimate',
+        url: '/businesses/business/project-quote-templates',
+      },
+      {
+        id: 'spa',
+        name: 'Spa',
+        slug: 'spa',
+        icon: Sparkles,
+        description:
+          'Bill wellness packages, massage and aesthetic memberships, corporate retreat bookings, and retail skincare inventory.',
+        image:
+          'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Wellness and spa practitioner attending to a client in a serene clinic',
+        url: '/businesses/business/spa',
+      },
+      {
+        id: 'car-dealership',
+        name: 'Car Dealership',
+        slug: 'car-dealership',
+        icon: Building2,
+        description:
+          'Manage fleet sales quotes, showroom vehicle billing, service department invoices, and parts inventory in one system.',
+        image:
+          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Automotive dealership service and inspection bay',
+        url: '/businesses/business/car-dealership',
+      },
+      {
+        id: 'farm',
+        name: 'Farm',
+        slug: 'farm',
+        icon: Trees,
+        description:
+          'Invoice wholesale produce buyers, restaurant farm-to-table accounts, CSA subscriptions, and track feed and equipment costs.',
+        image:
+          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Well-tended agricultural greenery and cultivated grounds',
+        url: '/businesses/business/farm',
+      },
+      {
+        id: 'public-relations',
+        name: 'Public Relations',
+        slug: 'public-relations',
+        icon: Megaphone,
+        description:
+          'Bill monthly PR retainers, press release distribution, media training workshops, crisis communications, and event press kits.',
+        image:
+          'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Public relations team reviewing media coverage and communications strategy',
+        url: '/businesses/business/public-relations',
+      },
+      {
+        id: 'sponsor',
+        name: 'Sponsor',
+        slug: 'sponsor',
+        icon: HeartHandshake,
+        description:
+          'Issue professional sponsorship proposals and invoices for conferences, sports teams, creator partnerships, and charity galas.',
+        image:
+          'https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Event organizers and corporate sponsors collaborating on a community program',
+        url: '/businesses/business/sponsor',
+      },
+      {
+        id: 'car-rental',
+        name: 'Car Rental',
+        slug: 'car-rental',
+        icon: KeyRound,
+        description:
+          'Itemize daily or weekly vehicle rental rates, mileage charges, insurance waivers, fuel top-ups, and security deposits.',
+        image:
+          'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Rental agent preparing keys and rental agreement for a customer',
+        url: '/businesses/business/car-rental',
+      },
+      {
+        id: 'finance',
+        name: 'Finance',
+        slug: 'finance',
+        icon: Calculator,
+        description:
+          'Generate structured advisory invoices, portfolio management statements, valuation project quotes, and expense summaries.',
+        image:
+          'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Finance professional analyzing cash flow reports and statements',
+        url: '/businesses/business/finance',
+      },
+      {
+        id: 'publisher',
+        name: 'Publisher',
+        slug: 'publisher',
+        icon: FileEdit,
+        description:
+          'Manage advertising insertion orders, wholesale book distribution invoices, print run expenses, and contributor payments.',
+        image:
+          'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Editorial and publishing desk with manuscripts and layout proofs',
+        url: '/businesses/business/publisher',
+      },
+      {
+        id: 'supermarket',
+        name: 'Supermarket',
+        slug: 'supermarket',
+        icon: Store,
+        description:
+          'Monitor high-volume stock levels, manage B2B corporate grocery accounts, and track wholesale supplier purchase costs.',
+        image:
+          'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Retail checkout and customer billing counter in a busy store',
+        url: '/businesses/business/supermarket',
+      },
+      {
+        id: 'car-sales',
+        name: 'Car Sales',
+        slug: 'car-sales',
+        icon: Handshake,
+        description:
+          'Create clear buyer order quotes, bill of sale invoices, deposit receipts, and balance statements for automotive sales.',
+        image:
+          'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Sales professional completing a vehicle purchase agreement with a buyer',
+        url: '/businesses/business/car-sales',
+      },
+      {
+        id: 'formal-quote-templates',
+        name: 'Formal Quote Templates',
+        slug: 'formal-quote-templates',
+        icon: Stamp,
+        description:
+          'Produce executive-ready formal tenders and RFP price quotes with terms, signatures, tax breakdowns, and validity periods.',
+        image:
+          'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Executive signing a formal commercial quote and tender document',
+        url: '/businesses/business/formal-quote-templates',
+      },
+      {
+        id: 'quote-proposal-templates',
+        name: 'Quote Proposal Templates',
+        slug: 'quote-proposal-templates',
+        icon: FileText,
+        description:
+          'Combine project scope summaries with transparent line-item pricing and convert accepted proposals into invoices in one click.',
+        image:
+          'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Consultant preparing a detailed client quote proposal at a desk',
+        url: '/businesses/business/quote-proposal-templates',
+      },
+      {
+        id: 'supplier',
+        name: 'Supplier',
+        slug: 'supplier',
+        icon: PackageCheck,
+        description:
+          'Manage wholesale trade catalogs, bulk order invoicing, reorder stock thresholds, and customer account statements.',
+        image:
+          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Commercial supplier managing wholesale inventory in a distribution facility',
+        url: '/businesses/business/supplier',
+      },
+      {
+        id: 'car-storage',
+        name: 'Car Storage',
+        slug: 'car-storage',
+        icon: ShieldCheck,
+        description:
+          'Bill monthly climate-controlled vehicle storage, battery tending, detailing add-ons, and long-term collector contracts.',
+        image:
+          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Indoor automotive facility maintaining and storing customer vehicles',
+        url: '/businesses/business/car-storage',
+      },
+      {
+        id: 'real-estate',
+        name: 'Real Estate',
+        slug: 'real-estate',
+        icon: KeyRound,
+        description:
+          'Invoice property management retainers, leasing commissions, commercial rent schedules, and maintenance expenses.',
+        image:
+          'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Real estate advisor reviewing property documents and keys',
+        url: '/businesses/business/real-estate',
+      },
+      {
+        id: 'travel-agency-quote-templates',
+        name: 'Travel Agency Quote Templates',
+        slug: 'travel-agency-quote-templates',
+        icon: Globe,
+        description:
+          'Build itemized travel itinerary quotes covering flights, accommodations, guided tours, group deposits, and booking balances.',
+        image:
+          'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Travel advisor presenting a custom itinerary and quote to clients',
+        url: '/businesses/business/travel-agency-quote-templates',
+      },
+      {
+        id: 'cargo',
+        name: 'Cargo',
+        slug: 'cargo',
+        icon: PackageCheck,
+        description:
+          'Issue commercial cargo invoices, container handling bills, demurrage charges, and freight forwarding documentation.',
+        image:
+          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Cargo warehouse team organizing palletized commercial shipments',
+        url: '/businesses/business/cargo',
+      },
+      {
+        id: 'freight',
+        name: 'Freight',
+        slug: 'freight',
+        icon: Layers,
+        description:
+          'Bill LTL and FTL freight loads, linehaul rates, fuel surcharges, accessorial fees, and carrier settlement statements.',
+        image:
+          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Freight operations supervisor checking shipping manifests in a warehouse',
+        url: '/businesses/business/freight',
+      },
+      {
+        id: 'recruitment',
+        name: 'Recruitment',
+        slug: 'recruitment',
+        icon: UserCheck,
+        description:
+          'Invoice permanent placement commissions, retained executive search milestones, and contract staffing timesheets.',
+        image:
+          'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Recruitment consultant interviewing and advising a professional candidate',
+        url: '/businesses/business/recruitment',
+      },
+      {
+        id: 'tuition',
+        name: 'Tuition',
+        slug: 'tuition',
+        icon: Brain,
+        description:
+          'Send term tuition invoices, private tutoring statements, course material fees, and installment payment receipts.',
+        image:
+          'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Academic tutor reviewing lesson plans and tuition schedules',
+        url: '/businesses/business/tuition',
+      },
+      {
+        id: 'clothing-brand',
+        name: 'Clothing Brand',
+        slug: 'clothing-brand',
+        icon: Palette,
+        description:
+          'Manage seasonal lookbook line sheets, boutique wholesale invoices, garment manufacturing costs, and SKU inventory.',
+        image:
+          'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Apparel collection displayed inside a modern clothing brand showroom',
+        url: '/businesses/business/clothing-brand',
+      },
+      {
+        id: 'gardening',
+        name: 'Gardening',
+        slug: 'gardening',
+        icon: Trees,
+        description:
+          'Quote residential garden care, planting packages, pruning visits, green waste removal, and recurring lawn maintenance.',
+        image:
+          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Lush, professionally maintained garden and outdoor greenery',
+        url: '/businesses/business/gardening',
+      },
+      {
+        id: 'warehouse',
+        name: 'Warehouse',
+        slug: 'warehouse',
+        icon: PackageCheck,
+        description:
+          'Bill pallet storage fees, pick-and-pack fulfillment, receiving charges, and monitor inventory levels in real time.',
+        image:
+          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Modern fulfillment warehouse with organized shelving and inventory',
+        url: '/businesses/business/warehouse',
+      },
+      {
+        id: 'clothing-store',
+        name: 'Clothing Store',
+        slug: 'clothing-store',
+        icon: ShoppingBag,
+        description:
+          'Track apparel sizes and stock availability, bill personal styling orders, and log wholesale vendor expenses.',
+        image:
+          'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Well-organized clothing store racks and retail display',
+        url: '/businesses/business/clothing-store',
+      },
+      {
+        id: 'hospitality',
+        name: 'Hospitality',
+        slug: 'hospitality',
+        icon: CalendarCheck,
+        description:
+          'Invoice corporate banquets, VIP hospitality suites, catering packages, venue bookings, and vendor operating costs.',
+        image:
+          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Hospitality venue prepared for corporate guests and dining',
+        url: '/businesses/business/hospitality',
+      },
+      {
+        id: 'restaurant',
+        name: 'Restaurant',
+        slug: 'restaurant',
+        icon: Store,
+        description:
+          'Bill private dining events, off-site catering orders, corporate meal accounts, and track food and beverage supplier bills.',
+        image:
+          'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Restaurant manager reviewing catering orders and customer accounts',
+        url: '/businesses/business/restaurant',
+      },
+      {
+        id: 'wine',
+        name: 'Wine',
+        slug: 'wine',
+        icon: Sparkles,
+        description:
+          'Manage vineyard and distributor case inventory, restaurant trade invoices, private cellar orders, and excise tax lines.',
+        image:
+          'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Curated boutique retail shelves and specialty merchant interior',
+        url: '/businesses/business/wine',
+      },
+      {
+        id: 'commercial',
+        name: 'Commercial',
+        slug: 'commercial',
+        icon: Building2,
+        description:
+          'Issue commercial trade invoices, service contracts, progress billings, and multi-invoice account statements.',
+        image:
+          'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Commercial enterprise office and conference environment',
+        url: '/businesses/business/commercial',
+      },
+      {
+        id: 'hours-worked',
+        name: 'Hours Worked',
+        slug: 'hours-worked',
+        icon: ClipboardCheck,
+        description:
+          'Itemize hourly labor rates, overtime logs, consultant timesheets, and billable project hours with transparent line items.',
+        image:
+          'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional reviewing billable hours worked and project timesheets',
+        url: '/businesses/business/hours-worked',
+      },
+      {
+        id: 'retail',
+        name: 'Retail',
+        slug: 'retail',
+        icon: ShoppingBag,
+        description:
+          'Track product inventory, manage wholesale and customer invoices, monitor reorder levels, and review daily sales margins.',
         image:
           'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=640&q=80',
         imageAlt: 'Clean, well-organized boutique retail store interior',
-        url: '/businesses/business/retail-store',
+        url: '/businesses/business/retail',
       },
       {
-        id: 'online-seller',
-        name: 'Online Seller',
-        slug: 'online-seller',
-        icon: PackageCheck,
+        id: 'company-quote-templates',
+        name: 'Company Quote Templates',
+        slug: 'company-quote-templates',
+        icon: FileText,
         description:
-          'Manage SKU stock availability, generate commercial invoices and packing documents, and track supplier inventory costs.',
+          'Create consistent, branded company price quotes with saved products, tax rates, payment terms, and instant PDF sharing.',
         image:
-          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Online seller organizing inventory boxes inside a fulfillment warehouse',
-        url: '/businesses/business/online-seller',
+          'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Company executive reviewing a branded commercial quote document',
+        url: '/businesses/business/company-quote-templates',
+      },
+      {
+        id: 'insurance',
+        name: 'Insurance',
+        slug: 'insurance',
+        icon: ShieldCheck,
+        description:
+          'Document insurance brokerage fees, risk assessment consultations, policy renewal schedules, and claim inspection billing.',
+        image:
+          'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Insurance advisor reviewing coverage documentation with a client',
+        url: '/businesses/business/insurance',
+      },
+      {
+        id: 'saas',
+        name: 'Saas',
+        slug: 'saas',
+        icon: Globe,
+        description:
+          'Manage B2B SaaS subscription invoices, annual contract renewals, usage overage billing, and enterprise implementation fees.',
+        image:
+          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'SaaS analytics dashboard and cloud software workspace',
+        url: '/businesses/business/saas',
       },
     ],
   },
@@ -808,6 +1624,15 @@ export const BUSINESS_CATEGORIES = [
   },
 ];
 
+const LEGACY_BUSINESS_SLUG_ALIASES = {
+  freelancer: 'freelance',
+  consultant: 'consulting',
+  'small-business': 'business',
+  accountant: 'bookkeeping-invoices',
+  'retail-store': 'retail',
+  'online-seller': 'ecommerce',
+};
+
 export function getCategoryBySlug(categorySlug) {
   if (!categorySlug) return null;
   return BUSINESS_CATEGORIES.find(c => c.slug === categorySlug.toLowerCase()) || null;
@@ -816,7 +1641,12 @@ export function getCategoryBySlug(categorySlug) {
 export function getSubcategoryBySlugs(categorySlug, businessSlug) {
   const category = getCategoryBySlug(categorySlug);
   if (!category || !businessSlug) return null;
-  const sub = category.subcategories.find(s => s.slug === businessSlug.toLowerCase());
+  const normalized = businessSlug.toLowerCase();
+  const resolvedSlug =
+    category.slug === 'business' && LEGACY_BUSINESS_SLUG_ALIASES[normalized]
+      ? LEGACY_BUSINESS_SLUG_ALIASES[normalized]
+      : normalized;
+  const sub = category.subcategories.find(s => s.slug === resolvedSlug);
   if (!sub) return null;
   return { category, subcategory: sub };
 }
