@@ -1,19 +1,1253 @@
-export const BLOG_CATEGORIES = ['Invoicing Guides','Invoice Templates','Freelancing','Accounting','Business Finance','International Invoicing'];
+export const BLOG_CATEGORIES = [
+  'Invoicing Guides',
+  'Invoice Templates',
+  'Freelancing',
+  'Accounting',
+  'Business Finance',
+  'International Invoicing',
+];
 
 export const ARTICLES = {
-  'how-to-create-an-invoice': { category:'Invoicing Guides', title:'How to Create an Invoice: A Practical Step-by-Step Guide', description:'Learn how to create a professional invoice with the right business details, line items, dates, totals, payment terms, and final checks.', intent:'Learn the steps and required information for creating an invoice.', sections:[['Gather the business and client details','Start with the legal or trading name and contact details that apply to the transaction. Add the client name and billing address exactly as agreed. Requirements differ by jurisdiction, so confirm any registration or tax identifiers you must display.'],['Assign an invoice number and dates','Give every invoice a unique, sequential reference that helps both parties locate it. Include the issue date and a specific due date; a phrase such as “due in 30 days” is clearer when paired with the actual calendar date.'],['Itemize the work','List each product, service, milestone, or billing period separately. Show a plain-language description, quantity or hours, unit rate, and line amount. This makes the invoice easier to approve and reduces questions.'],['Calculate and review the total','Show the subtotal, applicable discount, tax, prior deposit or credit, and final balance due. Verify arithmetic and confirm that the currency is visible.'],['Add terms and payment instructions','State the agreed payment method, reference information, due date, and any previously agreed late-payment terms. Do not add new contractual terms after the work is complete.'],['Check before sending','Confirm names, dates, currency, line items, tax treatment, totals, and payment details. Export a stable copy and keep the invoice record with any later payment entries.']]},
-  'how-to-write-an-invoice': { category:'Invoicing Guides', title:'How to Write an Invoice Clients Can Review Quickly', description:'Write a clear invoice using concise service descriptions, itemized rates, exact dates, totals, and practical payment instructions.', intent:'Understand how to word and structure a professional invoice.', sections:[['Use an unmistakable heading','Label the document “Invoice” and place the invoice number, issue date, and due date near the top. A client should be able to identify the document without reading the detail.'],['Describe services in client language','Match descriptions to the proposal, contract, purchase order, or approved estimate. “Website design — final milestone” is easier to verify than an internal code with no explanation.'],['Make every amount traceable','Put the quantity or hours, rate, and line total on the same row. Separate taxes, discounts, deposits, and credits so the final amount can be reconstructed.'],['Keep terms specific','Use an exact due date, identify the invoice currency, and provide only the payment instructions needed for the agreed method. Avoid vague wording or unrelated legal text.'],['End with a review','Read the invoice as the client would. Check that the document explains who is billing whom, what was supplied, when it was supplied, how the total was calculated, and when payment is due.']]},
-  'invoice-vs-receipt': { category:'Accounting', title:'Invoice vs Receipt: What Each Document Does', description:'Understand the difference between an invoice and a receipt, when each is issued, and why businesses should keep both records.', intent:'Compare invoices and receipts and know when to use each.', sections:[['The core difference','An invoice requests payment for products or services and records an amount due. A receipt confirms that payment was received. They describe different stages of the same transaction.'],['What an invoice normally shows','An invoice typically identifies the seller and client, invoice number, dates, line items, taxes, total, payment terms, and outstanding balance. It may later be marked paid, but it remains the billing document.'],['What a receipt normally shows','A receipt normally records the payment date, amount, method or reference, and the transaction it settled. If a partial payment is received, the receipt or payment record should make the remaining balance clear.'],['Why you may need both','Keeping the invoice and the payment record together creates a clearer audit trail. The invoice explains the charge; the receipt or payment entry explains what was paid.'],['Do not interchange the labels','Calling a payment request a receipt can imply money has already been received. Use document labels consistently and follow the record-keeping and tax rules that apply to your business.']]},
-  'invoice-payment-terms': { category:'Business Finance', title:'Invoice Payment Terms: Clear Examples and Practical Choices', description:'Choose clear invoice payment terms with an exact due date, agreed payment method, currency, deposits, and late-payment wording.', intent:'Choose and write clear invoice payment terms.', sections:[['What payment terms cover','Payment terms explain when and how the client should pay. They may also reflect an agreed deposit, milestone schedule, early-payment discount, or late-payment consequence.'],['Prefer exact due dates','Terms such as Net 15 or Net 30 are common, but an exact calendar date removes ambiguity. You can show both: “Net 30 — due 15 December 2026.”'],['Match the underlying agreement','The invoice should reflect the contract, proposal, or accepted estimate. Do not introduce a deposit, fee, interest rate, or payment method that the client did not agree to.'],['State currency and instructions','For international or multi-currency work, make the invoice currency prominent. Give the minimum accurate instructions needed for the agreed external payment method.'],['Examples to adapt','Useful plain-language patterns include “Due on receipt,” “50% deposit before work begins; balance due on completion,” and “Payment due within 14 days, by [exact date].” Check local law before applying late fees or interest.']]},
-  'how-to-invoice-international-clients': { category:'International Invoicing', title:'How to Invoice International Clients Clearly', description:'Create international invoices with an agreed currency, correct client details, clear tax treatment, payment instructions, and fee expectations.', intent:'Learn how to invoice a client in another country.', sections:[['Agree on the commercial details first','Before work starts, agree on the billing currency, price, payment schedule, external payment method, and who bears transfer or conversion fees. Put those details in the contract or proposal.'],['Use complete party information','Include the business names and addresses used for the transaction. Add registration or tax identifiers only when applicable and verify the destination country’s invoicing requirements.'],['Make currency unambiguous','Use the ISO currency code, such as USD, EUR, or GBP, next to totals. A dollar symbol alone may be ambiguous across countries. Avoid changing the invoice amount later because an exchange rate moved unless the agreement provides for it.'],['Handle taxes carefully','Cross-border tax treatment depends on the supplier, client, service or goods, and jurisdictions involved. Do not guess; confirm the applicable VAT, GST, sales-tax, withholding, or reverse-charge treatment with a qualified adviser.'],['Explain payment and fees','Provide accurate instructions for the agreed external payment channel, including any reference the client must use. State the agreed allocation of bank or platform fees.'],['Keep a complete record','Store the final invoice, relevant contract or estimate, proof of delivery where applicable, and payment record. Record the actual amount received and any separately recognized fee according to your accounting process.']]},
-};
-export const ARTICLE_ROUTES = Object.keys(ARTICLES).map(slug=>`/blog/${slug}`);
+  'how-to-create-an-invoice': {
+    featured: true,
+    category: 'Invoicing Guides',
+    title: 'How to Create an Invoice: Step-by-Step Guide for Small Businesses & Freelancers',
+    description:
+      'Learn how to create a professional invoice step by step with itemized line items, tax and discount calculations, clear due dates, and PDF sharing.',
+    intent:
+      'Learn the exact steps and required fields for creating a compliant, client-ready invoice online.',
+    readTime: '8 min read',
+    publishedDate: '2026-11-08',
+    updatedDate: '2026-11-10',
+    author: 'Invoice Next Editorial Team',
+    authorRole: 'Small Business Billing & Accounting Specialists',
+    image:
+      'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=85',
+    imageAlt:
+      'Small business owner creating a professional client invoice on a laptop in a modern office',
+    keywords: [
+      'how to create an invoice',
+      'online invoice generator',
+      'professional invoice template',
+      'itemized billing',
+      'small business invoicing software',
+      'how to make an invoice',
+    ],
+    keyTakeaways: [
+      'Include complete legal business details, client billing contact info, and a unique sequential invoice number on every bill.',
+      'Pair standard payment terms like Net 15 or Net 30 with an exact calendar due date to eliminate approval delays.',
+      'Itemize products, hourly services, fixed milestones, discounts, and applicable taxes on separate rows so clients can verify totals instantly.',
+      'Save recurring customers and catalog items in an online invoicing workspace so future invoices take less than 60 seconds to issue.',
+    ],
+    sections: [
+      [
+        '1. Gather Your Business Identity and Client Billing Details',
+        'Every professional invoice starts with unmistakable identification of both parties. At the top of your document, display your registered business name or freelance trading name, business address, email address, phone number, and company logo. Below or opposite your header, add your client’s legal company name, the specific accounts-payable or project contact person, and their verified billing address. In many jurisdictions, B2B invoices must also display tax registration numbers—such as an EIN, VAT ID, GST number, or business registration code—so confirm local compliance rules before sending your first bill.',
+        [
+          'Your company logo, legal business name, address, and contact email',
+          'Client company name, billing contact, and physical or registered address',
+          'Applicable tax IDs (VAT, GST, EIN) or purchase order (PO) reference numbers',
+        ],
+      ],
+      [
+        '2. Assign a Unique Invoice Number and Exact Calendar Dates',
+        'An organized invoice numbering system is essential for bookkeeping, tax audits, and fast client follow-ups. Assign a sequential, non-repeating reference—such as INV-2026-001 or a client-prefixed code like ACME-104—so both your team and the client’s accounting department can locate the record immediately. Alongside the invoice number, include the issue date (the day the invoice is generated) and a specific calendar due date. Writing "Net 30 (Due December 10, 2026)" is significantly clearer than writing "Due in 30 days" alone.',
+        [
+          'Use sequential numbering (e.g., INV-2026-001, INV-2026-002) without gaps',
+          'Display both the invoice issue date and the exact calendar payment due date',
+          'Reference the approved estimate, quote, or contract number when applicable',
+        ],
+      ],
+      [
+        '3. Itemize Products, Services, Quantities, and Unit Rates',
+        'Vague one-line bills like "Professional services rendered — $3,500" frequently stall in accounts-payable review because the approver cannot match the charge to deliverables. Instead, break the invoice into clear line items. Each row should state a plain-language description of the product or service, the quantity delivered or hours worked, the unit price or hourly rate, and the calculated line total. If you use an online invoice generator with a saved item catalog, you can pull standard service packages, SKU descriptions, and rates straight into the invoice without retyping.',
+        [
+          'Break work into distinct deliverables, milestones, hours, or product SKUs',
+          'Show Quantity × Unit Price = Line Amount clearly on every row',
+          'Order line items logically from primary project phases to add-on materials or expenses',
+        ],
+      ],
+      [
+        '4. Calculate Subtotals, Discounts, Taxes, and Balance Due',
+        'Below your itemized table, summarize the financial calculation so the client can see exactly how the final figure was reached. Start with the pre-tax subtotal of all line items. If you agreed to a volume or early-project discount—either as a fixed currency amount or a percentage—show that deduction explicitly. Next, apply the relevant sales tax, VAT, or GST rate, and subtract any upfront deposit or retainer credit already paid by the customer. Highlight the final Balance Due in bold typography alongside the three-letter ISO currency code (such as USD, EUR, or GBP).',
+        [
+          'Subtotal before taxes and discounts',
+          'Fixed or percentage discount deductions clearly labeled',
+          'Tax rate percentage and calculated tax amount per jurisdiction',
+          'Prior deposit or partial payment credits subtracted from the final balance due',
+        ],
+      ],
+      [
+        '5. Add Clear Payment Instructions, Terms, and Export as PDF',
+        'Before sending the invoice, include a concise payment terms and notes section at the bottom of the document. State your accepted external payment methods—such as ACH bank transfer, wire transfer, check, or business payment portal—and tell the client which invoice number to include in the payment memo. Once you verify that all names, quantities, tax rates, and totals are accurate, export a locked PDF copy or share a secure online invoice link, and track the invoice status from Unpaid to Partially Paid and Paid.',
+        [
+          'Specify accepted payment channels and bank/remittance reference instructions',
+          'Include a brief thank-you note and warranty or delivery confirmation details',
+          'Export a clean PDF or send via email link while logging the invoice in your receivables ledger',
+        ],
+      ],
+    ],
+    productTip: {
+      heading: 'Create & Send Invoices in Seconds with Invoice Next',
+      body: 'Invoice Next lets you save customer profiles, reusable service and inventory items, tax rates, and custom branding once—so you can generate polished PDF invoices, share secure links, and track unpaid or partial balances from one dashboard.',
+      ctaLabel: 'Explore Fast Invoicing',
+      ctaHref: '/features/lightning-fast-invoicing',
+    },
+    faqs: [
+      {
+        q: 'What is the fastest way to create an invoice for a small business?',
+        a: 'Using cloud invoicing software like Invoice Next is the fastest approach. Once your company logo, tax rates, saved customers, and standard products or services are stored, you can select a client, add line items, calculate totals automatically, and download a PDF or email the invoice in under a minute.',
+      },
+      {
+        q: 'Should I send an invoice as a PDF or an editable Word/Excel file?',
+        a: 'Always send invoices as a read-only PDF or a secure view-only web link. Editable Word or spreadsheet files can display formatting issues across devices and may be accidentally altered after delivery.',
+      },
+      {
+        q: 'What happens if a client pays only part of an invoice?',
+        a: 'When a client pays a deposit or partial installment, record the partial payment against the original invoice rather than deleting or overwriting the bill. This preserves the full billing audit trail and displays the exact remaining balance due.',
+      },
+    ],
+    relatedLinks: [
+      ['Online Invoice Generator', '/invoice-generator'],
+      ['Freelance Invoice Templates', '/templates/freelance'],
+      ['Fast Invoicing Feature', '/features/lightning-fast-invoicing'],
+      ['Document Customization', '/features/document-customization'],
+    ],
+  },
 
-export const TOPIC_PLAN = [
- ['How to Create an Invoice','Invoicing Guides'],['How to Write an Invoice','Invoicing Guides'],['Invoice vs Receipt','Accounting'],['Invoice Payment Terms','Business Finance'],['How to Invoice International Clients','International Invoicing'],
- ['What Is an Invoice Number?','Invoicing Guides'],['What to Put on an Invoice','Invoicing Guides'],['How to Send an Invoice','Invoicing Guides'],['How to Correct an Invoice','Accounting'],['Proforma Invoice vs Invoice','Accounting'],
- ['Freelance Invoice Checklist','Freelancing'],['How Freelancers Track Partial Payments','Freelancing'],['Retainer Invoice Guide','Freelancing'],['Milestone Billing Explained','Freelancing'],['Late Invoice Follow-Up Examples','Freelancing'],
- ['Consultant Invoice Template Guide','Invoice Templates'],['Contractor Invoice Template Guide','Invoice Templates'],['Accountant Invoice Template Guide','Invoice Templates'],['Small Business Invoice Template Guide','Invoice Templates'],['International Invoice Template Guide','Invoice Templates'],
- ['Net 15 vs Net 30 Payment Terms','Business Finance'],['Invoice Due Date Best Practices','Business Finance'],['How to Organize Accounts Receivable','Business Finance'],['How to Track Business Expenses','Business Finance'],['Estimate vs Invoice','Business Finance'],
- ['Multi-Currency Invoice Checklist','International Invoicing'],['Invoice Currency Codes Explained','International Invoicing'],['Cross-Border Payment Fee Planning','International Invoicing'],['International Client Billing Records','International Invoicing'],['VAT and International Invoices: Questions to Ask','International Invoicing'],
-];
+  'how-to-write-an-invoice': {
+    category: 'Invoicing Guides',
+    title: 'How to Write an Invoice Clients Approve & Pay Faster',
+    description:
+      'Discover how to word and structure a professional invoice using clear service descriptions, purchase order references, itemized rates, and specific payment terms.',
+    intent:
+      'Understand how to write clear invoice line items and payment notes that prevent client billing disputes.',
+    readTime: '7 min read',
+    publishedDate: '2026-11-08',
+    updatedDate: '2026-11-10',
+    author: 'Invoice Next Editorial Team',
+    authorRole: 'Small Business Billing & Accounting Specialists',
+    image:
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=85',
+    imageAlt:
+      'Business professionals reviewing a clearly written itemized invoice and project scope at a desk',
+    keywords: [
+      'how to write an invoice',
+      'invoice wording examples',
+      'itemized invoice description',
+      'how to bill a client',
+      'professional invoice format',
+    ],
+    keyTakeaways: [
+      'Mirror the exact deliverable names and milestone wording from your signed estimate, proposal, or contract.',
+      'Include dates of service, hours or unit counts, and concrete outcomes in each line-item description.',
+      'Keep payment instructions concise and actionable so accounts payable teams know exactly how to remit funds.',
+      'Avoid surprising clients with unapproved fees or unfamiliar internal project codes.',
+    ],
+    sections: [
+      [
+        '1. Use an Unmistakable Header and Reference Numbers',
+        'When an invoice arrives in a busy client’s inbox, the recipient should know within three seconds who sent it, how much is due, and when it must be paid. Label the document clearly as "INVOICE" at the top, and position the invoice number, issue date, due date, and purchase order (PO) or project reference in a clean summary block. If your client requires a PO number for internal routing, omitting it is the single most common reason corporate invoices get rejected.',
+        [
+          'Title the document "Invoice" with high-contrast typography',
+          'Place Invoice #, Issue Date, Due Date, and PO # in the top summary header',
+          'Address the bill to both the project stakeholder and the billing/AP contact',
+        ],
+      ],
+      [
+        '2. Write Line-Item Descriptions in Client-Friendly Language',
+        'Internal shorthand such as "Sprint 4 dev hours" or "Phase II consulting" often means nothing to a finance manager who was not on your project calls. Write every line item so a third-party reviewer can verify what was delivered. For example, write "Homepage & Checkout UI Redesign — Approved Figma Prototypes & Mobile Layouts (Oct 1–Oct 15)" instead of "Design work." Clear, outcome-focused wording builds trust and removes the need for back-and-forth clarification emails.',
+        [
+          'Bad example: "Consulting services — $2,000"',
+          'Good example: "Q4 SEO Technical Audit & Keyword Strategy Workshop (16 hrs @ $125/hr) — $2,000"',
+          'Match line-item titles directly to your approved estimate or statement of work',
+        ],
+      ],
+      [
+        '3. Separate Labor, Materials, Taxes, and Reimbursable Expenses',
+        'Bundling labor, replacement parts, software licenses, and travel reimbursements into one lump sum makes an invoice look opaque. Split each category onto its own row with its corresponding quantity and unit price. If you are passing through pre-approved expenses—such as domain registrations, building permits, or shipping fees—label them clearly as "Reimbursable Expense" and keep the underlying supplier receipts organized in your expense tracker in case the client requests documentation.',
+        [
+          'List hourly or flat-rate labor separately from physical materials or parts',
+          'Apply percentage or fixed discounts transparently before calculating tax',
+          'Itemize pre-approved reimbursable expenses with dates and vendor references',
+        ],
+      ],
+      [
+        '4. Write Polite, Specific Payment Terms and Footer Notes',
+        'The footer of your invoice should remove every friction point between approval and payment. State the exact calendar due date, the invoice currency, and the remittance instructions for the agreed payment method. Adding a warm, professional closing note—such as "Thank you for your business. Please reference Invoice #INV-2042 with your transfer"—encourages goodwill while reinforcing the reference data your bookkeeper needs to reconcile the payment.',
+        [
+          'State exact calendar due dates alongside Net 7, Net 15, or Net 30 terms',
+          'Include bank routing/account details or payment instructions agreed in the contract',
+          'Add a courteous thank-you message and support contact email for billing questions',
+        ],
+      ],
+    ],
+    productTip: {
+      heading: 'Customize Every Invoice Detail with Invoice Next',
+      body: 'With Invoice Next, you can reorder line items, toggle fixed or percentage discounts, add custom notes and terms, and convert approved estimates directly into invoices so your wording always matches the client quote.',
+      ctaLabel: 'See Document Customization',
+      ctaHref: '/features/document-customization',
+    },
+    faqs: [
+      {
+        q: 'How detailed should invoice descriptions be?',
+        a: 'Each line item should be specific enough that someone in the client’s accounting department who did not manage the project can still understand what product or service was delivered, the time period covered, and how the rate was calculated.',
+      },
+      {
+        q: 'Can I add late fee terms to an invoice if they were not in the contract?',
+        a: 'Generally, payment terms and late fees should be agreed upon in your initial contract, proposal, or estimate before work begins. Your invoice should reflect those previously agreed terms rather than introducing new contractual conditions after delivery.',
+      },
+      {
+        q: 'How do I write an invoice for a 50% upfront deposit?',
+        a: 'Create a line item referencing the full project scope and specify "50% Upfront Project Deposit — Due Before Kickoff" or convert your approved estimate into a deposit invoice showing the total contract value, the 50% deposit due now, and the remaining balance due upon completion.',
+      },
+    ],
+    relatedLinks: [
+      ['Document Customization', '/features/document-customization'],
+      ['Estimates to Invoices', '/features/estimates-to-invoices'],
+      ['Freelancer Invoice Template', '/freelancer-invoice-template'],
+      ['Consultant Invoice Templates', '/templates/consulting'],
+    ],
+  },
+
+  'invoice-vs-receipt': {
+    category: 'Accounting',
+    title: 'Invoice vs. Receipt: Key Differences, Examples & Record-Keeping Guide',
+    description:
+      'Understand the difference between an invoice and a receipt, when to issue each document, and how to connect invoices and payment records for clean accounting.',
+    intent:
+      'Compare invoices and receipts clearly and learn why businesses must maintain both for bookkeeping and tax audits.',
+    readTime: '6 min read',
+    publishedDate: '2026-11-08',
+    updatedDate: '2026-11-10',
+    author: 'Invoice Next Editorial Team',
+    authorRole: 'Small Business Billing & Accounting Specialists',
+    image:
+      'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=85',
+    imageAlt:
+      'Accountant reviewing small business invoices, payment receipts, and financial ledgers on a desk',
+    keywords: [
+      'invoice vs receipt',
+      'difference between invoice and receipt',
+      'is an invoice a receipt',
+      'proof of payment vs request for payment',
+      'small business accounting records',
+    ],
+    keyTakeaways: [
+      'An invoice is a legally structured request for payment issued before money changes hands; a receipt is proof of payment issued after funds are received.',
+      'Invoices track accounts receivable and outstanding client balances, while receipts confirm settled transactions.',
+      'When a client makes a partial payment, your payment record should show both the amount paid and the remaining unpaid balance on the invoice.',
+      'Keeping linked invoices, payment entries, and supplier expense receipts together creates a complete audit trail for tax preparation.',
+    ],
+    sections: [
+      [
+        '1. The Core Difference Between an Invoice and a Receipt',
+        'Although both documents summarize a commercial transaction, an invoice and a receipt serve opposite stages of the payment lifecycle. An invoice is issued by a seller to a buyer to request payment for goods delivered or services performed. It establishes an account receivable for the seller and an account payable for the buyer. A receipt, by contrast, is issued after the buyer pays—confirming that a specific amount of money was received on a specific date and reducing or clearing the outstanding balance.',
+        [
+          'Invoice = Request for payment (Issued before payment is collected)',
+          'Receipt = Confirmation of payment (Issued after full or partial payment clears)',
+          'Never label an unpaid bill as a "Receipt," as doing so implies the debt is already settled',
+        ],
+      ],
+      [
+        '2. What Information Belongs on an Invoice?',
+        'Because an invoice is used by the customer to verify charges and authorize payment, it requires comprehensive commercial detail. A standard business invoice includes your company information, the customer’s billing address, a unique invoice number, issue date, payment due date, itemized descriptions with quantities and unit prices, applicable taxes and discounts, payment instructions, and the current balance due.',
+        [
+          'Unique Invoice Number, Issue Date, and Calendar Due Date',
+          'Itemized breakdown of products or services, taxes, and discounts',
+          'Payment terms (e.g., Net 15, Net 30) and remittance instructions',
+          'Status indicator (Unpaid, Partially Paid, Paid, or Overdue)',
+        ],
+      ],
+      [
+        '3. What Information Belongs on a Payment Receipt?',
+        'A receipt focuses on how and when the obligation was satisfied. It references the original invoice number, states the exact date payment was received, shows the amount paid, identifies the payment method (such as bank transfer, check, card, or cash), and displays the remaining balance due. If a client pays a $2,000 invoice in two $1,000 installments, each payment entry acts as a partial receipt showing $1,000 received and the updated remaining balance.',
+        [
+          'Date payment was received and unique payment reference',
+          'Amount paid and payment method (ACH, wire, check, cash)',
+          'Linked invoice number and updated remaining balance ($0.00 if paid in full)',
+        ],
+      ],
+      [
+        '4. Why Your Business Needs Both Documents for Tax & Audit Compliance',
+        'Both accrual and cash-basis businesses benefit from linking every invoice to its corresponding payment record. For revenue tracking, the invoice proves what you billed and what tax rate was applied, while the payment record proves when cash actually entered your business. On the purchasing side, logging supplier bills and attaching receipt references in your expense manager substantiates your deductible operating costs at tax time.',
+        [
+          'Provides a complete audit trail from initial quote to final cash collection',
+          'Prevents double-billing or overlooking partial client installments',
+          'Substantiates both taxable sales revenue and deductible business expenses',
+        ],
+      ],
+    ],
+    productTip: {
+      heading: 'Track Invoices, Partial Payments & Receipts in One Place',
+      body: 'Invoice Next connects every invoice to its payment history. Record full or partial payments in seconds, automatically calculate remaining balances, and generate updated paid invoices or customer account statements anytime.',
+      ctaLabel: 'Explore Payment Tracking',
+      ctaHref: '/features/payment-tracking',
+    },
+    faqs: [
+      {
+        q: 'Can a paid invoice serve as a receipt?',
+        a: 'Yes, once an invoice is marked "Paid" and displays the payment date, amount received, and a $0.00 balance due, many businesses and clients use the updated Paid Invoice PDF as both the itemized bill and confirmation of payment.',
+      },
+      {
+        q: 'Do I need to keep supplier receipts if I have bank statements?',
+        a: 'Yes. Tax authorities typically require itemized receipts or supplier invoices showing what was purchased, the vendor name, date, and tax amount—a bank or card statement line alone rarely explains the business purpose of an expense.',
+      },
+      {
+        q: 'How should I handle a deposit payment before work starts?',
+        a: 'Issue an invoice for the deposit (or record a partial payment against the project invoice) so the client receives written confirmation of the amount paid and the remaining balance due upon completion.',
+      },
+    ],
+    relatedLinks: [
+      ['Payment Tracking Feature', '/features/payment-tracking'],
+      ['Customer Account Statements', '/features/customer-statements'],
+      ['Accountant Invoice Template', '/accountant-invoice-template'],
+      ['Sales & Financial Reports', '/features/sales-stock-reports'],
+    ],
+  },
+
+  'invoice-payment-terms': {
+    category: 'Business Finance',
+    title: 'Invoice Payment Terms Explained: Net 15, Net 30, Due on Receipt & Examples',
+    description:
+      'Learn how to choose and write invoice payment terms including Net 15, Net 30, Due on Receipt, upfront deposits, and milestone schedules to improve cash flow.',
+    intent:
+      'Choose the right invoice payment terms for your business model and write unambiguous payment clauses.',
+    readTime: '8 min read',
+    publishedDate: '2026-11-08',
+    updatedDate: '2026-11-10',
+    author: 'Invoice Next Editorial Team',
+    authorRole: 'Small Business Billing & Accounting Specialists',
+    image:
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85',
+    imageAlt:
+      'Financial dashboard showing cash flow metrics, invoice due dates, and accounts receivable aging',
+    keywords: [
+      'invoice payment terms',
+      'net 30 meaning',
+      'net 15 vs net 30',
+      'due on receipt meaning',
+      'standard payment terms for invoices',
+      'upfront deposit invoice terms',
+    ],
+    keyTakeaways: [
+      'Standard payment terms like Net 7, Net 15, and Net 30 define how many calendar days a client has to pay after the invoice issue date.',
+      'Always pair terms like "Net 30" with a concrete calendar due date so clients do not misinterpret when the countdown starts.',
+      'Use upfront deposits (25%–50%) and milestone billing on large projects to protect working capital.',
+      'Align the payment terms on your invoice with the terms agreed to in your initial quote, estimate, or master service agreement.',
+    ],
+    sections: [
+      [
+        '1. Common Invoice Payment Terms Glossary (PIA, Due on Receipt, Net 15, Net 30)',
+        'Invoice payment terms set the ground rules for when and how your business gets paid. Understanding standard commercial shorthand helps you negotiate terms that fit both your cash flow needs and your client’s procurement cycle:',
+        [
+          'PIA (Payment in Advance): 100% or an agreed deposit is due before work or shipping begins.',
+          'Due on Receipt: Payment is expected immediately upon delivery of the invoice—ideal for small jobs or retail services.',
+          'Net 7 / Net 14 / Net 15: Full payment is due within 7, 14, or 15 calendar days of the invoice issue date—popular with freelancers and agile agencies.',
+          'Net 30 / Net 60: Full payment is due within 30 or 60 calendar days—standard in corporate B2B and enterprise procurement.',
+          '2/10 Net 30: Offers the buyer a 2% early-payment discount if paid within 10 days; otherwise the full balance is due in 30 days.',
+        ],
+      ],
+      [
+        '2. Why Net 15 Often Outperforms Net 30 for Small Businesses',
+        'Many freelancers and small businesses default to Net 30 simply because it sounds traditional. However, if you do not have a dedicated credit facility, waiting 30 to 45 days for cash while paying your own suppliers and payroll immediately can strain working capital. Setting Net 14 or Net 15 as your default term for small-to-midsize clients shortens your collection cycle by two full weeks while still giving the client enough time to review and process the bill.',
+        [
+          'Use Due on Receipt or Net 7 for one-off residential, repair, or quick-turnaround creative work',
+          'Use Net 14 or Net 15 as your default for ongoing SMB consulting, agency, and trade work',
+          'Reserve Net 30+ for established commercial accounts or contracts that include an upfront deposit',
+        ],
+      ],
+      [
+        '3. Structuring Upfront Deposits and Milestone Payment Schedules',
+        'For custom projects, construction jobs, software builds, or event production, waiting until project completion to bill 100% exposes your business to excessive risk. Instead, structure staged payment terms in your initial estimate: for example, 50% deposit upon estimate acceptance, 25% upon midpoint milestone approval, and 25% upon final delivery. When each phase is reached, record the installment or issue the corresponding milestone invoice.',
+        [
+          '50% Upfront / 50% on Completion: Simple two-stage structure for design, web, and trade jobs',
+          '40% Deposit / 30% Midpoint / 30% Delivery: Ideal for multi-month consulting or renovation projects',
+          'Monthly Retainer in Advance: Billed on the 1st of each month to reserve dedicated capacity',
+        ],
+      ],
+      [
+        '4. Copy-and-Paste Invoice Payment Term Wording Examples',
+        'Clear, polite language eliminates ambiguity. Always ensure these terms match what your client agreed to in your proposal or contract before work started:',
+        [
+          'Standard Net 15: "Payment Terms: Net 15. Full balance of $2,450.00 USD is due by November 25, 2026 via ACH transfer."',
+          'Deposit & Balance: "50% project deposit ($1,500.00 USD) due prior to project kickoff; remaining 50% due within 14 days of final deliverable handoff."',
+          'Early Payment Incentive: "2/10 Net 30: Deduct 2% ($60.00) if paid in full by November 18, 2026; otherwise full balance of $3,000.00 is due by December 8, 2026."',
+        ],
+      ],
+    ],
+    productTip: {
+      heading: 'Automate Due Dates & Payment Follow-Ups with Invoice Next',
+      body: 'Set default payment terms in Invoice Next, monitor upcoming and overdue due dates in real time, and send polite payment reminders or recurring invoices without manual spreadsheet tracking.',
+      ctaLabel: 'See Payment Follow-Ups',
+      ctaHref: '/features/batch-payment-reminders',
+    },
+    faqs: [
+      {
+        q: 'Does Net 30 mean 30 business days or 30 calendar days?',
+        a: 'Net 30 means 30 calendar days (including weekends and holidays) starting from the invoice issue date, unless your contract explicitly specifies otherwise. Including the exact calendar due date on the invoice prevents any confusion.',
+      },
+      {
+        q: 'What does "Due on Receipt" mean on an invoice?',
+        a: 'Due on Receipt means the client is expected to remit payment as soon as they receive and review the invoice, rather than waiting 15 or 30 days.',
+      },
+      {
+        q: 'How do I change payment terms with an existing client?',
+        a: 'Communicate any change in payment terms—such as moving from Net 30 to Net 15—in writing before starting the next project or renewal period, and update the client’s default agreement before issuing the new invoice.',
+      },
+    ],
+    relatedLinks: [
+      ['Payment Follow-Ups', '/features/batch-payment-reminders'],
+      ['Recurring Invoices', '/features/recurring-invoices'],
+      ['Small Business Solutions', '/solutions/small-businesses'],
+      ['Business Invoice Template', '/business-invoice-template'],
+    ],
+  },
+
+  'how-to-invoice-international-clients': {
+    category: 'International Invoicing',
+    title: 'How to Invoice International Clients: Currency Codes, Tax Rules & Cross-Border Billing',
+    description:
+      'Bill international clients confidently with unambiguous ISO currency codes, cross-border tax and VAT considerations, clear transfer instructions, and complete records.',
+    intent:
+      'Learn how to create compliant, friction-free cross-border invoices for clients in other countries.',
+    readTime: '8 min read',
+    publishedDate: '2026-11-08',
+    updatedDate: '2026-11-10',
+    author: 'Invoice Next Editorial Team',
+    authorRole: 'Small Business Billing & Accounting Specialists',
+    image:
+      'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=85',
+    imageAlt:
+      'Global commercial aviation wing above the clouds representing international business and cross-border invoicing',
+    keywords: [
+      'how to invoice international clients',
+      'multi-currency invoicing',
+      'international invoice template',
+      'cross-border billing guide',
+      'ISO currency codes on invoices',
+    ],
+    keyTakeaways: [
+      'Agree on the billing currency, payment channel, and who covers wire or currency-conversion fees before starting work.',
+      'Always display the three-letter ISO 4217 currency code (e.g., USD, EUR, GBP, CAD, AUD) next to symbols like "$" to avoid currency confusion.',
+      'Include full legal addresses and applicable tax or VAT registration IDs for both your business and the foreign client.',
+      'Confirm cross-border VAT, GST, reverse-charge, or withholding-tax rules for your specific jurisdiction with a qualified tax adviser.',
+    ],
+    sections: [
+      [
+        '1. Agree on Billing Currency and Transfer Fees Upfront',
+        'When working across borders, exchange rate fluctuations and intermediary bank fees can quietly erode your profit margin if not addressed in your initial proposal. Before work starts, agree whether the invoice will be denominated in your home currency, the client’s local currency, or a major benchmark currency such as USD or EUR. Just as importantly, state in your agreement who bears international wire, SWIFT, or currency-conversion fees so your net received amount matches expectations.',
+        [
+          'Lock in the billing currency in the signed estimate or contract',
+          'Clarify whether the sender or recipient pays SWIFT/intermediary bank fees',
+          'Specify the accepted international payment rail (e.g., IBAN/SEPA, ACH, international wire)',
+        ],
+      ],
+      [
+        '2. Use Unambiguous Three-Letter ISO Currency Codes',
+        'More than twenty countries use a currency called the "dollar" or "peso" with the "$" symbol. Sending an invoice for "$5,000" between a Canadian agency, an Australian client, and a US subcontractor is a recipe for costly misunderstandings. Always pair the currency symbol with the three-letter ISO currency code—such as $5,000.00 USD, $5,000.00 CAD, €5,000.00 EUR, or £5,000.00 GBP—in your line-item headers and next to the final Balance Due.',
+        [
+          'Display ISO 4217 codes (USD, EUR, GBP, CAD, AUD, SGD, AED) prominently',
+          'Keep the entire invoice in a single agreed currency unless local law requires dual display',
+          'Use unambiguous date formats such as "10 November 2026" instead of "11/10/2026" (which means Nov 10 in the US and Oct 11 in Europe)',
+        ],
+      ],
+      [
+        '3. Understand Cross-Border Tax, VAT, GST, and Reverse-Charge Rules',
+        'Tax treatment on international invoices depends on where the supplier and customer are established, whether the buyer is a registered business (B2B) or consumer (B2C), and whether you are supplying digital services, consulting, or physical goods. In many B2B cross-border service transactions, a zero-rating or "Reverse Charge" mechanism applies—requiring you to display both parties’ VAT/GST numbers and a specific reverse-charge notation. Always verify the exact tax rules for your jurisdictions with your accountant.',
+        [
+          'Collect the client’s business registration or VAT/GST number during onboarding',
+          'Include required tax-exemption or reverse-charge notes when applicable',
+          'Never guess foreign tax rates—confirm cross-border rules with a tax professional',
+        ],
+      ],
+      [
+        '4. Provide Complete International Remittance Details and Keep Audit Records',
+        'International payments fail or get delayed when a single routing field is missing. Depending on the payment corridor, include your full beneficiary name (matching your bank account exactly), IBAN, SWIFT/BIC code, bank name and address, or local routing details, plus the invoice number the client must place in the remittance reference. Once payment arrives, record the settled amount and any bank transfer fees in your accounting and expense records.',
+        [
+          'Include IBAN, SWIFT/BIC, or local clearing codes required for the payment rail',
+          'Instruct the client to include the Invoice # in the wire reference field',
+          'Retain the signed contract, invoice PDF, and bank settlement record together',
+        ],
+      ],
+    ],
+    productTip: {
+      heading: 'Bill Global Clients Cleanly with Invoice Next',
+      body: 'Invoice Next supports multi-currency formatting, customizable tax labels, detailed client profiles, and clean PDF exports so you can bill domestic and international clients from one organized workspace.',
+      ctaLabel: 'Explore Multi-Currency Invoicing',
+      ctaHref: '/multi-currency-invoicing',
+    },
+    faqs: [
+      {
+        q: 'Should I invoice international clients in my currency or theirs?',
+        a: 'Either works as long as both parties agree before the project starts. Invoicing in your home currency protects you from exchange-rate swings, while invoicing in the client’s local currency (or USD/EUR) removes friction for their accounts-payable team.',
+      },
+      {
+        q: 'Why should I write dates like "15 November 2026" on international invoices?',
+        a: 'Numeric dates like 05/06/2026 are read as May 6 in the United States and June 5 in the UK, Europe, and Australia. Writing the month name out in full ensures neither party misinterprets the issue date or payment due date.',
+      },
+      {
+        q: 'How do I record international bank transfer fees in my books?',
+        a: 'If a $1,000 invoice is paid via wire and an intermediary bank deducts a $25 wire fee so $975 lands in your account, record the invoice payment and log the $25 bank charge as a business expense in consultation with your accountant.',
+      },
+    ],
+    relatedLinks: [
+      ['Multi-Currency Invoicing', '/multi-currency-invoicing'],
+      ['Client Management', '/features/client-management'],
+      ['Document Customization', '/features/document-customization'],
+      ['Consulting Solutions', '/solutions/consultants'],
+    ],
+  },
+
+  'estimate-vs-invoice': {
+    category: 'Invoicing Guides',
+    title: 'Estimate vs. Invoice: How to Quote Projects and Convert Estimates in One Click',
+    description:
+      'Learn the difference between an estimate, a quote, and an invoice, and see how converting approved estimates directly into invoices saves time and prevents billing errors.',
+    intent:
+      'Understand when to send an estimate or quote versus an invoice and how to connect them in one workflow.',
+    readTime: '7 min read',
+    publishedDate: '2026-11-09',
+    updatedDate: '2026-11-10',
+    author: 'Invoice Next Editorial Team',
+    authorRole: 'Small Business Billing & Accounting Specialists',
+    image:
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85',
+    imageAlt:
+      'Contractor and project manager reviewing a detailed job estimate and blueprint on site',
+    keywords: [
+      'estimate vs invoice',
+      'quote vs invoice',
+      'convert estimate to invoice',
+      'how to write a job estimate',
+      'contractor estimate template',
+    ],
+    keyTakeaways: [
+      'An estimate or quote proposes the scope and projected cost before work begins; an invoice requests payment after the scope is approved or delivered.',
+      'Clear estimates reduce scope creep by defining included deliverables, material allowances, validity dates, and payment stages upfront.',
+      'Converting an approved estimate directly into an invoice eliminates manual re-typing and guarantees that invoice prices match what the client approved.',
+      'Always document changes in scope with an updated estimate or change order before adding extra charges to the final invoice.',
+    ],
+    sections: [
+      [
+        '1. Estimate vs. Quote vs. Invoice: What Each Document Does',
+        'Before a client commits to a project, they want to know what is included and how much it will cost. An estimate (or price quote) is a pre-sale document that outlines proposed products, labor, timelines, and pricing for client approval. It is not a demand for payment and does not create an account receivable in your books. Once the client accepts the estimate and you reach an agreed billing milestone or complete the job, you issue an invoice—the formal commercial bill requesting payment.',
+        [
+          'Estimate / Quote: Sent before work starts to align on scope, pricing, and terms',
+          'Sales Order / Proforma: Confirms the accepted order details prior to final billing',
+          'Invoice: Sent at deposit, milestone, or completion stages to collect payment',
+        ],
+      ],
+      [
+        '2. What Every Professional Project Estimate Should Include',
+        'A well-structured estimate wins more jobs because it shows the client you have thought through every detail. Include a clear scope description, itemized parts or service phases, unit quantities and rates, estimated taxes, an expiration or validity date (such as "Quote valid for 14 days"), and the required deposit schedule. Separating optional add-ons onto distinct rows lets clients approve the core package while seeing transparent pricing for upgrades.',
+        [
+          'Detailed breakdown of labor phases, materials, or deliverable packages',
+          'Quote expiration date to protect against supplier material price increases',
+          'Explicit deposit and progress-billing schedule (e.g., 50% upfront, 50% on completion)',
+          'Notes on what is included and what requires a separate change order',
+        ],
+      ],
+      [
+        '3. Why One-Click Estimate-to-Invoice Conversion Matters',
+        'When businesses create quotes in Word documents and later re-type the numbers into a spreadsheet to make an invoice, mistakes happen—quantities get transposed, agreed discounts are forgotten, or tax rates differ. Using an integrated quoting and invoicing platform lets you convert an approved estimate directly into an editable invoice draft in one click. Every customer detail, line item, quantity, rate, and tax setting carries over automatically.',
+        [
+          'Eliminates double data entry between sales quoting and accounting',
+          'Ensures 100% consistency between the price quoted and the price billed',
+          'Lets you adjust final quantities or approved change-order items before sending',
+        ],
+      ],
+      [
+        '4. Handling Scope Changes and Partial Progress Billing',
+        'Real-world projects evolve. If a homeowner requests extra electrical outlets during a remodel or a marketing client adds two landing pages mid-campaign, document the addition in writing before executing the extra work. When billing the final invoice, keep the original quoted items intact and add a clearly labeled line item for the approved scope addition so the client can see how the final total compares to the original estimate.',
+        [
+          'Keep original approved estimate line items recognizable on the final invoice',
+          'Label additional work clearly (e.g., "Approved Change Order #1 — 4 Additional Outlets")',
+          'Deduct any upfront deposit already paid so the final balance due is crystal clear',
+        ],
+      ],
+    ],
+    productTip: {
+      heading: 'Convert Approved Estimates into Invoices in One Click',
+      body: 'With Invoice Next, you can build professional estimates, quotes, and proforma invoices from your saved item catalog and convert approved quotes into ready-to-send invoices without re-typing a single line item.',
+      ctaLabel: 'See Estimates to Invoices',
+      ctaHref: '/features/estimates-to-invoices',
+    },
+    faqs: [
+      {
+        q: 'Is an estimate legally binding like a contract?',
+        a: 'An estimate is generally a good-faith projection of costs, whereas a formal fixed-price quote or signed proposal can become binding once accepted by the client. Always specify in your document terms whether pricing is a fixed quote or a time-and-materials estimate.',
+      },
+      {
+        q: 'How long should a price quote or estimate remain valid?',
+        a: 'Most service businesses and contractors set a quote validity period of 14 to 30 days, especially when material costs or scheduling availability may change.',
+      },
+      {
+        q: 'Should I delete an estimate after converting it to an invoice?',
+        a: 'No. Keep the original estimate on file alongside the converted invoice so both you and the client have a complete history from initial proposal to final payment.',
+      },
+    ],
+    relatedLinks: [
+      ['Estimates to Invoices Feature', '/features/estimates-to-invoices'],
+      ['Contractor Solutions', '/solutions/contractors'],
+      ['Contractor Invoice Template', '/contractor-invoice-template'],
+      ['For Businesses Directory', '/for-businesses'],
+    ],
+  },
+
+  'freelance-invoice-guide': {
+    category: 'Freelancing',
+    title: 'The Complete Freelance Invoicing Guide: Hourly, Fixed-Fee, Milestone & Retainer Billing',
+    description:
+      'Master freelance invoicing with practical templates and workflows for hourly billing, flat-rate projects, milestone deposits, monthly retainers, and self-employed tax records.',
+    intent:
+      'Help freelancers and independent contractors structure professional invoices for every pricing model.',
+    readTime: '9 min read',
+    publishedDate: '2026-11-09',
+    updatedDate: '2026-11-10',
+    author: 'Invoice Next Editorial Team',
+    authorRole: 'Small Business Billing & Accounting Specialists',
+    image:
+      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=85',
+    imageAlt:
+      'Freelance designer and developer reviewing project milestones and client invoices in a modern studio',
+    keywords: [
+      'freelance invoice template',
+      'how to invoice as a freelancer',
+      'self-employed invoice guide',
+      'milestone billing vs hourly billing',
+      'retainer invoice example',
+    ],
+    keyTakeaways: [
+      'Choose an invoicing structure—hourly, fixed-fee, milestone, or monthly retainer—that matches how you scope and deliver client value.',
+      'Protect your cash flow as an independent professional by requiring a 30%–50% upfront deposit before beginning new client projects.',
+      'Track deductible freelance expenses (software, gear, subcontractors, home office supplies) alongside your invoices so you know your true net profit.',
+      'Use clean, branded PDF freelance invoice templates so solo operators look as polished as established agencies.',
+    ],
+    sections: [
+      [
+        '1. Choosing the Right Freelance Billing Structure',
+        'Freelancers typically bill clients in one of four ways, and each requires a slightly different line-item presentation on your invoice:',
+        [
+          'Hourly Billing: Multiply tracked hours by your hourly rate (e.g., "Backend API Development — 18.5 hrs @ $110/hr = $2,035.00"). Group hours by task or week.',
+          'Fixed-Fee / Project Billing: Charge a flat agreed fee per deliverable (e.g., "Brand Identity Package: Logo, Typography & Brand Guidelines = $3,200.00").',
+          'Milestone Billing: Split larger projects into 2–4 staged payments tied to concrete approvals (Kickoff Deposit, Prototype Sign-off, Final Launch).',
+          'Monthly Retainer Billing: Bill a recurring flat fee at the start of each month for an agreed allocation of ongoing support or deliverables.',
+        ],
+      ],
+      [
+        '2. Essential Elements of a Self-Employed Invoice',
+        'You do not need an incorporates structure to send a serious commercial invoice. As a sole proprietor or independent contractor, include your full name (or registered DBA/business name), professional contact details, the client’s company name and billing address, a sequential invoice number, issue and due dates, itemized work descriptions, and your payment instructions. Keeping your visual branding consistent across proposals and invoices reinforces your professionalism.',
+        [
+          'Use your personal legal name or registered DBA/trade name consistently',
+          'Include a sequential invoice number and exact calendar due date (such as Net 14)',
+          'Attach or reference timesheets or deliverable links when billing hourly or by milestone',
+        ],
+      ],
+      [
+        '3. How to Track Partial Payments, Retainers, and Scope Additions',
+        'When a freelance client pays a 50% deposit upfront, record that payment directly against the project record so both parties see the paid deposit and the remaining 50% balance due at launch. If the client asks for extra revision rounds or out-of-scope deliverables mid-project, get quick written approval on the fee before doing the work, and list the extra item on its own line on the final invoice.',
+        [
+          'Collect 30%–50% upfront before reserving your calendar for a new client',
+          'Record deposit payments immediately so remaining balances stay accurate',
+          'Specify included revision rounds in your estimate notes to prevent unpaid scope creep',
+        ],
+      ],
+      [
+        '4. Organizing Freelance Income and Deductible Expenses for Tax Season',
+        'One of the biggest mistakes new freelancers make is waiting until April to sort through a year of bank statements and email attachments. Every time you pay for design software, web hosting, camera gear, coworking space, or contractor help, log the cost in your expense tracker with the supplier name and receipt reference. Comparing your paid invoices against recorded expenses gives you real-time visibility into your net freelance income and makes quarterly estimated taxes effortless.',
+        [
+          'Log software subscriptions, equipment, and subcontractor bills as they occur',
+          'Review monthly revenue vs. expenses on your dashboard to set aside tax reserves',
+          'Export clean PDF and Excel summaries for your accountant at year-end',
+        ],
+      ],
+    ],
+    productTip: {
+      heading: 'Built for Freelancers & Solo Professionals',
+      body: 'Explore our free freelance invoice templates or launch Invoice Next to send branded quotes and invoices, track partial deposits, and organize all your deductible self-employed expenses in one place.',
+      ctaLabel: 'Browse Freelance Templates',
+      ctaHref: '/templates/freelance',
+    },
+    faqs: [
+      {
+        q: 'Do I need a registered company to send an invoice as a freelancer?',
+        a: 'No. Sole proprietors and independent contractors can legally issue invoices using their full legal name (or registered trade/DBA name), address, and contact details, subject to local tax and business registration rules.',
+      },
+      {
+        q: 'When should a freelancer send an invoice?',
+        a: 'For small tasks, send the invoice immediately upon delivery while the value of your work is top of mind. For larger projects, send a deposit invoice before kickoff and milestone invoices immediately upon each phase approval. For retainers, bill on the 1st of the month.',
+      },
+      {
+        q: 'What payment terms are best for freelancers?',
+        a: 'Most freelancers prefer Net 7 or Net 14 rather than Net 30, paired with a 50% upfront deposit on custom projects.',
+      },
+    ],
+    relatedLinks: [
+      ['Freelance Invoice Templates', '/templates/freelance'],
+      ['Invoicing for Freelancers', '/solutions/freelancers'],
+      ['Self-Employed Invoice Template', '/self-employed-invoice-template'],
+      ['Freelancer Invoice Generator', '/freelancer-invoice-template'],
+    ],
+  },
+
+  'how-to-track-business-expenses': {
+    category: 'Business Finance',
+    title: 'How to Track Business Expenses and Receipts for Tax Time & Profit Reporting',
+    description:
+      'Learn how to organize supplier bills, categorize operating expenses, store receipt references, and compare revenue against costs for accurate small business profit reporting.',
+    intent:
+      'Establish a simple, reliable workflow for recording small business expenses and receipts year-round.',
+    readTime: '7 min read',
+    publishedDate: '2026-11-09',
+    updatedDate: '2026-11-10',
+    author: 'Invoice Next Editorial Team',
+    authorRole: 'Small Business Billing & Accounting Specialists',
+    image:
+      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=85',
+    imageAlt:
+      'Small business owner reviewing supplier expense bills, receipts, and profit reports on a desk',
+    keywords: [
+      'how to track business expenses',
+      'small business expense tracker',
+      'organize receipts for taxes',
+      'deductible business expenses',
+      'income and expense reporting',
+    ],
+    keyTakeaways: [
+      'Record business expenses as they happen rather than reconstructing months of receipts at year-end.',
+      'Categorize every cost consistently (materials, software, rent, travel, subcontractors, utilities) to spot spending trends.',
+      'Link supplier profiles and receipt reference numbers to each expense entry so your records remain audit-ready.',
+      'Track expenses alongside your customer invoices to see true net profit—not just gross revenue.',
+    ],
+    sections: [
+      [
+        '1. Why Real-Time Expense Tracking Protects Your Profit Margins',
+        'Top-line invoice revenue only tells half the story of your business health. If your agency or trade business bills $15,000 in a month but spends $9,500 on materials, subcontractors, software, and fuel without tracking those outflows centrally, you can easily overestimate your available cash. Recording supplier bills and daily operating expenses in the same workspace as your customer invoices gives you an immediate, accurate picture of net profitability.',
+        [
+          'Compare gross invoiced revenue against actual operating expenses every month',
+          'Identify rising supplier or subscription costs before they erode margins',
+          'Ensure reimbursable client expenses are never forgotten when preparing client bills',
+        ],
+      ],
+      [
+        '2. Set Up Clear, Tax-Friendly Expense Categories',
+        'Organizing expenses into logical categories makes both monthly management reviews and annual tax filing dramatically faster. Keep your category list practical and aligned with standard business tax schedules:',
+        [
+          'Cost of Goods Sold (COGS) & Raw Materials: Inventory purchases, job-site supplies, packaging',
+          'Software & Cloud Subscriptions: SaaS tools, web hosting, domain renewals, design licenses',
+          'Contractors & Professional Fees: Subcontractors, legal, bookkeeping, consulting support',
+          'Office, Rent & Utilities: Studio lease, internet, phone, office consumables',
+          'Vehicle, Travel & Meals: Mileage/fuel for client site visits, flights, lodging',
+          'Marketing & Advertising: Paid campaigns, print collateral, trade show booths',
+        ],
+      ],
+      [
+        '3. Maintain Complete Supplier Records and Receipt References',
+        'For an expense record to hold up during a financial review or tax audit, it needs more than a dollar amount. For every expense entry, log the date of purchase, the supplier or vendor name, the expense category, the pre-tax amount and tax paid, the payment method used, and the receipt or vendor bill reference number. Storing your recurring suppliers in a dedicated partner directory lets you review total spend per vendor at any time.',
+        [
+          'Record vendor name, transaction date, category, tax amount, and total paid',
+          'Attach or reference the supplier invoice or receipt number on every entry',
+          'Keep personal and business spending strictly separated in dedicated accounts',
+        ],
+      ],
+      [
+        '4. Export Monthly & Quarterly Summaries for Your Accountant',
+        'Adopt a 15-minute Friday routine: log any remaining receipts from the week, update unpaid customer invoices, and check your financial dashboard. At the end of each quarter or fiscal year, export your categorized expense records and sales summaries to PDF or Excel (XLSX) so your bookkeeper or tax preparer has clean, structured data without hourly cleanup fees.',
+        [
+          'Schedule a 15-minute weekly check-in to log receipts and review balances',
+          'Use cash vs. accrual reporting views to understand both billed and collected performance',
+          'Export clean XLSX/PDF expense and sales ledgers for your CPA',
+        ],
+      ],
+    ],
+    productTip: {
+      heading: 'Manage Invoices, Suppliers & Expenses in One Workspace',
+      body: 'Invoice Next combines fast client invoicing with built-in supplier management, categorized expense logging, and exportable financial reports—so you never have to juggle separate apps.',
+      ctaLabel: 'See Sales & Financial Reports',
+      ctaHref: '/features/sales-stock-reports',
+    },
+    faqs: [
+      {
+        q: 'What is the best way for a small business to keep track of expenses?',
+        a: 'Use a cloud invoicing and expense platform where you can log supplier bills, assign expense categories, record taxes paid, and export structured reports alongside your sales invoices.',
+      },
+      {
+        q: 'How long should a business keep expense receipts and invoices?',
+        a: 'Depending on your country and tax authority (such as the IRS, HMRC, or CRA), businesses are generally required to retain invoices, receipts, and accounting records for 3 to 7 years. Digital PDF and cloud records make long-term retention simple.',
+      },
+      {
+        q: 'How do I bill a client for a reimbursable expense?',
+        a: 'First log the purchase as a business expense with the vendor receipt for your own books. Then add a clearly labeled line item on the client’s invoice (including the date and vendor description) so you recover the cost cleanly.',
+      },
+    ],
+    relatedLinks: [
+      ['Sales & Stock Reports', '/features/sales-stock-reports'],
+      ['Import & Export Records', '/features/import-export-records'],
+      ['Invoicing for Accountants', '/solutions/accountants'],
+      ['Small Business Solutions', '/solutions/small-businesses'],
+    ],
+  },
+
+  'inventory-and-invoicing-guide': {
+    category: 'Business Finance',
+    title: 'How Connected Inventory Tracking and Invoicing Prevents Overselling',
+    description:
+      'Discover how connecting your product catalog, stock reorder levels, and invoicing software keeps inventory counts accurate and prevents overselling.',
+    intent:
+      'Learn how small businesses and product sellers combine inventory management with invoicing and sales reporting.',
+    readTime: '7 min read',
+    publishedDate: '2026-11-09',
+    updatedDate: '2026-11-10',
+    author: 'Invoice Next Editorial Team',
+    authorRole: 'Small Business Billing & Accounting Specialists',
+    image:
+      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=85',
+    imageAlt:
+      'Warehouse and retail inventory specialist tracking product stock levels and commercial orders',
+    keywords: [
+      'inventory and invoicing software',
+      'small business inventory tracking',
+      'stock reorder levels',
+      'track product stock and invoices',
+      'prevent overselling inventory',
+    ],
+    keyTakeaways: [
+      'Connecting your item catalog directly to your invoicing workflow updates stock availability automatically as sales are billed.',
+      'Set minimum reorder levels (par thresholds) on fast-moving SKUs so you receive low-stock warnings before running out.',
+      'Enable stock tracking only for physical products while keeping service and labor items flexible on the same invoice.',
+      'Review inventory valuation and top-selling item reports to avoid tying up cash in slow-moving stock.',
+    ],
+    sections: [
+      [
+        '1. The Hidden Cost of Disconnected Spreadsheets and Invoices',
+        'Many wholesalers, trade contractors, computer shops, and retail sellers track inventory in one spreadsheet while creating customer invoices in another. Within days, the numbers drift apart: a salesperson quotes 25 units of a part that only has 12 units left on the shelf, leading to backorders, rush shipping costs, and frustrated customers. When your product catalog and stock ledger live inside your invoicing software, you can see current and projected stock availability the moment you add an item to a quote or invoice.',
+        [
+          'See live stock-on-hand while building customer quotes and invoices',
+          'Eliminate manual end-of-day stock deductions across separate spreadsheets',
+          'Combine physical stock items and hourly installation/service labor on a single bill',
+        ],
+      ],
+      [
+        '2. Setting Opening Stock, Unit Costs, and Reorder Thresholds',
+        'A clean inventory setup starts with structured item profiles. For each physical product in your catalog, record the item name or SKU, default selling price, purchase cost, opening stock quantity, and a reorder level (the minimum quantity threshold that triggers a restock alert). For service offerings—such as diagnostic labor, delivery fees, or consulting hours—simply leave stock tracking turned off so you can bill them freely alongside physical goods.',
+        [
+          'Toggle stock tracking per item (Enabled for physical goods, Optional for services)',
+          'Set custom reorder thresholds to highlight low-stock items before stockouts occur',
+          'Store standard unit prices and tax rules so every invoice is priced accurately',
+        ],
+      ],
+      [
+        '3. Monitoring Projected Availability and Low-Stock Warnings',
+        'Smart inventory management looks forward, not just backward. When you draft an invoice or allocate units to an order, projected availability shows how many units will remain once the transaction completes. If a line item pushes a product below its reorder threshold—or into negative availability—an instant low-stock indicator warns you to reorder from your supplier or adjust the delivery timeline with the customer.',
+        [
+          'Real-time low-stock badges alert your team before shelves run empty',
+          'Projected availability calculations prevent double-promising the same stock',
+          'Quickly identify which supplier provides each item when placing restock orders',
+        ],
+      ],
+      [
+        '4. Using Sales & Stock Reports to Optimize Working Capital',
+        'Healthy product businesses review two reports regularly: product-level sales performance and inventory valuation. Product sales reports reveal which SKUs generate the highest revenue and volume so you can prioritize them in purchasing. Inventory valuation reports show how much capital is currently sitting on your shelves, helping you clear slow-moving items and reinvest in high-margin bestsellers.',
+        [
+          'Track top-selling items by quantity sold and total invoiced revenue',
+          'Review current stock quantities and inventory valuation at any point in time',
+          'Export stock and sales reports to PDF or Excel for physical stocktakes',
+        ],
+      ],
+    ],
+    productTip: {
+      heading: 'Real-Time Inventory Tracking Built Into Your Invoicing',
+      body: 'Invoice Next lets you track opening and current stock, set low-stock reorder levels, see projected availability while invoicing, and run instant sales and stock valuation reports.',
+      ctaLabel: 'Explore Inventory Tracking',
+      ctaHref: '/features/inventory-tracking',
+    },
+    faqs: [
+      {
+        q: 'Can I mix physical inventory items and service labor on the same invoice?',
+        a: 'Yes. In Invoice Next, stock tracking is configured per item. You can add physical parts (which track stock quantities) and labor or service fees (which do not require stock counts) on the exact same quote or invoice.',
+      },
+      {
+        q: 'What is a reorder level in inventory management?',
+        a: 'A reorder level (or par level) is the minimum stock quantity at which you should order more units from your supplier so fresh inventory arrives before your current stock runs out.',
+      },
+      {
+        q: 'How do I export my product catalog and stock counts?',
+        a: 'You can export your item records, stock summaries, and sales reports in PDF or Excel (XLSX) format directly from your workspace.',
+      },
+    ],
+    relatedLinks: [
+      ['Inventory Tracking Feature', '/features/inventory-tracking'],
+      ['Sales & Stock Reports', '/features/sales-stock-reports'],
+      ['Client & Item Management', '/features/client-management'],
+      ['For Businesses Directory', '/for-businesses'],
+    ],
+  },
+
+  'overdue-invoice-follow-up': {
+    category: 'Business Finance',
+    title: 'How to Follow Up on Overdue Invoices: Polite Payment Reminder Templates & Workflow',
+    description:
+      'Get paid faster without damaging client relationships using a structured overdue invoice follow-up schedule, polite payment reminder email templates, and receivables tracking.',
+    intent:
+      'Learn how to write polite, effective payment reminder emails and manage overdue accounts receivable.',
+    readTime: '8 min read',
+    publishedDate: '2026-11-09',
+    updatedDate: '2026-11-10',
+    author: 'Invoice Next Editorial Team',
+    authorRole: 'Small Business Billing & Accounting Specialists',
+    image:
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=85',
+    imageAlt:
+      'Account manager reviewing client receivables and sending polite invoice follow-up communications',
+    keywords: [
+      'overdue invoice follow-up',
+      'payment reminder email template',
+      'how to ask for payment politely',
+      'unpaid invoice follow-up',
+      'accounts receivable management',
+    ],
+    keyTakeaways: [
+      'Most late invoices are caused by inbox oversight or missing routing info rather than refusal to pay—start with a warm, helpful tone.',
+      'Follow a predictable timeline: 3 days before due date, 1 day past due, 7 days past due, and 15+ days past due.',
+      'Always attach the PDF invoice (or direct view link) and state the invoice number, amount due, and due date in the subject line.',
+      'For clients with multiple open bills, send a consolidated Customer Account Statement showing all outstanding invoices on one page.',
+    ],
+    sections: [
+      [
+        '1. Why Invoices Go Unpaid (And How to Prevent Delays Before Sending)',
+        'In small business billing, over 70% of late payments happen because the original email got buried, went to a project manager instead of accounts payable, or lacked a required purchase order number. Before an invoice ever becomes overdue, you can cut late payments in half by confirming the billing contact upfront, stating an exact calendar due date, and sending a brief courtesy heads-up two to three days before the due date.',
+        [
+          'Send invoices to both your project contact and the client’s billing/AP email',
+          'Include the Invoice # and Due Date in the email subject line',
+          'Always attach the invoice PDF or include a one-click online view link',
+        ],
+      ],
+      [
+        '2. The 4-Stage Overdue Invoice Follow-Up Schedule',
+        'Taking the guesswork out of collections keeps you calm and professional. Instead of waiting a month and sending an frustrated message, use a structured cadence:',
+        [
+          'Stage 1 (3 Days Before Due Date): Friendly courtesy reminder confirming the upcoming due date and re-sharing the invoice copy.',
+          'Stage 2 (1–2 Days Past Due): Polite check-in assuming the bill simply slipped through the cracks and asking if any details are needed to process payment.',
+          'Stage 3 (7–10 Days Past Due): Direct follow-up requesting a specific scheduled payment date for your cash-flow forecasting.',
+          'Stage 4 (15–30+ Days Past Due): Formal overdue notice + phone call, attaching a full Customer Account Statement and pausing new project deliverables per contract terms.',
+        ],
+      ],
+      [
+        '3. Ready-to-Use Polite Payment Reminder Email Templates',
+        'Use these proven, relationship-friendly templates when following up with clients:',
+        [
+          '1 Day Overdue Subject: "Friendly reminder: Invoice #INV-1042 ($1,850.00) due Nov 10" — Body: "Hi [Name], I hope your week is going well! I’m writing to follow up on Invoice #INV-1042 for $1,850.00, which was due yesterday, November 10. I’ve attached a fresh PDF copy for your convenience. Please let me know if your team needs any additional details to process this, or if payment is already on the way. Thank you!"',
+          '7 Days Overdue Subject: "Follow-up: Overdue Invoice #INV-1042 ($1,850.00)" — Body: "Hi [Name], I’m checking in regarding Invoice #INV-1042 ($1,850.00), originally due on November 10. Could you share an update on when we can expect payment to be scheduled? I’ve re-attached the invoice and payment instructions below. Appreciate your help!"',
+        ],
+      ],
+      [
+        '4. Keeping Receivables Organized with Status Filters & Statements',
+        'Tracking who has paid, who has paid partially, and who is overdue should never require digging through sent emails. In an organized invoicing dashboard, every document carries a live status—Unpaid, Partially Paid, Paid, or Overdue—so you can filter your receivables list in one click. When a repeat client falls behind on two or three separate bills, generate a single Customer Account Statement so they can settle the entire balance in one transfer.',
+        [
+          'Filter invoices by Overdue and Partially Paid status every Monday morning',
+          'Log partial installment payments immediately so reminders reflect the true remaining balance',
+          'Send a Customer Account Statement when a client has multiple open invoices',
+        ],
+      ],
+    ],
+    productTip: {
+      heading: 'Stay on Top of Unpaid Balances with Invoice Next',
+      body: 'Invoice Next highlights overdue and partially paid invoices automatically, tracks payment history per bill, and lets you send polite reminders and full customer account statements in seconds.',
+      ctaLabel: 'Explore Payment Reminders',
+      ctaHref: '/features/batch-payment-reminders',
+    },
+    faqs: [
+      {
+        q: 'How soon after an invoice is overdue should I follow up?',
+        a: 'Send your first polite follow-up 1 to 2 business days after the due date passes. Prompt, courteous follow-up signals that your business tracks its receivables closely.',
+      },
+      {
+        q: 'What should I put in the subject line of an overdue invoice email?',
+        a: 'Include your company name, the invoice number, the amount due, and the status—for example: "Invoice #INV-1042 from [Your Business] — $1,850.00 Past Due." This allows the client to search their inbox and forward the email to accounting immediately.',
+      },
+      {
+        q: 'What if a client says they can only pay part of the overdue invoice right now?',
+        a: 'Agree on a concrete installment schedule in writing, collect the immediate partial payment today, record it against the invoice in your billing software so the remaining balance is documented, and set a specific due date for the remainder.',
+      },
+    ],
+    relatedLinks: [
+      ['Batch Payment Reminders', '/features/batch-payment-reminders'],
+      ['Payment Tracking', '/features/payment-tracking'],
+      ['Customer Statements', '/features/customer-statements'],
+      ['Invoice Management', '/invoice-management'],
+    ],
+  },
+
+  'customer-account-statements-guide': {
+    category: 'Accounting',
+    title: 'What Is a Customer Account Statement and When Should You Send One?',
+    description:
+      'Learn what a customer account statement (statement of account) includes, how it differs from an individual invoice, and how to use statements to reconcile B2B client balances.',
+    intent:
+      'Understand the purpose of a customer statement of account and when to send one to repeat clients.',
+    readTime: '6 min read',
+    publishedDate: '2026-11-09',
+    updatedDate: '2026-11-10',
+    author: 'Invoice Next Editorial Team',
+    authorRole: 'Small Business Billing & Accounting Specialists',
+    image:
+      'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=85',
+    imageAlt:
+      'Commercial business partners reviewing a consolidated customer account statement in a meeting room',
+    keywords: [
+      'customer account statement',
+      'statement of account vs invoice',
+      'client billing statement',
+      'how to send a statement of account',
+      'B2B accounts receivable reconciliation',
+    ],
+    keyTakeaways: [
+      'While an invoice bills for a single transaction, a Customer Account Statement summarizes all invoices, payments, and open balances for a client over a chosen period.',
+      'Monthly account statements are ideal for repeat B2B clients, property managers, wholesale buyers, and retainer accounts.',
+      'Statements help both your bookkeeper and the client’s accounting team spot missing invoices or unapplied partial payments immediately.',
+      'Generating statements automatically from your invoicing history eliminates manual spreadsheet reconciliation.',
+    ],
+    sections: [
+      [
+        '1. Statement of Account vs. Individual Invoice: How They Work Together',
+        'An individual invoice details the specific line items, quantities, and taxes for a single project or order. However, when you work with a repeat commercial client—sending four, ten, or twenty invoices across a quarter alongside partial payments and deposits—tracking individual PDFs becomes difficult for both sides. A Customer Account Statement (also called a Statement of Account) is a summary ledger document that lists every invoice issued, every payment recorded, and the net outstanding balance owed by that customer as of today.',
+        [
+          'Individual Invoice = Itemized bill for a single job, order, or milestone',
+          'Customer Account Statement = Chronological summary of all billed amounts, payments received, and total remaining balance',
+          'Statements do not replace invoices in tax accounting; they summarize them for easy reconciliation',
+        ],
+      ],
+      [
+        '2. Key Fields Included on a Professional Customer Statement',
+        'A clear statement gives the client’s finance team a complete snapshot of their account health on one page:',
+        [
+          'Statement Period & Issue Date: The date range covered (e.g., October 1 – October 31, 2026).',
+          'Account Summary Box: Opening balance, total invoiced during the period, total payments received, and closing balance due.',
+          'Chronological Transaction Table: Each row showing the Date, Document # (Invoice or Payment reference), Description/Status, Billed Amount, Paid Amount, and Running Balance.',
+        ],
+      ],
+      [
+        '3. When Should Your Business Send Customer Statements?',
+        'Sending a statement at the end of every month—or whenever a repeat account has more than one open invoice—keeps cash flow predictable without feeling confrontational. Commercial property managers, wholesale bakeries and distributors, legal and accounting firms, construction subcontractors, and ongoing service agencies rely on monthly statements so their clients can write a single check or send one consolidated ACH transfer to clear multiple open invoices at once.',
+        [
+          'End-of-Month Reconciliation: Send on the 1st of the month to repeat commercial accounts',
+          'Multi-Invoice Follow-Up: Clarify the total balance when a client has 2+ unpaid or partially paid bills',
+          'Audit & Year-End Requests: Provide clients with a clean annual summary of everything billed and paid',
+        ],
+      ],
+    ],
+    productTip: {
+      heading: 'Generate Customer Account Statements Automatically',
+      body: 'Because Invoice Next connects your customer profiles, invoices, and recorded payments in one database, you can view and export clean Customer Account Statements anytime without building manual spreadsheets.',
+      ctaLabel: 'See Customer Statements',
+      ctaHref: '/features/customer-statements',
+    },
+    faqs: [
+      {
+        q: 'Does a customer statement replace an invoice?',
+        a: 'No. You must still issue an itemized invoice for each sale or service. The customer statement is a periodic summary showing the status of all those invoices and payments in one consolidated view.',
+      },
+      {
+        q: 'Should a statement show paid invoices or only unpaid invoices?',
+        a: 'A complete account statement for a date range shows both billed invoices and recorded payments during that period, which reassures the client that their recent payments were properly credited and explains how the closing balance was calculated.',
+      },
+      {
+        q: 'How often should I send statements of account to B2B clients?',
+        a: 'Monthly (typically on the first business day of the month) is standard practice for active B2B and commercial accounts with ongoing transactions.',
+      },
+    ],
+    relatedLinks: [
+      ['Customer Statements Feature', '/features/customer-statements'],
+      ['Client Management', '/features/client-management'],
+      ['Payment Tracking', '/features/payment-tracking'],
+      ['Legal Firm Solutions', '/solutions/legal-firms'],
+    ],
+  },
+
+  'proforma-invoice-guide': {
+    category: 'Accounting',
+    title: 'Proforma Invoice vs. Commercial Invoice: When to Use Each in B2B Billing',
+    description:
+      'Understand what a proforma invoice is, how it differs from a standard commercial invoice or quote, and when to use proforma invoices for B2B approvals and international trade.',
+    intent:
+      'Learn what a proforma invoice means and when to issue one instead of a final commercial invoice.',
+    readTime: '6 min read',
+    publishedDate: '2026-11-09',
+    updatedDate: '2026-11-10',
+    author: 'Invoice Next Editorial Team',
+    authorRole: 'Small Business Billing & Accounting Specialists',
+    image:
+      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=85',
+    imageAlt:
+      'Executive reviewing B2B proforma invoice documentation and commercial order approvals',
+    keywords: [
+      'proforma invoice',
+      'proforma invoice vs invoice',
+      'what is a proforma invoice',
+      'when to use a proforma invoice',
+      'B2B sales order and proforma workflow',
+    ],
+    keyTakeaways: [
+      'A proforma invoice is a preliminary bill of sale sent before goods are shipped or services are finalized, showing the exact format and totals of the upcoming commercial invoice.',
+      'Unlike a final tax invoice, a proforma invoice is not recorded as finalized accounts receivable until the transaction is confirmed.',
+      'Enterprise buyers and international importers frequently require a proforma invoice to secure internal purchase order sign-off, letters of credit, or customs clearance.',
+      'Once the buyer approves or prepays against the proforma, convert it into a final numbered commercial invoice for your accounting ledger.',
+    ],
+    sections: [
+      [
+        '1. What Is a Proforma Invoice?',
+        'The term "pro forma" comes from Latin, meaning "as a matter of form." In business billing, a proforma invoice looks almost identical to a standard invoice—displaying itemized products or services, quantities, unit prices, shipping costs, and applicable taxes—but is clearly labeled "PROFORMA INVOICE." It acts as a good-faith commitment from the seller showing the buyer the exact price and terms they will pay once the order is finalized or shipped.',
+        [
+          'Labeled explicitly as "Proforma Invoice" so it is not confused with a final tax invoice',
+          'Includes full itemization, taxes, shipping estimates, and payment instructions',
+          'Used to obtain buyer purchase approval, advance payment, or customs documentation',
+        ],
+      ],
+      [
+        '2. Estimate vs. Proforma Invoice vs. Commercial Invoice',
+        'Knowing which pre-billing document to send depends on how formal the stage of the deal is:',
+        [
+          'Estimate / Quote: Used early in the sales conversation when scope or quantities are still being explored.',
+          'Proforma Invoice: Used once the buyer has agreed to the scope and needs a formal, invoice-formatted document to authorize a purchase order, release an upfront wire payment, or clear customs.',
+          'Final Commercial Invoice: The official accounting and tax document issued once the order is confirmed, delivered, or billed into accounts receivable.',
+        ],
+      ],
+      [
+        '3. Converting a Proforma Invoice into a Final Invoice',
+        'Because a proforma invoice is a preliminary document, it should not be booked as final taxable revenue on accrual ledgers until the sale is confirmed. Once your customer approves the proforma or sends the required advance payment, convert the proforma document into an official sequential invoice in your billing software and record the payment against it. This keeps your invoice numbering sequence unbroken and ensures your tax reports remain 100% accurate.',
+        [
+          'Issue the quote or proforma for client procurement sign-off',
+          'Convert the approved proforma into a numbered final invoice in one click',
+          'Record the client’s payment and issue the updated paid invoice record',
+        ],
+      ],
+    ],
+    productTip: {
+      heading: 'Create Quotes, Proformas & Final Invoices Seamlessly',
+      body: 'Invoice Next lets you prepare detailed quotes and proforma documents and convert them directly into official, sequentially numbered invoices the moment your client approves.',
+      ctaLabel: 'Explore Quotes & Estimates',
+      ctaHref: '/features/estimates-to-invoices',
+    },
+    faqs: [
+      {
+        q: 'Can a client pay from a proforma invoice?',
+        a: 'Yes, many B2B buyers use a proforma invoice to get internal finance approval and send an advance payment. Once payment is received or the order is finalized, the seller must issue the final commercial/tax invoice and mark the payment against it.',
+      },
+      {
+        q: 'Does a proforma invoice use the same numbering sequence as final invoices?',
+        a: 'No. Proforma invoices and quotes should use their own prefix (such as PRO-101 or QUO-101) so your official tax invoice sequence (INV-101, INV-102) has no gaps if a proforma order is canceled or revised.',
+      },
+      {
+        q: 'Why is a proforma invoice used in international shipping?',
+        a: 'Customs authorities and banks often require a proforma invoice before goods ship to verify the declared value, item descriptions, and currency of the shipment.',
+      },
+    ],
+    relatedLinks: [
+      ['Estimates to Invoices', '/features/estimates-to-invoices'],
+      ['Multi-Currency Invoicing', '/multi-currency-invoicing'],
+      ['Document Customization', '/features/document-customization'],
+      ['Business Invoice Template', '/business-invoice-template'],
+    ],
+  },
+
+  'invoice-template-guide': {
+    category: 'Invoice Templates',
+    title: 'What to Include on an Invoice Template: Essential Fields & Industry Examples',
+    description:
+      'Learn what fields belong on a professional invoice template and how freelancers, contractors, consultants, and small businesses customize layouts for faster client approval.',
+    intent:
+      'Choose and customize the right invoice template layout for your industry and billing workflow.',
+    readTime: '7 min read',
+    publishedDate: '2026-11-10',
+    updatedDate: '2026-11-10',
+    author: 'Invoice Next Editorial Team',
+    authorRole: 'Small Business Billing & Accounting Specialists',
+    image:
+      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85',
+    imageAlt:
+      'Modern commercial office workspace where branded invoice templates and client proposals are prepared',
+    keywords: [
+      'invoice template',
+      'what to put on an invoice',
+      'customizable invoice template',
+      'small business invoice layout',
+      'free PDF invoice template',
+    ],
+    keyTakeaways: [
+      'A great invoice template puts your invoice number, issue date, calendar due date, and total balance due in a high-visibility summary block.',
+      'Customizing your template with your company logo, brand colors, and saved catalog items reinforces trust and reduces client questions.',
+      'Different industries need tailored line-item structures—such as parts vs. labor for trades, or hourly vs. milestone rows for freelancers and consultants.',
+      'Cloud invoice templates calculate subtotals, discounts, taxes, and partial payment deductions automatically so you never send a math error.',
+    ],
+    sections: [
+      [
+        '1. The 8 Non-Negotiable Fields on Every Business Invoice Template',
+        'Whether you run a solo creative studio, a residential contracting business, or a B2B consulting practice, every compliant invoice template relies on eight foundational elements:',
+        [
+          'Seller Identity: Your company logo, legal business name, address, email, and phone number.',
+          'Buyer Identity: The client company name, billing contact, and physical billing address.',
+          'Document Metadata: A unique sequential Invoice Number, Issue Date, and Calendar Due Date.',
+          'Itemized Line Table: Description of goods or services, quantity/hours, unit rate, and line amount.',
+          'Discounts & Taxes: Fixed or percentage discounts and itemized sales tax, VAT, or GST.',
+          'Deposits & Payments Applied: Any upfront retainer or partial installment already received.',
+          'Final Balance Due: Highlighted clearly with the three-letter ISO currency code (e.g., USD).',
+          'Payment Terms & Instructions: Accepted payment channels, remittance reference, and notes.',
+        ],
+      ],
+      [
+        '2. Tailoring Your Invoice Template by Industry',
+        'A generic blank spreadsheet forces you to reinvent your billing format on every job. Tailoring your template to your profession makes approval effortless for your customers:',
+        [
+          'Freelancers & Creative Agencies: Highlight project phases, milestone deliverables, revision allowances, and usage rights.',
+          'Contractors & Skilled Trades: Separate replacement parts and building materials from technician labor hours and site fees.',
+          'Consultants & Legal/Accounting Firms: Reference retainer agreements, advisory hours, matter numbers, and reimbursable expenses.',
+          'Retail & Wholesale Sellers: Include SKU codes, unit quantities, volume discounts, and shipping or delivery charges.',
+        ],
+      ],
+      [
+        '3. Why Cloud Invoice Templates Beat Static Word & Excel Files',
+        'Static Word and Excel templates require manual arithmetic, manual file renaming, and manual folder tracking—making it easy to overwrite an old invoice number or miscalculate a tax percentage. Using an online invoice generator with customizable templates lets you pick a clean layout, auto-populate saved client and item details, verify calculations instantly, and export a print-ready PDF in seconds.',
+        [
+          'Automatic math for subtotals, percentage/fixed discounts, and tax rates',
+          'Consistent sequential invoice numbering without accidental duplicates',
+          'Instant PDF download, printing, or direct online link sharing',
+        ],
+      ],
+    ],
+    productTip: {
+      heading: 'Start with Ready-to-Use Professional Invoice Templates',
+      body: 'Browse Invoice Next’s customizable invoice templates for freelancers, consultants, contractors, law firms, and small businesses—complete with live PDF previews and instant online editing.',
+      ctaLabel: 'Explore Freelance Templates',
+      ctaHref: '/templates/freelance',
+    },
+    faqs: [
+      {
+        q: 'Can I add my own company logo and custom tax rates to an invoice template?',
+        a: 'Yes. In Invoice Next, you can upload your company logo, configure default tax rates, toggle fixed or percentage discounts, and save default payment terms so every new invoice reflects your brand automatically.',
+      },
+      {
+        q: 'What file format is best when sending an invoice template to a client?',
+        a: 'Always export and send your completed invoice as a PDF document or secure online link so the layout, fonts, and numbers remain locked across every desktop and mobile device.',
+      },
+      {
+        q: 'Where can I find industry-specific invoice examples?',
+        a: 'You can explore our Freelance, Consulting, Law Firm, Contractor, and Small Business template pages, or browse over 200 industry guides in our For Businesses directory.',
+      },
+    ],
+    relatedLinks: [
+      ['Freelance Invoice Templates', '/templates/freelance'],
+      ['All Invoice Templates', '/invoice-templates'],
+      ['Consulting Templates', '/templates/consulting'],
+      ['Small Business Templates', '/templates/small-businesses'],
+    ],
+  },
+};
+
+export const ARTICLE_ROUTES = Object.keys(ARTICLES).map(slug => `/blog/${slug}`);
+
+export const TOPIC_PLAN = Object.entries(ARTICLES).map(([slug, article]) => [
+  article.title,
+  article.category,
+  slug,
+]);

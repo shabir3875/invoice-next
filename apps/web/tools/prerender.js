@@ -193,20 +193,24 @@ async function prerender() {
 			for (const routePath of ['/blog', ...ARTICLE_ROUTES]) {
 				const slug = routePath === '/blog' ? undefined : routePath.split('/').at(-1);
 				const article = slug ? ARTICLES[slug] : null;
-				const title = article ? `${article.title} | Invoice Next` : 'Invoicing Guides & Business Resources | Invoice Next';
-				const description = article ? article.description : 'Practical guides for creating invoices, choosing payment terms, billing international clients, freelancing, accounting, and business finance.';
+				const title = article ? `${article.title} | Invoice Next` : 'Invoicing Guides, Templates & Business Finance Blog | Invoice Next';
+				const description = article ? article.description : 'Expert guides on how to create an invoice, choose payment terms, convert estimates to invoices, track business expenses, manage inventory, and get paid faster.';
 				const url = `https://invonxt.com${routePath}`;
 				const pageHtml = renderToString(React.createElement(BlogPage, { slug }));
 				const routeDir = path.join(distAppDir, ...routePath.split('/').filter(Boolean));
 				fs.mkdirSync(routeDir, { recursive: true });
+				const breadcrumbs = article
+					? [['Home', 'https://invonxt.com/'], ['Blog', 'https://invonxt.com/blog'], [article.title, url]]
+					: [['Home', 'https://invonxt.com/'], ['Blog', url]];
 				const routeHtml = distIndexHtml
-					.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${pageHtml}</div>\n\t\t`)
-					.replace(/<title>.*?<\/title>/, `<title>${title}</title>`)
-					.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="description" content="${description}" data-react-helmet="true" />`)
-					.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<link rel="canonical" href="${url}" data-react-helmet="true" />`)
-					.replace(/<meta property="og:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:title" content="${title}" data-react-helmet="true" />`)
-					.replace(/<meta property="og:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:description" content="${description}" data-react-helmet="true" />`)
-					.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${url}" data-react-helmet="true" />`);
+					.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, () => `<div id="root">${pageHtml}</div>\n\t\t`)
+					.replace(/<title>.*?<\/title>/, () => `<title>${title}</title>`)
+					.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, () => `<meta name="description" content="${description}" data-react-helmet="true" />`)
+					.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, () => `<link rel="canonical" href="${url}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, () => `<meta property="og:title" content="${title}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, () => `<meta property="og:description" content="${description}" data-react-helmet="true" />`)
+					.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, () => `<meta property="og:url" content="${url}" data-react-helmet="true" />`)
+					.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, () => pageSchema({ title, description, url, breadcrumbs }));
 				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
 			}
 			const forBusinessesHtml = renderToString(React.createElement(ForBusinessesPage));

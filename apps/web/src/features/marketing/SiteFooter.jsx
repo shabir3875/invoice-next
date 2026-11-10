@@ -12,9 +12,10 @@ export const FOOTER_GROUPS = [
   ]],
   ['Solutions', [
     ['For Businesses', '/for-businesses'],
+    ['Freelance Templates', '/templates/freelance'],
   ]],
   ['Company', [
-    ['About Invoice Next', '/about'], ['Pricing', '/pricing'], ['Contact Us', '/contact'],
+    ['About Invoice Next', '/about'], ['Pricing', '/pricing'], ['Blog & Guides', '/blog'], ['Contact Us', '/contact'],
     ['Help & Support', '/support'], ['FAQs', '/faq'],
   ]],
   ['Legal', [

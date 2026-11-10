@@ -15,6 +15,7 @@ export const MARKETING_NAVIGATION = [
   },
   { label: 'Invoice Generator', href: APP_ROUTES.login },
   { label: 'Pricing', href: '/pricing' },
+  { label: 'Blog', href: '/blog' },
 ];
 
 export function MarketingBrand({ dark = false }) {
@@ -31,6 +32,12 @@ export default function MarketingHeader({ currentPath = '' }) {
     if (
       href === '/for-businesses' &&
       (activePath.startsWith('/for-businesses') || activePath.startsWith('/businesses'))
+    ) {
+      return true;
+    }
+    if (
+      href === '/blog' &&
+      (activePath === '/blog' || activePath.startsWith('/blog/'))
     ) {
       return true;
     }
