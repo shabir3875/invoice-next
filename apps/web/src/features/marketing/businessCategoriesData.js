@@ -1431,64 +1431,664 @@ export const BUSINESS_CATEGORIES = [
     ],
     subcategories: [
       {
-        id: 'cleaning-services',
-        name: 'Cleaning Services',
-        slug: 'cleaning-services',
+        id: 'travel-agency',
+        name: 'Travel Agency',
+        slug: 'travel-agency',
+        icon: Globe,
+        description:
+          'Manage custom travel packages, flight and hotel bookings, group tour deposits, and client itinerary statements.',
+        image:
+          'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Travel agency consultant reviewing tour itineraries with clients',
+        url: '/businesses/services/travel-agency',
+      },
+      {
+        id: 'cleaning',
+        name: 'Cleaning',
+        slug: 'cleaning',
         icon: Sparkles,
         description:
-          'Bill residential deep cleans, recurring commercial janitorial contracts, and cleaning supply fees effortlessly.',
+          'Bill residential deep cleans, recurring weekly housekeeping, move-out sanitation, and cleaning supply costs effortlessly.',
         image:
           'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Professional cleaner sanitizing surfaces in a modern commercial space',
-        url: '/businesses/services/cleaning-services',
+        imageAlt: 'Professional cleaner sanitizing surfaces in a modern space',
+        url: '/businesses/services/cleaning',
       },
       {
-        id: 'landscaping',
-        name: 'Landscaping',
-        slug: 'landscaping',
-        icon: Trees,
+        id: 'tutoring',
+        name: 'Tutoring',
+        slug: 'tutoring',
+        icon: Brain,
         description:
-          'Estimate garden design projects, itemize plants and hardscape materials, and invoice seasonal grounds maintenance.',
+          'Invoice 1-on-1 academic tutoring sessions, exam prep bundles, study materials, and monthly student billing summaries.',
         image:
-          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Landscaped garden pathway and manicured lawn maintained by professionals',
-        url: '/businesses/services/landscaping',
+          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Private tutor reviewing study materials at a desk',
+        url: '/businesses/services/tutoring',
       },
       {
-        id: 'event-planning',
-        name: 'Event Planning',
-        slug: 'event-planning',
-        icon: CalendarCheck,
+        id: 'guest-speaker',
+        name: 'Guest Speaker',
+        slug: 'guest-speaker',
+        icon: Megaphone,
         description:
-          'Manage event proposals, vendor deposits, milestone payment schedules, and itemized client expense reconciliations.',
+          'Quote keynote speaking engagements, panel appearances, booking deposits, and travel and lodging reimbursements.',
         image:
           'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Professional event venue prepared for a corporate conference',
-        url: '/businesses/services/event-planning',
+        imageAlt: 'Professional conference auditorium prepared for a keynote guest speaker',
+        url: '/businesses/services/guest-speaker',
       },
       {
-        id: 'home-maintenance',
-        name: 'Home Maintenance',
-        slug: 'home-maintenance',
+        id: 'piano-lesson',
+        name: 'Piano Lesson',
+        slug: 'piano-lesson',
+        icon: Activity,
+        description:
+          'Bill private piano lessons, monthly music tuition packages, sheet music books, and student recital fees.',
+        image:
+          'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Studio workspace prepared for private music and piano instruction',
+        url: '/businesses/services/piano-lesson',
+      },
+      {
+        id: 'translation-quote-templates',
+        name: 'Translation Quote Templates',
+        slug: 'translation-quote-templates',
+        icon: FileText,
+        description:
+          'Prepare structured translation price quotes by word count, source/target language pair, certification, and rush turnaround.',
+        image:
+          'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Translator preparing a document translation quote at a desk',
+        url: '/businesses/services/translation-quote-templates',
+      },
+      {
+        id: 'cleaning-quote-templates',
+        name: 'Cleaning Quote Templates',
+        slug: 'cleaning-quote-templates',
+        icon: ClipboardCheck,
+        description:
+          'Send itemized residential and commercial cleaning estimates by square footage, room count, and deep-cleaning add-ons.',
+        image:
+          'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Cleaning service supervisor preparing an on-site job estimate',
+        url: '/businesses/services/cleaning-quote-templates',
+      },
+      {
+        id: 'hair-salon',
+        name: 'Hair Salon',
+        slug: 'hair-salon',
+        icon: Sparkles,
+        description:
+          'Manage bridal styling packages, salon chair rentals, retail hair care inventory, and vendor supply expenses.',
+        image:
+          'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Salon reception counter managing client appointments and billing',
+        url: '/businesses/services/hair-salon',
+      },
+      {
+        id: 'piano-teacher',
+        name: 'Piano Teacher',
+        slug: 'piano-teacher',
+        icon: Users,
+        description:
+          'Organize term lesson schedules, recurring family tuition statements, makeup session credits, and studio expenses.',
+        image:
+          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Independent music teacher organizing student lesson plans',
+        url: '/businesses/services/piano-teacher',
+      },
+      {
+        id: 'transportation',
+        name: 'Transportation',
+        slug: 'transportation',
+        icon: PackageCheck,
+        description:
+          'Invoice passenger shuttles, corporate commuter routes, charter bookings, mileage rates, and fleet maintenance expenses.',
+        image:
+          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Transportation operations team coordinating commercial vehicle dispatch',
+        url: '/businesses/services/transportation',
+      },
+      {
+        id: 'coaching',
+        name: 'Coaching',
+        slug: 'coaching',
+        icon: UserCheck,
+        description:
+          'Bill executive coaching retainers, career discovery packages, group mastermind programs, and workshop sessions.',
+        image:
+          'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional coach leading a strategy session with clients',
+        url: '/businesses/services/coaching',
+      },
+      {
+        id: 'home-repair',
+        name: 'Home Repair',
+        slug: 'home-repair',
         icon: Home,
         description:
-          'Quote property repairs, preventative maintenance visits, replacement hardware, and handyman labor hours.',
+          'Quote residential repairs, drywall and fixture replacements, hardware materials, and handyman service hours.',
         image:
           'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Well-maintained modern home interior after professional maintenance work',
-        url: '/businesses/services/home-maintenance',
+        imageAlt: 'Well-maintained home interior after professional repair work',
+        url: '/businesses/services/home-repair',
       },
       {
-        id: 'real-estate-services',
-        name: 'Real Estate Services',
-        slug: 'real-estate-services',
+        id: 'preschool',
+        name: 'Preschool',
+        slug: 'preschool',
+        icon: Smile,
+        description:
+          'Issue monthly preschool tuition invoices, enrollment deposit receipts, after-care add-ons, and family account statements.',
+        image:
+          'https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Early childhood educators organizing classroom programs',
+        url: '/businesses/services/preschool',
+      },
+      {
+        id: 'commercial-cleaning-quote-templates',
+        name: 'Commercial Cleaning Quote Templates',
+        slug: 'commercial-cleaning-quote-templates',
+        icon: Building2,
+        description:
+          'Create comprehensive office, medical, and retail facility cleaning proposals with service frequencies and supply breakdowns.',
+        image:
+          'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Clean commercial office building interior maintained by a facility crew',
+        url: '/businesses/services/commercial-cleaning-quote-templates',
+      },
+      {
+        id: 'janitorial-quote-templates',
+        name: 'Janitorial Quote Templates',
+        slug: 'janitorial-quote-templates',
+        icon: Sparkles,
+        description:
+          'Prepare recurring janitorial contract bids covering nightly sanitation, floor care, consumable restocking, and staffing hours.',
+        image:
+          'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Janitorial specialist maintaining a commercial facility',
+        url: '/businesses/services/janitorial-quote-templates',
+      },
+      {
+        id: 'pressure-washing',
+        name: 'Pressure Washing',
+        slug: 'pressure-washing',
+        icon: Droplets,
+        description:
+          'Quote driveway, exterior siding, deck, and commercial fleet power washing jobs with fast on-site estimates and invoices.',
+        image:
+          'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Technician operating high-pressure water equipment on site',
+        url: '/businesses/services/pressure-washing',
+      },
+      {
+        id: 'tree-service',
+        name: 'Tree Service',
+        slug: 'tree-service',
+        icon: Trees,
+        description:
+          'Estimate tree trimming, hazardous limb removal, stump grinding, crane haul-away fees, and storm cleanup jobs.',
+        image:
+          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional arborist and tree care grounds maintenance',
+        url: '/businesses/services/tree-service',
+      },
+      {
+        id: 'counseling',
+        name: 'Counseling',
+        slug: 'counseling',
+        icon: HeartHandshake,
+        description:
+          'Manage private counseling session invoices, sliding-scale fee schedules, client statements, and office overhead.',
+        image:
+          'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Counselor in a calm, supportive private consultation office',
+        url: '/businesses/services/counseling',
+      },
+      {
+        id: 'jewelry',
+        name: 'Jewelry',
+        slug: 'jewelry',
+        icon: Sparkles,
+        description:
+          'Bill custom jewelry commissions, ring resizing and stone-setting repairs, appraisal certificates, and precious metal inventory.',
+        image:
+          'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Boutique showroom displaying fine retail merchandise',
+        url: '/businesses/services/jewelry',
+      },
+      {
+        id: 'private-investigator',
+        name: 'Private Investigator',
+        slug: 'private-investigator',
+        icon: ShieldCheck,
+        description:
+          'Itemize investigative retainers, surveillance hours, background research fees, mileage logs, and case disbursements.',
+        image:
+          'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Investigator reviewing case documentation and research reports',
+        url: '/businesses/services/private-investigator',
+      },
+      {
+        id: 'courier',
+        name: 'Courier',
+        slug: 'courier',
+        icon: PackageCheck,
+        description:
+          'Bill same-day parcel dispatches, medical and legal courier routes, rush delivery surcharges, and corporate B2B accounts.',
+        image:
+          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Courier sorting express parcels for local delivery',
+        url: '/businesses/services/courier',
+      },
+      {
+        id: 'limousine',
+        name: 'Limousine',
+        slug: 'limousine',
         icon: KeyRound,
         description:
-          'Invoice property management fees, staging consultations, inspection services, and real estate marketing expenses.',
+          'Quote executive black-car transfers, wedding limousine charters, hourly wait times, airport tolls, and chauffeur gratuities.',
+        image:
+          'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Executive chauffeur and corporate transport professional',
+        url: '/businesses/services/limousine',
+      },
+      {
+        id: 'professional-services',
+        name: 'Professional Services',
+        slug: 'professional-services',
+        icon: Briefcase,
+        description:
+          'Deliver polished proposals, milestone and retainer invoices, and transparent account statements for client engagements.',
+        image:
+          'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional services team reviewing project deliverables with a client',
+        url: '/businesses/services/professional-services',
+      },
+      {
+        id: 'university',
+        name: 'University',
+        slug: 'university',
+        icon: Building2,
+        description:
+          'Document continuing education fees, research lab service billings, campus facility rentals, and departmental expenses.',
+        image:
+          'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Modern academic and institutional administration building',
+        url: '/businesses/services/university',
+      },
+      {
+        id: 'daycare',
+        name: 'Daycare',
+        slug: 'daycare',
+        icon: Smile,
+        description:
+          'Automate weekly or monthly childcare billing, sibling discounts, registration fees, and parent payment receipts.',
+        image:
+          'https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Daycare staff coordinating family schedules and care programs',
+        url: '/businesses/services/daycare',
+      },
+      {
+        id: 'maintenance',
+        name: 'Maintenance',
+        slug: 'maintenance',
+        icon: Wrench,
+        description:
+          'Invoice commercial facility upkeep, preventative maintenance contracts, replacement parts, and emergency repair call-outs.',
+        image:
+          'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Maintenance technician inspecting building equipment',
+        url: '/businesses/services/maintenance',
+      },
+      {
+        id: 'security',
+        name: 'Security',
+        slug: 'security',
+        icon: ShieldCheck,
+        description:
+          'Bill commercial patrol contracts, alarm and CCTV installation packages, event security staffing, and monitoring retainers.',
+        image:
+          'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Security systems specialist inspecting access control equipment',
+        url: '/businesses/services/security',
+      },
+      {
+        id: 'upholstery',
+        name: 'Upholstery',
+        slug: 'upholstery',
+        icon: Ruler,
+        description:
+          'Quote custom furniture reupholstery, fabric yardage, foam replacement, antique restoration labor, and pickup/delivery.',
+        image:
+          'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Craftsperson measuring materials in an upholstery and woodworking studio',
+        url: '/businesses/services/upholstery',
+      },
+      {
+        id: 'delivery',
+        name: 'Delivery',
+        slug: 'delivery',
+        icon: PackageCheck,
+        description:
+          'Track last-mile delivery routes, per-drop fees, white-glove assembly charges, and fuel expenses in one workspace.',
+        image:
+          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Delivery specialist preparing customer packages for dispatch',
+        url: '/businesses/services/delivery',
+      },
+      {
+        id: 'makeup-artist',
+        name: 'Makeup Artist',
+        slug: 'makeup-artist',
+        icon: Palette,
+        description:
+          'Invoice bridal makeup trials, wedding party bookings, editorial shoot day rates, kit fees, and travel retainers.',
+        image:
+          'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Creative beauty and styling team preparing for a client session',
+        url: '/businesses/services/makeup-artist',
+      },
+      {
+        id: 'security-guard',
+        name: 'Security Guard',
+        slug: 'security-guard',
+        icon: ShieldCheck,
+        description:
+          'Itemize uniformed guard shifts, holiday and overnight rates, site supervision hours, and corporate security statements.',
+        image:
+          'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Security professional managing site access and shift logs',
+        url: '/businesses/services/security-guard',
+      },
+      {
+        id: 'veterinary',
+        name: 'Veterinary',
+        slug: 'veterinary',
+        icon: HeartPulse,
+        description:
+          'Provide pet owners with clear, itemized veterinary invoices covering wellness exams, diagnostics, medications, and surgery.',
+        image:
+          'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Modern veterinary and clinical care facility',
+        url: '/businesses/services/veterinary',
+      },
+      {
+        id: 'delivery-service',
+        name: 'Delivery Service',
+        slug: 'delivery-service',
+        icon: PackageCheck,
+        description:
+          'Manage recurring merchant delivery contracts, scheduled route billing, proof-of-delivery references, and fleet costs.',
+        image:
+          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Delivery service hub organizing commercial parcels',
+        url: '/businesses/services/delivery-service',
+      },
+      {
+        id: 'moving-company-quote-templates',
+        name: 'Moving Company Quote Templates',
+        slug: 'moving-company-quote-templates',
+        icon: Home,
+        description:
+          'Prepare binding and non-binding moving estimates covering crew hours, truck size, packing boxes, and long-distance mileage.',
+        image:
+          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Moving company crew packing and staging boxes for relocation',
+        url: '/businesses/services/moving-company-quote-templates',
+      },
+      {
+        id: 'service-quote-templates',
+        name: 'Service Quote Templates',
+        slug: 'service-quote-templates',
+        icon: FileText,
+        description:
+          'Build clear, professional service price quotes with labor rates, material line items, terms, and one-click invoice conversion.',
+        image:
+          'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Service manager reviewing a formal price quote with a customer',
+        url: '/businesses/services/service-quote-templates',
+      },
+      {
+        id: 'wedding-cake',
+        name: 'Wedding Cake',
+        slug: 'wedding-cake',
+        icon: Sparkles,
+        description:
+          'Quote custom multi-tier wedding cakes, tasting consultations, booking deposits, venue delivery, and cake stand rentals.',
+        image:
+          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Elegant reception venue prepared for a wedding celebration',
+        url: '/businesses/services/wedding-cake',
+      },
+      {
+        id: 'dog-walking',
+        name: 'Dog Walking',
+        slug: 'dog-walking',
+        icon: HeartHandshake,
+        description:
+          'Bill weekly dog walking packs, solo or group walks, puppy drop-in visits, and recurring pet owner statements.',
+        image:
+          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Outdoor park pathway used for professional dog walking services',
+        url: '/businesses/services/dog-walking',
+      },
+      {
+        id: 'music-teacher',
+        name: 'Music Teacher',
+        slug: 'music-teacher',
+        icon: Users,
+        description:
+          'Manage private instrument instruction billing, semester tuition packages, ensemble workshops, and sheet music expenses.',
+        image:
+          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Music instructor preparing lesson materials and student invoices',
+        url: '/businesses/services/music-teacher',
+      },
+      {
+        id: 'snow-removal',
+        name: 'Snow Removal',
+        slug: 'snow-removal',
+        icon: Wind,
+        description:
+          'Invoice seasonal snow plowing retainers, per-push commercial lot clearing, de-icing salt applications, and equipment costs.',
+        image:
+          'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Outdoor commercial property maintenance crew on site',
+        url: '/businesses/services/snow-removal',
+      },
+      {
+        id: 'wedding-planner',
+        name: 'Wedding Planner',
+        slug: 'wedding-planner',
+        icon: CalendarCheck,
+        description:
+          'Organize full-service wedding planning retainers, day-of coordination packages, vendor deposits, and client budget tracking.',
+        image:
+          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Wedding planner coordinating table layouts and event design',
+        url: '/businesses/services/wedding-planner',
+      },
+      {
+        id: 'driver',
+        name: 'Driver',
+        slug: 'driver',
+        icon: KeyRound,
+        description:
+          'Issue clean invoices and receipts for private driving shifts, contract haulage, mileage reimbursements, and fuel logs.',
+        image:
+          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional vehicle inspection and commercial driving service',
+        url: '/businesses/services/driver',
+      },
+      {
+        id: 'nanny',
+        name: 'Nanny',
+        slug: 'nanny',
+        icon: HeartHandshake,
+        description:
+          'Track weekly childcare hours, overtime rates, family errand reimbursements, and clear payment statements.',
+        image:
+          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Warm, organized family home environment for private childcare',
+        url: '/businesses/services/nanny',
+      },
+      {
+        id: 'software-services',
+        name: 'Software Services',
+        slug: 'software-services',
+        icon: Code2,
+        description:
+          'Quote cloud migration projects, custom software implementation, technical support SLAs, and developer consulting hours.',
+        image:
+          'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Software services engineer configuring cloud systems on a laptop',
+        url: '/businesses/services/software-services',
+      },
+      {
+        id: 'welding',
+        name: 'Welding',
+        slug: 'welding',
+        icon: Hammer,
+        description:
+          'Bill structural and mobile welding repairs, custom metal fabrication, steel materials, and shop labor hours.',
+        image:
+          'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Skilled metalworker and fabrication specialist on site',
+        url: '/businesses/services/welding',
+      },
+      {
+        id: 'education',
+        name: 'Education',
+        slug: 'education',
+        icon: Brain,
+        description:
+          'Manage course enrollment invoices, corporate training workshops, curriculum development fees, and educational materials.',
+        image:
+          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Educators collaborating on training programs in a modern learning space',
+        url: '/businesses/services/education',
+      },
+      {
+        id: 'personal-assistant',
+        name: 'Personal Assistant',
+        slug: 'personal-assistant',
+        icon: UserCheck,
+        description:
+          'Invoice executive support retainers, calendar and travel management hours, and reimbursable client concierge purchases.',
+        image:
+          'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Personal assistant organizing executive schedules and client records',
+        url: '/businesses/services/personal-assistant',
+      },
+      {
+        id: 'taxi',
+        name: 'Taxi',
+        slug: 'taxi',
+        icon: KeyRound,
+        description:
+          'Generate corporate account transfer statements, airport voucher invoices, and track vehicle fuel and maintenance expenses.',
         image:
           'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Real estate professional holding house keys with a modern property model',
-        url: '/businesses/services/real-estate-services',
+        imageAlt: 'Private hire and taxi dispatch keys and booking records',
+        url: '/businesses/services/taxi',
+      },
+      {
+        id: 'window-cleaning',
+        name: 'Window Cleaning',
+        slug: 'window-cleaning',
+        icon: Sparkles,
+        description:
+          'Quote residential and high-rise commercial window washing, gutter clearing, screen repairs, and recurring route billing.',
+        image:
+          'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Sunlit glass facade of a modern commercial office building',
+        url: '/businesses/services/window-cleaning',
+      },
+      {
+        id: 'florist',
+        name: 'Florist',
+        slug: 'florist',
+        icon: Trees,
+        description:
+          'Prepare floral design proposals for weddings and corporate events, track stem inventory, and bill hotel and lobby subscriptions.',
+        image:
+          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Botanical and floral greenery arranged by a professional studio',
+        url: '/businesses/services/florist',
+      },
+      {
+        id: 'personal-chef',
+        name: 'Personal Chef',
+        slug: 'personal-chef',
+        icon: Store,
+        description:
+          'Itemize weekly meal-prep services, private dinner party menus, grocery receipts, and kitchen staffing fees.',
+        image:
+          'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Culinary professional organizing custom dining orders and ingredients',
+        url: '/businesses/services/personal-chef',
+      },
+      {
+        id: 'teaching',
+        name: 'Teaching',
+        slug: 'teaching',
+        icon: Users,
+        description:
+          'Invoice independent teaching contracts, workshop facilitation, guest lectures, and classroom resource expenses.',
+        image:
+          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Teacher preparing instructional workshops and student records',
+        url: '/businesses/services/teaching',
+      },
+      {
+        id: 'windshield-repair',
+        name: 'Windshield Repair',
+        slug: 'windshield-repair',
+        icon: Wrench,
+        description:
+          'Bill mobile auto glass chip repairs, full windshield replacements, ADAS calibration fees, and fleet service accounts.',
+        image:
+          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Automotive technician servicing a vehicle in a repair bay',
+        url: '/businesses/services/windshield-repair',
+      },
+      {
+        id: 'funeral',
+        name: 'Funeral',
+        slug: 'funeral',
+        icon: HeartHandshake,
+        description:
+          'Provide families with compassionate, transparent itemized statements covering funeral director services, merchandise, and cash advances.',
+        image:
+          'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional advisor reviewing formal arrangement documents with care',
+        url: '/businesses/services/funeral',
+      },
+      {
+        id: 'pet-sitting',
+        name: 'Pet-Sitting',
+        slug: 'pet-sitting',
+        icon: Smile,
+        description:
+          'Quote overnight pet-sitting stays, holiday care surcharges, medication administration, and repeat client packages.',
+        image:
+          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Comfortable home setting for in-home pet sitting care',
+        url: '/businesses/services/pet-sitting',
+      },
+      {
+        id: 'translation',
+        name: 'Translation',
+        slug: 'translation',
+        icon: Globe,
+        description:
+          'Invoice document localization, live interpretation hours, certified legal translations, and agency retainers.',
+        image:
+          'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional linguist working on multilingual translation projects',
+        url: '/businesses/services/translation',
       },
     ],
   },
@@ -1687,6 +2287,13 @@ const LEGACY_SLUG_ALIASES = {
     dentist: 'dental',
     therapist: 'therapy',
     physiotherapist: 'therapy',
+  },
+  services: {
+    'cleaning-services': 'cleaning',
+    landscaping: 'tree-service',
+    'event-planning': 'wedding-planner',
+    'home-maintenance': 'home-repair',
+    'real-estate-services': 'professional-services',
   },
 };
 

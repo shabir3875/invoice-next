@@ -388,9 +388,9 @@ export function CategoryAccordion({
 
 export default function ForBusinessesPage() {
   const [searchQuery, setSearchQuery] = useState('');
-  // Expand the Trades, Business, and Health categories by default to introduce the layout
+  // Expand the Trades, Business, Health, and Services categories by default to introduce the layout
   const [expandedIds, setExpandedIds] = useState(
-    () => new Set(['trades', 'business', 'health'])
+    () => new Set(['trades', 'business', 'health', 'services'])
   );
 
   const query = searchQuery.trim().toLowerCase();
