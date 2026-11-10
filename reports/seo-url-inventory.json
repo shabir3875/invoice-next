@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T17:26:30.581Z",
+  "generatedAt": "2026-11-10T06:46:17.721Z",
   "summary": {
     "totalPublicPages": 50,
     "indexablePages": 50,
@@ -21,7 +21,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1088,
+      "wordCount": 1104,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -355,7 +355,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 49
+      "internalLinkCount": 48
     },
     {
       "url": "https://invonxt.com/solutions/legal-firms",
@@ -370,7 +370,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 47
+      "internalLinkCount": 48
     },
     {
       "url": "https://invonxt.com/solutions/accountants",
@@ -385,7 +385,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 48
+      "internalLinkCount": 47
     },
     {
       "url": "https://invonxt.com/solutions/contractors",
@@ -490,7 +490,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 57
+      "internalLinkCount": 59
     },
     {
       "url": "https://invonxt.com/free-invoice-generator",

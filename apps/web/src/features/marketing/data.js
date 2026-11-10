@@ -51,12 +51,13 @@ export const templates = [
 ];
 
 export const solutions = [
-  { icon: Calculator, title: 'Accountants', route: '/solutions/accountants', text: 'Standardize client billing records and keep invoice, expense and document workflows organized.' },
-  { icon: GraduationCap, title: 'Education Consultants', route: '/solutions/consultants', text: 'Create professional service invoices and maintain a clear record for every student or institution.' },
-  { icon: BriefcaseBusiness, title: 'Business Consultants', route: '/solutions/consultants', text: 'Move from estimate to invoice while keeping client histories and service items ready to reuse.' },
-  { icon: FileClock, title: 'Freelancers', route: '/solutions/freelancers', text: 'Invoice projects quickly, record partial payments and see outstanding balances without spreadsheets.' },
-  { icon: Hammer, title: 'Contractors', route: '/solutions/contractors', text: 'Turn estimates into invoices, document expenses and keep customer records accessible on the go.' },
-  { icon: FileCheck2, title: 'Small Businesses', route: '/solutions/small-businesses', text: 'Bring documents, customers, products and expenses into one straightforward business workspace.' },
+  { icon: Hammer, title: 'Trades', route: '/solutions/contractors', text: 'Turn estimates into invoices, document materials and labor, and keep customer records accessible on the go.' },
+  { icon: FileCheck2, title: 'Legal', route: '/solutions/legal-firms', text: 'Create clear client invoices and keep matters, services, expenses, and billing records organized.' },
+  { icon: BriefcaseBusiness, title: 'Business', route: '/solutions/small-businesses', text: 'Bring documents, customers, products, payments, and expenses into one straightforward workspace.' },
+  { icon: ShieldCheck, title: 'Health', route: '/invoice-generator', text: 'Create professional invoices for appointments, treatments, and other health and wellness services.' },
+  { icon: Calculator, title: 'Services', route: '/solutions/consultants', text: 'Reuse service items, manage client details, and move smoothly from estimates to invoices.' },
+  { icon: FileClock, title: 'Creative', route: '/solutions/freelancers', text: 'Invoice projects and retainers, record partial payments, and keep outstanding balances visible.' },
+  { icon: FileText, title: 'General', route: '/invoice-generator', text: 'Build a polished invoice for any type of work with flexible line items, terms, and payment details.' },
 ];
 
 export const demoTestimonials = [
