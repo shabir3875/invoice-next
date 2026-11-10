@@ -47,7 +47,6 @@ async function prerender() {
 		}
 
 		const targets = [
-			path.join(webRoot, 'index.html'),
 			path.resolve(webRoot, '../../dist/apps/web/index.html'),
 		];
 

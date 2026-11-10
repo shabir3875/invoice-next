@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useInRouterContext, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { APP_ROUTES } from './data';
 import './marketing-header.css';
@@ -22,9 +23,17 @@ export function MarketingBrand({ dark = false }) {
   return <a href="/" aria-label="Invoice Next home" className={`marketing-brand flex items-center gap-2.5 text-xl font-black tracking-[-.04em] ${dark ? 'text-white' : 'text-slate-950'}`}><span className="grid h-10 w-10 place-items-center rounded-xl text-white">IN</span>Invoice <span>Next</span></a>;
 }
 
-export default function MarketingHeader({ currentPath = '' }) {
+function RouterAwareMarketingHeader({ currentPath = '' }) {
+  const location = useLocation();
+  return <MarketingHeaderContent activePath={currentPath || location.pathname} />;
+}
+
+function MarketingHeaderContent({ activePath = '' }) {
   const [open, setOpen] = useState(false);
-  const activePath = currentPath || (typeof window !== 'undefined' ? window.location.pathname : '');
+
+  useEffect(() => {
+    setOpen(false);
+  }, [activePath]);
 
   const isItemActive = (href) => {
     if (!activePath) return false;
@@ -116,4 +125,14 @@ export default function MarketingHeader({ currentPath = '' }) {
       )}
     </header>
   );
+}
+
+export default function MarketingHeader({ currentPath = '' }) {
+  const inRouter = useInRouterContext();
+  if (inRouter) {
+    return <RouterAwareMarketingHeader currentPath={currentPath} />;
+  }
+  const fallbackPath =
+    currentPath || (typeof window !== 'undefined' ? window.location.pathname : '');
+  return <MarketingHeaderContent activePath={fallbackPath} />;
 }
