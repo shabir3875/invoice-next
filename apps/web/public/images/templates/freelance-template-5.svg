@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="600" height="750" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="600" height="750" fill="#ffffff"/>
+  <rect width="600" height="14" fill="#4338ca"/>
+  <rect y="736" width="600" height="14" fill="#4338ca"/>
+
+  <!-- Wide Margin Container (x=64 to 536) -->
+  <text x="64" y="76" font-size="24" font-weight="900" fill="#1e1b4b" letter-spacing="0.5">INVOICE</text>
+  <text x="64" y="96" font-size="10" font-weight="700" fill="#4338ca" letter-spacing="1.2">LUMINA BRAND &amp; IDENTITY STUDIO</text>
+
+  <circle cx="500" cy="76" r="28" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+  <text x="500" y="81" font-size="14" font-weight="900" fill="#4338ca" text-anchor="middle">LB</text>
+
+  <text x="64" y="136" font-size="11" font-weight="700" fill="#0f172a">Lumina Brand Studio Inc.</text>
+  <text x="64" y="152" font-size="10" fill="#475569">910 N Michigan Ave, Chicago, IL 60611</text>
+  <text x="64" y="167" font-size="10" fill="#475569">hello@luminabrand.co • (312) 555-0174</text>
+
+  <text x="410" y="136" font-size="9" font-weight="700" fill="#64748b">DATE</text>
+  <text x="536" y="136" font-size="10" font-weight="700" fill="#0f172a" text-anchor="end">Oct 26, 2026</text>
+  <line x1="410" y1="143" x2="536" y2="143" stroke="#e2e8f0"/>
+
+  <text x="410" y="162" font-size="9" font-weight="700" fill="#64748b">INVOICE NO.</text>
+  <text x="536" y="162" font-size="10" font-weight="700" fill="#4338ca" text-anchor="end">#LB-2026-215</text>
+  <line x1="410" y1="169" x2="536" y2="169" stroke="#e2e8f0"/>
+
+  <!-- Bill To & Project -->
+  <text x="64" y="212" font-size="9" font-weight="800" fill="#4338ca" letter-spacing="1">BILL TO</text>
+  <line x1="64" y1="219" x2="280" y2="219" stroke="#cbd5e1"/>
+  <text x="64" y="236" font-size="11.5" font-weight="700" fill="#0f172a">Solstice Wellness Collective</text>
+  <text x="64" y="251" font-size="10" fill="#475569">Attn: Maya Lin, Founder</text>
+  <text x="64" y="266" font-size="10" fill="#475569">1420 Pearl Street, Boulder, CO</text>
+
+  <text x="310" y="212" font-size="9" font-weight="800" fill="#4338ca" letter-spacing="1">PROJECT DETAILS</text>
+  <line x1="310" y1="219" x2="536" y2="219" stroke="#cbd5e1"/>
+  <text x="310" y="236" font-size="11.5" font-weight="700" fill="#0f172a">Complete Brand Identity System</text>
+  <text x="310" y="251" font-size="10" fill="#475569">Logo Suite, Packaging &amp; Style Guide</text>
+  <text x="310" y="266" font-size="10" fill="#475569">Due on Receipt / Net 15</text>
+
+  <!-- Table -->
+  <rect x="64" y="298" width="472" height="26" rx="3" fill="#4338ca"/>
+  <text x="76" y="315" font-size="9" font-weight="700" fill="#ffffff" letter-spacing="0.8">DESCRIPTION</text>
+  <text x="366" y="315" font-size="9" font-weight="700" fill="#ffffff" text-anchor="end">HOURS</text>
+  <text x="444" y="315" font-size="9" font-weight="700" fill="#ffffff" text-anchor="end">RATE</text>
+  <text x="524" y="315" font-size="9" font-weight="700" fill="#ffffff" text-anchor="end">TOTAL</text>
+
+  <g font-size="10">
+    <rect x="64" y="324" width="472" height="40" fill="#ffffff"/>
+    <text x="76" y="344" font-weight="700" fill="#0f172a">Brand Discovery &amp; Visual Direction Boards</text>
+    <text x="366" y="344" fill="#334155" text-anchor="end">10.0</text>
+    <text x="444" y="344" fill="#334155" text-anchor="end">$110.00</text>
+    <text x="524" y="344" font-weight="700" fill="#0f172a" text-anchor="end">$1,100.00</text>
+    <line x1="64" y1="364" x2="536" y2="364" stroke="#e2e8f0"/>
+
+    <rect x="64" y="364" width="472" height="40" fill="#eef2ff"/>
+    <text x="76" y="384" font-weight="700" fill="#0f172a">Primary Logomark, Wordmark &amp; Monogram Suite</text>
+    <text x="366" y="384" fill="#334155" text-anchor="end">14.0</text>
+    <text x="444" y="384" fill="#334155" text-anchor="end">$110.00</text>
+    <text x="524" y="384" font-weight="700" fill="#0f172a" text-anchor="end">$1,540.00</text>
+    <line x1="64" y1="404" x2="536" y2="404" stroke="#e2e8f0"/>
+
+    <rect x="64" y="404" width="472" height="40" fill="#ffffff"/>
+    <text x="76" y="424" font-weight="700" fill="#0f172a">40-Page Brand Guidelines &amp; Packaging Templates</text>
+    <text x="366" y="424" fill="#334155" text-anchor="end">10.0</text>
+    <text x="444" y="424" fill="#334155" text-anchor="end">$110.00</text>
+    <text x="524" y="424" font-weight="700" fill="#0f172a" text-anchor="end">$1,100.00</text>
+    <line x1="64" y1="444" x2="536" y2="444" stroke="#4338ca" stroke-width="1.5"/>
+  </g>
+
+  <!-- Totals -->
+  <g font-size="10">
+    <text x="360" y="476" font-weight="600" fill="#64748b">Subtotal</text>
+    <text x="524" y="476" font-weight="700" fill="#0f172a" text-anchor="end">$3,740.00</text>
+    <text x="360" y="498" font-weight="600" fill="#64748b">Tax (0%)</text>
+    <text x="524" y="498" font-weight="700" fill="#0f172a" text-anchor="end">$0.00</text>
+
+    <line x1="350" y1="514" x2="536" y2="514" stroke="#1e1b4b" stroke-width="1.5"/>
+    <text x="360" y="536" font-size="12" font-weight="800" fill="#1e1b4b">Balance Due</text>
+    <text x="524" y="536" font-size="14.5" font-weight="900" fill="#4338ca" text-anchor="end">$3,740.00</text>
+    <line x1="350" y1="548" x2="536" y2="548" stroke="#1e1b4b" stroke-width="1.5"/>
+  </g>
+
+  <text x="64" y="476" font-size="9.5" font-weight="700" fill="#0f172a">Remarks / Payment Instructions:</text>
+  <text x="64" y="494" font-size="9.5" fill="#475569">Wire / ACH to Lumina Brand Studio Inc.</text>
+  <text x="64" y="510" font-size="9.5" fill="#475569">Vector master files delivered via shared cloud vault.</text>
+</svg>

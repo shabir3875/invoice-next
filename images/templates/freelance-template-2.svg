@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="600" height="750" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="600" height="750" fill="#ffffff"/>
+  <rect width="600" height="148" fill="#fffbeb"/>
+  <rect width="600" height="12" fill="#d97706"/>
+  <rect y="738" width="600" height="12" fill="#d97706"/>
+  <line x1="0" y1="148" x2="600" y2="148" stroke="#fde68a" stroke-width="1.5"/>
+
+  <!-- Letterhead Header -->
+  <circle cx="70" cy="80" r="26" fill="#d97706"/>
+  <text x="70" y="86" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">MC</text>
+  <text x="110" y="66" font-size="18" font-weight="800" fill="#0f172a">Meridian Copy &amp; Content Studio</text>
+  <text x="110" y="84" font-size="10.5" fill="#78350f">210 Congress Ave, Suite 4B, Austin, TX 78701</text>
+  <text x="110" y="100" font-size="10.5" fill="#92400e">hello@meridiancopy.com • www.meridiancopy.com</text>
+
+  <text x="556" y="68" font-size="24" font-weight="900" fill="#b45309" text-anchor="end" letter-spacing="1">INVOICE</text>
+  <text x="556" y="90" font-size="10.5" font-weight="700" fill="#0f172a" text-anchor="end">No. #MC-2026-089</text>
+  <text x="556" y="106" font-size="10" fill="#78350f" text-anchor="end">Issued: Nov 02, 2026</text>
+  <text x="556" y="122" font-size="10" font-weight="700" fill="#b45309" text-anchor="end">Due: Nov 16, 2026</text>
+
+  <!-- Bill To & Project Details -->
+  <text x="44" y="186" font-size="9.5" font-weight="800" fill="#b45309" letter-spacing="1">PREPARED FOR</text>
+  <line x1="44" y1="193" x2="275" y2="193" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="44" y="212" font-size="12" font-weight="700" fill="#0f172a">Veloce E-Commerce Group</text>
+  <text x="44" y="228" font-size="10.5" fill="#475569">Attn: Marcus Sterling, Marketing Director</text>
+  <text x="44" y="244" font-size="10.5" fill="#475569">880 Market Street, Seattle, WA 98101</text>
+  <text x="44" y="260" font-size="10.5" fill="#475569">ap@velocecommerce.com</text>
+
+  <text x="305" y="186" font-size="9.5" font-weight="800" fill="#b45309" letter-spacing="1">ENGAGEMENT SUMMARY</text>
+  <line x1="305" y1="193" x2="556" y2="193" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="305" y="212" font-size="12" font-weight="700" fill="#0f172a">Q4 Brand &amp; Conversion Copywriting</text>
+  <text x="305" y="228" font-size="10.5" fill="#475569">Contract: Monthly Retainer + Launch Deliverables</text>
+  <text x="305" y="244" font-size="10.5" fill="#475569">Payment Terms: Net 14 Days (ACH / Wire)</text>
+
+  <!-- Table Header -->
+  <rect x="44" y="290" width="512" height="28" rx="4" fill="#d97706"/>
+  <text x="56" y="308" font-size="9.5" font-weight="700" fill="#ffffff" letter-spacing="0.8">DELIVERABLE / DESCRIPTION</text>
+  <text x="368" y="308" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="end" letter-spacing="0.8">QTY / HRS</text>
+  <text x="454" y="308" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="end" letter-spacing="0.8">RATE</text>
+  <text x="544" y="308" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="end" letter-spacing="0.8">TOTAL</text>
+
+  <!-- Rows -->
+  <g font-size="10.5">
+    <rect x="44" y="318" width="512" height="44" fill="#ffffff"/>
+    <text x="56" y="336" font-weight="700" fill="#0f172a">Flagship Product Landing Page Copy (3 Pages)</text>
+    <text x="56" y="351" font-size="9.5" fill="#64748b">Hero positioning, value props, social proof blocks, and SEO metadata</text>
+    <text x="368" y="343" fill="#334155" text-anchor="end">3</text>
+    <text x="454" y="343" fill="#334155" text-anchor="end">$350.00</text>
+    <text x="544" y="343" font-weight="700" fill="#0f172a" text-anchor="end">$1,050.00</text>
+    <line x1="44" y1="362" x2="556" y2="362" stroke="#e2e8f0"/>
+
+    <rect x="44" y="362" width="512" height="44" fill="#fffbeb"/>
+    <text x="56" y="380" font-weight="700" fill="#0f172a">Customer Onboarding Email Sequence (6-Part Flow)</text>
+    <text x="56" y="395" font-size="9.5" fill="#64748b">Welcome series, A/B subject lines, and conversion CTAs</text>
+    <text x="368" y="387" fill="#334155" text-anchor="end">6</text>
+    <text x="454" y="387" fill="#334155" text-anchor="end">$140.00</text>
+    <text x="544" y="387" font-weight="700" fill="#0f172a" text-anchor="end">$840.00</text>
+    <line x1="44" y1="406" x2="556" y2="406" stroke="#e2e8f0"/>
+
+    <rect x="44" y="406" width="512" height="44" fill="#ffffff"/>
+    <text x="56" y="424" font-weight="700" fill="#0f172a">Long-Form Industry Thought Leadership Article</text>
+    <text x="56" y="439" font-size="9.5" fill="#64748b">2,200-word researched guide with executive interviews</text>
+    <text x="368" y="431" fill="#334155" text-anchor="end">1</text>
+    <text x="454" y="431" fill="#334155" text-anchor="end">$480.00</text>
+    <text x="544" y="431" font-weight="700" fill="#0f172a" text-anchor="end">$480.00</text>
+    <line x1="44" y1="450" x2="556" y2="450" stroke="#e2e8f0"/>
+
+    <rect x="44" y="450" width="512" height="40" fill="#fffbeb"/>
+    <text x="56" y="474" font-weight="700" fill="#0f172a">Editorial Strategy &amp; Brand Voice Workshop</text>
+    <text x="368" y="474" fill="#334155" text-anchor="end">3.0 hrs</text>
+    <text x="454" y="474" fill="#334155" text-anchor="end">$110.00</text>
+    <text x="544" y="474" font-weight="700" fill="#0f172a" text-anchor="end">$330.00</text>
+    <line x1="44" y1="490" x2="556" y2="490" stroke="#d97706" stroke-width="1.5"/>
+  </g>
+
+  <!-- Totals -->
+  <g font-size="10.5">
+    <text x="360" y="520" font-weight="600" fill="#64748b">Subtotal</text>
+    <text x="544" y="520" font-weight="700" fill="#0f172a" text-anchor="end">$2,700.00</text>
+    <line x1="360" y1="528" x2="556" y2="528" stroke="#f1f5f9"/>
+
+    <text x="360" y="546" font-weight="600" fill="#64748b">Package Discount</text>
+    <text x="544" y="546" font-weight="700" fill="#b45309" text-anchor="end">-$220.00</text>
+    <line x1="360" y1="554" x2="556" y2="554" stroke="#f1f5f9"/>
+
+    <text x="360" y="572" font-weight="600" fill="#64748b">Tax (0%)</text>
+    <text x="544" y="572" font-weight="600" fill="#0f172a" text-anchor="end">$0.00</text>
+
+    <rect x="352" y="590" width="204" height="42" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+    <text x="366" y="615" font-size="11.5" font-weight="800" fill="#92400e">BALANCE DUE</text>
+    <text x="542" y="616" font-size="15" font-weight="900" fill="#78350f" text-anchor="end">$2,480.00</text>
+  </g>
+
+  <!-- Remarks -->
+  <text x="44" y="524" font-size="9.5" font-weight="800" fill="#0f172a" letter-spacing="0.8">REMARKS &amp; PAYMENT DETAILS</text>
+  <text x="44" y="542" font-size="9.5" fill="#475569">Please remit payment via ACH or bank transfer within 14 days.</text>
+  <text x="44" y="557" font-size="9.5" fill="#475569">All final copy decks and source files transfer upon full settlement.</text>
+  <text x="44" y="578" font-size="9.5" font-weight="700" fill="#b45309">Questions? Contact billing@meridiancopy.com</text>
+</svg>

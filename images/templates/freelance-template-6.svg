@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="600" height="750" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="600" height="750" fill="#ffffff"/>
+
+  <!-- Rotated Side Label -->
+  <g transform="translate(52, 330) rotate(-90)">
+    <text x="0" y="0" font-size="22" font-weight="900" fill="#64748b" letter-spacing="1.5">INVOICE <tspan fill="#0284c7">#308</tspan></text>
+  </g>
+
+  <!-- Header -->
+  <text x="84" y="76" font-size="22" font-weight="800" fill="#0284c7">Stratos Digital Growth</text>
+  <text x="84" y="96" font-size="10" fill="#475569">450 Lexington Ave, New York, NY 10017</text>
+  <text x="84" y="112" font-size="10" fill="#475569">www.stratosgrowth.io • billing@stratosgrowth.io</text>
+  <text x="84" y="128" font-size="10" font-weight="700" fill="#0f172a">+1 (212) 555-0184</text>
+
+  <circle cx="504" cy="96" r="34" fill="#0284c7"/>
+  <text x="504" y="102" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle">SDG</text>
+
+  <!-- Bill To / Project / Dates -->
+  <text x="84" y="182" font-size="9.5" font-weight="800" fill="#0284c7" letter-spacing="0.8">BILL TO</text>
+  <line x1="84" y1="189" x2="256" y2="189" stroke="#cbd5e1"/>
+  <text x="84" y="206" font-size="11" font-weight="700" fill="#0f172a">Aether Cloud Systems</text>
+  <text x="84" y="221" font-size="10" fill="#475569">Attn: Rachel Green, VP Growth</text>
+  <text x="84" y="236" font-size="10" fill="#475569">600 Congress Ave, Austin, TX</text>
+
+  <text x="276" y="182" font-size="9.5" font-weight="800" fill="#0284c7" letter-spacing="0.8">PROJECT DETAILS</text>
+  <line x1="276" y1="189" x2="424" y2="189" stroke="#cbd5e1"/>
+  <text x="276" y="206" font-size="11" font-weight="700" fill="#0f172a">SEO &amp; Paid Search Sprint</text>
+  <text x="276" y="221" font-size="10" fill="#475569">Q4 Demand Generation</text>
+
+  <text x="440" y="202" font-size="10" font-weight="700" fill="#0f172a">Invoice Date: <tspan font-weight="500" fill="#475569">10/28/26</tspan></text>
+  <text x="440" y="220" font-size="10" font-weight="700" fill="#0284c7">Due Date: <tspan font-weight="700" fill="#0f172a">11/11/26</tspan></text>
+
+  <!-- Table -->
+  <rect x="84" y="272" width="468" height="26" fill="#0284c7"/>
+  <text x="96" y="289" font-size="9" font-weight="700" fill="#ffffff" letter-spacing="0.8">DESCRIPTION</text>
+  <text x="366" y="289" font-size="9" font-weight="700" fill="#ffffff" text-anchor="end">HOURS</text>
+  <text x="448" y="289" font-size="9" font-weight="700" fill="#ffffff" text-anchor="end">RATE</text>
+  <text x="540" y="289" font-size="9" font-weight="700" fill="#ffffff" text-anchor="end">TOTAL</text>
+
+  <g font-size="10">
+    <rect x="84" y="298" width="468" height="40" fill="#ffffff"/>
+    <text x="96" y="318" font-weight="700" fill="#0f172a">Technical SEO Audit &amp; Core Web Vitals Remediation</text>
+    <text x="366" y="318" fill="#334155" text-anchor="end">12.0</text>
+    <text x="448" y="318" fill="#334155" text-anchor="end">$105.00</text>
+    <text x="540" y="318" font-weight="700" fill="#0f172a" text-anchor="end">$1,260.00</text>
+    <line x1="84" y1="338" x2="552" y2="338" stroke="#e2e8f0"/>
+
+    <rect x="84" y="338" width="468" height="40" fill="#f0f9ff"/>
+    <text x="96" y="358" font-weight="700" fill="#0f172a">Search &amp; Retargeting Campaign Architecture</text>
+    <text x="366" y="358" fill="#334155" text-anchor="end">10.0</text>
+    <text x="448" y="358" fill="#334155" text-anchor="end">$105.00</text>
+    <text x="540" y="358" font-weight="700" fill="#0f172a" text-anchor="end">$1,050.00</text>
+    <line x1="84" y1="378" x2="552" y2="378" stroke="#e2e8f0"/>
+
+    <rect x="84" y="378" width="468" height="40" fill="#ffffff"/>
+    <text x="96" y="398" font-weight="700" fill="#0f172a">Looker Studio Attribution Dashboard &amp; Reporting</text>
+    <text x="366" y="398" fill="#334155" text-anchor="end">6.0</text>
+    <text x="448" y="398" fill="#334155" text-anchor="end">$105.00</text>
+    <text x="540" y="398" font-weight="700" fill="#0f172a" text-anchor="end">$630.00</text>
+    <line x1="84" y1="418" x2="552" y2="418" stroke="#0284c7" stroke-width="1.5"/>
+  </g>
+
+  <!-- Totals -->
+  <g font-size="10">
+    <text x="372" y="450" font-weight="600" fill="#64748b">Subtotal</text>
+    <text x="540" y="450" font-weight="700" fill="#0f172a" text-anchor="end">$2,940.00</text>
+    <text x="372" y="472" font-weight="600" fill="#64748b">Partner Discount</text>
+    <text x="540" y="472" font-weight="700" fill="#0284c7" text-anchor="end">-$50.00</text>
+    <text x="372" y="494" font-weight="600" fill="#64748b">Tax (0%)</text>
+    <text x="540" y="494" font-weight="700" fill="#0f172a" text-anchor="end">$0.00</text>
+
+    <rect x="364" y="512" width="188" height="38" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+    <text x="376" y="535" font-size="11.5" font-weight="800" fill="#0369a1">Balance Due</text>
+    <text x="540" y="536" font-size="14.5" font-weight="900" fill="#0c4a6e" text-anchor="end">$2,890.00</text>
+  </g>
+
+  <text x="84" y="520" font-size="10.5" font-weight="700" fill="#0f172a">Thank you for your business!</text>
+  <text x="84" y="590" font-size="9.5" font-weight="800" fill="#0284c7">Terms &amp; Instructions</text>
+  <line x1="84" y1="596" x2="240" y2="596" stroke="#bae6fd"/>
+  <text x="84" y="612" font-size="9.5" fill="#475569">Payment due within 14 days via ACH transfer or corporate check.</text>
+</svg>

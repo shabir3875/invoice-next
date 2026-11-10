@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="600" height="750" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="600" height="750" fill="#ffffff"/>
+  <rect width="164" height="750" fill="#eff6ff"/>
+  <rect width="164" height="118" fill="#1d4ed8"/>
+
+  <!-- Sidebar Content -->
+  <text x="26" y="62" font-size="24" font-weight="900" fill="#ffffff" letter-spacing="1">INVOICE</text>
+  <text x="26" y="82" font-size="10" font-weight="600" fill="#bfdbfe">#INV-2026-412</text>
+
+  <circle cx="82" cy="176" r="34" fill="#1e40af"/>
+  <text x="82" y="182" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle">AW</text>
+
+  <text x="24" y="242" font-size="11.5" font-weight="800" fill="#0f172a">Apex Web Engineering</text>
+  <text x="24" y="260" font-size="9.5" fill="#475569">1200 Peachtree St NE</text>
+  <text x="24" y="274" font-size="9.5" fill="#475569">Atlanta, GA 30309</text>
+  <text x="24" y="294" font-size="9.5" fill="#1d4ed8" font-weight="600">dev@apexengineering.io</text>
+  <text x="24" y="308" font-size="9.5" fill="#475569">+1 (404) 555-0192</text>
+
+  <line x1="24" y1="332" x2="140" y2="332" stroke="#bfdbfe"/>
+  <text x="24" y="352" font-size="9" font-weight="800" fill="#1e40af" letter-spacing="0.8">PAYMENT METHOD</text>
+  <text x="24" y="368" font-size="9.5" fill="#334155">ACH / Wire Transfer</text>
+  <text x="24" y="382" font-size="9.5" fill="#334155">Chase Commercial</text>
+  <text x="24" y="396" font-size="9.5" fill="#334155">Acct: ****9014</text>
+
+  <!-- Right Main Content -->
+  <text x="450" y="58" font-size="9.5" font-weight="700" fill="#64748b">ISSUE DATE</text>
+  <text x="564" y="58" font-size="10.5" font-weight="700" fill="#0f172a" text-anchor="end">Oct 20, 2026</text>
+  <line x1="450" y1="66" x2="564" y2="66" stroke="#e2e8f0"/>
+
+  <text x="450" y="84" font-size="9.5" font-weight="700" fill="#64748b">DUE DATE</text>
+  <text x="564" y="84" font-size="10.5" font-weight="700" fill="#1d4ed8" text-anchor="end">Nov 03, 2026</text>
+  <line x1="450" y1="92" x2="564" y2="92" stroke="#e2e8f0"/>
+
+  <text x="192" y="148" font-size="9.5" font-weight="800" fill="#1d4ed8" letter-spacing="0.8">BILL TO</text>
+  <line x1="192" y1="155" x2="365" y2="155" stroke="#cbd5e1"/>
+  <text x="192" y="172" font-size="11.5" font-weight="700" fill="#0f172a">Stratos FinTech Solutions</text>
+  <text x="192" y="187" font-size="10" fill="#475569">Attn: David Chen, CTO</text>
+  <text x="192" y="201" font-size="10" fill="#475569">400 Madison Ave, New York, NY</text>
+  <text x="192" y="215" font-size="10" fill="#475569">finance@stratosfintech.com</text>
+
+  <text x="385" y="148" font-size="9.5" font-weight="800" fill="#1d4ed8" letter-spacing="0.8">PROJECT DETAILS</text>
+  <line x1="385" y1="155" x2="564" y2="155" stroke="#cbd5e1"/>
+  <text x="385" y="172" font-size="11.5" font-weight="700" fill="#0f172a">Core API &amp; Portal Build</text>
+  <text x="385" y="187" font-size="10" fill="#475569">Sprint 4: Auth &amp; Webhooks</text>
+  <text x="385" y="201" font-size="10" fill="#475569">Terms: Net 14 Days</text>
+
+  <!-- Table -->
+  <rect x="192" y="246" width="372" height="26" fill="#1d4ed8"/>
+  <text x="202" y="263" font-size="9" font-weight="700" fill="#ffffff" letter-spacing="0.6">DESCRIPTION</text>
+  <text x="418" y="263" font-size="9" font-weight="700" fill="#ffffff" text-anchor="end">HRS</text>
+  <text x="484" y="263" font-size="9" font-weight="700" fill="#ffffff" text-anchor="end">RATE</text>
+  <text x="554" y="263" font-size="9" font-weight="700" fill="#ffffff" text-anchor="end">TOTAL</text>
+
+  <g font-size="10">
+    <rect x="192" y="272" width="372" height="40" fill="#ffffff"/>
+    <text x="202" y="290" font-weight="700" fill="#0f172a">REST &amp; Webhook API Integration</text>
+    <text x="202" y="303" font-size="9" fill="#64748b">OAuth2 token refresh and event queue handlers</text>
+    <text x="418" y="295" fill="#334155" text-anchor="end">18.0</text>
+    <text x="484" y="295" fill="#334155" text-anchor="end">$125.00</text>
+    <text x="554" y="295" font-weight="700" fill="#0f172a" text-anchor="end">$2,250.00</text>
+    <line x1="192" y1="312" x2="564" y2="312" stroke="#e2e8f0"/>
+
+    <rect x="192" y="312" width="372" height="40" fill="#f8fafc"/>
+    <text x="202" y="330" font-weight="700" fill="#0f172a">PostgreSQL Query &amp; Index Optimization</text>
+    <text x="202" y="343" font-size="9" fill="#64748b">Schema migration and reporting view indexing</text>
+    <text x="418" y="335" fill="#334155" text-anchor="end">10.0</text>
+    <text x="484" y="335" fill="#334155" text-anchor="end">$125.00</text>
+    <text x="554" y="335" font-weight="700" fill="#0f172a" text-anchor="end">$1,250.00</text>
+    <line x1="192" y1="352" x2="564" y2="352" stroke="#e2e8f0"/>
+
+    <rect x="192" y="352" width="372" height="40" fill="#ffffff"/>
+    <text x="202" y="370" font-weight="700" fill="#0f172a">React Dashboard Analytics Views</text>
+    <text x="202" y="383" font-size="9" fill="#64748b">Real-time chart components and CSV export</text>
+    <text x="418" y="375" fill="#334155" text-anchor="end">8.0</text>
+    <text x="484" y="375" fill="#334155" text-anchor="end">$125.00</text>
+    <text x="554" y="375" font-weight="700" fill="#0f172a" text-anchor="end">$1,000.00</text>
+    <line x1="192" y1="392" x2="564" y2="392" stroke="#e2e8f0"/>
+
+    <rect x="192" y="392" width="372" height="36" fill="#f8fafc"/>
+    <text x="202" y="414" font-weight="700" fill="#0f172a">CI/CD Pipeline &amp; End-to-End Test Suite</text>
+    <text x="418" y="414" fill="#334155" text-anchor="end">4.0</text>
+    <text x="484" y="414" fill="#334155" text-anchor="end">$125.00</text>
+    <text x="554" y="414" font-weight="700" fill="#0f172a" text-anchor="end">$500.00</text>
+    <line x1="192" y1="428" x2="564" y2="428" stroke="#1d4ed8" stroke-width="1.5"/>
+  </g>
+
+  <!-- Totals -->
+  <g font-size="10">
+    <text x="390" y="456" font-weight="600" fill="#64748b">Subtotal</text>
+    <text x="554" y="456" font-weight="700" fill="#0f172a" text-anchor="end">$5,000.00</text>
+    <text x="390" y="476" font-weight="600" fill="#64748b">Retainer Credit</text>
+    <text x="554" y="476" font-weight="700" fill="#1d4ed8" text-anchor="end">-$350.00</text>
+    <text x="390" y="496" font-weight="600" fill="#64748b">Tax (0%)</text>
+    <text x="554" y="496" font-weight="700" fill="#0f172a" text-anchor="end">$0.00</text>
+
+    <rect x="380" y="512" width="184" height="38" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5"/>
+    <text x="392" y="535" font-size="11" font-weight="800" fill="#1e3a8a">Balance Due</text>
+    <text x="552" y="536" font-size="14" font-weight="900" fill="#1e3a8a" text-anchor="end">$4,650.00</text>
+  </g>
+
+  <!-- Signatures -->
+  <line x1="192" y1="650" x2="345" y2="650" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="192" y="666" font-size="9.5" font-weight="600" fill="#64748b">Authorized Contractor Signature</text>
+
+  <line x1="395" y1="650" x2="556" y2="650" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="395" y="666" font-size="9.5" font-weight="600" fill="#64748b">Client Acceptance</text>
+</svg>

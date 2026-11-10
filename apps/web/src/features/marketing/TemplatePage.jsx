@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react';
-import Seo from '@/components/Seo';
+import Seo from '../../components/Seo';
 import { APP_ROUTES } from './data';
 import ScreenshotFreelancePage from './ScreenshotFreelancePage';
 import MarketingHeader from './MarketingHeader';

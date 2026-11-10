@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="600" height="750" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="600" height="750" fill="#ffffff"/>
+
+  <!-- Header -->
+  <text x="48" y="70" font-size="20" font-weight="800" fill="#0f172a">Vanguard Advisory &amp; Design</text>
+  <text x="48" y="90" font-size="10.5" fill="#334155">500 Boylston Street, Suite 1200, Boston, MA 02116</text>
+  <text x="48" y="106" font-size="10.5" fill="#334155">studio@vanguardadvisory.co • (617) 555-0148</text>
+
+  <text x="552" y="70" font-size="26" font-weight="900" fill="#0f172a" text-anchor="end" letter-spacing="1.5">INVOICE</text>
+  <rect x="444" y="84" width="108" height="36" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+  <text x="498" y="100" font-size="9" font-weight="800" fill="#475569" text-anchor="middle" letter-spacing="0.8">INVOICE NUMBER</text>
+  <text x="498" y="114" font-size="11" font-weight="800" fill="#0f172a" text-anchor="middle">#INV-00418</text>
+
+  <line x1="48" y1="138" x2="552" y2="138" stroke="#0f172a" stroke-width="2"/>
+
+  <!-- Bill To / Project / Dates -->
+  <text x="48" y="166" font-size="9.5" font-weight="800" fill="#0f172a" letter-spacing="0.8">BILL TO</text>
+  <text x="48" y="184" font-size="11.5" font-weight="700" fill="#0f172a">Kensington Architectural Press</text>
+  <text x="48" y="200" font-size="10" fill="#334155">Attn: Eleanor Vance</text>
+  <text x="48" y="215" font-size="10" fill="#334155">1900 Arch Street, Philadelphia, PA</text>
+  <text x="48" y="230" font-size="10" fill="#334155">billing@kensingtonpress.org</text>
+
+  <text x="245" y="166" font-size="9.5" font-weight="800" fill="#0f172a" letter-spacing="0.8">PROJECT DETAILS</text>
+  <text x="245" y="184" font-size="11.5" font-weight="700" fill="#0f172a">Annual Monograph Layout</text>
+  <text x="245" y="200" font-size="10" fill="#334155">Editorial Typography &amp; Prepress</text>
+  <text x="245" y="215" font-size="10" fill="#334155">PO #: KP-2026-19</text>
+
+  <text x="430" y="166" font-size="9.5" font-weight="800" fill="#0f172a" letter-spacing="0.8">DATES &amp; TERMS</text>
+  <text x="430" y="184" font-size="10" fill="#334155">Issue Date: Oct 24, 2026</text>
+  <text x="430" y="200" font-size="10" font-weight="700" fill="#0f172a">Due Date: Nov 07, 2026</text>
+  <text x="430" y="215" font-size="10" fill="#334155">Terms: Net 14</text>
+
+  <!-- Monochrome Table -->
+  <rect x="48" y="256" width="504" height="28" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+  <text x="60" y="274" font-size="9.5" font-weight="800" fill="#0f172a" letter-spacing="0.8">DESCRIPTION</text>
+  <text x="368" y="274" font-size="9.5" font-weight="800" fill="#0f172a" text-anchor="end">HOURS</text>
+  <text x="454" y="274" font-size="9.5" font-weight="800" fill="#0f172a" text-anchor="end">RATE</text>
+  <text x="540" y="274" font-size="9.5" font-weight="800" fill="#0f172a" text-anchor="end">TOTAL</text>
+
+  <g font-size="10.5" fill="#0f172a">
+    <text x="60" y="306" font-weight="700">Master Grid &amp; Typographic Specification</text>
+    <text x="368" y="306" text-anchor="end">8.0</text>
+    <text x="454" y="306" text-anchor="end">$90.00</text>
+    <text x="540" y="306" font-weight="700" text-anchor="end">$720.00</text>
+    <line x1="48" y1="320" x2="552" y2="320" stroke="#cbd5e1"/>
+
+    <text x="60" y="346" font-weight="700">Chapter Spread Typesetting &amp; Plate Layout (140 pp.)</text>
+    <text x="368" y="346" text-anchor="end">10.0</text>
+    <text x="454" y="346" text-anchor="end">$90.00</text>
+    <text x="540" y="346" font-weight="700" text-anchor="end">$900.00</text>
+    <line x1="48" y1="360" x2="552" y2="360" stroke="#cbd5e1"/>
+
+    <text x="60" y="386" font-weight="700">High-Resolution Color Profile &amp; Prepress Preflight</text>
+    <text x="368" y="386" text-anchor="end">4.0</text>
+    <text x="454" y="386" text-anchor="end">$90.00</text>
+    <text x="540" y="386" font-weight="700" text-anchor="end">$360.00</text>
+    <line x1="48" y1="400" x2="552" y2="400" stroke="#cbd5e1"/>
+
+    <text x="60" y="426" font-weight="700">Press Check &amp; Final Print-Ready PDF/X-4 Delivery</text>
+    <text x="368" y="426" text-anchor="end">2.0</text>
+    <text x="454" y="426" text-anchor="end">$90.00</text>
+    <text x="540" y="426" font-weight="700" text-anchor="end">$180.00</text>
+    <line x1="48" y1="442" x2="552" y2="442" stroke="#0f172a" stroke-width="1.5"/>
+  </g>
+
+  <!-- Totals -->
+  <g font-size="10.5" fill="#0f172a">
+    <text x="368" y="472" font-weight="600">Subtotal</text>
+    <text x="540" y="472" font-weight="700" text-anchor="end">$2,160.00</text>
+
+    <text x="368" y="494" font-weight="600">Academic Press Discount</text>
+    <text x="540" y="494" font-weight="700" text-anchor="end">-$210.00</text>
+
+    <text x="368" y="516" font-weight="600">Tax (0.00%)</text>
+    <text x="540" y="516" font-weight="700" text-anchor="end">$0.00</text>
+
+    <line x1="358" y1="530" x2="552" y2="530" stroke="#0f172a" stroke-width="1.5"/>
+    <text x="368" y="554" font-size="12.5" font-weight="900">Balance Due</text>
+    <text x="540" y="554" font-size="15" font-weight="900" text-anchor="end">$1,950.00</text>
+    <line x1="358" y1="566" x2="552" y2="566" stroke="#0f172a" stroke-width="2"/>
+  </g>
+
+  <text x="48" y="550" font-size="10.5" font-weight="700" fill="#0f172a">Thank you for your business!</text>
+  <text x="48" y="616" font-size="9.5" font-weight="800" fill="#0f172a" letter-spacing="0.8">TERMS &amp; INSTRUCTIONS</text>
+  <line x1="48" y1="622" x2="230" y2="622" stroke="#0f172a"/>
+  <text x="48" y="638" font-size="9.5" fill="#334155">Payable by check or ACH transfer to Vanguard Advisory &amp; Design.</text>
+  <text x="48" y="653" font-size="9.5" fill="#334155">Optimized for crisp black-and-white laser or inkjet printing.</text>
+</svg>

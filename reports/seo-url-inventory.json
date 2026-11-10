@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T17:54:28.651Z",
+  "generatedAt": "2026-11-10T18:19:44.643Z",
   "summary": {
     "totalPublicPages": 51,
     "indexablePages": 51,
@@ -25,7 +25,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 119
+      "internalLinkCount": 121
     },
     {
       "url": "https://invonxt.com/features/lightning-fast-invoicing",
@@ -40,7 +40,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 55
+      "internalLinkCount": 56
     },
     {
       "url": "https://invonxt.com/features/recurring-invoices",
@@ -55,7 +55,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 51
+      "internalLinkCount": 52
     },
     {
       "url": "https://invonxt.com/features/estimates-to-invoices",
@@ -100,7 +100,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 51
+      "internalLinkCount": 52
     },
     {
       "url": "https://invonxt.com/features/inventory-tracking",
@@ -115,7 +115,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 52
+      "internalLinkCount": 53
     },
     {
       "url": "https://invonxt.com/features/sales-stock-reports",
@@ -130,7 +130,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 55
+      "internalLinkCount": 56
     },
     {
       "url": "https://invonxt.com/features/import-export-records",
@@ -145,7 +145,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 52
+      "internalLinkCount": 53
     },
     {
       "url": "https://invonxt.com/features/document-customization",
@@ -160,7 +160,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 52
+      "internalLinkCount": 53
     },
     {
       "url": "https://invonxt.com/features/client-management",
@@ -175,7 +175,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 55
+      "internalLinkCount": 56
     },
     {
       "url": "https://invonxt.com/features/customer-statements",
@@ -205,7 +205,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 99
+      "internalLinkCount": 100
     },
     {
       "url": "https://invonxt.com/about",
@@ -220,7 +220,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 48
+      "internalLinkCount": 49
     },
     {
       "url": "https://invonxt.com/contact",
@@ -235,7 +235,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 48
+      "internalLinkCount": 49
     },
     {
       "url": "https://invonxt.com/support",
@@ -250,7 +250,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 48
+      "internalLinkCount": 49
     },
     {
       "url": "https://invonxt.com/faq",
@@ -265,7 +265,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 48
+      "internalLinkCount": 49
     },
     {
       "url": "https://invonxt.com/privacy",
@@ -280,7 +280,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 96
+      "internalLinkCount": 97
     },
     {
       "url": "https://invonxt.com/terms",
@@ -295,7 +295,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 96
+      "internalLinkCount": 97
     },
     {
       "url": "https://invonxt.com/disclaimer",
@@ -310,7 +310,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 48
+      "internalLinkCount": 49
     },
     {
       "url": "https://invonxt.com/solutions/freelancers",
@@ -415,7 +415,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 2
+      "internalLinkCount": 3
     },
     {
       "url": "https://invonxt.com/templates/freelance/",
@@ -426,7 +426,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/templates/freelance/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 797,
+      "wordCount": 1448,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -475,7 +475,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 55
+      "internalLinkCount": 57
     },
     {
       "url": "https://invonxt.com/invoice-generator",
@@ -490,7 +490,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 58
+      "internalLinkCount": 59
     },
     {
       "url": "https://invonxt.com/free-invoice-generator",
@@ -610,7 +610,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 51
+      "internalLinkCount": 52
     },
     {
       "url": "https://invonxt.com/invoice-customization",
@@ -685,7 +685,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 100
+      "internalLinkCount": 102
     },
     {
       "url": "https://invonxt.com/blog",
