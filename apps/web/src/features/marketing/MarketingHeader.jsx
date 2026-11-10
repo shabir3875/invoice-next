@@ -28,6 +28,12 @@ export default function MarketingHeader({ currentPath = '' }) {
   const isItemActive = (href) => {
     if (!activePath) return false;
     if (href === activePath) return true;
+    if (
+      href === '/for-businesses' &&
+      (activePath.startsWith('/for-businesses') || activePath.startsWith('/businesses'))
+    ) {
+      return true;
+    }
     if (href !== '/' && !href.startsWith('/#') && activePath === href) return true;
     return false;
   };

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import {
-  ArrowLeft, ArrowRight, Check, ChevronDown, ChevronLeft, ChevronRight,
+  ArrowLeft, ArrowRight, Check, ChevronDown, ChevronLeft, ChevronRight, ChevronUp,
   BarChart3, Boxes, Facebook, FileCheck2, FileSpreadsheet, FileText, Instagram,
   Linkedin, Mail, Plus, ReceiptText, RefreshCw, Send, SlidersHorizontal,
   Smartphone, Twitter, WalletCards, Zap,
@@ -10,6 +10,7 @@ import Seo from '@/components/Seo';
 import Reveal from '@/components/Reveal';
 import { PREMIUM_FEATURES, PREMIUM_PLANS } from '@/features/app-components/plans';
 import { APP_ROUTES, benefits, demoTestimonials, solutions } from './data';
+import { BUSINESS_CATEGORIES } from './businessCategoriesData';
 import SiteFooter from './SiteFooter';
 import { DashboardMockup } from './ProductVisuals';
 import AnimatedFeatures from './AnimatedFeatures';
@@ -61,7 +62,87 @@ function StepVisual({type}){if(type==='create')return <div className="hi-visual 
 
 function HowItWorks(){const steps=[['01','Create Your Invoice','Add customers, products, services, taxes, discounts, and payment terms using customizable invoice templates.','create'],['02','Share With Your Customer','Download a professional PDF, send an invoice through email, or share it using a secure link.','share'],['03','Track Your Payments','Record full or partial payments and monitor paid, unpaid, and overdue invoice balances.','payment']];return <section id="how-it-works" className="home-how"><div className="mx-auto max-w-7xl px-5 sm:px-8"><Reveal className="home-section-heading"><span>HOW IT WORKS</span><h2>From Details to Paid in Three Simple Steps</h2><p>A clear invoicing workflow that keeps every detail organized from creation through payment.</p></Reveal><div className="home-steps">{steps.map(([num,title,text,type],i)=><Reveal as="article" key={num} delay={i*.12} y={20} className="home-step"><div className="home-step-number">{num}</div><StepVisual type={type}/><h3>{title}</h3><p>{text}</p>{i<2&&<span className="home-step-connector" aria-hidden="true"><ArrowRight size={16}/></span>}</Reveal>)}</div></div></section>}
 
-function Solutions(){return <section id="solutions" className="scroll-mt-24 bg-white py-20 sm:py-28"><div className="mx-auto max-w-7xl px-5 sm:px-8"><div className="mx-auto max-w-3xl text-center"><span className="text-xs font-extrabold uppercase tracking-[.18em] text-blue-600">For businesses</span><h2 className="mt-4 text-3xl font-black tracking-[-.04em] text-slate-950 sm:text-5xl">Flexible enough for the way you work</h2></div><div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{solutions.map((x,i)=><article key={x.title} className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl"><div className={`mb-6 grid h-14 w-14 place-items-center rounded-2xl ${['bg-blue-50 text-blue-600','bg-violet-50 text-violet-600','bg-cyan-50 text-cyan-600','bg-orange-50 text-orange-600','bg-amber-50 text-amber-600','bg-emerald-50 text-emerald-600','bg-rose-50 text-rose-600'][i]}`}><x.icon size={25}/></div><h3 className="text-xl font-black text-slate-950">{x.title}</h3><p className="mt-3 min-h-[72px] text-sm leading-6 text-slate-600">{x.text}</p><a href={x.route} className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-blue-700">Learn more<ArrowRight size={15}/></a></article>)}</div></div></section>}
+function Solutions() {
+  const [openIds, setOpenIds] = useState(() => new Set(['trades']));
+
+  const toggleOpen = id => {
+    setOpenIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
+  return (
+    <section id="solutions" className="scroll-mt-24 bg-[#f8fafc] py-16 sm:py-24">
+      <div className="mx-auto max-w-5xl px-5 sm:px-8">
+        <div className="mb-10 text-center">
+          <span className="text-xs font-extrabold uppercase tracking-[.18em] text-[#047857]">For businesses</span>
+          <h2 className="mt-3 text-3xl font-black tracking-[-.04em] text-slate-950 sm:text-4xl">Explore Business Categories</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-slate-600">Discover how Invonxt helps professionals and businesses simplify invoicing, manage expenses, organize clients, and maintain better financial records.</p>
+        </div>
+
+        <div className="space-y-4">
+          {BUSINESS_CATEGORIES.map(category => {
+            const Icon = category.icon;
+            const isOpen = openIds.has(category.id);
+            const pills = category.subcategories.slice(0, 4);
+
+            return (
+              <article key={category.id} className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:border-slate-300">
+                <button
+                  type="button"
+                  onClick={() => toggleOpen(category.id)}
+                  aria-expanded={isOpen}
+                  className="flex w-full items-center justify-between px-5 py-4 text-left transition hover:bg-slate-50/60 sm:px-6"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="grid h-10 w-10 place-items-center rounded-lg bg-[#edfcf6] text-[#047857] border border-[#ccece0]">
+                      <Icon size={20} strokeWidth={2.2} />
+                    </span>
+                    <div>
+                      <span className="block text-base font-bold text-slate-900 sm:text-lg">{category.name}</span>
+                      <span className="hidden text-xs text-slate-500 sm:block">{category.description}</span>
+                    </div>
+                  </div>
+                  <span className="text-slate-500">
+                    {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                  </span>
+                </button>
+
+                {isOpen && (
+                  <div className="border-t border-slate-200 bg-white p-5 sm:p-6">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4 sm:gap-4">
+                      {pills.map(sub => (
+                        <a
+                          key={sub.id}
+                          href={sub.url || '/for-businesses'}
+                          className="flex items-center justify-center rounded-lg border border-slate-200 bg-slate-50 px-4 py-3.5 text-center text-sm font-semibold text-slate-800 transition hover:border-[#a7d9c9] hover:bg-[#edfcf6] hover:text-[#047857]"
+                        >
+                          {sub.name}
+                        </a>
+                      ))}
+                    </div>
+                    <div className="mt-5 text-center sm:mt-6">
+                      <a
+                        href="/for-businesses"
+                        className="group inline-flex items-center gap-1.5 text-sm font-bold text-[#047857] transition hover:text-[#065f46]"
+                      >
+                        <span>Explore all {category.name} businesses</span>
+                        <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
+                      </a>
+                    </div>
+                  </div>
+                )}
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function MobileShowcase(){return <section className="overflow-hidden bg-[#0b1f3a] py-20 text-white sm:py-28"><div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[.85fr_1.15fr]"><div><span className="text-xs font-extrabold uppercase tracking-[.18em] text-cyan-300">Responsive web application</span><h2 className="mt-4 text-3xl font-black tracking-[-.04em] sm:text-5xl">Your business, available wherever work happens</h2><p className="mt-6 text-base leading-8 text-slate-300">The Invoice Next web app adapts across mobile, tablet and desktop so you can review the dashboard, create invoices, access customer records and track payments from a modern browser.</p><p className="mt-4 text-sm font-semibold text-cyan-200">Native app-store downloads are not shown because this repository does not provide verified publication links.</p><PrimaryLink href={APP_ROUTES.signup} className="mt-8 !bg-white !text-[#0b1f3a] !shadow-none">Open Invoice Next<ArrowRight size={17}/></PrimaryLink></div><div className="relative min-h-[520px]"><div className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/20 blur-2xl"/><div className="absolute left-[6%] top-20 w-[210px] -rotate-6 rounded-[32px] border-[8px] border-slate-900 bg-white p-3 shadow-2xl"><PhoneScreen title="Customers" color="blue"/></div><div className="absolute left-1/2 top-3 z-10 w-[230px] -translate-x-1/2 rounded-[34px] border-[9px] border-slate-900 bg-white p-3 shadow-2xl"><PhoneScreen title="Dashboard" color="cyan"/></div><div className="absolute right-[4%] top-24 w-[210px] rotate-6 rounded-[32px] border-[8px] border-slate-900 bg-white p-3 shadow-2xl"><PhoneScreen title="Invoice" color="emerald"/></div></div></div></section>}
 function PhoneScreen({title,color}){return <div className="min-h-[380px] rounded-[22px] bg-slate-50 p-3 text-slate-900"><div className="mx-auto mb-4 h-3 w-16 rounded-full bg-slate-900"/><div className="flex items-center justify-between"><b className="text-xs">{title}</b><span className="grid h-7 w-7 place-items-center rounded-full bg-slate-200 text-[9px] font-bold">SN</span></div><div className={`mt-4 rounded-xl p-4 text-white ${color==='blue'?'bg-blue-600':color==='cyan'?'bg-cyan-600':'bg-emerald-600'}`}><span className="text-[9px] opacity-75">Total revenue</span><div className="mt-1 text-xl font-black">$18,640</div></div><div className="mt-3 grid grid-cols-2 gap-2">{[1,2,3,4].map(i=><div key={i} className="rounded-lg bg-white p-3 shadow-sm"><div className="h-2 w-10 rounded bg-slate-200"/><div className="mt-2 h-3 w-14 rounded bg-slate-300"/></div>)}</div><div className="mt-3 space-y-2">{[1,2,3].map(i=><div key={i} className="flex items-center gap-2 rounded-lg bg-white p-3 shadow-sm"><span className="h-7 w-7 rounded-lg bg-blue-100"/><span className="h-2 flex-1 rounded bg-slate-200"/></div>)}</div></div>}

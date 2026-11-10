@@ -1,10 +1,10 @@
 import { context } from 'esbuild';
-import { resolve } from 'path';
+import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 import { EDIT_MODE_STYLES } from './ui/inline-edit/styles.js';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = resolve(__filename, '..');
+const __dirname = dirname(__filename);
 
 /**
  * Bundles the multi-file contenteditable edit-mode runtime with esbuild and

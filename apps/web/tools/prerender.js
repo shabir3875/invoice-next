@@ -37,6 +37,8 @@ async function prerender() {
 		const { SEO_PAGES, SEO_ROUTES } = await vite.ssrLoadModule('/src/features/marketing/seo-pages.js');
 		const { default: BlogPage } = await vite.ssrLoadModule('/src/features/marketing/BlogPage.jsx');
 		const { default: ForBusinessesPage } = await vite.ssrLoadModule('/src/features/marketing/ForBusinessesPage.jsx');
+		const { default: BusinessDetailPage } = await vite.ssrLoadModule('/src/features/marketing/BusinessDetailPage.jsx');
+		const { BUSINESS_CATEGORIES } = await vite.ssrLoadModule('/src/features/marketing/businessCategoriesData.js');
 		const { ARTICLES, ARTICLE_ROUTES } = await vite.ssrLoadModule('/src/features/marketing/blog-data.js');
 		const appHtml = renderToString(React.createElement(HomePage));
 
@@ -207,12 +209,14 @@ async function prerender() {
 					.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${url}" data-react-helmet="true" />`);
 				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
 			}
-						const forBusinessesHtml = renderToString(React.createElement(ForBusinessesPage));
-			const fbTitle = 'For Businesses | Invoice Templates & Business Guidance | Invonxt';
-			const fbDescription = 'Explore professional invoice templates, invoicing guidance and business tools for freelancers, trades, legal firms, consultants, healthcare providers and small businesses.';
+			const forBusinessesHtml = renderToString(React.createElement(ForBusinessesPage));
+			const fbTitle = 'Businesses | Invoicing & Expense Management by Invonxt';
+			const fbDescription = 'Explore how Invonxt supports freelancers, legal firms, contractors, consultants, healthcare professionals, and small businesses with invoicing and expense management.';
 			const fbUrl = 'https://invonxt.com/for-businesses';
 			const fbRouteDir = path.join(distAppDir, 'for-businesses');
+			const businessesRouteDir = path.join(distAppDir, 'businesses');
 			fs.mkdirSync(fbRouteDir, { recursive: true });
+			fs.mkdirSync(businessesRouteDir, { recursive: true });
 			const fbRouteHtml = distIndexHtml
 				.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${forBusinessesHtml}</div>\n\t\t`)
 				.replace(/<title>.*?<\/title>/, `<title>${fbTitle}</title>`)
@@ -221,10 +225,51 @@ async function prerender() {
 				.replace(/<meta property="og:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:title" content="${fbTitle}" data-react-helmet="true" />`)
 				.replace(/<meta property="og:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:description" content="${fbDescription}" data-react-helmet="true" />`)
 				.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${fbUrl}" data-react-helmet="true" />`)
-				.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, pageSchema({ title: fbTitle, description: fbDescription, url: fbUrl, breadcrumbs: [['Home','https://invonxt.com/'],['For Businesses',fbUrl]] }));
+				.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, pageSchema({ title: fbTitle, description: fbDescription, url: fbUrl, breadcrumbs: [['Home','https://invonxt.com/'],['Businesses',fbUrl]] }));
 			fs.writeFileSync(path.join(fbRouteDir, 'index.html'), fbRouteHtml, 'utf8');
 			fs.writeFileSync(path.join(distAppDir, 'for-businesses.html'), fbRouteHtml, 'utf8');
-			console.log('✅ Generated static route HTML for /for-businesses');
+			fs.writeFileSync(path.join(businessesRouteDir, 'index.html'), fbRouteHtml, 'utf8');
+			fs.writeFileSync(path.join(distAppDir, 'businesses.html'), fbRouteHtml, 'utf8');
+			console.log('✅ Generated static route HTML for /for-businesses and /businesses');
+
+			for (const category of BUSINESS_CATEGORIES) {
+				for (const sub of category.subcategories) {
+					const detailHtml = renderToString(
+						React.createElement(BusinessDetailPage, {
+							categorySlug: category.slug,
+							businessSlug: sub.slug,
+						})
+					);
+					const subTitle = `${sub.name} Invoicing & Expense Management | Invonxt`;
+					const subDesc = `${sub.description} See how Invonxt helps ${sub.name.toLowerCase()} professionals manage invoices, estimates, clients, and expenses.`;
+					const subUrl = `https://invonxt.com${sub.url}`;
+					const subDir = path.join(distAppDir, 'businesses', category.slug, sub.slug);
+					fs.mkdirSync(subDir, { recursive: true });
+					const subRouteHtml = distIndexHtml
+						.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${detailHtml}</div>\n\t\t`)
+						.replace(/<title>.*?<\/title>/, `<title>${subTitle}</title>`)
+						.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="description" content="${subDesc}" data-react-helmet="true" />`)
+						.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<link rel="canonical" href="${subUrl}" data-react-helmet="true" />`)
+						.replace(/<meta property="og:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:title" content="${subTitle}" data-react-helmet="true" />`)
+						.replace(/<meta property="og:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:description" content="${subDesc}" data-react-helmet="true" />`)
+						.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${subUrl}" data-react-helmet="true" />`)
+						.replace(
+							/<script type="application\/ld\+json">[\s\S]*?<\/script>/,
+							pageSchema({
+								title: subTitle,
+								description: subDesc,
+								url: subUrl,
+								breadcrumbs: [
+									['Home', 'https://invonxt.com/'],
+									['Businesses', fbUrl],
+									[category.name, fbUrl],
+									[sub.name, subUrl],
+								],
+							})
+						);
+					fs.writeFileSync(path.join(subDir, 'index.html'), subRouteHtml, 'utf8');
+				}
+			}
 			fs.writeFileSync(path.join(distAppDir, '404.html'), distIndexHtml
 				.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${notFoundHtml}</div>\n\t\t`)
 				.replace(/<title>.*?<\/title>/, '<title>Page Not Found | Invoice Next</title>')

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T10:21:13.715Z",
+  "generatedAt": "2026-11-10T16:34:30.734Z",
   "summary": {
     "totalPublicPages": 51,
     "indexablePages": 51,
@@ -21,7 +21,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1096,
+      "wordCount": 1124,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -325,7 +325,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 2
+      "internalLinkCount": 1
     },
     {
       "url": "https://invonxt.com/solutions/small-businesses",
@@ -340,7 +340,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 2
+      "internalLinkCount": 1
     },
     {
       "url": "https://invonxt.com/solutions/consultants",
@@ -355,7 +355,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 2
+      "internalLinkCount": 1
     },
     {
       "url": "https://invonxt.com/solutions/legal-firms",
@@ -370,7 +370,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 2
+      "internalLinkCount": 1
     },
     {
       "url": "https://invonxt.com/solutions/accountants",
@@ -400,7 +400,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 3
+      "internalLinkCount": 2
     },
     {
       "url": "https://invonxt.com/templates/consulting",
@@ -490,7 +490,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 60
+      "internalLinkCount": 58
     },
     {
       "url": "https://invonxt.com/free-invoice-generator",
@@ -675,17 +675,17 @@
     {
       "url": "https://invonxt.com/for-businesses",
       "status": 200,
-      "title": "For Businesses | Invoice Templates & Business Guidance | Invonxt",
-      "description": "Explore professional invoice templates, invoicing guidance and business tools for freelancers, trades, legal firms, consultants, healthcare providers and small businesses.",
-      "h1": "Solutions for Every Business",
+      "title": "Businesses | Invoicing & Expense Management by Invonxt",
+      "description": "Explore how Invonxt supports freelancers, legal firms, contractors, consultants, healthcare professionals, and small businesses with invoicing and expense management.",
+      "h1": "Explore Business Categories",
       "h1Count": 1,
       "canonical": "https://invonxt.com/for-businesses",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 688,
+      "wordCount": 1022,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 99
+      "internalLinkCount": 100
     },
     {
       "url": "https://invonxt.com/blog",

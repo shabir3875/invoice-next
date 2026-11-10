@@ -10,6 +10,7 @@ const TemplatePage = React.lazy(() => import('./features/marketing/TemplatePage'
 const SeoLandingPage = React.lazy(() => import('./features/marketing/SeoLandingPage'));
 const BlogPage = React.lazy(() => import('./features/marketing/BlogPage'));
 const ForBusinessesPage = React.lazy(() => import('./features/marketing/ForBusinessesPage'));
+const BusinessDetailPage = React.lazy(() => import('./features/marketing/BusinessDetailPage'));
 import { SEO_ROUTES } from './features/marketing/seo-pages';
 
 function HashRouteHandler({ children }) {
@@ -50,6 +51,9 @@ function App() {
                     <Route path="/" element={<HomePage routePath="/" />} />
                     <Route path="/features" element={<Navigate to="/#features" replace />} />
                     <Route path="/for-businesses" element={<ForBusinessesPage />} />
+                    <Route path="/businesses" element={<ForBusinessesPage />} />
+                    <Route path="/businesses/:categorySlug/:businessSlug" element={<BusinessDetailPage />} />
+                    <Route path="/for-businesses/:categorySlug/:businessSlug" element={<BusinessDetailPage />} />
                     <Route path="/solutions/businesses" element={<Navigate to="/solutions/small-businesses" replace />} />
                     <Route path="/solutions/:slug" element={<PublicPage kind="solution" />} />
                     <Route path="/pricing" element={<PublicPage kind="pricing" />} />
