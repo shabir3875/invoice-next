@@ -189,8 +189,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote structural demolition, interior strip-outs, heavy equipment hours, debris haul-away fees, and dump permits.',
         image:
-          'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Heavy site demolition and structural clearing operation',
+          'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Heavy demolition machinery and structural site clearing equipment',
         url: '/businesses/trades/demolition',
       },
       {
@@ -213,8 +213,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill interior and exterior painting jobs, surface preparation, primer and paint gallons, and decorator labor hours.',
         image:
-          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Freshly painted modern residential interior',
+          'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional painter applying fresh paint to a wall with a roller',
         url: '/businesses/trades/painting',
       },
       {
@@ -225,8 +225,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Issue fast on-site repair invoices for diagnostic service calls, replacement components, warranty work, and technician hours.',
         image:
-          'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Technician performing equipment repair and diagnostics',
+          'https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Technician using professional tools for equipment repair and maintenance',
         url: '/businesses/trades/repair',
       },
       {
@@ -261,8 +261,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Send room-by-room or exterior square-footage painting quotes with coat counts, paint brand specs, and prep labor.',
         image:
-          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Professional painting estimator reviewing interior wall finishes',
+          'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional painting brushes, rollers, and color preparation on site',
         url: '/businesses/trades/painting-quote-templates',
       },
       {
@@ -273,8 +273,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Document water, fire, and storm damage mitigation, drying equipment rentals, and structural rebuild line items.',
         image:
-          'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Property restoration specialist reviewing structural plans',
+          'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Restored residential property exterior after structural renovation',
         url: '/businesses/trades/restoration',
       },
       {
@@ -321,8 +321,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill full roof replacements, shingle squares, underlayment, flashing repairs, tear-off disposal, and progress deposits.',
         image:
-          'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Roofing and exterior construction crew working on a building',
+          'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Roofing contractor installing residential roof shingles',
         url: '/businesses/trades/roofing',
       },
       {
@@ -369,8 +369,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Present clear roofing proposals detailing pitch, roofing squares, ventilation, gutter work, and warranty terms.',
         image:
-          'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Roofing estimator reviewing building plans and material specs',
+          'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Roofing estimator inspecting residential roof shingles for a project quote',
         url: '/businesses/trades/roofing-quote-templates',
       },
       {
@@ -417,8 +417,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote commercial snow plowing contracts by depth triggers, per-push rates, walkway shoveling, and salt applications.',
         image:
-          'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Commercial site crew preparing outdoor equipment',
+          'https://images.unsplash.com/photo-1517299321609-52687d1bc55a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Snow removal plow clearing a snow-covered roadway in winter',
         url: '/businesses/trades/snow-removal-quote-templates',
       },
       {
@@ -441,8 +441,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice luxury limousine charters, airport transfers, hourly event packages, fuel surcharges, and driver gratuities.',
         image:
-          'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Executive chauffeur and limousine transport service',
+          'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional chauffeur driving an executive luxury vehicle',
         url: '/businesses/trades/limo-service',
       },
       {
@@ -453,8 +453,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill weekly pool skimming and chemical balancing, filter and pump repairs, seasonal openings, and liner replacements.',
         image:
-          'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Pool technician inspecting water circulation and plumbing valves',
+          'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Crystal-clear blue swimming pool maintained by a pool service specialist',
         url: '/businesses/trades/pool-service',
       },
       {
@@ -465,8 +465,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote ceramic, porcelain, and natural stone tile jobs covering backer board, thin-set mortar, grouting, and square-foot labor.',
         image:
-          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Modern tiled interior finished by a professional installer',
+          'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Modern ceramic and stone tile installation in a residential interior',
         url: '/businesses/trades/tile-installation',
       },
       {
@@ -477,8 +477,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Create itemized flooring estimates for hardwood, LVP, carpet, subfloor leveling, trim transitions, and old floor removal.',
         image:
-          'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Hardwood and timber flooring materials measured for installation',
+          'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Hardwood flooring installation in a bright modern room',
         url: '/businesses/trades/flooring-quote-templates',
       },
       {
@@ -489,8 +489,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Issue instant mobile invoices for emergency lockouts, rekeying, smart lock installations, and commercial master key systems.',
         image:
-          'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Locksmith holding keys and security hardware',
+          'https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Keys and precision lock hardware prepared by a professional locksmith',
         url: '/businesses/trades/locksmith',
       },
       {
@@ -501,8 +501,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Prepare exterior soft-wash and pressure-washing quotes for roofs, driveways, commercial storefronts, and decks.',
         image:
-          'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Exterior surface cleaning and pressure washing equipment',
+          'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'High-pressure exterior surface washing and cleaning equipment',
         url: '/businesses/trades/pressure-washing-quote-templates',
       },
       {
@@ -513,8 +513,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill hookup fees, loaded mileage rates, roadside winch-outs, impound lot storage days, and commercial fleet calls.',
         image:
-          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Automotive roadside recovery and workshop service',
+          'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Roadside vehicle inspection and automotive recovery service',
         url: '/businesses/trades/towing',
       },
       {
@@ -525,8 +525,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Combine punch-list home repairs, fixture installations, hardware supplies, and hourly labor into one clear customer quote.',
         image:
-          'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Handyman preparing tools and repair estimate on site',
+          'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Handyman workshop tools and repair equipment on a workbench',
         url: '/businesses/trades/handyman-quote-templates',
       },
       {
@@ -537,8 +537,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote bricklaying, stone veneer, chimney repointing, concrete block walls, mortar materials, and mason crew hours.',
         image:
-          'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Masonry and structural construction crew on site',
+          'https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Brickwork and structural masonry wall construction',
         url: '/businesses/trades/masonry',
       },
       {
@@ -585,8 +585,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Provide vehicle owners with clear repair estimates detailing VIN/mileage, OEM parts, shop fees, and book labor hours.',
         image:
-          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Automotive mechanic preparing a vehicle repair estimate',
+          'https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Automotive mechanic preparing a vehicle repair estimate in a service bay',
         url: '/businesses/trades/mechanic-quote-templates',
       },
       {
@@ -609,8 +609,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Itemize tree felling, rigging, crane assistance, stump grinding, wood chipping, and haul-away costs clearly.',
         image:
-          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Arborist inspecting trees and grounds for a removal estimate',
+          'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Tall timber trees inspected for professional arborist tree removal',
         url: '/businesses/trades/tree-removal-quote-templates',
       },
       {
@@ -633,8 +633,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill residential and office relocations, packing supplies, crew loading hours, transit mileage, and storage-in-transit.',
         image:
-          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Moving company team organizing packed cartons for transport',
+          'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Stacked cardboard moving boxes in a home prepared for relocation',
         url: '/businesses/trades/moving-company',
       },
       {
@@ -645,7 +645,7 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Break down kitchen, bathroom, and basement remodeling estimates into demolition, rough-ins, finishes, and draw schedules.',
         image:
-          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
+          'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=640&q=80',
         imageAlt: 'Remodeled residential kitchen and interior living space',
         url: '/businesses/trades/remodeling-quote-templates',
       },
@@ -657,8 +657,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice freight hauls, per-mile rates, detention hours, lumper reimbursements, and fuel surcharges while tracking rig expenses.',
         image:
-          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Commercial trucking and freight loading dock',
+          'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Commercial semi-truck hauling freight on a highway',
         url: '/businesses/trades/trucking',
       },
       {
@@ -681,8 +681,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote residential and commercial paint jobs with surface prep, trim and ceiling lines, primer, and finish coats.',
         image:
-          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Clean painted walls and trim in a modern building',
+          'https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Painter preparing walls and trim for a commercial paint quote',
         url: '/businesses/trades/paint-quote-templates',
       },
       {
@@ -898,8 +898,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Track PC hardware inventory, itemize custom builds and diagnostic repair labor, and issue warranty-ready customer invoices.',
         image:
-          'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Technician testing computer hardware and laptops at a clean workbench',
+          'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Computer hardware technician inspecting a PC motherboard and components',
         url: '/businesses/business/computer-shop',
       },
       {
@@ -934,8 +934,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill wholesale pastry accounts, custom cake orders, event catering deposits, and daily ingredient supplier expenses.',
         image:
-          'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Small bakery owner serving customers and managing orders at the counter',
+          'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Freshly baked artisan bread loaves and pastries in a bakery',
         url: '/businesses/business/bakery',
       },
       {
@@ -946,8 +946,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Create itemized guest folios, corporate stay invoices, room block quotes, and occupancy tax summaries for lodging properties.',
         image:
-          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Welcoming boutique lodging interior prepared for arriving guests',
+          'https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Welcoming boutique hotel and lodging guest room',
         url: '/businesses/business/lodging',
       },
       {
@@ -1018,7 +1018,7 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Manage guest booking deposits, nightly room rates, dining add-ons, and housekeeping supply expenses for your B&B.',
         image:
-          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
+          'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=640&q=80',
         imageAlt: 'Bright, inviting guest room in a boutique bed and breakfast property',
         url: '/businesses/business/bed-and-breakfast',
       },
@@ -1079,8 +1079,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice private dance lessons, group class packages, choreography fees, studio rentals, and recital costume expenses.',
         image:
-          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Instructor organizing class schedules and student billing records',
+          'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Dance instructor leading a choreography class in a dance studio',
         url: '/businesses/business/dance-teacher',
       },
       {
@@ -1139,8 +1139,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Track tent, seating, lighting, and AV inventory while billing event booking deposits, delivery fees, and damage waivers.',
         image:
-          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Event space staged with professional party rental seating and lighting',
+          'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Festive event celebration setup with party rentals and decor',
         url: '/businesses/business/party-rental',
       },
       {
@@ -1175,8 +1175,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill commercial hotel and restaurant laundry accounts, garment care packages, alterations, and pickup-and-delivery routes.',
         image:
-          'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Professional garment and commercial cleaning service operation',
+          'https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Clean pressed garments hanging on racks in a dry cleaning shop',
         url: '/businesses/business/dry-cleaning',
       },
       {
@@ -1224,8 +1224,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Track SKU inventory across channels, issue B2B and wholesale order invoices, and monitor shipping and supplier unit costs.',
         image:
-          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Ecommerce fulfillment team preparing customer orders and inventory boxes',
+          'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Ecommerce order fulfillment boxes prepared for parcel shipping',
         url: '/businesses/business/ecommerce',
       },
       {
@@ -1296,8 +1296,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice studio recording sessions, mixing and mastering packages, live event audio engineering, and gear rental fees.',
         image:
-          'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Audio and media production equipment inside a professional studio',
+          'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Sound engineer operating a professional multi-channel audio mixing console',
         url: '/businesses/business/sound-engineer',
       },
       {
@@ -1308,8 +1308,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Prepare vehicle sales invoices, trade-in adjustments, dealer documentation fees, warranty packages, and deposit receipts.',
         image:
-          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Automotive specialist preparing a vehicle for customer handover',
+          'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'New vehicles displayed at a professional car dealer showroom',
         url: '/businesses/business/car-dealer',
       },
       {
@@ -1320,8 +1320,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Manage event budgets, client booking deposits, vendor pass-through expenses, and staged production milestone billing.',
         image:
-          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Event planner inspecting a professionally arranged conference hall',
+          'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Event planner table arrangement and banquet hall setup',
         url: '/businesses/business/event-planner',
       },
       {
@@ -1344,8 +1344,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill wellness packages, massage and aesthetic memberships, corporate retreat bookings, and retail skincare inventory.',
         image:
-          'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Wellness and spa practitioner attending to a client in a serene clinic',
+          'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Serene wellness spa treatment room prepared for a client session',
         url: '/businesses/business/spa',
       },
       {
@@ -1356,8 +1356,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Manage fleet sales quotes, showroom vehicle billing, service department invoices, and parts inventory in one system.',
         image:
-          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Automotive dealership service and inspection bay',
+          'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Modern automotive car dealership showroom floor',
         url: '/businesses/business/car-dealership',
       },
       {
@@ -1368,8 +1368,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice wholesale produce buyers, restaurant farm-to-table accounts, CSA subscriptions, and track feed and equipment costs.',
         image:
-          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Well-tended agricultural greenery and cultivated grounds',
+          'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Lush agricultural farm fields and crop cultivation at sunrise',
         url: '/businesses/business/farm',
       },
       {
@@ -1404,8 +1404,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Itemize daily or weekly vehicle rental rates, mileage charges, insurance waivers, fuel top-ups, and security deposits.',
         image:
-          'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Rental agent preparing keys and rental agreement for a customer',
+          'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Driver seated behind the wheel of a clean rental car',
         url: '/businesses/business/car-rental',
       },
       {
@@ -1440,8 +1440,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Monitor high-volume stock levels, manage B2B corporate grocery accounts, and track wholesale supplier purchase costs.',
         image:
-          'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Retail checkout and customer billing counter in a busy store',
+          'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Well-stocked fresh produce and grocery aisles inside a supermarket',
         url: '/businesses/business/supermarket',
       },
       {
@@ -1452,8 +1452,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Create clear buyer order quotes, bill of sale invoices, deposit receipts, and balance statements for automotive sales.',
         image:
-          'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Sales professional completing a vehicle purchase agreement with a buyer',
+          'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Polished sports sedan presented for automotive car sales',
         url: '/businesses/business/car-sales',
       },
       {
@@ -1500,8 +1500,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill monthly climate-controlled vehicle storage, battery tending, detailing add-ons, and long-term collector contracts.',
         image:
-          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Indoor automotive facility maintaining and storing customer vehicles',
+          'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Indoor climate-controlled automotive storage facility',
         url: '/businesses/business/car-storage',
       },
       {
@@ -1524,8 +1524,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Build itemized travel itinerary quotes covering flights, accommodations, guided tours, group deposits, and booking balances.',
         image:
-          'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Travel advisor presenting a custom itinerary and quote to clients',
+          'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Travel planning map, camera, and itinerary notebook for a travel agency quote',
         url: '/businesses/business/travel-agency-quote-templates',
       },
       {
@@ -1536,8 +1536,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Issue commercial cargo invoices, container handling bills, demurrage charges, and freight forwarding documentation.',
         image:
-          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Cargo warehouse team organizing palletized commercial shipments',
+          'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Shipping containers stacked at an international commercial cargo terminal',
         url: '/businesses/business/cargo',
       },
       {
@@ -1548,8 +1548,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill LTL and FTL freight loads, linehaul rates, fuel surcharges, accessorial fees, and carrier settlement statements.',
         image:
-          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Freight operations supervisor checking shipping manifests in a warehouse',
+          'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Commercial freight transport truck on an interstate route',
         url: '/businesses/business/freight',
       },
       {
@@ -1572,8 +1572,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Send term tuition invoices, private tutoring statements, course material fees, and installment payment receipts.',
         image:
-          'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Academic tutor reviewing lesson plans and tuition schedules',
+          'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Student studying course materials and writing notes at a desk',
         url: '/businesses/business/tuition',
       },
       {
@@ -1584,8 +1584,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Manage seasonal lookbook line sheets, boutique wholesale invoices, garment manufacturing costs, and SKU inventory.',
         image:
-          'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Apparel collection displayed inside a modern clothing brand showroom',
+          'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Apparel collection hanging on racks in a clothing brand studio',
         url: '/businesses/business/clothing-brand',
       },
       {
@@ -1632,8 +1632,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice corporate banquets, VIP hospitality suites, catering packages, venue bookings, and vendor operating costs.',
         image:
-          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Hospitality venue prepared for corporate guests and dining',
+          'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Upscale hotel resort pool and hospitality property',
         url: '/businesses/business/hospitality',
       },
       {
@@ -1644,8 +1644,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill private dining events, off-site catering orders, corporate meal accounts, and track food and beverage supplier bills.',
         image:
-          'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Restaurant manager reviewing catering orders and customer accounts',
+          'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Warm, inviting restaurant dining room with set tables',
         url: '/businesses/business/restaurant',
       },
       {
@@ -1656,8 +1656,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Manage vineyard and distributor case inventory, restaurant trade invoices, private cellar orders, and excise tax lines.',
         image:
-          'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Curated boutique retail shelves and specialty merchant interior',
+          'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Red wine poured into tasting glasses alongside cellar barrels',
         url: '/businesses/business/wine',
       },
       {
@@ -1775,8 +1775,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill 1-on-1 personal training packages, custom workout plans, nutrition coaching retainers, and gym session bundles.',
         image:
-          'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Personal trainer coaching a client on strength and mobility exercises',
+          'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Personal trainer coaching a client on strength exercises in a fitness gym',
         url: '/businesses/health/personal-trainer',
       },
       {
@@ -1811,8 +1811,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Track pharmaceutical stock and reorder levels, invoice care homes and clinic accounts, and log wholesale supplier bills.',
         image:
-          'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Healthcare pharmacist reviewing medication records in a clinical setting',
+          'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Pharmacist organizing prescription medications on pharmacy shelves',
         url: '/businesses/health/pharmacist',
       },
       {
@@ -1835,8 +1835,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice independent nursing shifts, private home-care visits, agency contract hours, and reimbursable medical supplies.',
         image:
-          'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Registered nurse providing attentive patient care in a clinical setting',
+          'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Registered nurse in clinical scrubs reviewing a patient care chart',
         url: '/businesses/health/nurse',
       },
       {
@@ -1859,8 +1859,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill individual, couples, physical, or occupational therapy sessions while keeping client balances and practice expenses organized.',
         image:
-          'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Therapist welcoming a client into a comfortable consultation space',
+          'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Therapist working with a patient in a rehabilitation and therapy clinic',
         url: '/businesses/health/therapy',
       },
       {
@@ -1918,8 +1918,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Manage custom travel packages, flight and hotel bookings, group tour deposits, and client itinerary statements.',
         image:
-          'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Travel agency consultant reviewing tour itineraries with clients',
+          'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Commercial airliner wing above the clouds for travel agency bookings',
         url: '/businesses/services/travel-agency',
       },
       {
@@ -1942,8 +1942,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice 1-on-1 academic tutoring sessions, exam prep bundles, study materials, and monthly student billing summaries.',
         image:
-          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Private tutor reviewing study materials at a desk',
+          'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Academic tutor and student working through study materials',
         url: '/businesses/services/tutoring',
       },
       {
@@ -1966,8 +1966,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill private piano lessons, monthly music tuition packages, sheet music books, and student recital fees.',
         image:
-          'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Studio workspace prepared for private music and piano instruction',
+          'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Grand piano keyboard keys prepared for a private piano lesson',
         url: '/businesses/services/piano-lesson',
       },
       {
@@ -2002,8 +2002,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Manage bridal styling packages, salon chair rentals, retail hair care inventory, and vendor supply expenses.',
         image:
-          'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Salon reception counter managing client appointments and billing',
+          'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Hairstylist styling a client inside a modern hair salon',
         url: '/businesses/services/hair-salon',
       },
       {
@@ -2014,8 +2014,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Organize term lesson schedules, recurring family tuition statements, makeup session credits, and studio expenses.',
         image:
-          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Independent music teacher organizing student lesson plans',
+          'https://images.unsplash.com/photo-1552422535-c45813c61732?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Pianist hands playing a grand piano during music instruction',
         url: '/businesses/services/piano-teacher',
       },
       {
@@ -2026,8 +2026,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice passenger shuttles, corporate commuter routes, charter bookings, mileage rates, and fleet maintenance expenses.',
         image:
-          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Transportation operations team coordinating commercial vehicle dispatch',
+          'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Commercial transportation fleet vehicle on a highway',
         url: '/businesses/services/transportation',
       },
       {
@@ -2050,8 +2050,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote residential repairs, drywall and fixture replacements, hardware materials, and handyman service hours.',
         image:
-          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Well-maintained home interior after professional repair work',
+          'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional home repair tools and hardware on a workbench',
         url: '/businesses/services/home-repair',
       },
       {
@@ -2062,8 +2062,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Issue monthly preschool tuition invoices, enrollment deposit receipts, after-care add-ons, and family account statements.',
         image:
-          'https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Early childhood educators organizing classroom programs',
+          'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Young child painting and learning in an early childhood preschool',
         url: '/businesses/services/preschool',
       },
       {
@@ -2098,8 +2098,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote driveway, exterior siding, deck, and commercial fleet power washing jobs with fast on-site estimates and invoices.',
         image:
-          'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Technician operating high-pressure water equipment on site',
+          'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional exterior surface and window pressure washing',
         url: '/businesses/services/pressure-washing',
       },
       {
@@ -2110,8 +2110,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Estimate tree trimming, hazardous limb removal, stump grinding, crane haul-away fees, and storm cleanup jobs.',
         image:
-          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Professional arborist and tree care grounds maintenance',
+          'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Tall forest trees cared for by a professional tree service',
         url: '/businesses/services/tree-service',
       },
       {
@@ -2134,8 +2134,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill custom jewelry commissions, ring resizing and stone-setting repairs, appraisal certificates, and precious metal inventory.',
         image:
-          'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Boutique showroom displaying fine retail merchandise',
+          'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Fine gold and diamond jewelry displayed in a boutique showcase',
         url: '/businesses/services/jewelry',
       },
       {
@@ -2158,8 +2158,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill same-day parcel dispatches, medical and legal courier routes, rush delivery surcharges, and corporate B2B accounts.',
         image:
-          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Courier sorting express parcels for local delivery',
+          'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Express courier packages labeled and ready for local dispatch',
         url: '/businesses/services/courier',
       },
       {
@@ -2170,8 +2170,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote executive black-car transfers, wedding limousine charters, hourly wait times, airport tolls, and chauffeur gratuities.',
         image:
-          'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Executive chauffeur and corporate transport professional',
+          'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Luxury black executive sedan prepared for chauffeur limousine service',
         url: '/businesses/services/limousine',
       },
       {
@@ -2194,8 +2194,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Document continuing education fees, research lab service billings, campus facility rentals, and departmental expenses.',
         image:
-          'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Modern academic and institutional administration building',
+          'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'University graduates and historic academic campus building',
         url: '/businesses/services/university',
       },
       {
@@ -2206,8 +2206,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Automate weekly or monthly childcare billing, sibling discounts, registration fees, and parent payment receipts.',
         image:
-          'https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Daycare staff coordinating family schedules and care programs',
+          'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Colorful learning blocks and toys inside a children daycare center',
         url: '/businesses/services/daycare',
       },
       {
@@ -2230,8 +2230,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill commercial patrol contracts, alarm and CCTV installation packages, event security staffing, and monitoring retainers.',
         image:
-          'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Security systems specialist inspecting access control equipment',
+          'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Commercial CCTV surveillance camera mounted for building security',
         url: '/businesses/services/security',
       },
       {
@@ -2242,8 +2242,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote custom furniture reupholstery, fabric yardage, foam replacement, antique restoration labor, and pickup/delivery.',
         image:
-          'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Craftsperson measuring materials in an upholstery and woodworking studio',
+          'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Custom upholstered armchair in a residential living room',
         url: '/businesses/services/upholstery',
       },
       {
@@ -2254,8 +2254,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Track last-mile delivery routes, per-drop fees, white-glove assembly charges, and fuel expenses in one workspace.',
         image:
-          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Delivery specialist preparing customer packages for dispatch',
+          'https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Courier delivering cardboard parcel boxes to a customer',
         url: '/businesses/services/delivery',
       },
       {
@@ -2266,8 +2266,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice bridal makeup trials, wedding party bookings, editorial shoot day rates, kit fees, and travel retainers.',
         image:
-          'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Creative beauty and styling team preparing for a client session',
+          'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Makeup artist applying professional cosmetics during a beauty session',
         url: '/businesses/services/makeup-artist',
       },
       {
@@ -2278,8 +2278,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Itemize uniformed guard shifts, holiday and overnight rates, site supervision hours, and corporate security statements.',
         image:
-          'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Security professional managing site access and shift logs',
+          'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Electronic access control lock and building security system',
         url: '/businesses/services/security-guard',
       },
       {
@@ -2290,8 +2290,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Provide pet owners with clear, itemized veterinary invoices covering wellness exams, diagnostics, medications, and surgery.',
         image:
-          'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Modern veterinary and clinical care facility',
+          'https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Veterinarian examining a puppy on a clinical examination table',
         url: '/businesses/services/veterinary',
       },
       {
@@ -2302,8 +2302,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Manage recurring merchant delivery contracts, scheduled route billing, proof-of-delivery references, and fleet costs.',
         image:
-          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Delivery service hub organizing commercial parcels',
+          'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Commercial parcel delivery packages staged for route dispatch',
         url: '/businesses/services/delivery-service',
       },
       {
@@ -2314,8 +2314,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Prepare binding and non-binding moving estimates covering crew hours, truck size, packing boxes, and long-distance mileage.',
         image:
-          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Moving company crew packing and staging boxes for relocation',
+          'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Packed moving boxes in a bright room ready for a moving company quote',
         url: '/businesses/services/moving-company-quote-templates',
       },
       {
@@ -2338,8 +2338,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote custom multi-tier wedding cakes, tasting consultations, booking deposits, venue delivery, and cake stand rentals.',
         image:
-          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Elegant reception venue prepared for a wedding celebration',
+          'https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Elegant multi-tier white wedding cake decorated with fresh flowers',
         url: '/businesses/services/wedding-cake',
       },
       {
@@ -2350,8 +2350,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill weekly dog walking packs, solo or group walks, puppy drop-in visits, and recurring pet owner statements.',
         image:
-          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Outdoor park pathway used for professional dog walking services',
+          'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Happy dogs running outdoors during a professional dog walking session',
         url: '/businesses/services/dog-walking',
       },
       {
@@ -2362,8 +2362,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Manage private instrument instruction billing, semester tuition packages, ensemble workshops, and sheet music expenses.',
         image:
-          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Music instructor preparing lesson materials and student invoices',
+          'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Acoustic guitar and studio microphone used by a music teacher',
         url: '/businesses/services/music-teacher',
       },
       {
@@ -2374,8 +2374,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice seasonal snow plowing retainers, per-push commercial lot clearing, de-icing salt applications, and equipment costs.',
         image:
-          'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Outdoor commercial property maintenance crew on site',
+          'https://images.unsplash.com/photo-1483664852095-d6cc6870702d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Winter snow-covered street and property requiring snow removal',
         url: '/businesses/services/snow-removal',
       },
       {
@@ -2386,8 +2386,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Organize full-service wedding planning retainers, day-of coordination packages, vendor deposits, and client budget tracking.',
         image:
-          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Wedding planner coordinating table layouts and event design',
+          'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Bride and groom bouquet and elegant wedding planner styling',
         url: '/businesses/services/wedding-planner',
       },
       {
@@ -2398,8 +2398,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Issue clean invoices and receipts for private driving shifts, contract haulage, mileage reimbursements, and fuel logs.',
         image:
-          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Professional vehicle inspection and commercial driving service',
+          'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional driver hands on the steering wheel of a modern vehicle',
         url: '/businesses/services/driver',
       },
       {
@@ -2410,8 +2410,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Track weekly childcare hours, overtime rates, family errand reimbursements, and clear payment statements.',
         image:
-          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Warm, organized family home environment for private childcare',
+          'https://images.unsplash.com/photo-1544776193-352d25ca82cd?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Caring nanny and young child learning together in a welcoming room',
         url: '/businesses/services/nanny',
       },
       {
@@ -2434,8 +2434,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill structural and mobile welding repairs, custom metal fabrication, steel materials, and shop labor hours.',
         image:
-          'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Skilled metalworker and fabrication specialist on site',
+          'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Welder wearing a protective mask with bright metal welding sparks',
         url: '/businesses/services/welding',
       },
       {
@@ -2446,8 +2446,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Manage course enrollment invoices, corporate training workshops, curriculum development fees, and educational materials.',
         image:
-          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Educators collaborating on training programs in a modern learning space',
+          'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Educator lecturing to students in a modern classroom',
         url: '/businesses/services/education',
       },
       {
@@ -2470,8 +2470,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Generate corporate account transfer statements, airport voucher invoices, and track vehicle fuel and maintenance expenses.',
         image:
-          'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Private hire and taxi dispatch keys and booking records',
+          'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Passenger vehicle operating on a city street for taxi transport',
         url: '/businesses/services/taxi',
       },
       {
@@ -2482,8 +2482,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote residential and high-rise commercial window washing, gutter clearing, screen repairs, and recurring route billing.',
         image:
-          'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Sunlit glass facade of a modern commercial office building',
+          'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional window cleaner washing glass panels with a squeegee',
         url: '/businesses/services/window-cleaning',
       },
       {
@@ -2494,8 +2494,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Prepare floral design proposals for weddings and corporate events, track stem inventory, and bill hotel and lobby subscriptions.',
         image:
-          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Botanical and floral greenery arranged by a professional studio',
+          'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Freshly arranged colorful flower bouquet in a florist studio',
         url: '/businesses/services/florist',
       },
       {
@@ -2506,8 +2506,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Itemize weekly meal-prep services, private dinner party menus, grocery receipts, and kitchen staffing fees.',
         image:
-          'https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Culinary professional organizing custom dining orders and ingredients',
+          'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Personal chef plating a gourmet dish in a professional kitchen',
         url: '/businesses/services/personal-chef',
       },
       {
@@ -2518,8 +2518,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice independent teaching contracts, workshop facilitation, guest lectures, and classroom resource expenses.',
         image:
-          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Teacher preparing instructional workshops and student records',
+          'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Teacher guiding students in an interactive classroom lesson',
         url: '/businesses/services/teaching',
       },
       {
@@ -2530,8 +2530,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill mobile auto glass chip repairs, full windshield replacements, ADAS calibration fees, and fleet service accounts.',
         image:
-          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Automotive technician servicing a vehicle in a repair bay',
+          'https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Clear automotive front windshield and vehicle exterior',
         url: '/businesses/services/windshield-repair',
       },
       {
@@ -2554,8 +2554,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote overnight pet-sitting stays, holiday care surcharges, medication administration, and repeat client packages.',
         image:
-          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Comfortable home setting for in-home pet sitting care',
+          'https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Friendly golden retriever dog cared for during an in-home pet-sitting visit',
         url: '/businesses/services/pet-sitting',
       },
       {
@@ -2637,8 +2637,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice wedding and club DJ bookings, sound and lighting rig rentals, overtime hours, and non-refundable event retainers.',
         image:
-          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Event stage lighting and sound setup prepared for a live performance',
+          'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Live DJ performance and crowd lighting at an entertainment venue',
         url: '/businesses/creative/dj',
       },
       {
@@ -2649,8 +2649,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Manage live performance contracts, corporate entertainment bookings, production crew expenses, and deposit schedules.',
         image:
-          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Live event venue and entertainment stage setup',
+          'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Concert stage lighting and live music entertainment performance',
         url: '/businesses/creative/entertainment',
       },
       {
@@ -2661,8 +2661,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote editorial illustrations, book cover commissions, character concept art, revision rounds, and commercial buyout rights.',
         image:
-          'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Illustrator sketching and refining digital artwork at a studio desk',
+          'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Illustrator brushes, paints, and artistic studio workspace',
         url: '/businesses/creative/illustrator',
       },
       {
@@ -2685,8 +2685,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Manage runway styling fees, bespoke garment commissions, showroom wholesale orders, and fabric sourcing expenses.',
         image:
-          'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Fashion studio and curated apparel collection display',
+          'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Curated high-fashion wardrobe and designer clothing rack',
         url: '/businesses/creative/fashion',
       },
       {
@@ -2697,8 +2697,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice sponsored social posts, brand ambassadorships, UGC video deliverables, exclusivity windows, and paid usage rights.',
         image:
-          'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Content creator and digital media team planning a brand campaign',
+          'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Social media and digital creator apps on a modern device',
         url: '/businesses/creative/influencer',
       },
       {
@@ -2733,8 +2733,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Track above- and below-the-line production budgets, location permits, cinema gear rentals, crew day rates, and post-production.',
         image:
-          'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Cinema camera and film production equipment in a studio',
+          'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Film production clapperboard and cinema camera on set',
         url: '/businesses/creative/film-production',
       },
       {
@@ -2745,8 +2745,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill spatial planning consultations, 3D rendering packages, FF&E procurement markups, and contractor coordination retainers.',
         image:
-          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Thoughtfully styled modern interior designed by a professional',
+          'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Luxury modern living room styled by an interior designer',
         url: '/businesses/creative/interior-designer',
       },
       {
@@ -2781,8 +2781,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Present itemized wedding and event floral proposals covering bridal bouquets, centerpieces, arch installations, and strike fees.',
         image:
-          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Lush botanical and floral greenery prepared for an event quote',
+          'https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Bespoke floral bouquet arrangement prepared for a florist quote',
         url: '/businesses/creative/florist-quote-templates',
       },
       {
@@ -2805,8 +2805,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill commercial video shoots, scripting, multi-cam filming, color grading, motion graphics, and final cut deliveries.',
         image:
-          'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Professional video production camera and studio lens',
+          'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Videographer filming with a professional cinema camera rig',
         url: '/businesses/creative/video-production',
       },
       {
@@ -2817,8 +2817,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Invoice recording booth lockouts, tracking and mixing engineer hours, analog mastering, and session musician fees.',
         image:
-          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Creative studio workspace for audio and music production',
+          'https://images.unsplash.com/photo-1598653222000-6b7b7a552625?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Recording studio condenser microphone and acoustic booth',
         url: '/businesses/creative/music-studio',
       },
       {
@@ -2829,8 +2829,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Create transparent video production estimates itemizing pre-production storyboards, shoot days, drone footage, and editing rounds.',
         image:
-          'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Producer preparing an itemized video production quote',
+          'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Video editor timeline and color grading workstation for a video quote',
         url: '/businesses/creative/video-quote-templates',
       },
       {
@@ -2853,8 +2853,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Bill live gig guarantees, session recording tracks, composition royalties, private event performances, and travel per diems.',
         image:
-          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Live performance hall prepared for professional musicians',
+          'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Musician playing acoustic guitar under stage lights',
         url: '/businesses/creative/musician',
       },
       {
@@ -2865,8 +2865,8 @@ export const BUSINESS_CATEGORIES = [
         description:
           'Quote wedding and event videography packages, highlight reels, raw footage archival drives, and second-shooter day rates.',
         image:
-          'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Videographer preparing camera rig and lenses for a shoot',
+          'https://images.unsplash.com/photo-1579632652768-6cb9dcf85912?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional digital cinema camera lens used for event videography',
         url: '/businesses/creative/videography',
       },
     ],
