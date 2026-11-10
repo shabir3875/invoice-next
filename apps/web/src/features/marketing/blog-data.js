@@ -108,7 +108,7 @@ export const ARTICLES = {
       },
     ],
     relatedLinks: [
-      ['Online Invoice Generator', '/invoice-generator'],
+      ['Free Invoice Generator', '/free-invoice-generator'],
       ['Freelance Invoice Templates', '/templates/freelance'],
       ['Fast Invoicing Feature', '/features/lightning-fast-invoicing'],
       ['Document Customization', '/features/document-customization'],

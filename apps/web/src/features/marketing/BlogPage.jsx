@@ -19,7 +19,7 @@ import { ARTICLES, BLOG_CATEGORIES } from './blog-data';
 import './blog-page.css';
 
 const QUICK_TOOL_LINKS = [
-  ['Online Invoice Generator', '/invoice-generator'],
+  ['Fast Online Invoicing', '/features/lightning-fast-invoicing'],
   ['Freelance Invoice Templates', '/templates/freelance'],
   ['Explore 200+ Business Industries', '/for-businesses'],
   ['Estimates to Invoices Workflow', '/features/estimates-to-invoices'],
@@ -652,7 +652,7 @@ export default function BlogPage({ slug }) {
                   <div className="mt-3 flex flex-wrap gap-3">
                     {(
                       article.relatedLinks || [
-                        ['Invoice Generator', '/invoice-generator'],
+                        ['Fast Invoicing', '/features/lightning-fast-invoicing'],
                         ['Invoice Templates', '/invoice-templates'],
                         ['Invoice Management', '/invoice-management'],
                       ]
@@ -716,7 +716,7 @@ export default function BlogPage({ slug }) {
                 <ul className="article-related-links">
                   {(
                     article.relatedLinks || [
-                      ['Invoice Generator', '/invoice-generator'],
+                      ['Fast Invoicing', '/features/lightning-fast-invoicing'],
                       ['Invoice Templates', '/invoice-templates'],
                       ['For Businesses', '/for-businesses'],
                     ]

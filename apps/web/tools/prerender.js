@@ -329,6 +329,7 @@ async function prerender() {
 				path.join('features', 'business-reports'),
 				path.join('features', 'create-estimates-invoices'),
 				'recurring-invoices',
+				'invoice-generator',
 			];
 			for (const destinationRoot of [rootDistDir, repoRootDir]) {
 				for (const retiredEntry of retiredDeployEntries) {

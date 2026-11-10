@@ -7,7 +7,7 @@ export const FOOTER_GROUPS = [
     ['Inventory Tracking', '/features/inventory-tracking'], ['Payment Follow-Ups', '/features/batch-payment-reminders'],
     ['Sales & Stock Reports', '/features/sales-stock-reports'], ['Import & Export', '/features/import-export-records'],
     ['Document Customization', '/features/document-customization'],
-    ['Clients & Services', '/client-management'], ['Invoice Generator', '/invoice-generator'],
+    ['Clients & Services', '/client-management'],
     ['Free Templates', '/invoice-templates'], ['Products & Inventory', '/features/client-management'],
   ]],
   ['Solutions', [
