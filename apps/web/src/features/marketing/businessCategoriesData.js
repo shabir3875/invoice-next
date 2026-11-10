@@ -182,52 +182,532 @@ export const BUSINESS_CATEGORIES = [
         existingSolutionSlug: 'contractors',
       },
       {
-        id: 'electrician',
-        name: 'Electrician',
-        slug: 'electrician',
+        id: 'demolition',
+        name: 'Demolition',
+        slug: 'demolition',
+        icon: Hammer,
+        description:
+          'Quote structural demolition, interior strip-outs, heavy equipment hours, debris haul-away fees, and dump permits.',
+        image:
+          'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Heavy site demolition and structural clearing operation',
+        url: '/businesses/trades/demolition',
+      },
+      {
+        id: 'landscaping-quote-templates',
+        name: 'Landscaping Quote Templates',
+        slug: 'landscaping-quote-templates',
+        icon: Trees,
+        description:
+          'Prepare itemized landscaping estimates covering grading, sod installation, plantings, hardscape pavers, and crew labor.',
+        image:
+          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Landscaped garden pathway and manicured lawn maintained by professionals',
+        url: '/businesses/trades/landscaping-quote-templates',
+      },
+      {
+        id: 'painting',
+        name: 'Painting',
+        slug: 'painting',
+        icon: Palette,
+        description:
+          'Bill interior and exterior painting jobs, surface preparation, primer and paint gallons, and decorator labor hours.',
+        image:
+          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Freshly painted modern residential interior',
+        url: '/businesses/trades/painting',
+      },
+      {
+        id: 'repair',
+        name: 'Repair',
+        slug: 'repair',
+        icon: Wrench,
+        description:
+          'Issue fast on-site repair invoices for diagnostic service calls, replacement components, warranty work, and technician hours.',
+        image:
+          'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Technician performing equipment repair and diagnostics',
+        url: '/businesses/trades/repair',
+      },
+      {
+        id: 'electrical',
+        name: 'Electrical',
+        slug: 'electrical',
         icon: Zap,
         description:
           'Bill residential and commercial electrical installations, panel upgrades, wiring materials, and emergency call-outs.',
         image:
           'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=640&q=80',
         imageAlt: 'Licensed electrician inspecting commercial electrical switchgear safely',
-        url: '/businesses/trades/electrician',
+        url: '/businesses/trades/electrical',
       },
       {
-        id: 'plumber',
-        name: 'Plumber',
-        slug: 'plumber',
+        id: 'lawn-care',
+        name: 'Lawn Care',
+        slug: 'lawn-care',
+        icon: Trees,
+        description:
+          'Manage recurring lawn mowing schedules, fertilization treatments, seasonal aeration, and property maintenance statements.',
+        image:
+          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Well-maintained green lawn and residential grounds',
+        url: '/businesses/trades/lawn-care',
+      },
+      {
+        id: 'painting-quote-templates',
+        name: 'Painting Quote Templates',
+        slug: 'painting-quote-templates',
+        icon: Palette,
+        description:
+          'Send room-by-room or exterior square-footage painting quotes with coat counts, paint brand specs, and prep labor.',
+        image:
+          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional painting estimator reviewing interior wall finishes',
+        url: '/businesses/trades/painting-quote-templates',
+      },
+      {
+        id: 'restoration',
+        name: 'Restoration',
+        slug: 'restoration',
+        icon: ShieldCheck,
+        description:
+          'Document water, fire, and storm damage mitigation, drying equipment rentals, and structural rebuild line items.',
+        image:
+          'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Property restoration specialist reviewing structural plans',
+        url: '/businesses/trades/restoration',
+      },
+      {
+        id: 'electrical-quotes-templates',
+        name: 'Electrical Quotes Templates',
+        slug: 'electrical-quotes-templates',
+        icon: Zap,
+        description:
+          'Create accurate electrical project quotes covering conduit runs, breaker panels, lighting fixtures, and licensed labor.',
+        image:
+          'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Electrical contractor preparing a commercial wiring estimate',
+        url: '/businesses/trades/electrical-quotes-templates',
+      },
+      {
+        id: 'lawn-care-quotes-templates',
+        name: 'Lawn Care Quotes Templates',
+        slug: 'lawn-care-quotes-templates',
+        icon: Trees,
+        description:
+          'Build clear seasonal lawn care proposals covering weekly mowing, edging, weed control, and mulch installation.',
+        image:
+          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Lawn care professional inspecting turf and garden beds',
+        url: '/businesses/trades/lawn-care-quotes-templates',
+      },
+      {
+        id: 'pest-control',
+        name: 'Pest Control',
+        slug: 'pest-control',
+        icon: ShieldCheck,
+        description:
+          'Invoice residential extermination visits, quarterly commercial pest prevention contracts, and termite inspection reports.',
+        image:
+          'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Field service technician preparing protective treatment equipment',
+        url: '/businesses/trades/pest-control',
+      },
+      {
+        id: 'roofing',
+        name: 'Roofing',
+        slug: 'roofing',
+        icon: Home,
+        description:
+          'Bill full roof replacements, shingle squares, underlayment, flashing repairs, tear-off disposal, and progress deposits.',
+        image:
+          'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Roofing and exterior construction crew working on a building',
+        url: '/businesses/trades/roofing',
+      },
+      {
+        id: 'estimate-template-new',
+        name: 'Estimate Template NEW',
+        slug: 'estimate-template-new',
+        icon: FileText,
+        description:
+          'Create fast, itemized job estimates with material quantities, labor rates, tax calculations, and instant invoice conversion.',
+        image:
+          'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Contractor preparing a formal project estimate document',
+        url: '/businesses/trades/estimate-template-new',
+      },
+      {
+        id: 'lawn-mowing-quote-templates',
+        name: 'Lawn Mowing Quote Templates',
+        slug: 'lawn-mowing-quote-templates',
+        icon: Trees,
+        description:
+          'Quote per-cut or monthly residential and commercial lawn mowing, string trimming, and blowing packages.',
+        image:
+          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Freshly mowed lawn and landscaped residential yard',
+        url: '/businesses/trades/lawn-mowing-quote-templates',
+      },
+      {
+        id: 'plumbing',
+        name: 'Plumbing',
+        slug: 'plumbing',
         icon: Droplets,
         description:
-          'Create fast on-site quotes and invoices for pipe repairs, fixture installations, service calls, and plumbing parts.',
+          'Create fast on-site quotes and invoices for pipe repairs, water heater installations, drain clearing, and plumbing parts.',
         image:
           'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=640&q=80',
         imageAlt: 'Professional plumber repairing a water pipe fitting with a wrench',
-        url: '/businesses/trades/plumber',
+        url: '/businesses/trades/plumbing',
       },
       {
-        id: 'carpenter',
-        name: 'Carpenter',
-        slug: 'carpenter',
+        id: 'roofing-quote-templates',
+        name: 'Roofing Quote Templates',
+        slug: 'roofing-quote-templates',
+        icon: ClipboardCheck,
+        description:
+          'Present clear roofing proposals detailing pitch, roofing squares, ventilation, gutter work, and warranty terms.',
+        image:
+          'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Roofing estimator reviewing building plans and material specs',
+        url: '/businesses/trades/roofing-quote-templates',
+      },
+      {
+        id: 'fence-quote-templates',
+        name: 'Fence Quote Templates',
+        slug: 'fence-quote-templates',
         icon: Ruler,
         description:
-          'Quote custom woodwork, cabinetry, timber materials, and finish carpentry labor with polished client documents.',
+          'Estimate linear footage, post-hole concrete, wood or vinyl panels, gate hardware, and fence installation labor.',
         image:
           'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Carpenter measuring and shaping timber in a woodworking workshop',
-        url: '/businesses/trades/carpenter',
+        imageAlt: 'Craftsperson measuring timber posts and fencing materials',
+        url: '/businesses/trades/fence-quote-templates',
       },
       {
-        id: 'hvac-technician',
-        name: 'HVAC Technician',
-        slug: 'hvac-technician',
+        id: 'lawn-service-quotes-templates',
+        name: 'Lawn Service Quotes Templates',
+        slug: 'lawn-service-quotes-templates',
+        icon: Trees,
+        description:
+          'Send comprehensive turf care and grounds maintenance quotes with recurring visit schedules and seasonal add-ons.',
+        image:
+          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional lawn service grounds and garden pathway',
+        url: '/businesses/trades/lawn-service-quotes-templates',
+      },
+      {
+        id: 'plumbing-quote-templates',
+        name: 'Plumbing Quote Templates',
+        slug: 'plumbing-quote-templates',
+        icon: Droplets,
+        description:
+          'Prepare upfront plumbing estimates for rough-in piping, bathroom remodels, fixture upgrades, and emergency repairs.',
+        image:
+          'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Plumber inspecting pipe fittings for a repair quote',
+        url: '/businesses/trades/plumbing-quote-templates',
+      },
+      {
+        id: 'snow-removal-quote-templates',
+        name: 'Snow Removal Quote Templates',
+        slug: 'snow-removal-quote-templates',
         icon: Wind,
         description:
-          'Invoice heating, ventilation, and air-conditioning installations, seasonal maintenance plans, and replacement units.',
+          'Quote commercial snow plowing contracts by depth triggers, per-push rates, walkway shoveling, and salt applications.',
+        image:
+          'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Commercial site crew preparing outdoor equipment',
+        url: '/businesses/trades/snow-removal-quote-templates',
+      },
+      {
+        id: 'fencing',
+        name: 'Fencing',
+        slug: 'fencing',
+        icon: Ruler,
+        description:
+          'Bill residential privacy fences, commercial chain-link enclosures, automated gates, and post-repair services.',
+        image:
+          'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Timber and fencing materials prepared in a workshop',
+        url: '/businesses/trades/fencing',
+      },
+      {
+        id: 'limo-service',
+        name: 'Limo Service',
+        slug: 'limo-service',
+        icon: KeyRound,
+        description:
+          'Invoice luxury limousine charters, airport transfers, hourly event packages, fuel surcharges, and driver gratuities.',
+        image:
+          'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Executive chauffeur and limousine transport service',
+        url: '/businesses/trades/limo-service',
+      },
+      {
+        id: 'pool-service',
+        name: 'Pool Service',
+        slug: 'pool-service',
+        icon: Droplets,
+        description:
+          'Bill weekly pool skimming and chemical balancing, filter and pump repairs, seasonal openings, and liner replacements.',
+        image:
+          'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Pool technician inspecting water circulation and plumbing valves',
+        url: '/businesses/trades/pool-service',
+      },
+      {
+        id: 'tile-installation',
+        name: 'Tile Installation',
+        slug: 'tile-installation',
+        icon: Layers,
+        description:
+          'Quote ceramic, porcelain, and natural stone tile jobs covering backer board, thin-set mortar, grouting, and square-foot labor.',
+        image:
+          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Modern tiled interior finished by a professional installer',
+        url: '/businesses/trades/tile-installation',
+      },
+      {
+        id: 'flooring-quote-templates',
+        name: 'Flooring Quote Templates',
+        slug: 'flooring-quote-templates',
+        icon: Layers,
+        description:
+          'Create itemized flooring estimates for hardwood, LVP, carpet, subfloor leveling, trim transitions, and old floor removal.',
+        image:
+          'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Hardwood and timber flooring materials measured for installation',
+        url: '/businesses/trades/flooring-quote-templates',
+      },
+      {
+        id: 'locksmith',
+        name: 'Locksmith',
+        slug: 'locksmith',
+        icon: KeyRound,
+        description:
+          'Issue instant mobile invoices for emergency lockouts, rekeying, smart lock installations, and commercial master key systems.',
+        image:
+          'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Locksmith holding keys and security hardware',
+        url: '/businesses/trades/locksmith',
+      },
+      {
+        id: 'pressure-washing-quote-templates',
+        name: 'Pressure Washing Quote Templates',
+        slug: 'pressure-washing-quote-templates',
+        icon: Sparkles,
+        description:
+          'Prepare exterior soft-wash and pressure-washing quotes for roofs, driveways, commercial storefronts, and decks.',
+        image:
+          'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Exterior surface cleaning and pressure washing equipment',
+        url: '/businesses/trades/pressure-washing-quote-templates',
+      },
+      {
+        id: 'towing',
+        name: 'Towing',
+        slug: 'towing',
+        icon: Wrench,
+        description:
+          'Bill hookup fees, loaded mileage rates, roadside winch-outs, impound lot storage days, and commercial fleet calls.',
+        image:
+          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Automotive roadside recovery and workshop service',
+        url: '/businesses/trades/towing',
+      },
+      {
+        id: 'handyman-quote-templates',
+        name: 'Handyman Quote Templates',
+        slug: 'handyman-quote-templates',
+        icon: Hammer,
+        description:
+          'Combine punch-list home repairs, fixture installations, hardware supplies, and hourly labor into one clear customer quote.',
+        image:
+          'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Handyman preparing tools and repair estimate on site',
+        url: '/businesses/trades/handyman-quote-templates',
+      },
+      {
+        id: 'masonry',
+        name: 'Masonry',
+        slug: 'masonry',
+        icon: HardHat,
+        description:
+          'Quote bricklaying, stone veneer, chimney repointing, concrete block walls, mortar materials, and mason crew hours.',
+        image:
+          'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Masonry and structural construction crew on site',
+        url: '/businesses/trades/masonry',
+      },
+      {
+        id: 'quote-templates-new',
+        name: 'Quote Templates NEW',
+        slug: 'quote-templates-new',
+        icon: FileSpreadsheet,
+        description:
+          'Send polished trade and contractor price quotes with customizable line items, deposits, and one-click invoice creation.',
+        image:
+          'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Trade professional reviewing a commercial price quote template',
+        url: '/businesses/trades/quote-templates-new',
+      },
+      {
+        id: 'tradesman',
+        name: 'Tradesman',
+        slug: 'tradesman',
+        icon: Hammer,
+        description:
+          'Manage on-site quotes, material markups, call-out fees, progress payments, and tool expenses for independent tradesmen.',
+        image:
+          'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Skilled tradesman working at an active job site',
+        url: '/businesses/trades/tradesman',
+      },
+      {
+        id: 'hvac',
+        name: 'HVAC',
+        slug: 'hvac',
+        icon: Wind,
+        description:
+          'Invoice heating, ventilation, and air-conditioning installations, seasonal tune-ups, refrigerant, and replacement units.',
         image:
           'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=640&q=80',
         imageAlt: 'HVAC technician inspecting climate control equipment with diagnostic tools',
-        url: '/businesses/trades/hvac-technician',
+        url: '/businesses/trades/hvac',
+      },
+      {
+        id: 'mechanic-quote-templates',
+        name: 'Mechanic Quote Templates',
+        slug: 'mechanic-quote-templates',
+        icon: Wrench,
+        description:
+          'Provide vehicle owners with clear repair estimates detailing VIN/mileage, OEM parts, shop fees, and book labor hours.',
+        image:
+          'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Automotive mechanic preparing a vehicle repair estimate',
+        url: '/businesses/trades/mechanic-quote-templates',
+      },
+      {
+        id: 'reinstatement-quote-template',
+        name: 'Reinstatement Quote Template',
+        slug: 'reinstatement-quote-template',
+        icon: Building2,
+        description:
+          'Prepare end-of-lease commercial reinstatement quotes covering partition removal, M&E make-good, and repainting.',
+        image:
+          'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Commercial office interior prepared for reinstatement works',
+        url: '/businesses/trades/reinstatement-quote-template',
+      },
+      {
+        id: 'tree-removal-quote-templates',
+        name: 'Tree Removal Quote Templates',
+        slug: 'tree-removal-quote-templates',
+        icon: Trees,
+        description:
+          'Itemize tree felling, rigging, crane assistance, stump grinding, wood chipping, and haul-away costs clearly.',
+        image:
+          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Arborist inspecting trees and grounds for a removal estimate',
+        url: '/businesses/trades/tree-removal-quote-templates',
+      },
+      {
+        id: 'hvac-quote-templates',
+        name: 'HVAC Quote Templates',
+        slug: 'hvac-quote-templates',
+        icon: Wind,
+        description:
+          'Present good-better-best HVAC system replacement proposals covering SEER ratings, ductwork, thermostats, and warranties.',
+        image:
+          'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'HVAC specialist preparing an equipment installation quote',
+        url: '/businesses/trades/hvac-quote-templates',
+      },
+      {
+        id: 'moving-company',
+        name: 'Moving Company',
+        slug: 'moving-company',
+        icon: PackageCheck,
+        description:
+          'Bill residential and office relocations, packing supplies, crew loading hours, transit mileage, and storage-in-transit.',
+        image:
+          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Moving company team organizing packed cartons for transport',
+        url: '/businesses/trades/moving-company',
+      },
+      {
+        id: 'remodeling-quote-templates',
+        name: 'Remodeling Quote Templates',
+        slug: 'remodeling-quote-templates',
+        icon: Home,
+        description:
+          'Break down kitchen, bathroom, and basement remodeling estimates into demolition, rough-ins, finishes, and draw schedules.',
+        image:
+          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Remodeled residential kitchen and interior living space',
+        url: '/businesses/trades/remodeling-quote-templates',
+      },
+      {
+        id: 'trucking',
+        name: 'Trucking',
+        slug: 'trucking',
+        icon: PackageCheck,
+        description:
+          'Invoice freight hauls, per-mile rates, detention hours, lumper reimbursements, and fuel surcharges while tracking rig expenses.',
+        image:
+          'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Commercial trucking and freight loading dock',
+        url: '/businesses/trades/trucking',
+      },
+      {
+        id: 'landscaping',
+        name: 'Landscaping',
+        slug: 'landscaping',
+        icon: Trees,
+        description:
+          'Estimate garden design projects, itemize plants and hardscape materials, and invoice seasonal grounds maintenance.',
+        image:
+          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Landscaped garden pathway and manicured lawn maintained by professionals',
+        url: '/businesses/trades/landscaping',
+      },
+      {
+        id: 'paint-quote-templates',
+        name: 'Paint Quote Templates',
+        slug: 'paint-quote-templates',
+        icon: Palette,
+        description:
+          'Quote residential and commercial paint jobs with surface prep, trim and ceiling lines, primer, and finish coats.',
+        image:
+          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Clean painted walls and trim in a modern building',
+        url: '/businesses/trades/paint-quote-templates',
+      },
+      {
+        id: 'renovation-quote-template',
+        name: 'Renovation Quote Template',
+        slug: 'renovation-quote-template',
+        icon: ClipboardCheck,
+        description:
+          'Structure whole-home or commercial renovation proposals with architectural allowances, trade breakdowns, and milestone payments.',
+        image:
+          'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Contractor reviewing renovation blueprints on site',
+        url: '/businesses/trades/renovation-quote-template',
+      },
+      {
+        id: 'woodworking',
+        name: 'Woodworking',
+        slug: 'woodworking',
+        icon: Ruler,
+        description:
+          'Quote custom furniture, architectural millwork, hardwood lumber, joinery hardware, and shop fabrication hours.',
+        image:
+          'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Woodworker measuring and shaping timber in a workshop',
+        url: '/businesses/trades/woodworking',
       },
     ],
   },
@@ -2126,64 +2606,268 @@ export const BUSINESS_CATEGORIES = [
     ],
     subcategories: [
       {
-        id: 'graphic-designer',
-        name: 'Graphic Designer',
-        slug: 'graphic-designer',
-        icon: PenTool,
-        description:
-          'Quote brand identity packages, print and digital design deliverables, licensing fees, and milestone payments.',
-        image:
-          'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Graphic designer working on brand identity visuals at a studio workstation',
-        url: '/businesses/creative/graphic-designer',
-      },
-      {
-        id: 'photographer',
-        name: 'Photographer',
-        slug: 'photographer',
+        id: 'photography',
+        name: 'Photography',
+        slug: 'photography',
         icon: Camera,
         description:
           'Bill booking deposits, shoot day rates, equipment rentals, retouching packages, and commercial usage licenses.',
         image:
           'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=640&q=80',
         imageAlt: 'Professional camera lens and photography equipment in a studio',
-        url: '/businesses/creative/photographer',
+        url: '/businesses/creative/photography',
       },
       {
-        id: 'content-writer',
-        name: 'Content Writer',
-        slug: 'content-writer',
-        icon: FileEdit,
+        id: 'graphic-design',
+        name: 'Graphic Design',
+        slug: 'graphic-design',
+        icon: PenTool,
         description:
-          'Invoice articles, copywriting projects, editorial retainers, and per-word or per-project deliverables cleanly.',
+          'Quote brand identity packages, print and digital design deliverables, licensing fees, and milestone payments.',
         image:
-          'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Content writer working on editorial copy at a desk',
-        url: '/businesses/creative/content-writer',
+          'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Graphic designer working on brand identity visuals at a studio workstation',
+        url: '/businesses/creative/graphic-design',
       },
       {
-        id: 'web-developer',
-        name: 'Web Developer',
-        slug: 'web-developer',
+        id: 'dj',
+        name: 'DJ',
+        slug: 'dj',
+        icon: Activity,
+        description:
+          'Invoice wedding and club DJ bookings, sound and lighting rig rentals, overtime hours, and non-refundable event retainers.',
+        image:
+          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Event stage lighting and sound setup prepared for a live performance',
+        url: '/businesses/creative/dj',
+      },
+      {
+        id: 'entertainment',
+        name: 'Entertainment',
+        slug: 'entertainment',
+        icon: Sparkles,
+        description:
+          'Manage live performance contracts, corporate entertainment bookings, production crew expenses, and deposit schedules.',
+        image:
+          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Live event venue and entertainment stage setup',
+        url: '/businesses/creative/entertainment',
+      },
+      {
+        id: 'illustrator',
+        name: 'Illustrator',
+        slug: 'illustrator',
+        icon: PenTool,
+        description:
+          'Quote editorial illustrations, book cover commissions, character concept art, revision rounds, and commercial buyout rights.',
+        image:
+          'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Illustrator sketching and refining digital artwork at a studio desk',
+        url: '/businesses/creative/illustrator',
+      },
+      {
+        id: 'web-design',
+        name: 'Web Design',
+        slug: 'web-design',
+        icon: Laptop,
+        description:
+          'Bill UI/UX wireframes, Figma design systems, responsive landing page builds, and ongoing website care plans.',
+        image:
+          'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Web designers reviewing responsive interface layouts in a studio',
+        url: '/businesses/creative/web-design',
+      },
+      {
+        id: 'fashion',
+        name: 'Fashion',
+        slug: 'fashion',
+        icon: Palette,
+        description:
+          'Manage runway styling fees, bespoke garment commissions, showroom wholesale orders, and fabric sourcing expenses.',
+        image:
+          'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Fashion studio and curated apparel collection display',
+        url: '/businesses/creative/fashion',
+      },
+      {
+        id: 'influencer',
+        name: 'Influencer',
+        slug: 'influencer',
+        icon: Megaphone,
+        description:
+          'Invoice sponsored social posts, brand ambassadorships, UGC video deliverables, exclusivity windows, and paid usage rights.',
+        image:
+          'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Content creator and digital media team planning a brand campaign',
+        url: '/businesses/creative/influencer',
+      },
+      {
+        id: 'photography-quote-templates',
+        name: 'Photography Quote Templates',
+        slug: 'photography-quote-templates',
+        icon: Camera,
+        description:
+          'Send detailed photography estimates covering pre-production, shoot hours, assistant fees, post-processing, and usage tiers.',
+        image:
+          'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Photography gear prepared for a commercial shoot quote',
+        url: '/businesses/creative/photography-quote-templates',
+      },
+      {
+        id: 'web-design-quote-templates',
+        name: 'Web Design Quote Templates',
+        slug: 'web-design-quote-templates',
+        icon: FileText,
+        description:
+          'Structure website design proposals with discovery, UX prototyping, CMS integration, SEO setup, and milestone draw schedules.',
+        image:
+          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Web design proposal and digital project scope on a laptop',
+        url: '/businesses/creative/web-design-quote-templates',
+      },
+      {
+        id: 'film-production',
+        name: 'Film Production',
+        slug: 'film-production',
+        icon: Camera,
+        description:
+          'Track above- and below-the-line production budgets, location permits, cinema gear rentals, crew day rates, and post-production.',
+        image:
+          'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Cinema camera and film production equipment in a studio',
+        url: '/businesses/creative/film-production',
+      },
+      {
+        id: 'interior-designer',
+        name: 'Interior Designer',
+        slug: 'interior-designer',
+        icon: Home,
+        description:
+          'Bill spatial planning consultations, 3D rendering packages, FF&E procurement markups, and contractor coordination retainers.',
+        image:
+          'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Thoughtfully styled modern interior designed by a professional',
+        url: '/businesses/creative/interior-designer',
+      },
+      {
+        id: 'studio',
+        name: 'Studio',
+        slug: 'studio',
+        icon: Building2,
+        description:
+          'Invoice hourly or daily creative studio bookings, cyclorama wall painting, lighting grip packages, and client catering add-ons.',
+        image:
+          'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Modern creative studio workspace and collaborative desk',
+        url: '/businesses/creative/studio',
+      },
+      {
+        id: 'web-development',
+        name: 'Web Development',
+        slug: 'web-development',
         icon: Code2,
         description:
-          'Manage software sprint billing, website build milestones, hosting and maintenance retainers, and hourly development logs.',
+          'Manage full-stack sprint billing, custom web application milestones, API integrations, and monthly hosting and maintenance retainers.',
         image:
           'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=640&q=80',
         imageAlt: 'Web developer writing application code on a laptop at a clean desk',
-        url: '/businesses/creative/web-developer',
+        url: '/businesses/creative/web-development',
       },
       {
-        id: 'marketing-agency',
-        name: 'Marketing Agency',
-        slug: 'marketing-agency',
-        icon: Megaphone,
+        id: 'florist-quote-templates',
+        name: 'Florist Quote Templates',
+        slug: 'florist-quote-templates',
+        icon: Trees,
         description:
-          'Organize multi-channel campaign retainers, media management fees, creative production costs, and client statements.',
+          'Present itemized wedding and event floral proposals covering bridal bouquets, centerpieces, arch installations, and strike fees.',
+        image:
+          'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Lush botanical and floral greenery prepared for an event quote',
+        url: '/businesses/creative/florist-quote-templates',
+      },
+      {
+        id: 'media',
+        name: 'Media',
+        slug: 'media',
+        icon: Globe,
+        description:
+          'Organize digital media production invoices, ad placement orders, editorial content packages, and cross-platform syndication.',
         image:
           'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Marketing agency team collaborating on campaign strategy in a modern office',
-        url: '/businesses/creative/marketing-agency',
+        imageAlt: 'Media production team reviewing digital content strategy',
+        url: '/businesses/creative/media',
+      },
+      {
+        id: 'video-production',
+        name: 'Video Production',
+        slug: 'video-production',
+        icon: Camera,
+        description:
+          'Bill commercial video shoots, scripting, multi-cam filming, color grading, motion graphics, and final cut deliveries.',
+        image:
+          'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Professional video production camera and studio lens',
+        url: '/businesses/creative/video-production',
+      },
+      {
+        id: 'music-studio',
+        name: 'Music Studio',
+        slug: 'music-studio',
+        icon: Activity,
+        description:
+          'Invoice recording booth lockouts, tracking and mixing engineer hours, analog mastering, and session musician fees.',
+        image:
+          'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Creative studio workspace for audio and music production',
+        url: '/businesses/creative/music-studio',
+      },
+      {
+        id: 'video-quote-templates',
+        name: 'Video Quote Templates',
+        slug: 'video-quote-templates',
+        icon: FileSpreadsheet,
+        description:
+          'Create transparent video production estimates itemizing pre-production storyboards, shoot days, drone footage, and editing rounds.',
+        image:
+          'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Producer preparing an itemized video production quote',
+        url: '/businesses/creative/video-quote-templates',
+      },
+      {
+        id: 'graphic-design-quote-templates',
+        name: 'Graphic Design Quote Templates',
+        slug: 'graphic-design-quote-templates',
+        icon: PenTool,
+        description:
+          'Send clear graphic design quotes detailing logo concepts, brand guidelines, packaging dielines, and source file handoff.',
+        image:
+          'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Graphic design studio workstation with brand identity concepts',
+        url: '/businesses/creative/graphic-design-quote-templates',
+      },
+      {
+        id: 'musician',
+        name: 'Musician',
+        slug: 'musician',
+        icon: Users,
+        description:
+          'Bill live gig guarantees, session recording tracks, composition royalties, private event performances, and travel per diems.',
+        image:
+          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Live performance hall prepared for professional musicians',
+        url: '/businesses/creative/musician',
+      },
+      {
+        id: 'videography',
+        name: 'Videography',
+        slug: 'videography',
+        icon: Camera,
+        description:
+          'Quote wedding and event videography packages, highlight reels, raw footage archival drives, and second-shooter day rates.',
+        image:
+          'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Videographer preparing camera rig and lenses for a shoot',
+        url: '/businesses/creative/videography',
       },
     ],
   },
@@ -2273,6 +2957,12 @@ export const BUSINESS_CATEGORIES = [
 ];
 
 const LEGACY_SLUG_ALIASES = {
+  trades: {
+    electrician: 'electrical',
+    plumber: 'plumbing',
+    carpenter: 'woodworking',
+    'hvac-technician': 'hvac',
+  },
   business: {
     freelancer: 'freelance',
     consultant: 'consulting',
@@ -2294,6 +2984,13 @@ const LEGACY_SLUG_ALIASES = {
     'event-planning': 'wedding-planner',
     'home-maintenance': 'home-repair',
     'real-estate-services': 'professional-services',
+  },
+  creative: {
+    'graphic-designer': 'graphic-design',
+    photographer: 'photography',
+    'content-writer': 'media',
+    'web-developer': 'web-development',
+    'marketing-agency': 'media',
   },
 };
 
