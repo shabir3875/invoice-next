@@ -1288,64 +1288,112 @@ export const BUSINESS_CATEGORIES = [
     ],
     subcategories: [
       {
-        id: 'medical-clinic',
-        name: 'Medical Clinic',
-        slug: 'medical-clinic',
-        icon: Building2,
+        id: 'personal-trainer',
+        name: 'Personal Trainer',
+        slug: 'personal-trainer',
+        icon: Activity,
         description:
-          'Streamline outpatient consultation billing, procedure itemization, payment receipts, and clinic supply expense tracking.',
+          'Bill 1-on-1 personal training packages, custom workout plans, nutrition coaching retainers, and gym session bundles.',
+        image:
+          'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Personal trainer coaching a client on strength and mobility exercises',
+        url: '/businesses/health/personal-trainer',
+      },
+      {
+        id: 'psychologist',
+        name: 'Psychologist',
+        slug: 'psychologist',
+        icon: Brain,
+        description:
+          'Manage psychological assessment billing, therapy session receipts, client account statements, and private practice expenses.',
+        image:
+          'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Psychologist in a calm, welcoming private consultation office',
+        url: '/businesses/health/psychologist',
+      },
+      {
+        id: 'medical',
+        name: 'Medical',
+        slug: 'medical',
+        icon: Stethoscope,
+        description:
+          'Streamline outpatient consultation billing, procedure itemization, patient payment receipts, and medical clinic supply expenses.',
         image:
           'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=640&q=80',
         imageAlt: 'Modern medical clinic interior and patient care environment',
-        url: '/businesses/health/medical-clinic',
+        url: '/businesses/health/medical',
       },
       {
-        id: 'doctor',
-        name: 'Doctor',
-        slug: 'doctor',
-        icon: Stethoscope,
+        id: 'pharmacist',
+        name: 'Pharmacist',
+        slug: 'pharmacist',
+        icon: ShieldCheck,
         description:
-          'Create clear private-practice consultation invoices, medical examination receipts, and organized financial records.',
+          'Track pharmaceutical stock and reorder levels, invoice care homes and clinic accounts, and log wholesale supplier bills.',
         image:
           'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Doctor in a medical clinic wearing a white coat and stethoscope',
-        url: '/businesses/health/doctor',
+        imageAlt: 'Healthcare pharmacist reviewing medication records in a clinical setting',
+        url: '/businesses/health/pharmacist',
       },
       {
-        id: 'dentist',
-        name: 'Dentist',
-        slug: 'dentist',
-        icon: Smile,
-        description:
-          'Prepare treatment cost estimates, itemize dental procedures, and track staged orthodontic or restorative payments.',
-        image:
-          'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Dentist in a modern dental clinic examination room',
-        url: '/businesses/health/dentist',
-      },
-      {
-        id: 'therapist',
-        name: 'Therapist',
-        slug: 'therapist',
+        id: 'psychotherapy',
+        name: 'Psychotherapy',
+        slug: 'psychotherapy',
         icon: Brain,
         description:
-          'Manage session billing, recurring appointment statements, and private practice expenses with minimal admin overhead.',
+          'Issue confidential psychotherapy session invoices, recurring care statements, and track continuing education and room rental costs.',
         image:
-          'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Therapist in a calm, welcoming private consultation office',
-        url: '/businesses/health/therapist',
+          'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Psychotherapy practitioner preparing session notes in a quiet office',
+        url: '/businesses/health/psychotherapy',
       },
       {
-        id: 'physiotherapist',
-        name: 'Physiotherapist',
-        slug: 'physiotherapist',
-        icon: Activity,
+        id: 'nurse',
+        name: 'Nurse',
+        slug: 'nurse',
+        icon: HeartPulse,
         description:
-          'Bill rehabilitation sessions, physical therapy packages, and mobility equipment while tracking patient account balances.',
+          'Invoice independent nursing shifts, private home-care visits, agency contract hours, and reimbursable medical supplies.',
         image:
           'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=640&q=80',
-        imageAlt: 'Physiotherapist working with a patient in a rehabilitation clinic',
-        url: '/businesses/health/physiotherapist',
+        imageAlt: 'Registered nurse providing attentive patient care in a clinical setting',
+        url: '/businesses/health/nurse',
+      },
+      {
+        id: 'psychiatrist',
+        name: 'Psychiatrist',
+        slug: 'psychiatrist',
+        icon: Stethoscope,
+        description:
+          'Create structured psychiatric consultation invoices, follow-up appointment receipts, and comprehensive patient account statements.',
+        image:
+          'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Medical specialist in a private consultation practice',
+        url: '/businesses/health/psychiatrist',
+      },
+      {
+        id: 'therapy',
+        name: 'Therapy',
+        slug: 'therapy',
+        icon: HeartHandshake,
+        description:
+          'Bill individual, couples, physical, or occupational therapy sessions while keeping client balances and practice expenses organized.',
+        image:
+          'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Therapist welcoming a client into a comfortable consultation space',
+        url: '/businesses/health/therapy',
+      },
+      {
+        id: 'dental',
+        name: 'Dental',
+        slug: 'dental',
+        icon: Smile,
+        description:
+          'Prepare dental treatment cost estimates, itemize hygiene and restorative procedures, and track staged patient payments.',
+        image:
+          'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=640&q=80',
+        imageAlt: 'Dental professional in a modern dental clinic examination room',
+        url: '/businesses/health/dental',
       },
     ],
   },
@@ -1624,13 +1672,22 @@ export const BUSINESS_CATEGORIES = [
   },
 ];
 
-const LEGACY_BUSINESS_SLUG_ALIASES = {
-  freelancer: 'freelance',
-  consultant: 'consulting',
-  'small-business': 'business',
-  accountant: 'bookkeeping-invoices',
-  'retail-store': 'retail',
-  'online-seller': 'ecommerce',
+const LEGACY_SLUG_ALIASES = {
+  business: {
+    freelancer: 'freelance',
+    consultant: 'consulting',
+    'small-business': 'business',
+    accountant: 'bookkeeping-invoices',
+    'retail-store': 'retail',
+    'online-seller': 'ecommerce',
+  },
+  health: {
+    'medical-clinic': 'medical',
+    doctor: 'medical',
+    dentist: 'dental',
+    therapist: 'therapy',
+    physiotherapist: 'therapy',
+  },
 };
 
 export function getCategoryBySlug(categorySlug) {
@@ -1642,9 +1699,10 @@ export function getSubcategoryBySlugs(categorySlug, businessSlug) {
   const category = getCategoryBySlug(categorySlug);
   if (!category || !businessSlug) return null;
   const normalized = businessSlug.toLowerCase();
+  const categoryAliases = LEGACY_SLUG_ALIASES[category.slug];
   const resolvedSlug =
-    category.slug === 'business' && LEGACY_BUSINESS_SLUG_ALIASES[normalized]
-      ? LEGACY_BUSINESS_SLUG_ALIASES[normalized]
+    categoryAliases && categoryAliases[normalized]
+      ? categoryAliases[normalized]
       : normalized;
   const sub = category.subcategories.find(s => s.slug === resolvedSlug);
   if (!sub) return null;
