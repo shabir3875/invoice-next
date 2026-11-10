@@ -20,9 +20,9 @@ import {
 } from './businessCategoriesData';
 import './for-businesses.css';
 
-const PAGE_TITLE = 'Businesses | Invoicing & Expense Management by Invonxt';
+const PAGE_TITLE = 'Businesses | Invoicing & Expense Management by Invoice Next';
 const PAGE_DESCRIPTION =
-  'Explore how Invonxt supports freelancers, legal firms, contractors, consultants, healthcare professionals, and small businesses with invoicing and expense management.';
+  'Explore how Invoice Next supports freelancers, legal firms, contractors, consultants, healthcare professionals, and small businesses with invoicing and expense management.';
 const CANONICAL_URL = 'https://invonxt.com/for-businesses';
 
 function Schema() {
@@ -468,10 +468,10 @@ export default function ForBusinessesPage() {
   return (
     <div className="fb-page">
       <Helmet>
-        <title>Businesses | Invoicing &amp; Expense Management by Invonxt</title>
+        <title>Businesses | Invoicing &amp; Expense Management by Invoice Next</title>
         <meta
           name="description"
-          content="Explore how Invonxt supports freelancers, legal firms, contractors, consultants, healthcare professionals, and small businesses with invoicing and expense management."
+          content="Explore how Invoice Next supports freelancers, legal firms, contractors, consultants, healthcare professionals, and small businesses with invoicing and expense management."
         />
       </Helmet>
 
@@ -549,7 +549,7 @@ export default function ForBusinessesPage() {
                 Get Started Free <ArrowRight size={17} aria-hidden="true" />
               </a>
               <a href={APP_ROUTES.login} className="fb-btn-secondary">
-                Log In to Invonxt
+                Log In to Invoice Next
               </a>
             </div>
           </div>

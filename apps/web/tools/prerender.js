@@ -210,8 +210,8 @@ async function prerender() {
 				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
 			}
 			const forBusinessesHtml = renderToString(React.createElement(ForBusinessesPage));
-			const fbTitle = 'Businesses | Invoicing & Expense Management by Invonxt';
-			const fbDescription = 'Explore how Invonxt supports freelancers, legal firms, contractors, consultants, healthcare professionals, and small businesses with invoicing and expense management.';
+			const fbTitle = 'Businesses | Invoicing & Expense Management by Invoice Next';
+			const fbDescription = 'Explore how Invoice Next supports freelancers, legal firms, contractors, consultants, healthcare professionals, and small businesses with invoicing and expense management.';
 			const fbUrl = 'https://invonxt.com/for-businesses';
 			const fbRouteDir = path.join(distAppDir, 'for-businesses');
 			const businessesRouteDir = path.join(distAppDir, 'businesses');
@@ -240,8 +240,8 @@ async function prerender() {
 							businessSlug: sub.slug,
 						})
 					);
-					const subTitle = `${sub.name} Invoicing & Expense Management | Invonxt`;
-					const subDesc = `${sub.description} See how Invonxt helps ${sub.name.toLowerCase()} professionals manage invoices, estimates, clients, and expenses.`;
+					const subTitle = `${sub.name} Invoicing & Expense Management | Invoice Next`;
+					const subDesc = `${sub.description} See how Invoice Next helps ${sub.name.toLowerCase()} professionals manage invoices, estimates, clients, and expenses.`;
 					const subUrl = `https://invonxt.com${sub.url}`;
 					const subDir = path.join(distAppDir, 'businesses', category.slug, sub.slug);
 					fs.mkdirSync(subDir, { recursive: true });

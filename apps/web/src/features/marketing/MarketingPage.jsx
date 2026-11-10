@@ -80,7 +80,7 @@ function Solutions() {
         <div className="mb-10 text-center">
           <span className="text-xs font-extrabold uppercase tracking-[.18em] text-[#047857]">For businesses</span>
           <h2 className="mt-3 text-3xl font-black tracking-[-.04em] text-slate-950 sm:text-4xl">Explore Business Categories</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-slate-600">Discover how Invonxt helps professionals and businesses simplify invoicing, manage expenses, organize clients, and maintain better financial records.</p>
+          <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-slate-600">Discover how Invoice Next helps professionals and businesses simplify invoicing, manage expenses, organize clients, and maintain better financial records.</p>
         </div>
 
         <div className="space-y-4">

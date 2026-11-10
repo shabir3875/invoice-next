@@ -46,10 +46,10 @@ import {
 } from 'lucide-react';
 
 export const BUSINESS_HERO_DATA = {
-  eyebrow: 'Invonxt for Businesses',
+  eyebrow: 'Invoice Next for Businesses',
   heading: 'Explore Business Categories',
   description:
-    'Discover how Invonxt helps professionals and businesses simplify invoicing, manage expenses, organize clients, and maintain better financial records.',
+    'Discover how Invoice Next helps professionals and businesses simplify invoicing, manage expenses, organize clients, and maintain better financial records.',
   benefits: [
     'Simple Business Invoicing',
     'Expense & Client Management',

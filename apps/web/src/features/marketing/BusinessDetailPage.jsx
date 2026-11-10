@@ -33,10 +33,10 @@ export default function BusinessDetailPage({
     return (
       <div className="fb-page">
         <Helmet>
-          <title>Business Category Not Found | Invonxt</title>
+          <title>Business Category Not Found | Invoice Next</title>
           <meta
             name="description"
-            content="Explore how Invonxt supports businesses and professionals with invoicing, estimates, and expense management."
+            content="Explore how Invoice Next supports businesses and professionals with invoicing, estimates, and expense management."
           />
         </Helmet>
         <MarketingHeader currentPath="/for-businesses" />
@@ -59,8 +59,8 @@ export default function BusinessDetailPage({
 
   const { category, subcategory } = match;
   const SubIcon = subcategory.icon || category.icon;
-  const pageTitle = `${subcategory.name} Invoicing & Expense Management | Invonxt`;
-  const pageDescription = `${subcategory.description} See how Invonxt helps ${subcategory.name.toLowerCase()} professionals manage invoices, estimates, clients, and expenses.`;
+  const pageTitle = `${subcategory.name} Invoicing & Expense Management | Invoice Next`;
+  const pageDescription = `${subcategory.description} See how Invoice Next helps ${subcategory.name.toLowerCase()} professionals manage invoices, estimates, clients, and expenses.`;
   const canonicalUrl = `https://invonxt.com${subcategory.url}`;
 
   const challenges = subcategory.challenges || category.defaultChallenges;
@@ -195,7 +195,7 @@ export default function BusinessDetailPage({
                 <span className="bd-info-card-num">0{index + 1}</span>
                 <h3>{challenge}</h3>
                 <p>
-                  Invonxt replaces disconnected notes and spreadsheets with structured
+                  Invoice Next replaces disconnected notes and spreadsheets with structured
                   customer, item, invoice, and payment records.
                 </p>
               </article>
@@ -203,14 +203,14 @@ export default function BusinessDetailPage({
           </div>
         </section>
 
-        {/* How Invonxt Helps */}
+        {/* How Invoice Next Helps */}
         <section
           className="bd-section"
           style={{ paddingTop: 0 }}
           aria-labelledby="bd-helps-heading"
         >
           <div className="bd-section-header">
-            <span className="bd-section-eyebrow">How Invonxt Helps</span>
+            <span className="bd-section-eyebrow">How Invoice Next Helps</span>
             <h2 id="bd-helps-heading" className="bd-section-title">
               Built for Everyday {subcategory.name} Workflows
             </h2>
@@ -260,7 +260,7 @@ export default function BusinessDetailPage({
           </div>
         </section>
 
-        {/* Relevant Invonxt Features */}
+        {/* Relevant Invoice Next Features */}
         <section
           className="bd-section"
           style={{ paddingTop: 0 }}
@@ -269,7 +269,7 @@ export default function BusinessDetailPage({
           <div className="bd-section-header">
             <span className="bd-section-eyebrow">Relevant Features</span>
             <h2 id="bd-features-heading" className="bd-section-title">
-              Invonxt Tools for {subcategory.name}
+              Invoice Next Tools for {subcategory.name}
             </h2>
           </div>
 
@@ -325,7 +325,7 @@ export default function BusinessDetailPage({
         <section className="fb-bottom-cta" aria-labelledby="bd-cta-heading">
           <div className="fb-bottom-cta-inner">
             <h2 id="bd-cta-heading" className="fb-bottom-cta-title">
-              Start Managing Your {subcategory.name} Finances with Invonxt
+              Start Managing Your {subcategory.name} Finances with Invoice Next
             </h2>
             <p className="fb-bottom-cta-desc">
               Create professional invoices, track expenses, organize clients, and keep
