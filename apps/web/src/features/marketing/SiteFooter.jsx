@@ -11,9 +11,7 @@ export const FOOTER_GROUPS = [
     ['Free Templates', '/invoice-templates'], ['Products & Inventory', '/features/client-management'],
   ]],
   ['Solutions', [
-    ['Freelancers', '/solutions/freelancers'], ['Small Businesses', '/solutions/small-businesses'],
-    ['Consultants', '/solutions/consultants'], ['Lawyers & Legal Firms', '/solutions/legal-firms'],
-    ['Accountants', '/solutions/accountants'], ['Contractors', '/solutions/contractors'],
+    ['For Businesses', '/for-businesses'],
   ]],
   ['Company', [
     ['About Invoice Next', '/about'], ['Pricing', '/pricing'], ['Contact Us', '/contact'],

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-10T06:46:17.721Z",
+  "generatedAt": "2026-11-10T10:21:13.715Z",
   "summary": {
-    "totalPublicPages": 50,
-    "indexablePages": 50,
+    "totalPublicPages": 51,
+    "indexablePages": 51,
     "missingMetadata": 0,
     "duplicateTitles": 0,
     "missingDescriptions": 0,
@@ -21,11 +21,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1104,
+      "wordCount": 1096,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 117
+      "internalLinkCount": 119
     },
     {
       "url": "https://invonxt.com/features/lightning-fast-invoicing",
@@ -36,11 +36,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/lightning-fast-invoicing",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 864,
+      "wordCount": 858,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 54
+      "internalLinkCount": 55
     },
     {
       "url": "https://invonxt.com/features/recurring-invoices",
@@ -51,11 +51,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/recurring-invoices",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 981,
+      "wordCount": 975,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 50
+      "internalLinkCount": 51
     },
     {
       "url": "https://invonxt.com/features/estimates-to-invoices",
@@ -66,7 +66,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/estimates-to-invoices",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 714,
+      "wordCount": 708,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -81,7 +81,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/payment-tracking",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 890,
+      "wordCount": 884,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -96,11 +96,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/batch-payment-reminders",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 967,
+      "wordCount": 961,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 50
+      "internalLinkCount": 51
     },
     {
       "url": "https://invonxt.com/features/inventory-tracking",
@@ -111,11 +111,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/inventory-tracking",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 581,
+      "wordCount": 575,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 51
+      "internalLinkCount": 52
     },
     {
       "url": "https://invonxt.com/features/sales-stock-reports",
@@ -126,11 +126,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/sales-stock-reports",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 953,
+      "wordCount": 947,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 54
+      "internalLinkCount": 55
     },
     {
       "url": "https://invonxt.com/features/import-export-records",
@@ -141,11 +141,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/import-export-records",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1033,
+      "wordCount": 1027,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 51
+      "internalLinkCount": 52
     },
     {
       "url": "https://invonxt.com/features/document-customization",
@@ -156,11 +156,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/document-customization",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 970,
+      "wordCount": 964,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 51
+      "internalLinkCount": 52
     },
     {
       "url": "https://invonxt.com/features/client-management",
@@ -171,11 +171,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/client-management",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 627,
+      "wordCount": 621,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 54
+      "internalLinkCount": 55
     },
     {
       "url": "https://invonxt.com/features/customer-statements",
@@ -186,7 +186,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/customer-statements",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 616,
+      "wordCount": 610,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -201,11 +201,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/pricing",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 370,
+      "wordCount": 364,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 97
+      "internalLinkCount": 99
     },
     {
       "url": "https://invonxt.com/about",
@@ -216,11 +216,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/about",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 243,
+      "wordCount": 237,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 47
+      "internalLinkCount": 48
     },
     {
       "url": "https://invonxt.com/contact",
@@ -231,11 +231,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/contact",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 236,
+      "wordCount": 230,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 47
+      "internalLinkCount": 48
     },
     {
       "url": "https://invonxt.com/support",
@@ -246,11 +246,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/support",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 228,
+      "wordCount": 222,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 47
+      "internalLinkCount": 48
     },
     {
       "url": "https://invonxt.com/faq",
@@ -261,11 +261,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/faq",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 318,
+      "wordCount": 312,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 47
+      "internalLinkCount": 48
     },
     {
       "url": "https://invonxt.com/privacy",
@@ -276,11 +276,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/privacy",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 1465,
+      "wordCount": 1459,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 94
+      "internalLinkCount": 96
     },
     {
       "url": "https://invonxt.com/terms",
@@ -291,11 +291,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/terms",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 178,
+      "wordCount": 172,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 94
+      "internalLinkCount": 96
     },
     {
       "url": "https://invonxt.com/disclaimer",
@@ -306,11 +306,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/disclaimer",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 878,
+      "wordCount": 872,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 47
+      "internalLinkCount": 48
     },
     {
       "url": "https://invonxt.com/solutions/freelancers",
@@ -321,11 +321,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/solutions/freelancers",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 496,
+      "wordCount": 490,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 48
+      "internalLinkCount": 2
     },
     {
       "url": "https://invonxt.com/solutions/small-businesses",
@@ -336,11 +336,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/solutions/small-businesses",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 494,
+      "wordCount": 488,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 48
+      "internalLinkCount": 2
     },
     {
       "url": "https://invonxt.com/solutions/consultants",
@@ -351,11 +351,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/solutions/consultants",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 485,
+      "wordCount": 479,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 48
+      "internalLinkCount": 2
     },
     {
       "url": "https://invonxt.com/solutions/legal-firms",
@@ -366,11 +366,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/solutions/legal-firms",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 499,
+      "wordCount": 493,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 48
+      "internalLinkCount": 2
     },
     {
       "url": "https://invonxt.com/solutions/accountants",
@@ -381,11 +381,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/solutions/accountants",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 497,
+      "wordCount": 491,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 47
+      "internalLinkCount": 1
     },
     {
       "url": "https://invonxt.com/solutions/contractors",
@@ -396,11 +396,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/solutions/contractors",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 489,
+      "wordCount": 483,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 49
+      "internalLinkCount": 3
     },
     {
       "url": "https://invonxt.com/templates/consulting",
@@ -411,7 +411,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/templates/consulting",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 130,
+      "wordCount": 132,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -426,7 +426,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/templates/freelance/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 795,
+      "wordCount": 797,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -441,7 +441,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/templates/law-firm",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 129,
+      "wordCount": 131,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -456,7 +456,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/templates/small-businesses",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 123,
+      "wordCount": 125,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -471,11 +471,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/invoice-templates",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 405,
+      "wordCount": 399,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 54
+      "internalLinkCount": 55
     },
     {
       "url": "https://invonxt.com/invoice-generator",
@@ -486,11 +486,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/invoice-generator",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 412,
+      "wordCount": 406,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 59
+      "internalLinkCount": 60
     },
     {
       "url": "https://invonxt.com/free-invoice-generator",
@@ -501,7 +501,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/free-invoice-generator",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 416,
+      "wordCount": 410,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -516,7 +516,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/freelancer-invoice-template",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 405,
+      "wordCount": 399,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -531,7 +531,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/self-employed-invoice-template",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 402,
+      "wordCount": 396,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -546,7 +546,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/consultant-invoice-template",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 394,
+      "wordCount": 388,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -561,7 +561,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/accountant-invoice-template",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 399,
+      "wordCount": 393,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -576,7 +576,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/business-invoice-template",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 389,
+      "wordCount": 383,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -591,7 +591,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/contractor-invoice-template",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 393,
+      "wordCount": 387,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -606,11 +606,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/client-management",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 395,
+      "wordCount": 389,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 50
+      "internalLinkCount": 51
     },
     {
       "url": "https://invonxt.com/invoice-customization",
@@ -621,7 +621,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/invoice-customization",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 399,
+      "wordCount": 393,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -636,7 +636,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/multi-currency-invoicing",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 403,
+      "wordCount": 397,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -651,7 +651,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/invoice-management",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 399,
+      "wordCount": 393,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -666,11 +666,26 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/invoice-reports",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 397,
+      "wordCount": 391,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
       "internalLinkCount": 3
+    },
+    {
+      "url": "https://invonxt.com/for-businesses",
+      "status": 200,
+      "title": "For Businesses | Invoice Templates & Business Guidance | Invonxt",
+      "description": "Explore professional invoice templates, invoicing guidance and business tools for freelancers, trades, legal firms, consultants, healthcare providers and small businesses.",
+      "h1": "Solutions for Every Business",
+      "h1Count": 1,
+      "canonical": "https://invonxt.com/for-businesses",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "wordCount": 688,
+      "missingAltCount": 0,
+      "issues": [],
+      "brokenInternalLinks": [],
+      "internalLinkCount": 99
     },
     {
       "url": "https://invonxt.com/blog",
@@ -681,7 +696,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 574,
+      "wordCount": 568,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -696,7 +711,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/how-to-create-an-invoice",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 419,
+      "wordCount": 413,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -711,7 +726,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/how-to-write-an-invoice",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 365,
+      "wordCount": 359,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -726,7 +741,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/invoice-vs-receipt",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 374,
+      "wordCount": 368,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -741,7 +756,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/invoice-payment-terms",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 355,
+      "wordCount": 349,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -756,7 +771,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/how-to-invoice-international-clients",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 405,
+      "wordCount": 399,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],

@@ -46,6 +46,15 @@
 .marketing-header__link { padding: 0.5rem 0.75rem; }
 .marketing-header__login { padding: 0.5rem 0.75rem; font-size: 0.875rem; }
 .marketing-header__link:hover,.marketing-header__link:focus-visible,.marketing-header__login:hover,.marketing-header__login:focus-visible { background: transparent; color: #0f172a; }
+.marketing-header__link.is-active,
+.marketing-header__link[aria-current="page"] {
+  color: #047857;
+  background: #edfcf6;
+}
+.marketing-header__link.is-active:hover {
+  background: #e2f8ef;
+  color: #047857;
+}
 
 .marketing-header__dropdown {
   visibility: hidden;
@@ -86,7 +95,10 @@
 .marketing-header__toggle { display: none; width: 44px; height: 44px; place-items: center; border-radius: 0.625rem; color: #0f172a; }
 .marketing-header__toggle:hover { background: #edfcf6; }
 .marketing-header__mobile { display: none; border-top: 1px solid #e2e8f0; background: #fff; padding: 0 1.25rem 1.5rem; }
-.marketing-header__mobile nav a { display: block; min-height: 48px; border-bottom: 1px solid #f1f5f9; padding: 0.875rem 0; color: #047857; font-size: 0.875rem; font-weight: 700; }
+.marketing-header__mobile nav a { display: block; min-height: 48px; border-bottom: 1px solid #f1f5f9; padding: 0.875rem 0.5rem; color: #334155; font-size: 0.875rem; font-weight: 700; border-radius: 0.375rem; }
+.marketing-header__mobile nav a:hover { color: #047857; background: #f0fdf4; }
+.marketing-header__mobile nav a.is-active,
+.marketing-header__mobile nav a[aria-current="page"] { color: #047857; background: #edfcf6; font-weight: 800; }
 .marketing-header__mobile-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.25rem; }
 .marketing-header__mobile-actions .marketing-header__login { min-height: 48px; justify-content: center; border: 1px solid #cbd5e1; }
 .marketing-header__mobile-actions .marketing-header__cta { min-height: 48px; padding-inline: 0.75rem; }

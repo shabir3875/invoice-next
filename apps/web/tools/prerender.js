@@ -36,6 +36,7 @@ async function prerender() {
 		const { default: SeoLandingPage } = await vite.ssrLoadModule('/src/features/marketing/SeoLandingPage.jsx');
 		const { SEO_PAGES, SEO_ROUTES } = await vite.ssrLoadModule('/src/features/marketing/seo-pages.js');
 		const { default: BlogPage } = await vite.ssrLoadModule('/src/features/marketing/BlogPage.jsx');
+		const { default: ForBusinessesPage } = await vite.ssrLoadModule('/src/features/marketing/ForBusinessesPage.jsx');
 		const { ARTICLES, ARTICLE_ROUTES } = await vite.ssrLoadModule('/src/features/marketing/blog-data.js');
 		const appHtml = renderToString(React.createElement(HomePage));
 
@@ -206,6 +207,24 @@ async function prerender() {
 					.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${url}" data-react-helmet="true" />`);
 				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
 			}
+						const forBusinessesHtml = renderToString(React.createElement(ForBusinessesPage));
+			const fbTitle = 'For Businesses | Invoice Templates & Business Guidance | Invonxt';
+			const fbDescription = 'Explore professional invoice templates, invoicing guidance and business tools for freelancers, trades, legal firms, consultants, healthcare providers and small businesses.';
+			const fbUrl = 'https://invonxt.com/for-businesses';
+			const fbRouteDir = path.join(distAppDir, 'for-businesses');
+			fs.mkdirSync(fbRouteDir, { recursive: true });
+			const fbRouteHtml = distIndexHtml
+				.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${forBusinessesHtml}</div>\n\t\t`)
+				.replace(/<title>.*?<\/title>/, `<title>${fbTitle}</title>`)
+				.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="description" content="${fbDescription}" data-react-helmet="true" />`)
+				.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<link rel="canonical" href="${fbUrl}" data-react-helmet="true" />`)
+				.replace(/<meta property="og:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:title" content="${fbTitle}" data-react-helmet="true" />`)
+				.replace(/<meta property="og:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:description" content="${fbDescription}" data-react-helmet="true" />`)
+				.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${fbUrl}" data-react-helmet="true" />`)
+				.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, pageSchema({ title: fbTitle, description: fbDescription, url: fbUrl, breadcrumbs: [['Home','https://invonxt.com/'],['For Businesses',fbUrl]] }));
+			fs.writeFileSync(path.join(fbRouteDir, 'index.html'), fbRouteHtml, 'utf8');
+			fs.writeFileSync(path.join(distAppDir, 'for-businesses.html'), fbRouteHtml, 'utf8');
+			console.log('✅ Generated static route HTML for /for-businesses');
 			fs.writeFileSync(path.join(distAppDir, '404.html'), distIndexHtml
 				.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${notFoundHtml}</div>\n\t\t`)
 				.replace(/<title>.*?<\/title>/, '<title>Page Not Found | Invoice Next</title>')
@@ -229,6 +248,7 @@ async function prerender() {
 				.filter((route) => route.startsWith('/templates/'))
 				.map((route) => ({ route: `${route}${templatePages[route].trailingSlash ? '/' : ''}`, lastmod: sourceDate('src/features/marketing/TemplatePage.jsx') })),
 			...SEO_ROUTES.map((route) => ({ route, lastmod: sourceDate('src/features/marketing/seo-pages.js') })),
+			{ route: '/for-businesses', lastmod: sourceDate('src/features/marketing/ForBusinessesPage.jsx') },
 			{ route: '/blog', lastmod: sourceDate('src/features/marketing/blog-data.js') },
 			...ARTICLE_ROUTES.map((route) => ({ route, lastmod: sourceDate('src/features/marketing/blog-data.js') })),
 		];
