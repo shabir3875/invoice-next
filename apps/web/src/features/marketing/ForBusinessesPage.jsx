@@ -388,10 +388,8 @@ export function CategoryAccordion({
 
 export default function ForBusinessesPage() {
   const [searchQuery, setSearchQuery] = useState('');
-  // Expand the Trades, Business, Health, Services, and Creative categories by default
-  const [expandedIds, setExpandedIds] = useState(
-    () => new Set(['trades', 'business', 'health', 'services', 'creative'])
-  );
+  // Collapse all categories by default
+  const [expandedIds, setExpandedIds] = useState(() => new Set());
 
   const query = searchQuery.trim().toLowerCase();
 

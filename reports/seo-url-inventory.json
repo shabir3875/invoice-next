@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T20:05:52.237Z",
+  "generatedAt": "2026-11-10T20:16:05.412Z",
   "summary": {
     "totalPublicPages": 58,
     "indexablePages": 58,
@@ -21,7 +21,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1129,
+      "wordCount": 1118,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -670,7 +670,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 121
+      "internalLinkCount": 120
     },
     {
       "url": "https://invonxt.com/blog",

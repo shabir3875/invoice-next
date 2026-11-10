@@ -63,7 +63,7 @@ function StepVisual({type}){if(type==='create')return <div className="hi-visual 
 function HowItWorks(){const steps=[['01','Create Your Invoice','Add customers, products, services, taxes, discounts, and payment terms using customizable invoice templates.','create'],['02','Share With Your Customer','Download a professional PDF, send an invoice through email, or share it using a secure link.','share'],['03','Track Your Payments','Record full or partial payments and monitor paid, unpaid, and overdue invoice balances.','payment']];return <section id="how-it-works" className="home-how"><div className="mx-auto max-w-7xl px-5 sm:px-8"><Reveal className="home-section-heading"><span>HOW IT WORKS</span><h2>From Details to Paid in Three Simple Steps</h2><p>A clear invoicing workflow that keeps every detail organized from creation through payment.</p></Reveal><div className="home-steps">{steps.map(([num,title,text,type],i)=><Reveal as="article" key={num} delay={i*.12} y={20} className="home-step"><div className="home-step-number">{num}</div><StepVisual type={type}/><h3>{title}</h3><p>{text}</p>{i<2&&<span className="home-step-connector" aria-hidden="true"><ArrowRight size={16}/></span>}</Reveal>)}</div></div></section>}
 
 function Solutions() {
-  const [openIds, setOpenIds] = useState(() => new Set(['trades']));
+  const [openIds, setOpenIds] = useState(() => new Set());
 
   const toggleOpen = id => {
     setOpenIds(prev => {
