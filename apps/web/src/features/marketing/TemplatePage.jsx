@@ -7,14 +7,6 @@ import ScreenshotFreelancePage from './ScreenshotFreelancePage';
 import MarketingHeader from './MarketingHeader';
 
 export const templatePages = {
-  '/templates/consulting': {
-    name: 'Consulting',
-    eyebrow: 'Consulting invoice template',
-    headline: 'Professional invoices for every client engagement',
-    description: 'Present strategy, advisory and project work clearly with a polished consulting invoice built for retainers, milestones and hourly services.',
-    features: ['Itemize advisory services and project phases', 'Add hourly rates, retainers and milestone fees', 'Keep payment terms and client details clear'],
-    accent: 'from-blue-600 to-cyan-500',
-  },
   '/templates/freelance': {
     name: 'Freelance',
     seoTitle: 'Freelance Invoice Templates | Free Invoice Maker | Invoice Next',
@@ -30,22 +22,6 @@ export const templatePages = {
     description: 'Turn completed projects into clear, professional invoices that make your scope, pricing and payment expectations easy to understand.',
     features: ['Bill fixed-price or hourly projects', 'Show deposits, discounts and remaining balances', 'Reuse client and service details'],
     accent: 'from-violet-600 to-blue-500',
-  },
-  '/templates/law-firm': {
-    name: 'Law Firm',
-    eyebrow: 'Law firm invoice template',
-    headline: 'Clear billing for legal services and matters',
-    description: 'Organize professional fees and reimbursable costs in a structured invoice designed for legal practices and client matters.',
-    features: ['Separate professional fees and expenses', 'Describe services with dates and matter details', 'Present totals and payment terms professionally'],
-    accent: 'from-slate-800 to-blue-700',
-  },
-  '/templates/small-businesses': {
-    name: 'Small Businesses',
-    eyebrow: 'Small business invoice template',
-    headline: 'Reliable invoices for everyday business',
-    description: 'Create branded, easy-to-read invoices for products and services without spending valuable time formatting documents from scratch.',
-    features: ['Add products, services, taxes and discounts', 'Keep customer information organized', 'Download or share professional invoices'],
-    accent: 'from-emerald-600 to-cyan-500',
   },
 };
 

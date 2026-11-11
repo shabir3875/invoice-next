@@ -51,12 +51,12 @@ export const templates = [
 ];
 
 export const solutions = [
-  { icon: Hammer, title: 'Trades', route: '/solutions/contractors', text: 'Turn estimates into invoices, document materials and labor, and keep customer records accessible on the go.' },
-  { icon: FileCheck2, title: 'Legal', route: '/solutions/legal-firms', text: 'Create clear client invoices and keep matters, services, expenses, and billing records organized.' },
-  { icon: BriefcaseBusiness, title: 'Business', route: '/solutions/small-businesses', text: 'Bring documents, customers, products, payments, and expenses into one straightforward workspace.' },
+  { icon: Hammer, title: 'Trades', route: '/for-businesses', text: 'Turn estimates into invoices, document materials and labor, and keep customer records accessible on the go.' },
+  { icon: FileCheck2, title: 'Legal', route: '/for-businesses', text: 'Create clear client invoices and keep matters, services, expenses, and billing records organized.' },
+  { icon: BriefcaseBusiness, title: 'Business', route: '/for-businesses', text: 'Bring documents, customers, products, payments, and expenses into one straightforward workspace.' },
   { icon: ShieldCheck, title: 'Health', route: '/for-businesses', text: 'Create professional invoices for appointments, treatments, and other health and wellness services.' },
-  { icon: Calculator, title: 'Services', route: '/solutions/consultants', text: 'Reuse service items, manage client details, and move smoothly from estimates to invoices.' },
-  { icon: FileClock, title: 'Creative', route: '/solutions/freelancers', text: 'Invoice projects and retainers, record partial payments, and keep outstanding balances visible.' },
+  { icon: Calculator, title: 'Services', route: '/for-businesses', text: 'Reuse service items, manage client details, and move smoothly from estimates to invoices.' },
+  { icon: FileClock, title: 'Creative', route: '/for-businesses', text: 'Invoice projects and retainers, record partial payments, and keep outstanding balances visible.' },
   { icon: FileText, title: 'General', route: '/for-businesses', text: 'Build a polished invoice for any type of work with flexible line items, terms, and payment details.' },
 ];
 

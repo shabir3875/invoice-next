@@ -123,7 +123,7 @@ const relatedTemplates = [
   {
     label: 'Consulting Invoice Templates',
     description: 'Bill strategy retainers, advisory hours, and executive project phases with clarity.',
-    href: '/templates/consulting',
+    href: '/consultant-invoice-template',
   },
   {
     label: 'Graphic Design Invoice Templates',

@@ -54,8 +54,14 @@ function App() {
                         <Route path="/businesses" element={<ForBusinessesPage />} />
                         <Route path="/businesses/:categorySlug/:businessSlug" element={<BusinessDetailPage />} />
                         <Route path="/for-businesses/:categorySlug/:businessSlug" element={<BusinessDetailPage />} />
-                        <Route path="/solutions/businesses" element={<Navigate to="/solutions/small-businesses" replace />} />
-                        <Route path="/solutions/:slug" element={<PublicPage kind="solution" />} />
+                        <Route path="/solutions/businesses" element={<Navigate to="/for-businesses" replace />} />
+                        <Route path="/solutions/small-businesses" element={<Navigate to="/for-businesses" replace />} />
+                        <Route path="/solutions/consultants" element={<Navigate to="/for-businesses" replace />} />
+                        <Route path="/solutions/legal-firms" element={<Navigate to="/for-businesses" replace />} />
+                        <Route path="/solutions/accountants" element={<Navigate to="/for-businesses" replace />} />
+                        <Route path="/solutions/contractors" element={<Navigate to="/for-businesses" replace />} />
+                        <Route path="/solutions/freelancers" element={<Navigate to="/templates/freelance" replace />} />
+                        <Route path="/solutions/:slug" element={<Navigate to="/for-businesses" replace />} />
                         <Route path="/pricing" element={<Navigate to="/#pricing" replace />} />
                         <Route path="/about" element={<PublicPage kind="about" />} />
                         <Route path="/contact" element={<PublicPage kind="contact" />} />
@@ -66,11 +72,11 @@ function App() {
                         <Route path="/cookie-policy" element={<PublicPage kind="cookie-policy" />} />
                         <Route path="/refund-policy" element={<PublicPage kind="refund-policy" />} />
                         <Route path="/disclaimer" element={<PublicPage kind="disclaimer" />} />
-                        <Route path="/templates/consulting" element={<TemplatePage routePath="/templates/consulting" />} />
+                        <Route path="/templates/consulting" element={<Navigate to="/templates/freelance" replace />} />
                         <Route path="/templates/freelance" element={<TemplatePage routePath="/templates/freelance" />} />
                         <Route path="/template/freeluncer" element={<Navigate to="/templates/freelance" replace />} />
-                        <Route path="/templates/law-firm" element={<TemplatePage routePath="/templates/law-firm" />} />
-                        <Route path="/templates/small-businesses" element={<TemplatePage routePath="/templates/small-businesses" />} />
+                        <Route path="/templates/law-firm" element={<Navigate to="/templates/freelance" replace />} />
+                        <Route path="/templates/small-businesses" element={<Navigate to="/templates/freelance" replace />} />
                         <Route path="/features/:slug" element={<FeatureDetailPage />} />
                         {SEO_ROUTES.map(path => <Route key={path} path={path} element={<SeoLandingPage routePath={path} />} />)}
                         <Route path="/blog" element={<BlogPage />} />

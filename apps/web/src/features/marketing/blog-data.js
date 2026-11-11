@@ -206,7 +206,7 @@ export const ARTICLES = {
       ['Document Customization', '/features/document-customization'],
       ['Estimates to Invoices', '/features/estimates-to-invoices'],
       ['Freelancer Invoice Template', '/freelancer-invoice-template'],
-      ['Consultant Invoice Templates', '/templates/consulting'],
+      ['Consultant Invoice Templates', '/consultant-invoice-template'],
     ],
   },
 
@@ -399,7 +399,7 @@ export const ARTICLES = {
     relatedLinks: [
       ['Payment Follow-Ups', '/features/batch-payment-reminders'],
       ['Recurring Invoices', '/features/recurring-invoices'],
-      ['Small Business Solutions', '/solutions/small-businesses'],
+      ['For Businesses', '/for-businesses'],
       ['Business Invoice Template', '/business-invoice-template'],
     ],
   },
@@ -495,7 +495,7 @@ export const ARTICLES = {
       ['Multi-Currency Invoicing', '/multi-currency-invoicing'],
       ['Client Management', '/features/client-management'],
       ['Document Customization', '/features/document-customization'],
-      ['Consulting Solutions', '/solutions/consultants'],
+      ['Consultant Invoicing', '/consultant-invoice-template'],
     ],
   },
 
@@ -589,7 +589,7 @@ export const ARTICLES = {
     ],
     relatedLinks: [
       ['Estimates to Invoices Feature', '/features/estimates-to-invoices'],
-      ['Contractor Solutions', '/solutions/contractors'],
+      ['Contractor Invoicing', '/contractor-invoice-template'],
       ['Contractor Invoice Template', '/contractor-invoice-template'],
       ['For Businesses Directory', '/for-businesses'],
     ],
@@ -685,7 +685,7 @@ export const ARTICLES = {
     ],
     relatedLinks: [
       ['Freelance Invoice Templates', '/templates/freelance'],
-      ['Invoicing for Freelancers', '/solutions/freelancers'],
+      ['Freelancer Invoice Guide', '/freelancer-invoice-template'],
       ['Self-Employed Invoice Template', '/self-employed-invoice-template'],
       ['Freelancer Invoice Generator', '/freelancer-invoice-template'],
     ],
@@ -784,8 +784,8 @@ export const ARTICLES = {
     relatedLinks: [
       ['Sales & Stock Reports', '/features/sales-stock-reports'],
       ['Import & Export Records', '/features/import-export-records'],
-      ['Invoicing for Accountants', '/solutions/accountants'],
-      ['Small Business Solutions', '/solutions/small-businesses'],
+      ['Accountant Invoice Template', '/accountant-invoice-template'],
+      ['For Businesses', '/for-businesses'],
     ],
   },
 
@@ -1061,7 +1061,7 @@ export const ARTICLES = {
       ['Customer Statements Feature', '/features/customer-statements'],
       ['Client Management', '/features/client-management'],
       ['Payment Tracking', '/features/payment-tracking'],
-      ['Legal Firm Solutions', '/solutions/legal-firms'],
+      ['For Businesses', '/for-businesses'],
     ],
   },
 
@@ -1238,8 +1238,8 @@ export const ARTICLES = {
     relatedLinks: [
       ['Freelance Invoice Templates', '/templates/freelance'],
       ['All Invoice Templates', '/invoice-templates'],
-      ['Consulting Templates', '/templates/consulting'],
-      ['Small Business Templates', '/templates/small-businesses'],
+      ['Consulting Templates', '/consultant-invoice-template'],
+      ['Business Templates', '/business-invoice-template'],
     ],
   },
 };

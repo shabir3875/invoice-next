@@ -166,7 +166,7 @@ const LEGAL = {
   'refund-policy':{title:'Cancellation & Refund Policy',description:'Review the current Invoice Next cancellation and refund policy notice.',body:['This page is intentionally marked for owner and legal review. The repository verifies monthly, 12-month, and 24-month subscription periods, but it does not provide enough authoritative information to publish a binding refund policy.','The final policy must be aligned with the payment provider, checkout disclosures, applicable consumer law, renewal behavior, and the actual cancellation process.']},
 };
 
-export const PUBLIC_ROUTES = ['/about','/contact','/support','/faq','/privacy','/terms','/cookie-policy','/refund-policy','/disclaimer',...Object.keys(SOLUTIONS).map(x=>`/solutions/${x}`)];
+export const PUBLIC_ROUTES = ['/about','/contact','/support','/faq','/privacy','/terms','/cookie-policy','/refund-policy','/disclaimer'];
 export function getPublicRoute(path){
   if(path==='/pricing')return {kind:'pricing',title:'Invoice Next Pricing',description:'Compare verified Invoice Next monthly, annual, and 24-month subscription options and included premium features.'};
   if(path==='/faq')return {kind:'faq',title:'Invoice Next Frequently Asked Questions',description:'Get clear answers about Invoice Next invoices, estimates, payments, expenses, statements, reports, inventory, and account access.'};
