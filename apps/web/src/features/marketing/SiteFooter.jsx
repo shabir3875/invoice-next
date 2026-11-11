@@ -29,11 +29,11 @@ export function SiteBrand({ light = false }) {
 }
 
 export default function SiteFooter() {
-  return <footer id="resources" className="bg-[#07172c] text-slate-400">
+  return <footer id="resources" className="bg-[#021a15] text-slate-400">
     <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.45fr_repeat(4,1fr)]">
-      <div><SiteBrand light/><p className="mt-5 max-w-sm text-sm leading-7">Invoice Next helps freelancers, small businesses, consultants, and professionals create invoices, manage payments, and keep business records organized.</p></div>
-      {FOOTER_GROUPS.map(([heading, links]) => <nav key={heading} aria-label={`${heading} footer navigation`}><h2 className="text-sm font-extrabold text-white">{heading}</h2><ul className="mt-5 space-y-3">{links.map(([label, href]) => <li key={href}><a href={href} className="text-sm transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-400">{label}</a></li>)}</ul></nav>)}
+      <div><SiteBrand light/><p className="mt-5 max-w-sm text-sm leading-7 text-slate-400">Invoice Next helps freelancers, small businesses, consultants, and professionals create invoices, manage payments, and keep business records organized.</p></div>
+      {FOOTER_GROUPS.map(([heading, links]) => <nav key={heading} aria-label={`${heading} footer navigation`}><h2 className="text-sm font-extrabold text-white">{heading}</h2><ul className="mt-5 space-y-3">{links.map(([label, href]) => <li key={href}><a href={href} className="text-sm transition hover:text-emerald-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#10b981]">{label}</a></li>)}</ul></nav>)}
     </div>
-    <div className="border-t border-white/10"><div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 text-xs sm:px-8 md:flex-row md:items-center md:justify-between"><span>© {new Date().getFullYear()} Invoice Next. All rights reserved.</span><div className="flex flex-wrap gap-5"><a href="/privacy" className="hover:text-white">Privacy</a><a href="/terms" className="hover:text-white">Terms</a><button type="button" onClick={openCookiePreferences} className="hover:text-white">Cookie settings</button></div></div></div>
+    <div className="border-t border-emerald-950/60"><div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 text-xs sm:px-8 md:flex-row md:items-center md:justify-between"><span className="text-slate-400">© {new Date().getFullYear()} Invoice Next. All rights reserved.</span><div className="flex flex-wrap gap-5"><a href="/privacy" className="text-slate-400 hover:text-emerald-300 transition-colors">Privacy</a><a href="/terms" className="text-slate-400 hover:text-emerald-300 transition-colors">Terms</a><button type="button" onClick={openCookiePreferences} className="text-slate-400 hover:text-emerald-300 transition-colors">Cookie settings</button></div></div></div>
   </footer>;
 }

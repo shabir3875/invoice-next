@@ -1,35 +1,67 @@
 .af-section {
-  --orange: #10a887;
+  --orange: #047857;
+  --navy: #0f172a;
 }
 
 .af-glow-one { background: #ecfdf5; }
+.af-glow-two { background: #edfcf6; }
+
 .af-heading > span {
   border-color: #a7f3d0;
   background: #ecfdf5;
   color: #047857;
 }
+
 .af-card:hover,
-.af-card.is-active { border-color: #86d9c7; }
-.af-icon { background: #eaf9f2; color: #0f9f78; }
-.af-card > a { color: #078568; }
-.af-invoice-mini .af-logo { background: #10a887; }
-.af-bars i:nth-child(4) { background: #10a887; }
+.af-card.is-active {
+  border-color: #86d9c7;
+  box-shadow: 0 20px 45px rgba(4, 120, 87, 0.12);
+}
+
+.af-icon,
+.af-card .af-icon,
+.af-blue .af-icon,
+.af-purple .af-icon,
+.af-orange .af-icon,
+.af-green .af-icon {
+  background: #eaf9f2 !important;
+  color: #047857 !important;
+}
+
+.af-card > a {
+  color: #047857;
+}
+
+.af-card > a:hover {
+  color: #065f46;
+}
+
+.af-invoice-mini .af-logo { background: #047857; }
+.af-bars i:nth-child(4) { background: #047857; }
 .af-clients-mini > svg,
-.af-convert-mini svg { color: #10a887; }
-.af-calendar-mini { color: #10a887; }
-.af-calendar-mini span { background: #10a887; }
-.af-doc span { color: #078568; }
+.af-convert-mini svg { color: #047857; }
+.af-calendar-mini { color: #047857; }
+.af-calendar-mini span { background: #047857; }
+.af-doc span { color: #047857; }
+
 .af-doc-arrow {
   background: #eaf9f2;
-  color: #078568;
-  box-shadow: 0 7px 20px #10a8872e;
+  color: #047857;
+  box-shadow: 0 7px 20px rgba(4, 120, 87, 0.2);
 }
+
 .af-screen aside b,
-.af-dash header > span { background: #10a887; }
-.af-screen aside i:nth-child(2) { background: #5eead4; }
-.af-stats svg { color: #10a887; }
-.af-line { stroke: #10a887; }
+.af-dash header > span { background: #047857; }
+.af-screen aside i:nth-child(2) { background: #34d399; }
+.af-stats svg { color: #047857; }
+.af-line { stroke: #047857; }
+
 .af-primary {
-  background: #10a887;
-  box-shadow: 0 12px 27px #10a8873d;
+  background: #047857;
+  box-shadow: 0 12px 27px rgba(4, 120, 87, 0.3);
+}
+
+.af-primary:hover {
+  background: #065f46;
+  box-shadow: 0 14px 30px rgba(4, 120, 87, 0.4);
 }
