@@ -123,7 +123,7 @@ const relatedTemplates = [
   {
     label: 'Consulting Invoice Templates',
     description: 'Bill strategy retainers, advisory hours, and executive project phases with clarity.',
-    href: '/consultant-invoice-template',
+    href: '/businesses/business/consulting',
   },
   {
     label: 'Graphic Design Invoice Templates',
@@ -580,8 +580,6 @@ export default function ScreenshotFreelancePage() {
           <div className="mx-auto max-w-[1180px] px-5 py-14 sm:px-8 sm:py-20 lg:py-24">
             <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-xs font-bold text-slate-500">
               <a href="/" className="transition hover:text-emerald-700">Home</a>
-              <span aria-hidden="true">/</span>
-              <a href="/invoice-templates" className="transition hover:text-emerald-700">Invoice Templates</a>
               <span aria-hidden="true">/</span>
               <span className="text-slate-800">Freelance Invoice Templates</span>
             </nav>

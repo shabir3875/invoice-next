@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-11T12:22:01.287Z",
+  "generatedAt": "2026-11-11T13:20:42.889Z",
   "summary": {
-    "totalPublicPages": 48,
-    "indexablePages": 48,
+    "totalPublicPages": 35,
+    "indexablePages": 35,
     "missingMetadata": 0,
     "duplicateTitles": 0,
     "missingDescriptions": 0,
@@ -21,11 +21,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 954,
+      "wordCount": 956,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 125
+      "internalLinkCount": 86
     },
     {
       "url": "https://invonxt.com/features/lightning-fast-invoicing",
@@ -36,11 +36,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/lightning-fast-invoicing",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 862,
+      "wordCount": 864,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 62
+      "internalLinkCount": 59
     },
     {
       "url": "https://invonxt.com/features/recurring-invoices",
@@ -51,11 +51,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/recurring-invoices",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 979,
+      "wordCount": 981,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 54
+      "internalLinkCount": 41
     },
     {
       "url": "https://invonxt.com/features/estimates-to-invoices",
@@ -66,11 +66,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/estimates-to-invoices",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 712,
+      "wordCount": 714,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 13
+      "internalLinkCount": 49
     },
     {
       "url": "https://invonxt.com/features/payment-tracking",
@@ -81,11 +81,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/payment-tracking",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 888,
+      "wordCount": 890,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 14
+      "internalLinkCount": 48
     },
     {
       "url": "https://invonxt.com/features/batch-payment-reminders",
@@ -96,11 +96,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/batch-payment-reminders",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 965,
+      "wordCount": 967,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 58
+      "internalLinkCount": 45
     },
     {
       "url": "https://invonxt.com/features/inventory-tracking",
@@ -111,11 +111,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/inventory-tracking",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 579,
+      "wordCount": 581,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 56
+      "internalLinkCount": 43
     },
     {
       "url": "https://invonxt.com/features/sales-stock-reports",
@@ -126,11 +126,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/sales-stock-reports",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 951,
+      "wordCount": 953,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 62
+      "internalLinkCount": 48
     },
     {
       "url": "https://invonxt.com/features/import-export-records",
@@ -141,11 +141,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/import-export-records",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1031,
+      "wordCount": 1033,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 54
+      "internalLinkCount": 41
     },
     {
       "url": "https://invonxt.com/features/document-customization",
@@ -156,11 +156,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/document-customization",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 968,
+      "wordCount": 970,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 61
+      "internalLinkCount": 52
     },
     {
       "url": "https://invonxt.com/features/client-management",
@@ -171,11 +171,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/client-management",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 625,
+      "wordCount": 627,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 59
+      "internalLinkCount": 47
     },
     {
       "url": "https://invonxt.com/features/customer-statements",
@@ -186,11 +186,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/features/customer-statements",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 614,
+      "wordCount": 616,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 12
+      "internalLinkCount": 46
     },
     {
       "url": "https://invonxt.com/about",
@@ -201,11 +201,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/about",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 242,
+      "wordCount": 244,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 49
+      "internalLinkCount": 36
     },
     {
       "url": "https://invonxt.com/contact",
@@ -216,11 +216,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/contact",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 235,
+      "wordCount": 237,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 49
+      "internalLinkCount": 36
     },
     {
       "url": "https://invonxt.com/support",
@@ -231,11 +231,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/support",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 227,
+      "wordCount": 229,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 49
+      "internalLinkCount": 36
     },
     {
       "url": "https://invonxt.com/faq",
@@ -246,11 +246,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/faq",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 316,
+      "wordCount": 318,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 49
+      "internalLinkCount": 36
     },
     {
       "url": "https://invonxt.com/privacy",
@@ -261,11 +261,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/privacy",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 1463,
+      "wordCount": 1465,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 97
+      "internalLinkCount": 71
     },
     {
       "url": "https://invonxt.com/terms",
@@ -276,11 +276,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/terms",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 176,
+      "wordCount": 178,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 97
+      "internalLinkCount": 71
     },
     {
       "url": "https://invonxt.com/disclaimer",
@@ -291,11 +291,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/disclaimer",
       "robots": "index, follow, max-image-preview:large",
-      "wordCount": 876,
+      "wordCount": 878,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 49
+      "internalLinkCount": 36
     },
     {
       "url": "https://invonxt.com/templates/freelance/",
@@ -306,206 +306,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/templates/freelance/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1452,
+      "wordCount": 1451,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
       "internalLinkCount": 1
-    },
-    {
-      "url": "https://invonxt.com/invoice-templates",
-      "status": 200,
-      "title": "Free Invoice Templates for Businesses | Invoice Next",
-      "description": "Explore professional invoice templates for freelancers, consultants, contractors, accountants, legal practices, and small businesses.",
-      "h1": "Free Invoice Templates for Professional Billing",
-      "h1Count": 1,
-      "canonical": "https://invonxt.com/invoice-templates",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 403,
-      "missingAltCount": 0,
-      "issues": [],
-      "brokenInternalLinks": [],
-      "internalLinkCount": 53
-    },
-    {
-      "url": "https://invonxt.com/free-invoice-generator",
-      "status": 200,
-      "title": "Free Invoice Generator — Create an Invoice Online | Invoice Next",
-      "description": "Use the Invoice Next free invoice generator to create a professional itemized invoice online with your business and client details.",
-      "h1": "Free Invoice Generator for Your First Professional Invoice",
-      "h1Count": 1,
-      "canonical": "https://invonxt.com/free-invoice-generator",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 413,
-      "missingAltCount": 0,
-      "issues": [],
-      "brokenInternalLinks": [],
-      "internalLinkCount": 3
-    },
-    {
-      "url": "https://invonxt.com/freelancer-invoice-template",
-      "status": 200,
-      "title": "Freelancer Invoice Template for Professional Billing | Invoice Next",
-      "description": "Create a freelancer invoice with project details, rates, deliverables, payment terms, and a polished professional layout.",
-      "h1": "Freelancer Invoice Template for Projects and Retainers",
-      "h1Count": 1,
-      "canonical": "https://invonxt.com/freelancer-invoice-template",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 402,
-      "missingAltCount": 0,
-      "issues": [],
-      "brokenInternalLinks": [],
-      "internalLinkCount": 10
-    },
-    {
-      "url": "https://invonxt.com/self-employed-invoice-template",
-      "status": 200,
-      "title": "Self-Employed Invoice Template | Invoice Next",
-      "description": "Use a self-employed invoice template for clear client details, services, rates, due dates, and payment instructions.",
-      "h1": "Self-Employed Invoice Template That Keeps Billing Simple",
-      "h1Count": 1,
-      "canonical": "https://invonxt.com/self-employed-invoice-template",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 400,
-      "missingAltCount": 0,
-      "issues": [],
-      "brokenInternalLinks": [],
-      "internalLinkCount": 4
-    },
-    {
-      "url": "https://invonxt.com/consultant-invoice-template",
-      "status": 200,
-      "title": "Consultant Invoice Template for Services & Retainers | Invoice Next",
-      "description": "Create consulting invoices for hourly advice, retainers, milestones, projects, and reimbursable expenses.",
-      "h1": "Consultant Invoice Template for Clear Professional Fees",
-      "h1Count": 1,
-      "canonical": "https://invonxt.com/consultant-invoice-template",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 392,
-      "missingAltCount": 0,
-      "issues": [],
-      "brokenInternalLinks": [],
-      "internalLinkCount": 9
-    },
-    {
-      "url": "https://invonxt.com/accountant-invoice-template",
-      "status": 200,
-      "title": "Accountant Invoice Template for Professional Services | Invoice Next",
-      "description": "Create itemized accounting invoices for bookkeeping, tax preparation, advisory work, and recurring services.",
-      "h1": "Accountant Invoice Template for Accurate Service Billing",
-      "h1Count": 1,
-      "canonical": "https://invonxt.com/accountant-invoice-template",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 397,
-      "missingAltCount": 0,
-      "issues": [],
-      "brokenInternalLinks": [],
-      "internalLinkCount": 6
-    },
-    {
-      "url": "https://invonxt.com/business-invoice-template",
-      "status": 200,
-      "title": "Business Invoice Template for Products & Services | Invoice Next",
-      "description": "Create a professional business invoice with customer details, itemized products or services, taxes, totals, and payment terms.",
-      "h1": "Business Invoice Template for Products and Services",
-      "h1Count": 1,
-      "canonical": "https://invonxt.com/business-invoice-template",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 387,
-      "missingAltCount": 0,
-      "issues": [],
-      "brokenInternalLinks": [],
-      "internalLinkCount": 9
-    },
-    {
-      "url": "https://invonxt.com/contractor-invoice-template",
-      "status": 200,
-      "title": "Contractor Invoice Template for Labor & Materials | Invoice Next",
-      "description": "Create contractor invoices that separate labor, materials, project details, taxes, deposits, and outstanding balances.",
-      "h1": "Contractor Invoice Template for Labor and Materials",
-      "h1Count": 1,
-      "canonical": "https://invonxt.com/contractor-invoice-template",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 392,
-      "missingAltCount": 0,
-      "issues": [],
-      "brokenInternalLinks": [],
-      "internalLinkCount": 6
-    },
-    {
-      "url": "https://invonxt.com/client-management",
-      "status": 200,
-      "title": "Client Management for Faster Invoicing | Invoice Next",
-      "description": "Organize customer details, billing history, reusable products, and services to create accurate invoices more efficiently.",
-      "h1": "Client Management That Keeps Billing Details Ready",
-      "h1Count": 1,
-      "canonical": "https://invonxt.com/client-management",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 393,
-      "missingAltCount": 0,
-      "issues": [],
-      "brokenInternalLinks": [],
-      "internalLinkCount": 52
-    },
-    {
-      "url": "https://invonxt.com/invoice-customization",
-      "status": 200,
-      "title": "Invoice Customization with Branded Templates | Invoice Next",
-      "description": "Customize invoice layouts with your business details, logo, colors, line items, notes, taxes, and payment terms.",
-      "h1": "Invoice Customization for a Consistent Business Brand",
-      "h1Count": 1,
-      "canonical": "https://invonxt.com/invoice-customization",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 397,
-      "missingAltCount": 0,
-      "issues": [],
-      "brokenInternalLinks": [],
-      "internalLinkCount": 2
-    },
-    {
-      "url": "https://invonxt.com/multi-currency-invoicing",
-      "status": 200,
-      "title": "Multi-Currency Invoicing for International Clients | Invoice Next",
-      "description": "Create invoices in the agreed currency and clearly present prices, totals, payment terms, and international client details.",
-      "h1": "Multi-Currency Invoicing for International Client Work",
-      "h1Count": 1,
-      "canonical": "https://invonxt.com/multi-currency-invoicing",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 401,
-      "missingAltCount": 0,
-      "issues": [],
-      "brokenInternalLinks": [],
-      "internalLinkCount": 6
-    },
-    {
-      "url": "https://invonxt.com/invoice-management",
-      "status": 200,
-      "title": "Invoice Management Software for Small Businesses | Invoice Next",
-      "description": "Create, revise, export, and organize invoices while tracking paid, pending, partial, and overdue balances.",
-      "h1": "Invoice Management from Draft to Recorded Payment",
-      "h1Count": 1,
-      "canonical": "https://invonxt.com/invoice-management",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 397,
-      "missingAltCount": 0,
-      "issues": [],
-      "brokenInternalLinks": [],
-      "internalLinkCount": 6
-    },
-    {
-      "url": "https://invonxt.com/invoice-reports",
-      "status": 200,
-      "title": "Invoice Reports for Revenue & Outstanding Balances | Invoice Next",
-      "description": "Review invoice status, revenue, expenses, tax summaries, receivables, and outstanding balances with practical business reports.",
-      "h1": "Invoice Reports That Turn Billing Records into Answers",
-      "h1Count": 1,
-      "canonical": "https://invonxt.com/invoice-reports",
-      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 395,
-      "missingAltCount": 0,
-      "issues": [],
-      "brokenInternalLinks": [],
-      "internalLinkCount": 3
     },
     {
       "url": "https://invonxt.com/for-businesses",
@@ -516,11 +321,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/for-businesses",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 4576,
+      "wordCount": 4578,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 111
+      "internalLinkCount": 93
     },
     {
       "url": "https://invonxt.com/blog",
@@ -531,11 +336,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1071,
+      "wordCount": 1073,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 123
+      "internalLinkCount": 97
     },
     {
       "url": "https://invonxt.com/blog/how-to-create-an-invoice",
@@ -546,7 +351,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/how-to-create-an-invoice",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1381,
+      "wordCount": 1383,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -561,11 +366,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/how-to-write-an-invoice",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1149,
+      "wordCount": 1147,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 20
+      "internalLinkCount": 19
     },
     {
       "url": "https://invonxt.com/blog/invoice-vs-receipt",
@@ -576,7 +381,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/invoice-vs-receipt",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1164,
+      "wordCount": 1166,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -595,7 +400,7 @@
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 15
+      "internalLinkCount": 13
     },
     {
       "url": "https://invonxt.com/blog/how-to-invoice-international-clients",
@@ -606,11 +411,11 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/how-to-invoice-international-clients",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1164,
+      "wordCount": 1166,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
-      "internalLinkCount": 6
+      "internalLinkCount": 4
     },
     {
       "url": "https://invonxt.com/blog/estimate-vs-invoice",
@@ -636,7 +441,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/freelance-invoice-guide",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1128,
+      "wordCount": 1124,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -666,7 +471,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/inventory-and-invoicing-guide",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1103,
+      "wordCount": 1105,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -681,7 +486,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/overdue-invoice-follow-up",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1201,
+      "wordCount": 1203,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -696,7 +501,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/customer-account-statements-guide",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 1005,
+      "wordCount": 1007,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
@@ -726,7 +531,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/blog/invoice-template-guide",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 991,
+      "wordCount": 986,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],

@@ -108,7 +108,7 @@ export const ARTICLES = {
       },
     ],
     relatedLinks: [
-      ['Free Invoice Generator', '/free-invoice-generator'],
+      ['Estimates to Invoices', '/features/estimates-to-invoices'],
       ['Freelance Invoice Templates', '/templates/freelance'],
       ['Fast Invoicing Feature', '/features/lightning-fast-invoicing'],
       ['Document Customization', '/features/document-customization'],
@@ -205,8 +205,8 @@ export const ARTICLES = {
     relatedLinks: [
       ['Document Customization', '/features/document-customization'],
       ['Estimates to Invoices', '/features/estimates-to-invoices'],
-      ['Freelancer Invoice Template', '/freelancer-invoice-template'],
-      ['Consultant Invoice Templates', '/consultant-invoice-template'],
+      ['Freelance Templates', '/templates/freelance'],
+      ['For Businesses', '/for-businesses'],
     ],
   },
 
@@ -301,7 +301,7 @@ export const ARTICLES = {
     relatedLinks: [
       ['Payment Tracking Feature', '/features/payment-tracking'],
       ['Customer Account Statements', '/features/customer-statements'],
-      ['Accountant Invoice Template', '/accountant-invoice-template'],
+      ['Clients & Services', '/features/client-management'],
       ['Sales & Financial Reports', '/features/sales-stock-reports'],
     ],
   },
@@ -400,7 +400,7 @@ export const ARTICLES = {
       ['Payment Follow-Ups', '/features/batch-payment-reminders'],
       ['Recurring Invoices', '/features/recurring-invoices'],
       ['For Businesses', '/for-businesses'],
-      ['Business Invoice Template', '/business-invoice-template'],
+      ['Fast Invoicing', '/features/lightning-fast-invoicing'],
     ],
   },
 
@@ -474,8 +474,8 @@ export const ARTICLES = {
     productTip: {
       heading: 'Bill Global Clients Cleanly with Invoice Next',
       body: 'Invoice Next supports multi-currency formatting, customizable tax labels, detailed client profiles, and clean PDF exports so you can bill domestic and international clients from one organized workspace.',
-      ctaLabel: 'Explore Multi-Currency Invoicing',
-      ctaHref: '/multi-currency-invoicing',
+      ctaLabel: 'Explore Fast Invoicing',
+      ctaHref: '/features/lightning-fast-invoicing',
     },
     faqs: [
       {
@@ -492,10 +492,10 @@ export const ARTICLES = {
       },
     ],
     relatedLinks: [
-      ['Multi-Currency Invoicing', '/multi-currency-invoicing'],
+      ['Fast Invoicing', '/features/lightning-fast-invoicing'],
       ['Client Management', '/features/client-management'],
       ['Document Customization', '/features/document-customization'],
-      ['Consultant Invoicing', '/consultant-invoice-template'],
+      ['For Businesses', '/for-businesses'],
     ],
   },
 
@@ -589,8 +589,8 @@ export const ARTICLES = {
     ],
     relatedLinks: [
       ['Estimates to Invoices Feature', '/features/estimates-to-invoices'],
-      ['Contractor Invoicing', '/contractor-invoice-template'],
-      ['Contractor Invoice Template', '/contractor-invoice-template'],
+      ['Freelance Templates', '/templates/freelance'],
+      ['Fast Invoicing', '/features/lightning-fast-invoicing'],
       ['For Businesses Directory', '/for-businesses'],
     ],
   },
@@ -685,9 +685,9 @@ export const ARTICLES = {
     ],
     relatedLinks: [
       ['Freelance Invoice Templates', '/templates/freelance'],
-      ['Freelancer Invoice Guide', '/freelancer-invoice-template'],
-      ['Self-Employed Invoice Template', '/self-employed-invoice-template'],
-      ['Freelancer Invoice Generator', '/freelancer-invoice-template'],
+      ['Fast Invoicing', '/features/lightning-fast-invoicing'],
+      ['Document Customization', '/features/document-customization'],
+      ['For Businesses', '/for-businesses'],
     ],
   },
 
@@ -784,7 +784,7 @@ export const ARTICLES = {
     relatedLinks: [
       ['Sales & Stock Reports', '/features/sales-stock-reports'],
       ['Import & Export Records', '/features/import-export-records'],
-      ['Accountant Invoice Template', '/accountant-invoice-template'],
+      ['Payment Tracking', '/features/payment-tracking'],
       ['For Businesses', '/for-businesses'],
     ],
   },
@@ -975,7 +975,7 @@ export const ARTICLES = {
       ['Batch Payment Reminders', '/features/batch-payment-reminders'],
       ['Payment Tracking', '/features/payment-tracking'],
       ['Customer Statements', '/features/customer-statements'],
-      ['Invoice Management', '/invoice-management'],
+      ['Fast Invoicing', '/features/lightning-fast-invoicing'],
     ],
   },
 
@@ -1145,9 +1145,9 @@ export const ARTICLES = {
     ],
     relatedLinks: [
       ['Estimates to Invoices', '/features/estimates-to-invoices'],
-      ['Multi-Currency Invoicing', '/multi-currency-invoicing'],
+      ['Fast Invoicing', '/features/lightning-fast-invoicing'],
       ['Document Customization', '/features/document-customization'],
-      ['Business Invoice Template', '/business-invoice-template'],
+      ['For Businesses', '/for-businesses'],
     ],
   },
 
@@ -1232,14 +1232,14 @@ export const ARTICLES = {
       },
       {
         q: 'Where can I find industry-specific invoice examples?',
-        a: 'You can explore our Freelance, Consulting, Law Firm, Contractor, and Small Business template pages, or browse over 200 industry guides in our For Businesses directory.',
+        a: 'You can explore our Freelance template page or browse over 200 industry guides in our For Businesses directory.',
       },
     ],
     relatedLinks: [
       ['Freelance Invoice Templates', '/templates/freelance'],
-      ['All Invoice Templates', '/invoice-templates'],
-      ['Consulting Templates', '/consultant-invoice-template'],
-      ['Business Templates', '/business-invoice-template'],
+      ['Document Customization', '/features/document-customization'],
+      ['Fast Invoicing', '/features/lightning-fast-invoicing'],
+      ['For Businesses Directory', '/for-businesses'],
     ],
   },
 };

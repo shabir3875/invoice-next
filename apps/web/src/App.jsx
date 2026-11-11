@@ -5,11 +5,9 @@ import HomePage from './pages/HomePage';
 import FeatureDetailPage from './features/marketing/FeatureDetailPage';
 import PublicPage from './features/marketing/PublicPage';
 import TemplatePage from './features/marketing/TemplatePage';
-import SeoLandingPage from './features/marketing/SeoLandingPage';
 import BlogPage from './features/marketing/BlogPage';
 import ForBusinessesPage from './features/marketing/ForBusinessesPage';
 import BusinessDetailPage from './features/marketing/BusinessDetailPage';
-import { SEO_ROUTES } from './features/marketing/seo-pages';
 
 const AppShell = React.lazy(() => import('./features/app-components').then(module => ({ default: module.AppShell })));
 
@@ -78,7 +76,19 @@ function App() {
                         <Route path="/templates/law-firm" element={<Navigate to="/templates/freelance" replace />} />
                         <Route path="/templates/small-businesses" element={<Navigate to="/templates/freelance" replace />} />
                         <Route path="/features/:slug" element={<FeatureDetailPage />} />
-                        {SEO_ROUTES.map(path => <Route key={path} path={path} element={<SeoLandingPage routePath={path} />} />)}
+                        <Route path="/invoice-templates" element={<Navigate to="/templates/freelance" replace />} />
+                        <Route path="/free-invoice-generator" element={<Navigate to="/templates/freelance" replace />} />
+                        <Route path="/freelancer-invoice-template" element={<Navigate to="/templates/freelance" replace />} />
+                        <Route path="/self-employed-invoice-template" element={<Navigate to="/templates/freelance" replace />} />
+                        <Route path="/consultant-invoice-template" element={<Navigate to="/templates/freelance" replace />} />
+                        <Route path="/accountant-invoice-template" element={<Navigate to="/templates/freelance" replace />} />
+                        <Route path="/business-invoice-template" element={<Navigate to="/for-businesses" replace />} />
+                        <Route path="/contractor-invoice-template" element={<Navigate to="/for-businesses" replace />} />
+                        <Route path="/client-management" element={<Navigate to="/features/client-management" replace />} />
+                        <Route path="/invoice-customization" element={<Navigate to="/features/document-customization" replace />} />
+                        <Route path="/multi-currency-invoicing" element={<Navigate to="/features/lightning-fast-invoicing" replace />} />
+                        <Route path="/invoice-management" element={<Navigate to="/features/lightning-fast-invoicing" replace />} />
+                        <Route path="/invoice-reports" element={<Navigate to="/features/sales-stock-reports" replace />} />
                         <Route path="/blog" element={<BlogPage />} />
                         <Route path="/blog/:slug" element={<BlogRoute />} />
                         <Route path="/premium" element={<AppShell initialPage="premium" />} />

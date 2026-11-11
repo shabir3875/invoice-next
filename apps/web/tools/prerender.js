@@ -33,8 +33,6 @@ async function prerender() {
 		const { default: FeatureDetailPage, FEATURE_SLUGS, getFeature, getFeatureSeoTitle } = await vite.ssrLoadModule('/src/features/marketing/FeatureDetailPage.jsx');
 		const { default: PublicPage, PUBLIC_ROUTES, getPublicRoute } = await vite.ssrLoadModule('/src/features/marketing/PublicPage.jsx');
 		const { default: TemplatePage, templatePages } = await vite.ssrLoadModule('/src/features/marketing/TemplatePage.jsx');
-		const { default: SeoLandingPage } = await vite.ssrLoadModule('/src/features/marketing/SeoLandingPage.jsx');
-		const { SEO_PAGES, SEO_ROUTES } = await vite.ssrLoadModule('/src/features/marketing/seo-pages.js');
 		const { default: BlogPage } = await vite.ssrLoadModule('/src/features/marketing/BlogPage.jsx');
 		const { default: ForBusinessesPage } = await vite.ssrLoadModule('/src/features/marketing/ForBusinessesPage.jsx');
 		const { default: BusinessDetailPage } = await vite.ssrLoadModule('/src/features/marketing/BusinessDetailPage.jsx');
@@ -168,26 +166,8 @@ async function prerender() {
 					.replace(/<meta property="og:description" content=".*?"\s*\/?>/, `<meta property="og:description" content="${description}" />`)
 					.replace(/<meta name="twitter:title" content=".*?"\s*\/?>/, `<meta name="twitter:title" content="${title}" />`)
 					.replace(/<meta name="twitter:description" content=".*?"\s*\/?>/, `<meta name="twitter:description" content="${description}" />`);
-				const templateRouteHtml = routeHtml.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, pageSchema({ title, description, url, breadcrumbs: [['Home','https://invonxt.com/'],['Invoice Templates','https://invonxt.com/invoice-templates'],[template.name,url]] }));
+				const templateRouteHtml = routeHtml.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, pageSchema({ title, description, url, breadcrumbs: [['Home','https://invonxt.com/'],['Invoice Templates','https://invonxt.com/templates/freelance'],[template.name,url]] }));
 				fs.writeFileSync(path.join(routeDir, 'index.html'), templateRouteHtml, 'utf8');
-			}
-			for (const routePath of SEO_ROUTES) {
-				const page = SEO_PAGES[routePath];
-				const pageHtml = renderToString(React.createElement(SeoLandingPage, { routePath }));
-				const url = `https://invonxt.com${routePath}`;
-				const routeDir = path.join(distAppDir, ...routePath.split('/').filter(Boolean));
-				fs.mkdirSync(routeDir, { recursive: true });
-				const routeHtml = distIndexHtml
-					.replace(/<div id="root">[\s\S]*?<\/div>\s*(?=<script|<\/body>)/, `<div id="root">${pageHtml}</div>\n\t\t`)
-					.replace(/<title>.*?<\/title>/, `<title>${page.title}</title>`)
-					.replace(/<meta name="description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="description" content="${page.description}" data-react-helmet="true" />`)
-					.replace(/<link rel="canonical" href=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<link rel="canonical" href="${url}" data-react-helmet="true" />`)
-					.replace(/<meta property="og:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:title" content="${page.title}" data-react-helmet="true" />`)
-					.replace(/<meta property="og:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:description" content="${page.description}" data-react-helmet="true" />`)
-					.replace(/<meta property="og:url" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta property="og:url" content="${url}" data-react-helmet="true" />`)
-					.replace(/<meta name="twitter:title" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="twitter:title" content="${page.title}" data-react-helmet="true" />`)
-					.replace(/<meta name="twitter:description" content=".*?"(\s+data-react-helmet="true")?\s*\/?>/, `<meta name="twitter:description" content="${page.description}" data-react-helmet="true" />`);
-				fs.writeFileSync(path.join(routeDir, 'index.html'), routeHtml, 'utf8');
 			}
 			for (const routePath of ['/blog', ...ARTICLE_ROUTES]) {
 				const slug = routePath === '/blog' ? undefined : routePath.split('/').at(-1);
@@ -295,7 +275,6 @@ async function prerender() {
 			...Object.keys(templatePages)
 				.filter((route) => route.startsWith('/templates/'))
 				.map((route) => ({ route: `${route}${templatePages[route].trailingSlash ? '/' : ''}`, lastmod: sourceDate('src/features/marketing/TemplatePage.jsx') })),
-			...SEO_ROUTES.map((route) => ({ route, lastmod: sourceDate('src/features/marketing/seo-pages.js') })),
 			{ route: '/for-businesses', lastmod: sourceDate('src/features/marketing/ForBusinessesPage.jsx') },
 			{ route: '/blog', lastmod: sourceDate('src/features/marketing/blog-data.js') },
 			...ARTICLE_ROUTES.map((route) => ({ route, lastmod: sourceDate('src/features/marketing/blog-data.js') })),
@@ -325,15 +304,6 @@ async function prerender() {
 				path.join('pricing', 'index.html'),
 				'solutions',
 				path.join('solutions', 'index.html'),
-				path.join('solutions', 'small-businesses'),
-				path.join('solutions', 'consultants'),
-				path.join('solutions', 'legal-firms'),
-				path.join('solutions', 'accountants'),
-				path.join('solutions', 'contractors'),
-				path.join('solutions', 'freelancers'),
-				path.join('templates', 'consulting'),
-				path.join('templates', 'law-firm'),
-				path.join('templates', 'small-businesses'),
 				'features.html',
 				path.join('features', 'index.html'),
 				path.join('features', 'professional-invoices'),
@@ -343,6 +313,32 @@ async function prerender() {
 				path.join('features', 'create-estimates-invoices'),
 				'recurring-invoices',
 				'invoice-generator',
+				'invoice-templates',
+				'invoice-templates.html',
+				'free-invoice-generator',
+				'free-invoice-generator.html',
+				'freelancer-invoice-template',
+				'freelancer-invoice-template.html',
+				'self-employed-invoice-template',
+				'self-employed-invoice-template.html',
+				'consultant-invoice-template',
+				'consultant-invoice-template.html',
+				'accountant-invoice-template',
+				'accountant-invoice-template.html',
+				'business-invoice-template',
+				'business-invoice-template.html',
+				'contractor-invoice-template',
+				'contractor-invoice-template.html',
+				'client-management',
+				'client-management.html',
+				'invoice-customization',
+				'invoice-customization.html',
+				'multi-currency-invoicing',
+				'multi-currency-invoicing.html',
+				'invoice-management',
+				'invoice-management.html',
+				'invoice-reports',
+				'invoice-reports.html',
 			];
 			for (const destinationRoot of [distAppDir, rootDistDir, repoRootDir]) {
 				for (const retiredEntry of retiredDeployEntries) {

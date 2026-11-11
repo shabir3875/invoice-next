@@ -3,16 +3,21 @@ import { openCookiePreferences } from '../../lib/cookieConsent';
 
 export const FOOTER_GROUPS = [
   ['Product', [
-    ['Fast Invoicing', '/features/lightning-fast-invoicing'], ['Recurring Invoices', '/features/recurring-invoices'],
-    ['Inventory Tracking', '/features/inventory-tracking'], ['Payment Follow-Ups', '/features/batch-payment-reminders'],
-    ['Sales & Stock Reports', '/features/sales-stock-reports'], ['Import & Export', '/features/import-export-records'],
+    ['Fast Invoicing', '/features/lightning-fast-invoicing'],
+    ['Recurring Invoices', '/features/recurring-invoices'],
+    ['Estimates to Invoices', '/features/estimates-to-invoices'],
+    ['Payment Tracking', '/features/payment-tracking'],
+    ['Payment Follow-Ups', '/features/batch-payment-reminders'],
+    ['Inventory Tracking', '/features/inventory-tracking'],
+    ['Sales & Stock Reports', '/features/sales-stock-reports'],
+    ['Import & Export', '/features/import-export-records'],
     ['Document Customization', '/features/document-customization'],
-    ['Clients & Services', '/client-management'],
-    ['Free Templates', '/invoice-templates'], ['Products & Inventory', '/features/client-management'],
+    ['Clients & Services', '/features/client-management'],
+    ['Customer Statements', '/features/customer-statements'],
   ]],
   ['Solutions', [
     ['For Businesses', '/for-businesses'],
-    ['Freelance Templates', '/templates/freelance'],
+    ['Invoice Templates', '/templates/freelance'],
   ]],
   ['Company', [
     ['About Invoice Next', '/about'], ['Pricing', '/#pricing'], ['Blog & Guides', '/blog'], ['Contact Us', '/contact'],

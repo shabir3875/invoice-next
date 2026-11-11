@@ -653,8 +653,8 @@ export default function BlogPage({ slug }) {
                     {(
                       article.relatedLinks || [
                         ['Fast Invoicing', '/features/lightning-fast-invoicing'],
-                        ['Invoice Templates', '/invoice-templates'],
-                        ['Invoice Management', '/invoice-management'],
+                        ['Invoice Templates', '/templates/freelance'],
+                        ['For Businesses', '/for-businesses'],
                       ]
                     ).map(([label, href]) => (
                       <a
@@ -717,7 +717,7 @@ export default function BlogPage({ slug }) {
                   {(
                     article.relatedLinks || [
                       ['Fast Invoicing', '/features/lightning-fast-invoicing'],
-                      ['Invoice Templates', '/invoice-templates'],
+                      ['Invoice Templates', '/templates/freelance'],
                       ['For Businesses', '/for-businesses'],
                     ]
                   ).map(([label, href]) => (
