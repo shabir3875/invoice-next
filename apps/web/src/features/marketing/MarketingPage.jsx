@@ -52,8 +52,7 @@ function Hero() {
           </span>
 
           <h1 className="home-hero-title">
-            Professional Invoicing Made{' '}
-            <span className="home-hero-title-accent">Simple</span>
+            Professional Invoicing Made Simple
           </h1>
 
           <p className="home-hero-description">
