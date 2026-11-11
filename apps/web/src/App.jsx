@@ -56,7 +56,7 @@ function App() {
                         <Route path="/for-businesses/:categorySlug/:businessSlug" element={<BusinessDetailPage />} />
                         <Route path="/solutions/businesses" element={<Navigate to="/solutions/small-businesses" replace />} />
                         <Route path="/solutions/:slug" element={<PublicPage kind="solution" />} />
-                        <Route path="/pricing" element={<PublicPage kind="pricing" />} />
+                        <Route path="/pricing" element={<Navigate to="/#pricing" replace />} />
                         <Route path="/about" element={<PublicPage kind="about" />} />
                         <Route path="/contact" element={<PublicPage kind="contact" />} />
                         <Route path="/support" element={<PublicPage kind="support" />} />

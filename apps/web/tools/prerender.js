@@ -320,6 +320,9 @@ async function prerender() {
 			// Remove retired prerendered routes before mirroring so old deploy artifacts
 			// cannot survive a build simply because recursive copying merges folders.
 			const retiredDeployEntries = [
+				'pricing.html',
+				'pricing',
+				path.join('pricing', 'index.html'),
 				'features.html',
 				path.join('features', 'index.html'),
 				path.join('features', 'professional-invoices'),
@@ -330,7 +333,7 @@ async function prerender() {
 				'recurring-invoices',
 				'invoice-generator',
 			];
-			for (const destinationRoot of [rootDistDir, repoRootDir]) {
+			for (const destinationRoot of [distAppDir, rootDistDir, repoRootDir]) {
 				for (const retiredEntry of retiredDeployEntries) {
 					fs.rmSync(path.join(destinationRoot, retiredEntry), { recursive: true, force: true });
 				}

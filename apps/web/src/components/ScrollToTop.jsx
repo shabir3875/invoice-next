@@ -39,6 +39,18 @@ const ScrollToTop = () => {
                 return;
             }
 
+            // Same-page root anchor link (e.g. "/#features" or "/#pricing")
+            if (rawHref.startsWith('/#')) {
+                const targetId = rawHref.slice(2);
+                const targetEl = targetId ? document.getElementById(targetId) : null;
+                if (targetEl && window.location.pathname === '/') {
+                    event.preventDefault();
+                    window.history.pushState(null, '', rawHref);
+                    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    return;
+                }
+            }
+
             // Internal route link (e.g. "/for-businesses", "/blog", "/#features")
             if (rawHref.startsWith('/') && !rawHref.startsWith('//')) {
                 event.preventDefault();

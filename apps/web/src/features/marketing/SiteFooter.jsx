@@ -15,7 +15,7 @@ export const FOOTER_GROUPS = [
     ['Freelance Templates', '/templates/freelance'],
   ]],
   ['Company', [
-    ['About Invoice Next', '/about'], ['Pricing', '/pricing'], ['Blog & Guides', '/blog'], ['Contact Us', '/contact'],
+    ['About Invoice Next', '/about'], ['Pricing', '/#pricing'], ['Blog & Guides', '/blog'], ['Contact Us', '/contact'],
     ['Help & Support', '/support'], ['FAQs', '/faq'],
   ]],
   ['Legal', [

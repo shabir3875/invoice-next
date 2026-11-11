@@ -15,7 +15,7 @@ export const MARKETING_NAVIGATION = [
     ],
   },
   { label: 'Invoice Generator', href: APP_ROUTES.login },
-  { label: 'Pricing', href: '/pricing' },
+  { label: 'Pricing', href: '/#pricing' },
   { label: 'Blog', href: '/blog' },
 ];
 
