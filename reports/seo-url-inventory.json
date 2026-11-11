@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T09:34:22.201Z",
+  "generatedAt": "2026-11-11T09:37:14.482Z",
   "summary": {
     "totalPublicPages": 58,
     "indexablePages": 58,
@@ -21,7 +21,7 @@
       "h1Count": 1,
       "canonical": "https://invonxt.com/",
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      "wordCount": 974,
+      "wordCount": 954,
       "missingAltCount": 0,
       "issues": [],
       "brokenInternalLinks": [],
