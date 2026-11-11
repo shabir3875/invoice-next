@@ -9,10 +9,9 @@ import {
 import Seo from '@/components/Seo';
 import Reveal from '@/components/Reveal';
 import { PREMIUM_FEATURES, PREMIUM_PLANS } from '@/features/app-components/plans';
-import { APP_ROUTES, benefits, demoTestimonials, solutions } from './data';
+import { APP_ROUTES, demoTestimonials, solutions } from './data';
 import { BUSINESS_CATEGORIES } from './businessCategoriesData';
 import SiteFooter from './SiteFooter';
-import { DashboardMockup } from './ProductVisuals';
 import AnimatedFeatures from './AnimatedFeatures';
 import TemplateGallery from './TemplateGallery';
 import InvoiceGenerator from './InvoiceGenerator';
@@ -27,9 +26,52 @@ function PrimaryLink({href=APP_ROUTES.signup,children,className=''}){return <a h
 
 const Header = MarketingHeader;
 
-function Hero(){return <section className="home-hero"><div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[.86fr_1.14fr]"><div className="home-hero-copy"><div className="home-eyebrow"><span/>Invoicing and business management, in one place</div><h1>Professional Invoicing <span>Made Simple.</span></h1><div className="home-hero-intro"><p>Create professional invoices, manage expenses, track payments, and keep your business organized—all in one simple, powerful platform.</p><p>Invoice Next is modern invoicing and business management software designed to make everyday financial tasks easier, faster, and more efficient. Create and customize invoices, generate estimates, manage customers and products, organize expenses and receipts, record payments, and monitor outstanding balances from one intuitive workspace.</p><p>Say goodbye to complicated paperwork, scattered spreadsheets, and time-consuming manual processes. With flexible templates, streamlined workflows, and clear financial insights, Invoice Next helps you stay in control of your business finances while saving valuable time.</p><p>Less paperwork. Better organization. More time to grow your business.</p></div><div className="home-hero-actions"><PrimaryLink className="!min-h-14 !px-8 !text-base">Get Started Free<ArrowRight size={18}/></PrimaryLink></div><div className="home-trust">{['No credit card required','Works on every device','Secure cloud workspace'].map(x=><span key={x}><Check size={15}/>{x}</span>)}</div></div><div className="home-dashboard-stage"><span className="home-sample-label">Illustrative product preview · sample data</span><DashboardMockup/></div></div></section>}
+function Hero() {
+  return (
+    <section className="home-hero-banner" aria-label="Professional Invoicing and Operations Platform">
+      {/* Background Image Layer */}
+      <div className="home-hero-bg-layer">
+        <img
+          src="/images/hero/hero-banner.jpg"
+          alt="Invoice Next — Professional Invoicing and Operations Platform desk workspace with dual monitors showing dashboard, template studio, partners, invoices, and expenses"
+          width="1600"
+          height="669"
+          loading="eager"
+          decoding="async"
+          className="home-hero-bg-img"
+        />
+        <div className="home-hero-scrim" aria-hidden="true" />
+      </div>
 
-function Benefits(){return <section className="border-y border-slate-200 bg-white"><div className="mx-auto grid max-w-7xl grid-cols-2 px-5 sm:px-8 md:grid-cols-5">{benefits.map((x,i)=><div key={x.title} className={`flex items-center gap-3 py-7 md:px-4 ${i<benefits.length-1?'md:border-r':''}`}><span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-blue-50 text-blue-600"><x.icon size={19}/></span><div><b className="block text-xs text-slate-950 sm:text-sm">{x.title}</b><span className="hidden text-[11px] leading-4 text-slate-500 lg:block">{x.text}</span></div></div>)}</div></section>}
+      {/* Foreground Content Overlay */}
+      <div className="home-hero-overlay">
+        <div className="home-hero-content">
+          <span className="home-hero-eyebrow">
+            <Zap size={14} strokeWidth={2.4} aria-hidden="true" />
+            ALL-IN-ONE BUSINESS OPERATIONS PLATFORM
+          </span>
+
+          <h1 className="home-hero-title">
+            Professional Invoicing Made{' '}
+            <span className="home-hero-title-accent">Simple</span>
+          </h1>
+
+          <p className="home-hero-description">
+            Create branded invoices, track expenses, manage clients and partners,
+            organize documents, and customize professional templates — all in one powerful platform.
+          </p>
+
+          <div className="home-hero-cta">
+            <a href={APP_ROUTES.signup} className="home-hero-primary-btn">
+              <span>Start Free</span>
+              <ArrowRight size={18} aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 const FEATURE_HIGHLIGHTS = [
   [Zap, 'Lightning Fast', 'Create and send professional invoices in under 60 seconds. No learning curve required.'],
@@ -157,4 +199,4 @@ function Footer(){const cols=[['Product',['Invoices',APP_ROUTES.invoices],['Esti
 
 function LegalPage({routePath}){const pages={about:['About Invoice Next','Invoice Next is designed to help freelancers and small businesses manage invoices, estimates, expenses, customers and documents from one cloud workspace.'],contact:['Contact Invoice Next','For product help, account questions or business enquiries, use the support options available inside the Invoice Next application.'],privacy:['Privacy Policy','Invoice Next is committed to handling business and customer information responsibly. The production application should provide the complete policy governing collection, storage and processing.'],terms:['Terms and Conditions','These terms describe the general use of Invoice Next. The production application should provide the complete service terms and subscription conditions.']};const key=routePath.slice(1);const[heading,body]=pages[key]||pages.about;return <div className="min-h-screen bg-slate-50"><Header/><main className="mx-auto max-w-3xl px-5 py-24 sm:px-8"><a href="/" className="inline-flex items-center gap-2 text-sm font-bold text-blue-700"><ArrowLeft size={16}/>Back to home</a><h1 className="mt-8 text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">{heading}</h1><p className="mt-6 text-lg leading-9 text-slate-600">{body}</p><a href={routePath==='/contact'?APP_ROUTES.login:APP_ROUTES.signup} className="mt-9 inline-flex rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white">{routePath==='/contact'?'Open support':'Get Started Free'}</a></main><Footer/></div>}
 
-export default function MarketingPage({routePath='/'}){const title='Invoice Next | Professional Invoicing Software for Freelancers & Businesses';const description='Create professional invoices with customizable templates, manage estimates, track payments, organize expenses, and simplify business billing with Invoice Next.';const keywords='invoicing software, invoice generator, professional invoices, encrypted invoicing, PDF invoice, invoice template builder, freelancer invoicing, small business invoicing, online invoicing, Next Invoice';if(routePath!=='/')return <LegalPage routePath={routePath}/>;return <div className="min-h-screen bg-white text-slate-900"><Helmet><title>{title}</title><meta name="description" content={description}/><meta name="keywords" content={keywords}/></Helmet><Seo title={title} description={description} url="https://invonxt.com/" image="https://invonxt.com/og-image.png" siteName="Invoice Next"/><Header/><main><Hero/><Benefits/><AnimatedFeatures/><DailyBusinessTools/><TemplateGallery/><InvoiceGenerator/><Solutions/>{SHOW_MOBILE_SHOWCASE&&<MobileShowcase/>}<Testimonials/><Pricing/><FinalCta/></main><SiteFooter/></div>}
+export default function MarketingPage({routePath='/'}){const title='Invoice Next | Professional Invoicing Software for Freelancers & Businesses';const description='Create professional invoices with customizable templates, manage estimates, track payments, organize expenses, and simplify business billing with Invoice Next.';const keywords='invoicing software, invoice generator, professional invoices, encrypted invoicing, PDF invoice, invoice template builder, freelancer invoicing, small business invoicing, online invoicing, Next Invoice';if(routePath!=='/')return <LegalPage routePath={routePath}/>;return <div className="min-h-screen bg-white text-slate-900"><Helmet><title>{title}</title><meta name="description" content={description}/><meta name="keywords" content={keywords}/></Helmet><Seo title={title} description={description} url="https://invonxt.com/" image="https://invonxt.com/og-image.png" siteName="Invoice Next"/><Header/><main><Hero/><AnimatedFeatures/><DailyBusinessTools/><TemplateGallery/><InvoiceGenerator/><Solutions/>{SHOW_MOBILE_SHOWCASE&&<MobileShowcase/>}<Testimonials/><Pricing/><FinalCta/></main><SiteFooter/></div>}
